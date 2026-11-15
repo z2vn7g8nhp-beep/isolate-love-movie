@@ -1,8 +1,9 @@
 import {cleanAlbum} from './collection.js';
-export const PHOTO_ENDPOINT=typeof location!=='undefined'&&['localhost','127.0.0.1'].includes(location.hostname)?'/isolate/v1/photos':'https://movie-radar-production.up.railway.app/isolate/v1/photos';
+export const PHOTO_ENDPOINT=typeof location!=='undefined'&&['localhost','127.0.0.1'].includes(location.hostname)?'/isolate/v1/photos':'';
 export const DIRECT_SOURCES={imdb:'IMDb',douban:'豆瓣',pinterest:'Pinterest'};
 export async function fetchPhotoSource(item,{source,cursor,signal,endpoint=PHOTO_ENDPOINT}={}){
  if(!DIRECT_SOURCES[source])throw Error('未知图片来源');
+ if(!endpoint)throw Error('独立抓图服务尚未部署');
  const id=item.kind==='character'?(item.workId||item.actorId||''):item.id;
  const params=new URLSearchParams({source,id:/^(tt|nm)\d+$/.test(id||'')?id:'',kind:item.kind,title:item.title,zh:item.zh||'',work:item.work||'',year:item.year?String(item.year):'',douban:item.douban?String(item.douban):''});
  if(cursor)params.set('after',cursor);
