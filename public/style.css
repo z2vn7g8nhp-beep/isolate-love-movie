@@ -42,3 +42,17 @@ dialog{background:var(--panel);border:1px solid var(--line);border-radius:10px 3
 :root[data-theme='sakura'] .button,:root[data-theme='sakura'] .search-trigger{border-radius:25px}:root[data-theme='sakura'] .cover-nameplate{border-radius:16px}:root[data-theme='sakura'] .dossier-stamp{border-radius:26px}:root[data-theme='sakura'] .dossier-image{border-radius:18px}
 :root[data-theme='sakura'] .cabinet-metrics b{font-size:2.15rem;line-height:1.4}:root[data-theme='sakura'] .cover-nameplate strong{font-weight:500}
 @media(max-width:760px){:root[data-theme='sakura'] .collection-hero{border-radius:20px}:root[data-theme='sakura'] .cabinet-metrics b{font-size:1.6rem;line-height:1.4}.theme-options button{padding:10px 6px}}
+
+/* This skip-link target is a reading region, not one giant interactive control.
+   Safari can restore focus here after a dialog redraws its opening card. */
+.archive:focus {
+  outline: 0;
+}
+
+/* Keep keyboard skip navigation visible without outlining the entire collection. */
+.archive:focus-visible .archive-heading h2 {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .22em;
+}
