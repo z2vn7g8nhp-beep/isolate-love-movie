@@ -60,10 +60,12 @@ async function resolveDouban(subject,signal){
  for(const candidate of (Array.isArray(suggestions)?suggestions:[]).slice(0,3)){if(!/^\d+$/.test(candidate.id||''))continue;const html=await read('https://movie.douban.com/subject/'+candidate.id+'/',{signal});if(html.includes(subject.id))return candidate.id;}
  throw new SourceError('尚未核对到对应豆瓣档案','unmatched');
 }
+export function doubanJsonImages(data,subject,id){return unique((data.photos||[]).filter(photo=>!photo.image?.is_animated&&(!photo.owner_uri||photo.owner_uri.endsWith('/'+id))).map(photo=>{const url=imageUrl(photo.image?.large?.url||photo.image?.normal?.url),thumbnail=imageUrl(photo.image?.normal?.url||photo.image?.small?.url)||url;return {url,thumbnail,title:text(photo.description)||subject.title+' · 豆瓣相册',kind:subject.kind==='person'?'人物照片':'作品图片',source:'豆瓣 相册',license:'版权归原权利人',pageUrl:'https://movie.douban.com/photos/photo/'+photo.id+'/'};}));}
 async function douban(subject,signal){
  const id=subject.cursor?.douban||await resolveDouban(subject,signal),offset=Number(subject.cursor?.offset)||0;
  if(!/^\d+$/.test(String(id))||!Number.isSafeInteger(offset)||offset<0||offset>6000)throw new SourceError('豆瓣分页标识无效');
  const root=subject.kind==='person'?'celebrity':'subject';
+ try{const data=await read('https://m.douban.com/rexxar/api/v2/'+(subject.kind==='person'?'celebrity':'movie')+'/'+id+'/photos?'+new URLSearchParams({start:String(offset),count:'12'}),{signal,json:true,headers:{referer:'https://m.douban.com/'}});const images=doubanJsonImages(data,subject,String(id));if(images.length)return {images,next:offset+images.length<Number(data.total)?{source:'douban',douban:id,offset:offset+images.length}:null};}catch(error){if(signal.aborted)throw error;}
  const html=await read('https://movie.douban.com/'+root+'/'+id+'/photos/?type='+(root==='subject'?'S':'C')+'&start='+offset,{signal});
  const all=parseDoubanHtml(html,subject),local=Number(subject.cursor?.local)||0,images=all.slice(local,local+BATCH);
  const nextStart=html.match(/(?:rel=["']next["'][^>]*href|href)=["'][^"']*start=(\d+)[^"']*["'][^>]*(?:rel=["']next["'])?/i);
