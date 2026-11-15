@@ -1,0 +1,5 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {fromImdb} from '../public/data-client.js';
+const file=new URL('../public/catalog.json',import.meta.url);const catalog=JSON.parse(await readFile(file,'utf8'));let success=0,failed=0;
+const update=async item=>{if(!/^(tt|nm)\d+$/.test(item.id))return item;try{const url='https://v3.sg.media-imdb.com/suggestion/x/'+item.id+'.json';const response=await fetch(url,{signal:AbortSignal.timeout(15000),headers:{'User-Agent':'ISOLATE film archive (https://github.com/z2vn7g8nhp-beep/isolate-love-movie)'}});if(!response.ok)throw Error('HTTP '+response.status);const d=await response.json(),match=(d.d||[]).find(x=>x.id===item.id);if(!match)throw Error('ID mismatch');success++;return {...item,...fromImdb(match)};}catch(e){failed++;console.warn(item.id+': '+e.message);return item;}};
+const updated=[];for(let i=0;i<catalog.length;i+=3)updated.push(...await Promise.all(catalog.slice(i,i+3).map(update)));await writeFile(file,JSON.stringify(updated,null,2)+'\n');console.log('IMDb refreshed: '+success+'; retained cached: '+failed);if(success===0)throw Error('IMDb unavailable; existing deployment is retained.');
