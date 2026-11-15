@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "start": "node scripts/server.mjs",
-    "test": "node --test test/pages.test.js",
+    "test": "node --test test/*.test.js",
     "refresh": "node scripts/refresh-catalog.mjs"
   },
   "engines": {

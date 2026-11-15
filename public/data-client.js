@@ -10,10 +10,52 @@ async function wikiRequest(params,signal){const url=new URL(WikiOrigin);url.sear
 async function wikiSearch(query,signal){const d=await wikiRequest({action:'wbsearchentities',search:query,language:/[\u3400-\u9fff]/.test(query)?'zh':'en',uselang:'zh',limit:'6'},signal);return d.search||[];}
 const claim=(e,p)=>e?.claims?.[p]?.[0]?.mainsnak?.datavalue?.value;
 export function wikiFields(entity){const zh=entity.labels?.['zh-cn']?.value||entity.labels?.zh?.value;const douban=claim(entity,'P4529')||claim(entity,'P5284');return {wikidata:entity.id,...(zh?{zh}:{}),...(douban?{douban}:{} )};}
-async function entities(ids,signal){if(!ids.length)return[];const d=await wikiRequest({action:'wbgetentities',ids:ids.join('|'),props:'labels|claims',languages:'zh-cn|zh|en|mul'},signal);return Object.values(d.entities||{});}
+async function entities(ids,signal){if(!ids.length)return[];const d=await wikiRequest({action:'wbgetentities',ids:ids.join('|'),props:'labels|claims|descriptions',languages:'zh-cn|zh|en|mul'},signal);return Object.values(d.entities||{});}
 export async function search(query,type='all',{signal}={}){const q=query.trim();if(!q||q.length>150)throw Error('请输入不超过 150 字的关键词');const chinese=/[\u3400-\u9fff]/.test(q);let items=[],source='IMDb',warning;
 if(!chinese)try{items=await imdbSearch(q,{signal});}catch(e){if(signal?.aborted)throw e;warning='IMDb 暂不可用，尝试 Wikidata 关联';}
 if(chinese||!items.length){try{const results=await wikiSearch(q,signal),es=await entities(results.map(x=>x.id),signal);const linked=es.filter(e=>/^(tt|nm)\d+$/.test(claim(e,'P345')||''));const fetched=await Promise.allSettled(linked.slice(0,5).map(async e=>{const id=claim(e,'P345');const matches=await imdbSearch(id,{signal});const item=matches.find(x=>x.id===id);return item?{...item,...wikiFields(e)}:null;}));for(const r of fetched)if(r.status==='fulfilled'&&r.value){const index=items.findIndex(x=>x.id===r.value.id);if(index>=0)items[index]={...items[index],...r.value};else items.push(r.value);}source='IMDb + Wikidata';if(!items.length&&linked.length)warning='IMDb 暂不可用，请稍后重试';else if(items.length)warning=undefined;}catch(e){if(signal?.aborted)throw e;warning=items.length?'Wikidata 暂不可用，显示 IMDb 结果':'数据源暂不可用，请稍后重试';}}
 if(type==='person')items=items.filter(x=>x.kind==='person');else if(type==='title')items=items.filter(x=>x.kind!=='person');return {items,source,warning,fetchedAt:new Date().toISOString()};}
 export async function detail(id,title,{signal}={}){if(!/^(tt|nm)\d+$/.test(id))throw Error('IMDb 标识无效');const result=await wikiSearch(title||id,signal);const es=await entities(result.map(x=>x.id),signal);const e=es.find(x=>claim(x,'P345')===id);return {item:e?wikiFields(e):{},...(!e?{warning:'未找到可核对的 Wikidata 关联，保留 IMDb 档案'}:{}),fetchedAt:new Date().toISOString()};}
 export async function pagesApi(path,options={}){const url=new URL(path,'https://isolate.invalid/'),signal=options.signal;if(url.pathname==='/search')return search(url.searchParams.get('q')||'',url.searchParams.get('type')||'all',{signal});if(url.pathname==='/detail')return detail(url.searchParams.get('id'),url.searchParams.get('title'),{signal});if(url.pathname==='/library')return {available:false,records:{}};if(url.pathname==='/refresh'){const r=await fetch('./catalog.json?updated='+Date.now(),{cache:'no-store',signal:signal||AbortSignal.timeout(15000)});if(!r.ok)throw Error('目录更新暂不可用');const catalog=await r.json();const ids=catalog.filter(x=>['film','series'].includes(x.kind)).slice(0,6).map(x=>x.id);const refreshed=await Promise.allSettled(ids.map(id=>imdbSearch(id,{signal})));const items=new Map(catalog.map(x=>[x.id,x]));let count=0;refreshed.forEach((r,i)=>{const item=r.status==='fulfilled'?r.value.find(x=>x.id===ids[i]):null;if(item){items.set(item.id,{...items.get(item.id),...item});count++;}});return {items:[...items.values()],fetchedAt:new Date().toISOString(),warning:count<ids.length?'已更新公开目录；部分 IMDb 数据暂不可用':undefined};}throw Error('静态版不支持此操作');}
+
+function wikiDate(value) {
+  if (!value?.time || !/^\+\d{4}/.test(value.time)) return '';
+  const date=value.time.slice(1,11);
+  return value.precision>=11?date:value.precision===10?date.slice(0,7):date.slice(0,4);
+}
+const values=(entity,property)=>(entity.claims?.[property]||[]).filter(x=>x.rank!=='deprecated').map(x=>x.mainsnak?.datavalue?.value).filter(x=>x!=null);
+const entityId=value=>value?.id;
+const unique=list=>[...new Set(list.filter(Boolean))];
+export function describeEntity(entity,lookup={}) {
+  const label=id=>lookup[id]?.labels?.['zh-cn']?.value||lookup[id]?.labels?.zh?.value||lookup[id]?.labels?.en?.value||lookup[id]?.labels?.mul?.value||'';
+  const labels=prop=>unique(values(entity,prop).map(v=>label(entityId(v))));
+  const facts=[];
+  const add=(key,value)=>{if(Array.isArray(value)&&!value.length)return;if(value)facts.push({label:key,value:Array.isArray(value)?value.join(' · '):String(value)});};
+  const person=values(entity,'P31').some(x=>x.id==='Q5');
+  if(person){add('出生日期',wikiDate(values(entity,'P569')[0]));add('出生地',labels('P19'));add('国籍',labels('P27'));add('职业',labels('P106'));}
+  else {add('上映 / 首播',unique(values(entity,'P577').map(wikiDate)).slice(0,4));const duration=values(entity,'P2047')[0];if(duration?.amount){const amount=Number(duration.amount);if(duration.unit?.endsWith('/Q7727'))add('片长',`${amount} 分钟`);else if(duration.unit?.endsWith('/Q11574'))add('片长',`${Math.round(amount/60)} 分钟`);}add('类型',labels('P136'));add('制作国家 / 地区',labels('P495'));add('原始语言',labels('P364'));add('集数',values(entity,'P1113')[0]?.amount?.replace(/^\+/,''));add('季数',values(entity,'P2437')[0]?.amount?.replace(/^\+/,''));}
+  const credits=[];
+  for(const [property,role] of person?[['P800','代表作品']]:[['P57','导演'],['P58','编剧'],['P161','演员'],['P86','配乐']]) {
+    for(const value of values(entity,property).slice(0,16)) {const e=lookup[entityId(value)];if(!e)continue;const title=e.labels?.en?.value||e.labels?.mul?.value||label(e.id);const zh=e.labels?.['zh-cn']?.value||e.labels?.zh?.value||'';const imdb=claim(e,'P345');const img=claim(e,'P18');credits.push({title,zh,role,wikidata:e.id,...(/^(tt|nm)\d+$/.test(imdb||'')?{id:imdb,kind:imdb.startsWith('nm')?'person':'film'}:{}),...(typeof img==='string'?{image:'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(img)+'?width=500'}:{})});}
+  }
+  const awards=labels('P166').slice(0,8);if(awards.length)add('获奖记录',awards);
+  const description=entity.descriptions?.['zh-cn']?.value||entity.descriptions?.zh?.value||entity.descriptions?.en?.value||'';
+  return {facts,credits,description};
+}
+export async function dossier(id,title,{wikidata,signal}={}) {
+  if(!/^(tt|nm)\d+$/.test(id))throw Error('IMDb 标识无效');
+  let candidates=[];
+  if(/^Q\d+$/.test(wikidata||''))candidates=await entities([wikidata],signal);
+  let entity=candidates.find(x=>claim(x,'P345')===id);
+  if(!entity){const found=await wikiSearch(title||id,signal);candidates=await entities(found.map(x=>x.id),signal);entity=candidates.find(x=>claim(x,'P345')===id);}
+  if(!entity)return {item:{},facts:[],credits:[],warning:'没有找到可核对的辅助档案。可继续记录你的收藏信息。',fetchedAt:new Date().toISOString()};
+  const props=['P19','P27','P106','P136','P495','P364','P57','P58','P161','P86','P800','P166'];
+  const ids=unique(props.flatMap(prop=>values(entity,prop).slice(0,16).map(entityId))).slice(0,90),lookup={};
+  for(let offset=0;offset<ids.length;offset+=40){const batch=await entities(ids.slice(offset,offset+40),signal);for(const e of batch)lookup[e.id]=e;}
+  return {item:wikiFields(entity),...describeEntity(entity,lookup),fetchedAt:new Date().toISOString(),source:'Wikidata',sourceUrl:'https://www.wikidata.org/wiki/'+entity.id};
+}
+export async function refreshOwned(items,{signal}={}) {
+  const results=[];let failed=0;
+  for(let offset=0;offset<items.length;offset+=3){const batch=await Promise.allSettled(items.slice(offset,offset+3).map(async item=>{if(!/^(tt|nm)\d+$/.test(item.id))return item;const found=await imdbSearch(item.id,{signal});return found.find(x=>x.id===item.id)||item;}));for(const result of batch)if(result.status==='fulfilled')results.push(result.value);else failed++;}
+  return {items:results,failed,fetchedAt:new Date().toISOString()};
+}

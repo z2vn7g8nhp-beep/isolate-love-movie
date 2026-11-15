@@ -1,48 +1,56 @@
-# ISOLATE / LOVE MOVIE
+# ISOLATE / 我的藏柜
 
-运行在 **GitHub Pages** 的影视、人物与角色档案 Web App。页面、图像资产和公开目录由本仓库构建发布，不依赖 Sites 或自建后端。
+运行在 **GitHub Pages** 的私人影视、人物与角色藏柜。
 
-预计地址：https://z2vn7g8nhp-beep.github.io/isolate-love-movie/
+https://z2vn7g8nhp-beep.github.io/isolate-love-movie/
 
-## 开启 GitHub Pages
+## 收藏由你决定
 
-仓库 → **Settings → Pages → Build and deployment → Source → GitHub Actions**。
+- 首页和各个分柜只展示你亲自收入的藏品。没有默认推荐片单、未关注人物或预填角色。
+- 搜索结果仅供选择；打开预览、查看演职或刷新辅助资料不会自动入藏。
+- 已有的已看 / 想看 / 关注、偏爱、评分、笔记视为原有收藏，升级后保留。
+- 明确「收入藏柜」或填写自己的记录后才进入藏柜。可以移出并撤销，移出时保留原笔记和编号。
 
-自动发布工作流：[Publish GitHub Web App](../../actions/workflows/pages.yml)。每次推送 `main`、手动运行以及每小时会执行。流程检查应用、尝试更新公开 IMDb 目录、构建静态文件，然后部署到 GitHub Pages。数据源不可用时保留缓存。GitHub 定时任务可能延迟，长期无提交的公共仓库可能被 GitHub 暂停定时任务。
+## 你的编目与藏印
 
-GitHub App 连接若没有 Pages 管理权限，无法代替仓库所有者首次开启 Pages；在设置里选择 GitHub Actions 后，重新运行工作流即可。无需 API key 或仓库密钥。
+每件藏品有固定编号，排序和筛选不会更改它。支持个人标签、评分、观看日期、笔记、偏爱藏印、邮票式陈列和列表视图。藏柜名称与藏印署名可以自定义，封面只能从自己的藏品中选。
 
-## 功能
+电影 / 剧集、人物、角色之间的关联，只在「我的藏品关联」中呈现已经入藏的条目。角色可以从作品或人物内部建立，自动关联已入藏的所属作品与饰演者。
 
-- 黑色画廊界面、海报档案墙、人物肖像、响应式布局。
-- 默认 18px 阅读字号；右上角 Aa 可选择大号 / 特大，偏好会保留。
-- 卡片直接标记已看 / 想看 / 关注，支持档案内即时筛选和可记忆的列表视图。
-- IMDb 电影 / 剧集 / 人物检索，中文通过 Wikidata 精确匹配 IMDb ID。
-- 已看、想看、人物与角色关注、偏爱、私人评分、日期、笔记。
-- 自建角色档案，关联作品与饰演者。
-- 电影 / 剧集 / 已看 / 想看 / 偏爱筛选，年代、评分和记录时间排序。
-- JSON 导入导出，按修改时间合并；离线应用外壳。
+默认 18px 阅读字号，右上角 Aa 可调大；手机也可选择大号或特大。偏好会保留。
 
-个人观影记录仅保存在**当前浏览器 localStorage**，不上传到公开仓库或 GitHub Pages。跨设备使用请导出 / 导入 JSON。清理浏览器网站数据会删除本机记录，建议定期备份。此前在其他域名产生的记录可导出后导入这里。
+## 藏品内部
 
-## 数据
+个人记录优先展示。辅助档案通过 Wikidata P345 与 IMDb ID 精确匹配后补充，能获取的字段才显示：
 
-- IMDb 是主索引。浏览器使用 IMDb 官方 `sg.media-imdb.com/suggests/` JSONP 搜索入口，解决静态页面的 CORS 限制；公开目录由 GitHub Actions 从 IMDb JSON 接口定时获取。
-- Wikidata 使用带 `origin=*` 的开放 MediaWiki API，补充中文名与外部标识。IMDb 关联必须与 P345 一致。
-- 豆瓣使用 Wikidata 已关联的 P4529 / P5284 标识直达，无关联时提供搜索；不声称实时抓取豆瓣评分。
-- 「刷新数据」获取最近一次 GitHub 部署的目录，并尝试即时更新精选影视。搜索是在使用时直接读取公开数据；抓取失败会显示状态。
-- 角色关系由人工整理或由使用者建立，角色图像使用饰演者肖像。海报来自 IMDb，首屏图像来自 MetaHub，版权归原权利人。
-- 初始目录仅供浏览，已看记录与私人评分从空白开始。
+- 影视：上映 / 首播日期、片长、类型、制作国家、语言、集数、季数、获奖记录。
+- 人物：出生日期、出生地、国籍、职业、获奖记录、已记录的代表作品。
+- 演职 / 相关作品折叠显示，可主动查看，查看不会自动入藏。
+- 角色关系由你编目，角色图像使用饰演者肖像并标注。
 
-## 本地开发
+辅助资料按需读取并在本机缓存 6 小时，可以手动重新核对。数据源不完整时保留原资料，不填造未知字段或平台评分。
 
-Node.js 22+，无需安装依赖。
+## 数据与存储
+
+IMDb 是主索引。浏览器使用官方 `sg.media-imdb.com/suggests/` JSONP 搜索入口，解决静态站点的 CORS 限制。Wikidata 使用带 `origin=*` 的公开 MediaWiki API。豆瓣有已验证标识时直达，否则提供搜索入口。
+
+「更新我的藏品」只请求已经入藏的 IMDb 条目。仓库中的公开目录仅供检索与旧记录元数据补全，不作为默认展示内容；GitHub Actions 每小时尝试更新这个辅助索引，定时任务可能被 GitHub 延迟或暂停。
+
+个人数据保存在**当前浏览器 localStorage**，不上传到公开仓库。JSON 导出包含个人记录、固定编号、标签、藏柜名称、署名与封面选择。旧版 JSON 可以导入，记录按修改时间合并，当前藏品编号优先保留。跨设备使用请导出 / 导入；清理网站数据会删除本机记录。
+
+作品、海报、肖像版权归原权利人。IMDb / Wikidata 的访问状况和数据完整性会影响可展示的补充字段。
+
+## GitHub Pages 与开发
+
+仓库 Settings → Pages → Source 选择 GitHub Actions。工作流 `.github/workflows/pages.yml` 在推送 main、手动运行和每小时时执行。构建会对 UI 资源生成内容版本，并更新离线应用缓存。
+
+Node.js 22+，无安装依赖。
 
 ```sh
 npm start       # http://127.0.0.1:3000
-npm test        # 数据适配与静态部署检查
-npm run build   # 生成 dist/，可部署到任何静态主机
-npm run refresh # 更新公开 IMDb 目录，需要网络
+npm test        # 收藏边界、编号、兼容性、数据适配检查
+npm run build   # 生成 dist/
+npm run refresh # 刷新辅助公开索引，需要网络
 ```
 
-`public/` 是应用源码与资产；`scripts/build.mjs` 将其构建到 `dist/`；`.github/workflows/pages.yml` 负责 GitHub Pages 发布与定时刷新。所有路径均相对引用，兼容 `/isolate-love-movie/` 仓库子路径。
+`public/collection.js` 管理入藏边界、编号与旧记录兼容；`public/data-client.js` 管理 IMDb / Wikidata；`public/app.js` 管理藏柜和藏品档案界面。
