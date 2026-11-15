@@ -2,12 +2,18 @@ const sources={imdb:{page:/(^|\.)imdb\.com$/,image:/^m\.media-amazon\.com$/},dou
 const names={imdb:'IMDb',douban:'豆瓣',pinterest:'Pinterest'};
 const decode=s=>String(s||'').replace(/&quot;/g,'"').replace(/&#39;|&#x27;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
 const normalize=s=>String(s||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
+export function matchesPhotoSubject(pageUrl,caption,source,item){
+ try{const page=new URL(pageUrl),id=page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)/)?.[1];if(source==='imdb'&&id&&id!==item.id)return false;
+ const release=String(caption||'').match(/\(((?:19|20)\d{2})\)/)?.[1];if(item.year&&release&&Number(release)!==Number(item.year)&&!String(item.title).includes(release))return false;
+ return true;
+ }catch{return false;}
+}
 export function parseImageIndex(html,source,item){
  const rule=sources[source];if(!rule)return[];const result=[],seen=new Set();
  for(const match of html.matchAll(/\bm=("[^"]*"|'[^']*')/g))try{
   const row=JSON.parse(decode(match[1].slice(1,-1))),image=new URL(row.murl),page=new URL(row.purl);
   if(!['https:','http:'].includes(image.protocol)||page.protocol!=='https:'||!rule.image.test(image.hostname)||!rule.page.test(page.hostname))continue;
-  image.protocol='https:';const caption=decode(row.t||row.desc||''),n=normalize(caption+' '+(row.desc||'')),title=normalize(item.title),zh=normalize(item.zh);
+  image.protocol='https:';const caption=decode(row.t||row.desc||'');if(!matchesPhotoSubject(page.href,caption,source,item))continue;const n=normalize(caption+' '+(row.desc||'')),title=normalize(item.title),zh=normalize(item.zh);
   const exactId=source==='imdb'&&page.pathname.includes('/'+item.id+'/');
   const words=String(item.title||'').toLowerCase().match(/[a-z]{3,}/g)||[];const closePin=source==='pinterest'&&words.length>=2&&words.every(word=>n.includes(word));if(!exactId&&!closePin&&!(title&&n.includes(title))&&!(zh&&n.includes(zh)))continue;
   if(/\.gif(?:$|\?)/i.test(image.href)||seen.has(image.href))continue;seen.add(image.href);
