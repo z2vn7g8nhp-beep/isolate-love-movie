@@ -6,6 +6,7 @@ const output = new URL('dist/', root);
 await rm(output, {recursive: true, force: true});
 await mkdir(output, {recursive: true});
 await cp(new URL('public/', root), output, {recursive: true});
+await cp(new URL('photo-data/', root),new URL('photo-data/', output),{recursive:true});
 
 // Version module imports too: an older cached adapter must not break a new app.
 let visual = await readFile(new URL('visual-data.js', output), 'utf8');

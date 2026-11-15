@@ -1,7 +1,7 @@
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {retrievePhotos,parseImdbHtml,parseDoubanHtml,parsePinterestHtml,decodeCursor} from '../server/photo-api.mjs';
 import {detail} from '../public/data-client.js';
-import {indexedPhotos} from './photo-index.mjs';
+import {indexedPhotos,enrichPinterest} from './photo-index.mjs';
 const root=new URL('../photo-data/',import.meta.url),subjects=JSON.parse(await readFile(new URL('subjects.json',root),'utf8'));
 const max=Math.max(1,Math.min(40,Number(process.env.PHOTO_SUBJECT_LIMIT)||3));
 const browserTried=new Set();let browser;
@@ -26,6 +26,7 @@ async function crawl(item,source,old){
  const direct=await retrievePhotos({...item,source,cursor:old?.nextCursor?decodeCursor(old.nextCursor):null});let images=direct.images||[],method='direct',status=direct.status,message=direct.message;
  if(!images.length){images=await browserPhotos(source,item);method='browser';}
  if(!images.length)try{images=await indexedPhotos(source,item,{first:old?.indexOffset||1});method='public-image-index';}catch(error){message+='; '+error.message;}
+ if(source==='pinterest'&&images.length){const pins=await enrichPinterest(images,item);if(pins.length){images=unique([...pins,...images]);method='public-pin-widget';}}
  if(images.length){status='ok';message=method==='public-image-index'?'三站公开图片经搜索索引发现':'从原站读取';}
  const combined=unique([...(old?.images||[]),...images]).slice(-120);
  console.log(JSON.stringify({subject:item.id,source,status,method,newImages:images.length,total:combined.length}));
