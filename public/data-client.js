@@ -67,18 +67,24 @@ export function commonsImages(data) {
   return Object.values(data?.query?.pages||{}).map(page=>{
     const info=page.imageinfo?.[0],meta=info?.extmetadata||{};
     if(!info)return null;const photographic=info.mime?/^image\/(jpeg|png|webp)$/.test(info.mime):/\.(jpe?g|png|webp)$/i.test(page.title||'');if(!photographic)return null;
-    let url=info.thumburl||info.url;try{const parsed=new URL(url);for(const key of [...parsed.searchParams.keys()])if(key.startsWith('utm_'))parsed.searchParams.delete(key);url=parsed.href;}catch{return null;}return {url,title:plainMetadata(page.title?.replace(/^File:/,'')),source:'Wikimedia Commons',author:plainMetadata(meta.Artist?.value),license:plainMetadata(meta.LicenseShortName?.value),pageUrl:info.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title)};
+    let url=info.url||info.thumburl;try{const parsed=new URL(url);for(const key of [...parsed.searchParams.keys()])if(key.startsWith('utm_'))parsed.searchParams.delete(key);url=parsed.href;}catch{return null;}return {url,thumbnail:info.thumburl||url,title:plainMetadata(page.title?.replace(/^File:/,'')),source:'Wikimedia Commons',author:plainMetadata(meta.Artist?.value),license:plainMetadata(meta.LicenseShortName?.value),pageUrl:info.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title)};
   }).filter(Boolean).filter(image=>/^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(image.url||''));
 }
-export async function fetchGallery(item,data={}, {signal}={}) {
-  const images=[];
-  if(item.image)images.push({url:item.image,title:item.kind==='character'?'饰演者肖像':'IMDb 主图',kind:['film','series'].includes(item.kind)?'海报':'肖像',source:item.source||'IMDb',author:'',license:'版权归原权利人',pageUrl:/^(tt|nm)\d+$/.test(item.id)?'https://www.imdb.com/'+(item.id.startsWith('nm')?'name':'title')+'/'+item.id+'/':''});
-  if(item.id?.startsWith('tt'))images.push({url:'https://images.metahub.space/background/medium/'+item.id+'/img',title:'作品背景图',kind:'背景图',source:'MetaHub · IMDb 作品标识关联',author:'',license:'版权归原权利人',pageUrl:'https://www.imdb.com/title/'+item.id+'/'});
+export async function fetchGallery(item,data={}, {signal,offset=0}={}) {
+  const images=[];let nextOffset=null,failed=false;
+  if(!offset){
+    if(item.image)images.push({url:item.image,title:item.kind==='character'?'饰演者肖像':'IMDb 主图',kind:['film','series'].includes(item.kind)?'海报':'肖像',source:item.source||'IMDb',license:'版权归原权利人',pageUrl:/^(tt|nm)\d+$/.test(item.id)?'https://www.imdb.com/'+(item.id.startsWith('nm')?'name':'title')+'/'+item.id+'/':''});
+    if(item.id?.startsWith('tt'))images.push({url:'https://images.metahub.space/background/medium/'+item.id+'/img',title:'作品背景图',kind:'背景图',source:'MetaHub · IMDb 作品标识关联',license:'版权归原权利人',pageUrl:'https://www.imdb.com/title/'+item.id+'/'});
+  }
   const wiki=data.item?.wikidata||item.wikidata;
   if(/^Q\d+$/.test(wiki||'')){
-    try{const params={action:'query',generator:'search',gsrsearch:'haswbstatement:P180='+wiki+' filetype:bitmap',gsrnamespace:'6',gsrlimit:'36',prop:'imageinfo',iiprop:'url|mime|extmetadata',iiurlwidth:'1100',format:'json',origin:'*'};const url='https://commons.wikimedia.org/w/api.php?'+new URLSearchParams(params);const response=await fetch(url,{signal:signal||AbortSignal.timeout(15000),credentials:'omit'});if(!response.ok)throw Error('Commons unavailable');const body=await response.json();images.push(...commonsImages(body));}catch(e){if(signal?.aborted)throw e;}
+    try{
+      const params={action:'query',generator:'search',gsrsearch:'haswbstatement:P180='+wiki+' filetype:bitmap',gsrnamespace:'6',gsrlimit:'12',gsroffset:String(offset),prop:'imageinfo',iiprop:'url|mime|extmetadata',iiurlwidth:'480',format:'json',origin:'*'};
+      const response=await fetch('https://commons.wikimedia.org/w/api.php?'+new URLSearchParams(params),{signal:signal||AbortSignal.timeout(15000),credentials:'omit'});
+      if(!response.ok)throw Error('Commons unavailable');const body=await response.json();if(body.error)throw Error('Commons unavailable');
+      images.push(...commonsImages(body));nextOffset=body.continue?.gsroffset??null;
+    }catch(e){if(signal?.aborted)throw e;failed=true;nextOffset=offset;}
   }
-  // Wikidata's explicit photographs remain useful when structured Commons search is unavailable.
-  for(const file of data.wikiImages||[]){const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=1100';if(!images.some(x=>decodeURIComponent(x.url).includes(file.replaceAll(' ','_'))))images.push({url,title:file,source:'Wikidata 指定配图',author:'',license:'授权见原图来源',pageUrl:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file)});}
-  const used=new Set();return {images:images.filter(image=>!used.has(image.url)&&used.add(image.url)).slice(0,44),fetchedAt:new Date().toISOString()};
+  if(!offset)for(const file of data.wikiImages||[]){const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=1100';if(!images.some(x=>decodeURIComponent(x.url).includes(file.replaceAll(' ','_'))))images.push({url,thumbnail:url.replace('width=1100','width=360'),title:file,source:'Wikidata 指定配图',license:'授权见原图来源',pageUrl:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file)});}
+  const used=new Set();return {images:images.filter(image=>!used.has(image.url)&&used.add(image.url)),nextOffset,failed,fetchedAt:new Date().toISOString()};
 }

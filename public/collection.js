@@ -13,15 +13,25 @@ export function cleanItem(value) {
   if (!kinds.includes(item.kind)) item.kind = 'film';
   if (item.wikidata && !/^Q\d+$/.test(item.wikidata)) delete item.wikidata;
   if (item.douban && !/^\d+$/.test(String(item.douban))) delete item.douban;
-  if (item.image && !/^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org|static\.tvmaze\.com|i\.ytimg\.com)\//.test(item.image)) item.image = '';
+  if (item.image && !/^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org|static\.tvmaze\.com|i\.ytimg\.com|i\.pinimg\.com|img\d*\.doubanio\.com)\//.test(item.image)) item.image = '';
   return item;
 }
 export function validImageUrl(value) {
-  return typeof value==='string' && /^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org|static\.tvmaze\.com|i\.ytimg\.com)\//.test(value) ? value.slice(0,2400) : '';
+  return typeof value==='string' && /^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org|static\.tvmaze\.com|i\.ytimg\.com|i\.pinimg\.com|img\d*\.doubanio\.com)\//.test(value) ? value.slice(0,2400) : '';
+}
+export function photoKey(value){
+ try{const url=new URL(value),host=url.hostname,path=decodeURIComponent(url.pathname);
+  if(/^(upload|thumb)\.wikimedia\.org$/.test(host)){const file=path.match(/\/[a-f0-9]\/[a-f0-9]{2}\/([^/]+)/i);if(file)return 'commons:'+file[1].replaceAll('_',' ');}
+  if(host==='commons.wikimedia.org'&&path.includes('Special:FilePath/'))return 'commons:'+path.split('Special:FilePath/')[1].replaceAll('_',' ');
+  if(host==='static.tvmaze.com')return host+path.replace(/\/(original_untouched|medium_portrait|medium_landscape)\//,'/');
+  if(host==='i.pinimg.com')return host+path.replace(/^\/[^/]+\//,'/');
+  if(host==='m.media-amazon.com')return host+path.replace(/\._V1_.*(?=\.(?:jpg|png))/i,'._V1_');
+  return value;
+ }catch{return value;}
 }
 export function cleanAlbum(input) {
   if(!Array.isArray(input))return [];
-  const used=new Set();return input.filter(image=>image&&validImageUrl(image.url)&&!used.has(image.url)&&used.add(image.url)).slice(0,60).map(image=>({url:validImageUrl(image.url),title:String(image.title||'相片').slice(0,200),kind:String(image.kind||'照片').slice(0,30),source:String(image.source||'').slice(0,100),author:String(image.author||'').slice(0,300),license:String(image.license||'').slice(0,150),pageUrl:typeof image.pageUrl==='string'&&/^https:\/\/(www\.imdb\.com|commons\.wikimedia\.org|en\.wikipedia\.org|www\.wikidata\.org|www\.tvmaze\.com|www\.youtube\.com|zh\.wikipedia\.org)\//.test(image.pageUrl)?image.pageUrl.slice(0,2400):''}));
+  const used=new Set();return input.filter(image=>image&&validImageUrl(image.url)&&!used.has(photoKey(image.url))&&used.add(photoKey(image.url))).slice(0,240).map(image=>({url:validImageUrl(image.url),thumbnail:validImageUrl(image.thumbnail)||'',title:String(image.title||'相片').slice(0,200),kind:String(image.kind||'照片').slice(0,30),source:String(image.source||'').slice(0,100),author:String(image.author||'').slice(0,300),license:String(image.license||'').slice(0,150),pageUrl:typeof image.pageUrl==='string'&&/^https:\/\/(www\.imdb\.com|commons\.wikimedia\.org|en\.wikipedia\.org|www\.wikidata\.org|www\.tvmaze\.com|www\.youtube\.com|zh\.wikipedia\.org|www\.pinterest\.com|movie\.douban\.com)\//.test(image.pageUrl)?image.pageUrl.slice(0,2400):''}));
 }
 export function cleanMemories(input) {
   if(!Array.isArray(input))return [];
