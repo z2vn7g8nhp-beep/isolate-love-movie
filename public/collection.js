@@ -13,8 +13,25 @@ export function cleanItem(value) {
   if (!kinds.includes(item.kind)) item.kind = 'film';
   if (item.wikidata && !/^Q\d+$/.test(item.wikidata)) delete item.wikidata;
   if (item.douban && !/^\d+$/.test(String(item.douban))) delete item.douban;
-  if (item.image && !/^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org)\//.test(item.image)) item.image = '';
+  if (item.image && !/^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org)\//.test(item.image)) item.image = '';
   return item;
+}
+export function validImageUrl(value) {
+  return typeof value==='string' && /^https:\/\/(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org)\//.test(value) ? value.slice(0,2400) : '';
+}
+export function cleanAlbum(input) {
+  if(!Array.isArray(input))return [];
+  const used=new Set();return input.filter(image=>image&&validImageUrl(image.url)&&!used.has(image.url)&&used.add(image.url)).slice(0,36).map(image=>({url:validImageUrl(image.url),title:String(image.title||'相片').slice(0,200),source:String(image.source||'').slice(0,100),author:String(image.author||'').slice(0,300),license:String(image.license||'').slice(0,150),pageUrl:typeof image.pageUrl==='string'&&/^https:\/\/(www\.imdb\.com|commons\.wikimedia\.org|en\.wikipedia\.org|www\.wikidata\.org)\//.test(image.pageUrl)?image.pageUrl.slice(0,2400):''}));
+}
+export function cleanMemories(input) {
+  if(!Array.isArray(input))return [];
+  const used=new Set();return input.filter(memory=>memory&&typeof memory.id==='string'&&/^[a-zA-Z0-9-]{1,80}$/.test(memory.id)&&!used.has(memory.id)&&used.add(memory.id)&&/^\d{4}-\d{2}-\d{2}$/.test(memory.date||'')).slice(0,150).map(memory=>({id:memory.id,date:memory.date,mood:String(memory.mood||'').slice(0,24),note:String(memory.note||'').slice(0,3000)}));
+}
+export function nextAnniversary(date, now=new Date()) {
+  if(!/^\d{4}-\d{2}-\d{2}/.test(date||''))return null;
+  const month=Number(date.slice(5,7))-1,day=Number(date.slice(8,10));
+  const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  for(let offset=0;offset<9;offset++){const target=new Date(today.getFullYear()+offset,month,day);if(target.getMonth()!==month||target.getDate()!==day||target<today)continue;return {date:target,days:Math.round((Date.UTC(target.getFullYear(),target.getMonth(),target.getDate())-Date.UTC(today.getFullYear(),today.getMonth(),today.getDate()))/86400000)};}return null;
 }
 export function cleanTags(input) {
   const tags = Array.isArray(input) ? input : String(input || '').split(/[,，;；\n]/);
@@ -32,6 +49,7 @@ export function normaliseRecords(input) {
       rating:Math.max(0,Math.min(10,Number(value.rating)||0)), date:/^\d{4}-\d{2}-\d{2}$/.test(value.date||'')?value.date:'',
       note:String(value.note||'').slice(0,10000), tags:cleanTags(value.tags), updatedAt,
       serial:Number.isSafeInteger(value.serial)&&value.serial>0?value.serial:null,
+      nickname:String(value.nickname||'').slice(0,80), quote:String(value.quote||'').slice(0,600), album:cleanAlbum(value.album), coverImage:validImageUrl(value.coverImage), memories:cleanMemories(value.memories),
       addedAt:value.addedAt&&!isNaN(Date.parse(value.addedAt))?new Date(value.addedAt).toISOString():null};
     if (typeof value.collected === 'boolean') record.collected = value.collected;
     result[id] = record;

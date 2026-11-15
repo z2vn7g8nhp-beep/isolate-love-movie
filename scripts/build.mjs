@@ -18,7 +18,7 @@ await writeFile(new URL('app.js', output), app);
 // Give changed UI assets new URLs so existing installations see each update.
 let html = await readFile(new URL('index.html', output), 'utf8');
 const version = createHash('sha256');
-for (const file of ['style.css', 'app.js', 'reading.js', 'collection.js', 'data-client.js']) {
+for (const file of ['style.css', 'app.js', 'reading.js', 'collection.js', 'data-client.js', 'icon.svg', 'manifest.webmanifest']) {
   const contents = await readFile(new URL(file, output));
   const hash = createHash('sha256').update(contents).digest('hex').slice(0, 12);
   version.update(contents);

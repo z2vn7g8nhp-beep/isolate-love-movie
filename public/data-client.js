@@ -10,7 +10,7 @@ async function wikiRequest(params,signal){const url=new URL(WikiOrigin);url.sear
 async function wikiSearch(query,signal){const d=await wikiRequest({action:'wbsearchentities',search:query,language:/[\u3400-\u9fff]/.test(query)?'zh':'en',uselang:'zh',limit:'6'},signal);return d.search||[];}
 const claim=(e,p)=>e?.claims?.[p]?.[0]?.mainsnak?.datavalue?.value;
 export function wikiFields(entity){const zh=entity.labels?.['zh-cn']?.value||entity.labels?.zh?.value;const douban=claim(entity,'P4529')||claim(entity,'P5284');return {wikidata:entity.id,...(zh?{zh}:{}),...(douban?{douban}:{} )};}
-async function entities(ids,signal){if(!ids.length)return[];const d=await wikiRequest({action:'wbgetentities',ids:ids.join('|'),props:'labels|claims|descriptions',languages:'zh-cn|zh|en|mul'},signal);return Object.values(d.entities||{});}
+async function entities(ids,signal){if(!ids.length)return[];const d=await wikiRequest({action:'wbgetentities',ids:ids.join('|'),props:'labels|claims|descriptions|sitelinks',sitefilter:'enwiki',languages:'zh-cn|zh|en|mul'},signal);return Object.values(d.entities||{});}
 export async function search(query,type='all',{signal}={}){const q=query.trim();if(!q||q.length>150)throw Error('请输入不超过 150 字的关键词');const chinese=/[\u3400-\u9fff]/.test(q);let items=[],source='IMDb',warning;
 if(!chinese)try{items=await imdbSearch(q,{signal});}catch(e){if(signal?.aborted)throw e;warning='IMDb 暂不可用，尝试 Wikidata 关联';}
 if(chinese||!items.length){try{const results=await wikiSearch(q,signal),es=await entities(results.map(x=>x.id),signal);const linked=es.filter(e=>/^(tt|nm)\d+$/.test(claim(e,'P345')||''));const fetched=await Promise.allSettled(linked.slice(0,5).map(async e=>{const id=claim(e,'P345');const matches=await imdbSearch(id,{signal});const item=matches.find(x=>x.id===id);return item?{...item,...wikiFields(e)}:null;}));for(const r of fetched)if(r.status==='fulfilled'&&r.value){const index=items.findIndex(x=>x.id===r.value.id);if(index>=0)items[index]={...items[index],...r.value};else items.push(r.value);}source='IMDb + Wikidata';if(!items.length&&linked.length)warning='IMDb 暂不可用，请稍后重试';else if(items.length)warning=undefined;}catch(e){if(signal?.aborted)throw e;warning=items.length?'Wikidata 暂不可用，显示 IMDb 结果':'数据源暂不可用，请稍后重试';}}
@@ -32,15 +32,15 @@ export function describeEntity(entity,lookup={}) {
   const facts=[];
   const add=(key,value)=>{if(Array.isArray(value)&&!value.length)return;if(value)facts.push({label:key,value:Array.isArray(value)?value.join(' · '):String(value)});};
   const person=values(entity,'P31').some(x=>x.id==='Q5');
-  if(person){add('出生日期',wikiDate(values(entity,'P569')[0]));add('出生地',labels('P19'));add('国籍',labels('P27'));add('职业',labels('P106'));}
-  else {add('上映 / 首播',unique(values(entity,'P577').map(wikiDate)).slice(0,4));const duration=values(entity,'P2047')[0];if(duration?.amount){const amount=Number(duration.amount);if(duration.unit?.endsWith('/Q7727'))add('片长',`${amount} 分钟`);else if(duration.unit?.endsWith('/Q11574'))add('片长',`${Math.round(amount/60)} 分钟`);}add('类型',labels('P136'));add('制作国家 / 地区',labels('P495'));add('原始语言',labels('P364'));add('集数',values(entity,'P1113')[0]?.amount?.replace(/^\+/,''));add('季数',values(entity,'P2437')[0]?.amount?.replace(/^\+/,''));}
+  if(person){add('出生日期',wikiDate(values(entity,'P569')[0]));add('出生地',labels('P19'));add('国籍',labels('P27'));add('职业',labels('P106'));add('出生姓名',values(entity,'P1477')[0]?.text);add('使用语言',labels('P1412'));add('教育经历',labels('P69'));const height=values(entity,'P2048')[0];if(height?.amount){if(height.unit?.endsWith('/Q174728'))add('身高',Number(height.amount)+' 厘米');else if(height.unit?.endsWith('/Q11573'))add('身高',Number(height.amount)+' 米');}}
+  else {add('上映 / 首播',unique(values(entity,'P577').map(wikiDate)).slice(0,4));const duration=values(entity,'P2047')[0];if(duration?.amount){const amount=Number(duration.amount);if(duration.unit?.endsWith('/Q7727'))add('片长',`${amount} 分钟`);else if(duration.unit?.endsWith('/Q11574'))add('片长',`${Math.round(amount/60)} 分钟`);}add('类型',labels('P136'));add('制作国家 / 地区',labels('P495'));add('原始语言',labels('P364'));add('集数',values(entity,'P1113')[0]?.amount?.replace(/^\+/,''));add('季数',values(entity,'P2437')[0]?.amount?.replace(/^\+/,''));add('系列',labels('P179'));add('改编自',labels('P144'));}
   const credits=[];
-  for(const [property,role] of person?[['P800','代表作品']]:[['P57','导演'],['P58','编剧'],['P161','演员'],['P86','配乐']]) {
+  for(const [property,role] of person?[['P800','代表作品']]:[['P57','导演'],['P58','编剧'],['P161','演员'],['P86','配乐'],['P344','摄影'],['P1040','剪辑'],['P162','制片人']]) {
     for(const value of values(entity,property).slice(0,16)) {const e=lookup[entityId(value)];if(!e)continue;const title=e.labels?.en?.value||e.labels?.mul?.value||label(e.id);const zh=e.labels?.['zh-cn']?.value||e.labels?.zh?.value||'';const imdb=claim(e,'P345');const img=claim(e,'P18');credits.push({title,zh,role,wikidata:e.id,...(/^(tt|nm)\d+$/.test(imdb||'')?{id:imdb,kind:imdb.startsWith('nm')?'person':'film'}:{}),...(typeof img==='string'?{image:'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(img)+'?width=500'}:{})});}
   }
   const awards=labels('P166').slice(0,8);if(awards.length)add('获奖记录',awards);
   const description=entity.descriptions?.['zh-cn']?.value||entity.descriptions?.zh?.value||entity.descriptions?.en?.value||'';
-  return {facts,credits,description};
+  return {facts,credits,description,birthday:person?wikiDate(values(entity,'P569')[0]):''};
 }
 export async function dossier(id,title,{wikidata,signal}={}) {
   if(!/^(tt|nm)\d+$/.test(id))throw Error('IMDb 标识无效');
@@ -49,13 +49,36 @@ export async function dossier(id,title,{wikidata,signal}={}) {
   let entity=candidates.find(x=>claim(x,'P345')===id);
   if(!entity){const found=await wikiSearch(title||id,signal);candidates=await entities(found.map(x=>x.id),signal);entity=candidates.find(x=>claim(x,'P345')===id);}
   if(!entity)return {item:{},facts:[],credits:[],warning:'没有找到可核对的辅助档案。可继续记录你的收藏信息。',fetchedAt:new Date().toISOString()};
-  const props=['P19','P27','P106','P136','P495','P364','P57','P58','P161','P86','P800','P166'];
+  const props=['P19','P27','P106','P136','P495','P364','P57','P58','P161','P86','P800','P166','P1412','P69','P179','P144','P344','P1040','P162'];
   const ids=unique(props.flatMap(prop=>values(entity,prop).slice(0,16).map(entityId))).slice(0,90),lookup={};
   for(let offset=0;offset<ids.length;offset+=40){const batch=await entities(ids.slice(offset,offset+40),signal);for(const e of batch)lookup[e.id]=e;}
-  return {item:wikiFields(entity),...describeEntity(entity,lookup),fetchedAt:new Date().toISOString(),source:'Wikidata',sourceUrl:'https://www.wikidata.org/wiki/'+entity.id};
+  return {version:3,item:wikiFields(entity),...describeEntity(entity,lookup),wikiImages:values(entity,'P18').filter(x=>typeof x==='string').slice(0,6),wikiArticle:entity.sitelinks?.enwiki?.title||'',fetchedAt:new Date().toISOString(),source:'Wikidata',sourceUrl:'https://www.wikidata.org/wiki/'+entity.id};
 }
 export async function refreshOwned(items,{signal}={}) {
   const results=[];let failed=0;
   for(let offset=0;offset<items.length;offset+=3){const batch=await Promise.allSettled(items.slice(offset,offset+3).map(async item=>{if(!/^(tt|nm)\d+$/.test(item.id))return item;const found=await imdbSearch(item.id,{signal});return found.find(x=>x.id===item.id)||item;}));for(const result of batch)if(result.status==='fulfilled')results.push(result.value);else failed++;}
   return {items:results,failed,fetchedAt:new Date().toISOString()};
+}
+
+export function plainMetadata(value) {
+  return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/\s+/g,' ').trim().slice(0,500);
+}
+export function commonsImages(data) {
+  return Object.values(data?.query?.pages||{}).map(page=>{
+    const info=page.imageinfo?.[0],meta=info?.extmetadata||{};
+    if(!info)return null;const photographic=info.mime?/^image\/(jpeg|png|webp)$/.test(info.mime):/\.(jpe?g|png|webp)$/i.test(page.title||'');if(!photographic)return null;
+    let url=info.thumburl||info.url;try{const parsed=new URL(url);for(const key of [...parsed.searchParams.keys()])if(key.startsWith('utm_'))parsed.searchParams.delete(key);url=parsed.href;}catch{return null;}return {url,title:plainMetadata(page.title?.replace(/^File:/,'')),source:'Wikimedia Commons',author:plainMetadata(meta.Artist?.value),license:plainMetadata(meta.LicenseShortName?.value),pageUrl:info.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title)};
+  }).filter(Boolean).filter(image=>/^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(image.url||''));
+}
+export async function fetchGallery(item,data={}, {signal}={}) {
+  const images=[];
+  if(item.image)images.push({url:item.image,title:item.kind==='character'?'饰演者肖像':'IMDb 主图',source:item.source||'IMDb',author:'',license:'版权归原权利人',pageUrl:/^(tt|nm)\d+$/.test(item.id)?'https://www.imdb.com/'+(item.id.startsWith('nm')?'name':'title')+'/'+item.id+'/':''});
+  if(item.id?.startsWith('tt'))images.push({url:'https://images.metahub.space/background/medium/'+item.id+'/img',title:'作品背景图',source:'MetaHub · IMDb 作品标识关联',author:'',license:'版权归原权利人',pageUrl:'https://www.imdb.com/title/'+item.id+'/'});
+  const wiki=data.item?.wikidata||item.wikidata;
+  if(/^Q\d+$/.test(wiki||'')){
+    try{const params={action:'query',generator:'search',gsrsearch:'haswbstatement:P180='+wiki+' filetype:bitmap',gsrnamespace:'6',gsrlimit:'10',prop:'imageinfo',iiprop:'url|mime|extmetadata',iiurlwidth:'1100',format:'json',origin:'*'};const url='https://commons.wikimedia.org/w/api.php?'+new URLSearchParams(params);const response=await fetch(url,{signal:signal||AbortSignal.timeout(15000),credentials:'omit'});if(!response.ok)throw Error('Commons unavailable');const body=await response.json();images.push(...commonsImages(body));}catch(e){if(signal?.aborted)throw e;}
+  }
+  // Wikidata's explicit photographs remain useful when structured Commons search is unavailable.
+  for(const file of data.wikiImages||[]){const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=1100';if(!images.some(x=>decodeURIComponent(x.url).includes(file.replaceAll(' ','_'))))images.push({url,title:file,source:'Wikidata 指定配图',author:'',license:'授权见原图来源',pageUrl:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file)});}
+  const used=new Set();return {images:images.filter(image=>!used.has(image.url)&&used.add(image.url)).slice(0,16),fetchedAt:new Date().toISOString()};
 }
