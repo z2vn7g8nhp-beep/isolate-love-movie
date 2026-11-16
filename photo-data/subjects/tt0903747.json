@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMmU0NjJkNzUtZjgwNS00ODEyLTlkNTctMTNiNDU0ODA3OTliXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UX500_CR0,47,500,281_.jpg",
@@ -1037,8 +1039,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T20:35:27.435Z",
-      "checkedAt": "2026-11-16T20:35:27.435Z"
+      "updatedAt": "2026-11-16T21:32:16.215Z",
+      "checkedAt": "2026-11-16T21:32:16.215Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1049,7 +1051,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T20:35:30.735Z"
+      "checkedAt": "2026-11-16T21:32:19.037Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1846,11 +1848,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/6f/e3/02/6fe3029be6e536048fabe5d473ee0eae.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/6f/e3/02/6fe3029be6e536048fabe5d473ee0eae.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-16T20:35:33.612Z",
-      "checkedAt": "2026-11-16T20:35:33.612Z"
+      "updatedAt": "2026-11-16T21:32:22.006Z",
+      "checkedAt": "2026-11-16T21:32:22.006Z"
     }
   },
-  "checkedAt": "2026-11-16T20:35:33.614Z"
+  "checkedAt": "2026-11-16T21:32:22.008Z"
 }
