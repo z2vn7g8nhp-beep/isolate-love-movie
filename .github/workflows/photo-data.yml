@@ -44,9 +44,9 @@ jobs:
           path: photo-data/
       - name: Save independent public metadata
         run: |
-          git pull --rebase --autostash
           git config user.name 'isolate-photo-data'
           git config user.email 'isolate-photo-data@users.noreply.github.com'
+          git pull --rebase --autostash
           git add photo-data/
           if ! git diff --cached --quiet; then
             git commit -m "Refresh public photo metadata"
