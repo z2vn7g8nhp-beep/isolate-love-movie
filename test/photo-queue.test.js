@@ -29,6 +29,27 @@ test('queue remains pending until an authenticated collector publishes a result'
  assert.deepEqual(await(await call(env,'internal/pending',{token:'server-key'})).json(),{items:[]});
  assert.equal((await call(env,'internal/results',{method:'POST',token,body:{items:[{id:'nm3641002',status:'done'}]}})).status,401);
 });
+test('real queue position and collector stages are public while repeated heartbeats keep one attempt',async()=>{
+ const env={BUCKET:new Bucket(),CRAWL_KEY:'server-key'},token=(await(await call(env,'api/session',{method:'POST'})).json()).token;
+ await call(env,'api/requests',{method:'POST',token,body:{id:'nm10514458'}});const queued=await(await call(env,'api/requests',{method:'POST',token,body:{id:'tt1234567'}})).json();assert.equal(queued.queueAhead,1);
+ await call(env,'internal/pending',{token:'server-key'});
+ const report=async patch=>{const response=await call(env,'internal/results',{method:'POST',token:'server-key',body:{items:[{id:'tt1234567',status:'processing',runId:'12345',...patch}]}});assert.equal(response.status,200);};
+ await report({stage:'preparing'});const started=await(await env.BUCKET.get('requests/tt1234567')).json();
+ for(let n=0;n<4;n++)await report({stage:'collecting',source:'imdb',sourceStatus:'fetching'});
+ await report({stage:'collecting',source:'imdb',sourceStatus:'ok',total:3,newImages:2});await report({stage:'publishing',summary:{total:3,added:2},dataCheckedAt:'2026-11-16T12:00:00Z'});
+ const row=await(await env.BUCKET.get('requests/tt1234567')).json();assert.equal(row.startedAt,started.startedAt);assert.equal(row.attempts,1);
+ const progress=await(await call(env,'api/status',{method:'POST',token,body:{id:'tt1234567'}})).json();assert.equal(progress.stage,'publishing');assert.equal(progress.sources.imdb.newImages,2);assert.equal(progress.summary.added,2);assert.equal(progress.runId,undefined);assert.doesNotMatch(JSON.stringify(progress),/server-key/);
+ await report({status:'done'});await report({stage:'collecting',source:'imdb',sourceStatus:'fetching'});assert.equal((await(await call(env,'api/status',{method:'POST',token,body:{id:'tt1234567'}})).json()).status,'done');
+ const waiting=await(await call(env,'api/status',{method:'POST',token,body:{id:'nm10514458'}})).json();assert.ok(waiting.lastCollectorAt);assert.equal(waiting.queueAhead,0);
+});
+test('progress feedback rejects private fields and invalid source or counts before changing any task',async()=>{
+ const env={BUCKET:new Bucket(),CRAWL_KEY:'server-key'},token=(await(await call(env,'api/session',{method:'POST'})).json()).token;
+ await call(env,'api/requests',{method:'POST',token,body:{id:'nm10514458'}});
+ for(const patch of [{note:'PRIVATE'},{source:'other'},{source:'imdb',newImages:-1},{summary:{total:1,added:2}},{summary:{total:1,added:0,note:'PRIVATE'}}]){
+  const response=await call(env,'internal/results',{method:'POST',token:'server-key',body:{items:[{id:'nm10514458',status:'processing',...patch}]}});assert.equal(response.status,400);
+ }
+ const state=await(await call(env,'api/status',{method:'POST',token,body:{id:'nm10514458'}})).json();assert.equal(state.status,'queued');assert.doesNotMatch(JSON.stringify([...env.BUCKET.data]),/PRIVATE/);
+});
 test('in-app client silently creates one local queue session and sends only one public ID',async()=>{
  const data=new Map(),storage={getItem:key=>data.get(key),setItem:(key,value)=>data.set(key,value),removeItem:key=>data.delete(key)},env={BUCKET:new Bucket(),CRAWL_KEY:'key'},requests=[];
  const fetcher=async(url,options)=>{requests.push({url,options});return queue.fetch(new Request(url,{...options,headers:{...options.headers,Origin:origin}}),env);};

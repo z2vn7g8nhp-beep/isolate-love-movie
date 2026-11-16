@@ -29,5 +29,5 @@ export async function fetchPhotoSource(item,{source,cursor,signal,knownImages,ba
  const offset=knownImages?0:Number(String(cursor||'').match(/^data:(\d+)$/)?.[1]||0),unseen=knownImages?images.filter(image=>!known.has(photoKey(image.url))):images;
  const page=unseen.slice(offset,offset+12),next=offset+12<unseen.length?'data:'+(offset+12):null;
  const complete=record.previewLimit&&images.length>=record.previewLimit;
- return {source,registered:true,status:page.length?'ok':images.length?(complete?'complete':'empty'):record.status||'unavailable',images:page,nextCursor:next,method:record.method||'direct',updatedAt:record.updatedAt||null,checkedAt:record.checkedAt||data.checkedAt,message:page.length?'读取已抓取的公开图库':complete?'已读完 '+images.length+' 张预览，更多可查看原站':images.length?'本批图片已读完，后台更新后可继续':record.message||'来源暂不可用'};
+ return {source,registered:true,status:page.length?'ok':images.length?(complete?'complete':'empty'):record.status||'unavailable',images:page,nextCursor:next,method:record.method||'direct',updatedAt:record.updatedAt||null,checkedAt:record.checkedAt||data.checkedAt,datasetAt:data.checkedAt||null,message:page.length?'读取已抓取的公开图库':complete?'已读完 '+images.length+' 张预览，更多可查看原站':images.length?'本批图片已读完，后台更新后可继续':record.message||'来源暂不可用'};
 }

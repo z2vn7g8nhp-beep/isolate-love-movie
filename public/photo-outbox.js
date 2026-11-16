@@ -15,7 +15,7 @@ export function deferPhotoTask(task,error,now=Date.now()){
 }
 export function photoTaskDelay(tasks,now=Date.now()){
  let delay=Infinity;for(const task of Object.values(tasks||{})){
-  if(['queued','processing'].includes(task.status))delay=Math.min(delay,20000);
+  if(['queued','processing','syncing','ready'].includes(task.status))delay=Math.min(delay,20000);
   if(task.status==='waiting-network')delay=Math.min(delay,Math.max(1000,(task.retryAt||now)-now));
  }return Number.isFinite(delay)?delay:null;
 }
