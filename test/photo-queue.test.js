@@ -36,8 +36,28 @@ test('in-app client silently creates one local queue session and sends only one 
  assert.equal((await requestPhotoTask('nm3641002',options)).status,'queued');
  assert.equal((await requestPhotoTask('nm3641002',{...options,readOnly:true})).status,'queued');
  assert.equal(requests.filter(row=>row.url.endsWith('/api/session')).length,1);
- assert.equal(requests.find(row=>row.url.endsWith('/api/requests')).options.body,'{"id":"nm3641002"}');
+ const sent=requests.find(row=>row.url.endsWith('/api/requests'));assert.deepEqual(Object.keys(JSON.parse(sent.options.body)).sort(),['id','session']);assert.equal(JSON.parse(sent.options.body).id,'nm3641002');assert.equal(JSON.parse(sent.options.body).session.length,64);
+ for(const row of requests){assert.equal(row.options.method,'POST');assert.equal(Object.keys(row.options.headers||{}).some(name=>name.toLowerCase()==='authorization'),false);if(row.options.headers)assert.match(row.options.headers['Content-Type'],/^text\/plain/);assert.equal(new URL(row.url).search,'');}
+ assert.ok(requests.some(row=>row.url.endsWith('/api/status')));
  assert.equal(requests.some(row=>row.url.includes('github.com')),false);assert.equal(requests.every(row=>row.options.credentials==='omit'),true);
+});
+
+test('mobile network failures are translated and can be retried without losing the public ID',async()=>{
+ await assert.rejects(requestPhotoTask('nm10514458',{baseUrl:'https://offline.example/',storage:{getItem:()=>null},fetcher:async()=>{throw TypeError('Load failed');}}),error=>error.code==='network'&&error.retryable&&!/Load failed/.test(error.message));
+});
+
+test('a temporary connection failure can recover and unavailable browser storage does not recreate sessions',async()=>{
+ const env={BUCKET:new Bucket()},options={baseUrl:'https://recovery.example/',storage:{getItem(){throw Error('Storage unavailable');},setItem(){throw Error('Storage unavailable');},removeItem(){}}};let offline=true,sessions=0;
+ const fetcher=async(url,request)=>{if(offline)throw TypeError('Load failed');if(url.endsWith('/api/session'))sessions++;return queue.fetch(new Request(url,{...request,headers:{...request.headers,Origin:origin}}),env);};
+ await assert.rejects(requestPhotoTask('nm10514458',{...options,fetcher}),error=>error.retryable);offline=false;
+ assert.equal((await requestPhotoTask('nm10514458',{...options,fetcher})).status,'queued');assert.equal((await requestPhotoTask('nm10514458',{...options,fetcher,readOnly:true})).status,'queued');assert.equal(sessions,1);
+});
+
+test('plain-text authenticated transport preserves origin checks and rejects private fields',async()=>{
+ const env={BUCKET:new Bucket()},token=(await(await call(env,'api/session',{method:'POST'})).json()).token;
+ const simple=body=>queue.fetch(new Request('https://queue.example/api/requests',{method:'POST',headers:{Origin:origin,'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(body)}),env);
+ assert.equal((await simple({id:'nm10514458',session:token,note:'PRIVATE'})).status,400);assert.equal((await simple({id:'nm10514458',session:token})).status,202);
+ assert.equal((await simple({id:'nm10514458',session:'0'.repeat(64)})).status,401);assert.doesNotMatch(JSON.stringify([...env.BUCKET.data]),/PRIVATE/);
 });
 
 test('collector identity requires a valid GitHub signature, this repository, workflow, audience and main branch',async()=>{

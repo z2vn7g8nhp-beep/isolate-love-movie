@@ -1,5 +1,5 @@
 const CACHE='isolate-pages-v2';
-const FILES=['./','./index.html','./style.css','./app.js','./reading.js','./data-client.js','./collection.js','./visual-data.js','./image-tools.js','./photo-client.js','./photo-queue-client.js','./catalog.json','./icon.svg','./manifest.webmanifest'];
+const FILES=['./','./index.html','./style.css','./app.js','./reading.js','./data-client.js','./collection.js','./visual-data.js','./image-tools.js','./photo-client.js','./photo-queue-client.js','./photo-outbox.js','./catalog.json','./icon.svg','./manifest.webmanifest'];
 const IMAGE_CACHE='isolate-images-v1', OPAQUE_CACHE='isolate-images-opaque-v1';
 const IMAGE_HOST=/^(m\.media-amazon\.com|images\.metahub\.space|commons\.wikimedia\.org|upload\.wikimedia\.org|thumb\.wikimedia\.org|static\.tvmaze\.com|i\.ytimg\.com|i\.pinimg\.com|img\d*\.doubanio\.com)$/;
 const imagePending=new Map(), imageQueue=[];let imageRunning=0;
