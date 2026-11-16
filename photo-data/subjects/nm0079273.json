@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTM1NTgwODI0NF5BMl5BanBnXkFtZTcwNTg0NjgzNA@@._V1_.jpg",
@@ -99,11 +97,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T16:28:32.028Z",
-      "checkedAt": "2026-11-16T16:28:32.028Z"
+      "updatedAt": "2026-11-16T17:45:48.017Z",
+      "checkedAt": "2026-11-16T17:45:48.017Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0IjoxNDR9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0IjoxNTZ9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
@@ -591,8 +589,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm0079273/58a5713edbf7f773cc65455b.webp"
         }
       ],
-      "updatedAt": "2026-11-16T16:28:32.511Z",
-      "checkedAt": "2026-11-16T16:28:32.511Z",
+      "updatedAt": "2026-11-16T17:45:48.515Z",
+      "checkedAt": "2026-11-16T17:45:48.515Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -828,11 +826,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/6b/b5/c7/6bb5c76fe354066f6669973eced26920.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/6b/b5/c7/6bb5c76fe354066f6669973eced26920.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
         }
       ],
-      "updatedAt": "2026-11-16T16:28:35.666Z",
-      "checkedAt": "2026-11-16T16:28:35.666Z"
+      "updatedAt": "2026-11-16T17:45:51.502Z",
+      "checkedAt": "2026-11-16T17:45:51.502Z"
     }
   },
-  "checkedAt": "2026-11-16T16:28:35.667Z"
+  "checkedAt": "2026-11-16T17:45:51.503Z"
 }
