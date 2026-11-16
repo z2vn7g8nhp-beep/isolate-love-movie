@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -39,24 +37,24 @@
           "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-16T14:41:34.536Z",
-      "checkedAt": "2026-11-16T14:41:34.536Z"
+      "updatedAt": "2026-11-16T15:05:31.108Z",
+      "checkedAt": "2026-11-16T15:05:31.108Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T14:41:48.012Z",
+      "checkedAt": "2026-11-16T15:05:37.921Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "Pinterest",
       "status": "ok",
       "message": "从 Pinterest 官方公开组件读取",
@@ -81,9 +79,9 @@
           "pageUrl": "https://www.pinterest.com/pin/417005246768665738/"
         }
       ],
-      "updatedAt": "2026-11-16T14:41:51.295Z",
-      "checkedAt": "2026-11-16T14:41:51.295Z"
+      "updatedAt": "2026-11-16T15:05:41.052Z",
+      "checkedAt": "2026-11-16T15:05:41.052Z"
     }
   },
-  "checkedAt": "2026-11-16T14:41:51.295Z"
+  "checkedAt": "2026-11-16T15:05:41.052Z"
 }
