@@ -18,7 +18,7 @@ https://z2vn7g8nhp-beep.github.io/isolate-love-movie/
 - 新增收藏时自动检查图库，未建库则在后台提交一个公开 IMDb 编号；相册里的「更多」读完现有图片后，也可直接排队补图。无需跳转、表单或 GitHub 访问令牌。进度留在相册里，完成后自动重新读取图片。旧的 GitHub Issue 工作流仅保留兼容性，界面不再提供该入口。
 - 独立队列只接受 `{id}`，拒绝额外字段；不会接收收藏列表、私人称呼、评分或笔记。角色只使用关联的作品或演员编号。编号及采集后的公开图片仍会进入公开数据目录。
 - 队列给浏览器分配有期限、仅能使用补图队列的匿名会话，保存在本机独立存储项中。它不是 GitHub 凭据，不进入藏柜备份。来源校验、单设备／全局限额、同一编号去重以及队列状态查询均在接口处理。采集入口只接受此仓库 `main` 上指定工作流的 GitHub OIDC 短期签名身份，网页与接口均无需保存 GitHub 令牌。
-- `.github/workflows/photo-queue.yml` 每 5 分钟检查一次队列，每批最多 8 个公开条目；空队列不安装采集器、不构建、不发布。GitHub 调度可能延迟，因此排队不等于即时采集。新接口默认保持 owner-only，须在明确授权开放接口后再合并启用对应网页；网站本身继续托管在原 GitHub Pages 地址。
+- `.github/workflows/photo-queue.yml` 每 5 分钟检查一次队列，每批最多 8 个公开条目；空队列不安装采集器、不构建、不发布。GitHub 调度可能延迟，因此排队不等于即时采集。独立接口已获明确授权开放，供原网页匿名提交公开编号；网站本身继续托管在原 GitHub Pages 地址。
 - 当前 GitHub 连接不具备创建仓库的权限，所以先使用 ISOLATE 本项目内的独立数据目录。后续可拆到单独的数据仓库，调整发布路径及 `PHOTO_DATA_BASE` 即可。不接入或复用其他项目。
 
 `server/photo-api.mjs` 提供独立来源读取和本地开发适配；`scripts/photo-crawl.mjs` 运行抓取任务；`scripts/photo-index.mjs` 发现并验证公开图片索引；`scripts/photo-request.mjs` 只核对并登记公开 IMDb 标识；`public/photo-client.js` 读取静态数据；旧请求链接仅保留兼容性。接口契约测试与实际 GitHub Runner 抓取验证分开记录，不把任务结束视为每站抓取成功。
