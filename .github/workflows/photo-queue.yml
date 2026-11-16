@@ -46,14 +46,7 @@ jobs:
         if: steps.queue.outputs.has_requests == 'true'
         run: |
           npm test
-          git config user.name 'isolate-photo-data'
-          git config user.email 'isolate-photo-data@users.noreply.github.com'
-          git pull --rebase --autostash
-          git add photo-data/
-          if ! git diff --cached --quiet; then
-            git commit -m "Process in-app public photo requests"
-            git push
-          fi
+          node scripts/photo-data-sync.mjs "Process in-app public photo requests"
           npm run build
       - uses: actions/configure-pages@v5
         if: steps.queue.outputs.has_requests == 'true'

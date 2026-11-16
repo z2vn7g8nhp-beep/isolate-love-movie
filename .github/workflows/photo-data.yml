@@ -49,15 +49,7 @@ jobs:
             photo-data/subjects/*.json
           retention-days: 1
       - name: Save independent public metadata
-        run: |
-          git config user.name 'isolate-photo-data'
-          git config user.email 'isolate-photo-data@users.noreply.github.com'
-          git pull --rebase --autostash
-          git add photo-data/
-          if ! git diff --cached --quiet; then
-            git commit -m "Refresh public photo metadata"
-            git push
-          fi
+        run: node scripts/photo-data-sync.mjs "Refresh public photo metadata"
       - name: Build updated data and app
         if: github.ref == 'refs/heads/main'
         run: npm run build

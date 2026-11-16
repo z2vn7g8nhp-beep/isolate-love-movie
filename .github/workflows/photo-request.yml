@@ -51,15 +51,7 @@ jobs:
           npm test
           npm run build
       - name: Save public metadata
-        run: |
-          git config user.name 'isolate-photo-data'
-          git config user.email 'isolate-photo-data@users.noreply.github.com'
-          git pull --rebase --autostash
-          git add photo-data/
-          if ! git diff --cached --quiet; then
-            git commit -m "Build requested public photo archive"
-            git push
-          fi
+        run: node scripts/photo-data-sync.mjs "Build requested public photo archive"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
