@@ -56,11 +56,26 @@ export function parseDoubanHtml(html,subject){
 async function resolveDouban(subject,signal){
  if(subject.douban)return subject.douban;
  if(!subject.id)throw new SourceError('尚未核对到对应豆瓣档案','unmatched');
- const suggestions=await read('https://movie.douban.com/j/subject_suggest?q='+encodeURIComponent(subject.kind==='character'&&subject.work?subject.work:subject.title),{signal,json:true});
- for(const candidate of (Array.isArray(suggestions)?suggestions:[]).slice(0,3)){if(!/^\d+$/.test(candidate.id||''))continue;const html=await read('https://movie.douban.com/subject/'+candidate.id+'/',{signal});if(html.includes(subject.id))return candidate.id;}
+ const title=subject.kind==='character'&&subject.work?subject.work:subject.title;
+ const suggestions=await read('https://movie.douban.com/j/subject_suggest?q='+encodeURIComponent(title),{signal,json:true,headers:{referer:'https://movie.douban.com/'}});
+ const candidates=(Array.isArray(suggestions)?suggestions:[]).filter(x=>/^\d+$/.test(x.id||'')).slice(0,3);
+ const norm=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
+ const exact=candidates.filter(x=>[x.title,x.sub_title].some(name=>norm(name)===norm(title))&&subject.year&&String(x.year)===String(subject.year));
+ for(const candidate of candidates){
+  try{const details=await read('https://m.douban.com/rexxar/api/v2/movie/'+candidate.id,{signal,json:true,headers:{referer:'https://m.douban.com/'}});
+   if(details.imdb===subject.id)return candidate.id;
+   if(!details.imdb&&exact.length===1&&exact[0].id===candidate.id&&String(details.year)===String(subject.year)&&[details.original_title,details.title].some(name=>norm(name)===norm(title))&&!(subject.kind==='series'&&details.is_tv===false))return candidate.id;
+  }catch(error){if(signal.aborted)throw error;}
+  try{const html=await read('https://movie.douban.com/subject/'+candidate.id+'/',{signal});if(html.includes(subject.id))return candidate.id;}catch(error){if(signal.aborted)throw error;}
+ }
  throw new SourceError('尚未核对到对应豆瓣档案','unmatched');
 }
-export function doubanJsonImages(data,subject,id){return unique((data.photos||[]).filter(photo=>!photo.image?.is_animated&&(!photo.owner_uri||photo.owner_uri.endsWith('/'+id))).map(photo=>{const url=imageUrl(photo.image?.large?.url||photo.image?.normal?.url),thumbnail=imageUrl(photo.image?.normal?.url||photo.image?.small?.url)||url;return {url,thumbnail,title:text(photo.description)||subject.title+' · 豆瓣相册',kind:subject.kind==='person'?'人物照片':'作品图片',source:'豆瓣 相册',license:'版权归原权利人',pageUrl:'https://movie.douban.com/photos/photo/'+photo.id+'/'};}));}
+function doubanPhotoPage(photo){try{const page=new URL(photo.url);if(/^(www|movie)\.douban\.com$/.test(page.hostname)&&/\/(?:photos\/photo|personage\/\d+\/photo)\/\d+/.test(page.pathname)){page.protocol='https:';return page.href;}}catch{}return 'https://movie.douban.com/photos/photo/'+photo.id+'/';}
+export function doubanJsonImages(data,subject,id){
+ const migrated=subject.kind==='person'&&data.uri==='douban://douban.com/celebrity/'+id+'/photos';
+ return unique((data.photos||[]).filter(photo=>/^\d+$/.test(String(photo.id))&&!photo.image?.is_animated&&(!photo.owner_uri||photo.owner_uri.endsWith('/'+id)||(migrated&&/^douban:\/\/douban\.com\/personage\/\d+$/.test(photo.owner_uri)))).map(photo=>{const url=imageUrl(photo.image?.large?.url||photo.image?.normal?.url),thumbnail=imageUrl(photo.image?.normal?.url||photo.image?.small?.url)||url;return {url,thumbnail,title:text(photo.description)||subject.title+' · 豆瓣相册',kind:subject.kind==='person'?'人物照片':'作品图片',source:'豆瓣 相册',license:'版权归原权利人',pageUrl:doubanPhotoPage(photo)};}));
+}
+
 async function douban(subject,signal){
  const id=subject.cursor?.douban||await resolveDouban(subject,signal),offset=Number(subject.cursor?.offset)||0;
  if(!/^\d+$/.test(String(id))||!Number.isSafeInteger(offset)||offset<0||offset>6000)throw new SourceError('豆瓣分页标识无效');

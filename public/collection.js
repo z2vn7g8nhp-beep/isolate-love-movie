@@ -31,7 +31,7 @@ export function photoKey(value){
 }
 export function cleanAlbum(input) {
   if(!Array.isArray(input))return [];
-  const used=new Set();return input.filter(image=>image&&validImageUrl(image.url)&&!used.has(photoKey(image.url))&&used.add(photoKey(image.url))).slice(0,240).map(image=>({url:validImageUrl(image.url),thumbnail:validImageUrl(image.thumbnail)||'',title:String(image.title||'相片').slice(0,200),kind:String(image.kind||'照片').slice(0,30),source:String(image.source||'').slice(0,100),author:String(image.author||'').slice(0,300),license:String(image.license||'').slice(0,150),pageUrl:typeof image.pageUrl==='string'&&/^https:\/\/(www\.imdb\.com|commons\.wikimedia\.org|en\.wikipedia\.org|www\.wikidata\.org|www\.tvmaze\.com|www\.youtube\.com|zh\.wikipedia\.org|www\.pinterest\.com|movie\.douban\.com)\//.test(image.pageUrl)?image.pageUrl.slice(0,2400):''}));
+  const used=new Set();return input.filter(image=>image&&validImageUrl(image.url)&&!used.has(photoKey(image.url))&&used.add(photoKey(image.url))).slice(0,240).map(image=>({url:validImageUrl(image.url),thumbnail:validImageUrl(image.thumbnail)||'',title:String(image.title||'相片').slice(0,200),kind:String(image.kind||'照片').slice(0,30),source:String(image.source||'').slice(0,100),author:String(image.author||'').slice(0,300),license:String(image.license||'').slice(0,150),pageUrl:typeof image.pageUrl==='string'&&/^https:\/\/(www\.imdb\.com|commons\.wikimedia\.org|en\.wikipedia\.org|www\.wikidata\.org|www\.tvmaze\.com|www\.youtube\.com|zh\.wikipedia\.org|www\.pinterest\.com|movie\.douban\.com|www\.douban\.com)\//.test(image.pageUrl)?image.pageUrl.slice(0,2400):''}));
 }
 export function cleanMemories(input) {
   if(!Array.isArray(input))return [];
