@@ -204,7 +204,7 @@ async function checkPhotoAvailability(refresh=false){
  const item=selected;if(!item)return;const id=photoSubjectId(item);if(!/^(tt|nm)\d+$/.test(id)){updateDirectState();return;}
  const old=photoChecks.get(id);if(!refresh&&old&&(old.status==='checking'||Date.now()-old.at<60000)){updateDirectState();return;}
  photoChecks.set(id,{status:'checking',at:Date.now()});updateDirectState();
- try{const result=await fetchPhotoSource(item,{source:'imdb',refresh,signal:AbortSignal.timeout(16000)});photoChecks.set(id,{status:result.registered===false?'missing':'ready',at:Date.now()});if(result.registered===false&&isCollected(recordFor(item))&&!photoTasks[id])queuePhotoTask(item,{quiet:true});if(result.registered!==false&&selected?.id===item.id){const sourceState=galleries[item.id]?.sourceState;for(const name of Object.keys(sourceState||{}))if(sourceState[name].status==='unavailable')delete sourceState[name];if(old?.status==='missing'&&detailTab==='gallery')loadDirectPhotos('all');}}
+ try{const result=await fetchPhotoSource(item,{source:'imdb',refresh:refresh||photoTasks[id]?.status==='ready',signal:AbortSignal.timeout(16000)});photoChecks.set(id,{status:result.registered===false?'missing':'ready',at:Date.now()});if(result.registered===false&&isCollected(recordFor(item))&&!photoTasks[id])queuePhotoTask(item,{quiet:true});if(result.registered!==false&&selected?.id===item.id){const sourceState=galleries[item.id]?.sourceState;for(const name of Object.keys(sourceState||{}))if(sourceState[name].status==='unavailable')delete sourceState[name];if((old?.status==='missing'||photoTasks[id]?.status==='ready')&&detailTab==='gallery'){if(photoTasks[id]?.status==='ready'){photoTasks[id].status='loaded';persistPhotoTasks();}loadDirectPhotos('all');}}}
  catch(error){photoChecks.set(id,{status:'error',message:error.message||'暂时无法连接图库',at:Date.now()});}
  if(selected&&photoSubjectId(selected)===id)updateDirectState();
 }
@@ -223,7 +223,7 @@ async function queuePhotoTask(item,{quiet=false}={}){
 async function pollPhotoTasks(){
  clearTimeout(photoTaskTimer);const pending=Object.entries(photoTasks).filter(([,task])=>['queued','processing'].includes(task.status)).slice(0,8);
  await Promise.allSettled(pending.map(async([id])=>{try{const result=await requestPhotoTask(id,{readOnly:true});photoTasks[id]=result;if(result.status==='done'){
-  photoTasks[id].status='ready';if(selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}
+  photoTasks[id].status='ready';photoChecks.delete(id);if(selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}
  }}catch(error){photoTasks[id]={...photoTasks[id],message:error.message};}}));persistPhotoTasks();updateDirectState();schedulePhotoTasks();
 }
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){pollPhotoTasks();if(selected&&detailTab==='gallery'){const check=photoChecks.get(photoSubjectId(selected));if(check?.status==='missing'&&Date.now()-check.at>15000)checkPhotoAvailability(true);}}else clearTimeout(photoTaskTimer);});
