@@ -1,7 +1,8 @@
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
-import {parseImdbHtml,parseDoubanHtml,parsePinterestHtml,decodeCursor} from '../server/photo-api.mjs';
+import {parseImdbHtml,parseDoubanHtml,parsePinterestHtml,parsePinterestPayload,decodeCursor} from '../server/photo-api.mjs';
 import {detail} from '../public/data-client.js';
 import {collectPhotoSource} from './photo-source.mjs';
+import {matchesPhotoSubject} from './photo-index.mjs';
 import {cachePhotoPreviews} from './photo-cache.mjs';
 import {reportPhotoProgress,summarizePhotoCrawl} from './photo-queue-report.mjs';
 const root=new URL('../photo-data/',import.meta.url),subjects=JSON.parse(await readFile(new URL('subjects.json',root),'utf8'));
@@ -9,6 +10,7 @@ const max=Math.max(1,Math.min(40,Number(process.env.PHOTO_SUBJECT_LIMIT)||3));
 const requested=(process.env.PHOTO_SUBJECT_IDS||'').split(',').filter(Boolean);
 if(requested.some(id=>!/^(tt|nm)\d{5,12}$/.test(id)||!subjects.some(item=>item.id===id)))throw Error('待采集的公开条目尚未登记');
 const browserTried=new Set(),browserBlocked=new Set();let browser;
+const BROWSER_UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 const getJson=async(url,fallback)=>{try{return JSON.parse(await readFile(url,'utf8'));}catch{return fallback;}};
 const unique=items=>[...new Map(items.filter(x=>x?.url).map(x=>[x.url,x])).values()];
 async function browserPhotos(source,item){
@@ -16,10 +18,16 @@ async function browserPhotos(source,item){
  try{
   const {chromium}=await import('playwright');
   if(!browser){try{browser=await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});}catch{browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});}}
-  const page=await browser.newPage({locale:'en-US',viewport:{width:1440,height:1000}});await page.route('**/*',route=>['image','font','media'].includes(route.request().resourceType())?route.abort():route.continue());
-  const urls={imdb:'https://www.imdb.com/'+(item.kind==='person'?'name':'title')+'/'+item.id+'/mediaindex/',douban:item.douban?'https://movie.douban.com/'+(item.kind==='person'?'celebrity':'subject')+'/'+item.douban+'/photos/?type='+(item.kind==='person'?'C':'S'):'',pinterest:'https://www.pinterest.com/search/pins/?q='+encodeURIComponent(item.title+' '+(item.year||'')+' '+(item.kind==='person'?'portrait':'stills'))};
+  const page=await browser.newPage({locale:'en-US',viewport:{width:1440,height:1000},userAgent:BROWSER_UA});await page.route('**/*',route=>['image','font','media'].includes(route.request().resourceType())?route.abort():route.continue());
+  const pinQuery=String(item.title||'').replaceAll('&',' and ').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
+  const urls={imdb:'https://www.imdb.com/'+(item.kind==='person'?'name':'title')+'/'+item.id+'/mediaindex/',douban:item.douban?'https://movie.douban.com/'+(item.kind==='person'?'celebrity':'subject')+'/'+item.douban+'/photos/?type='+(item.kind==='person'?'C':'S'):'',pinterest:'https://www.pinterest.com/search/pins/?q='+encodeURIComponent([pinQuery,item.year||'',item.kind==='person'?'portrait':'stills'].filter(Boolean).join(' '))};
   if(!urls[source]){await page.close();return[];}
-  try{const response=await page.goto(urls[source],{waitUntil:'domcontentloaded',timeout:22000});if([401,403,429].includes(response?.status())){browserBlocked.add(source);console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'blocked',httpStatus:response?.status()}));return[];}await page.waitForTimeout(1800);const html=await page.content(),visible=await page.locator('body').innerText().catch(()=>'');if(/verify you are human|access denied|异常请求|访问异常|请输入验证码/i.test(visible.slice(0,20000))){browserBlocked.add(source);console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'blocked',reason:'challenge'}));return[];}
+  const pinApi=[],pinTasks=[];
+  if(source==='pinterest')page.on('response',res=>{if(res.url().includes('/resource/BaseSearchResource/get/')&&res.status()===200)pinTasks.push((async()=>{try{const data=await res.json();if(data?.resource_response?.status!=='failure')pinApi.push(...parsePinterestPayload(data));}catch{}})());});
+  try{const waitPinApi=source==='pinterest'?page.waitForResponse(res=>res.url().includes('/resource/BaseSearchResource/get/')&&res.status()===200,{timeout:5500}).catch(()=>null):Promise.resolve();
+   const response=await page.goto(urls[source],{waitUntil:'domcontentloaded',timeout:22000});if([401,403,429].includes(response?.status())){browserBlocked.add(source);console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'blocked',httpStatus:response?.status()}));return[];}await waitPinApi;await page.waitForTimeout(source==='pinterest'?500:1800);await Promise.allSettled(pinTasks);const html=await page.content(),visible=await page.locator('body').innerText().catch(()=>'');if(/verify you are human|access denied|异常请求|访问异常|请输入验证码/i.test(visible.slice(0,20000))){browserBlocked.add(source);console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'blocked',reason:'challenge'}));return[];}
+   const apiMatched=source==='pinterest'?unique(pinApi.filter(image=>matchesPhotoSubject(image.pageUrl,image.title,'pinterest',item))):[];
+   if(apiMatched.length){console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'ok',pins:apiMatched.length}));return apiMatched;}
    const parsed=source==='imdb'?parseImdbHtml(html,item):source==='douban'?parseDoubanHtml(html,item):parsePinterestHtml(html);
    if(parsed.length)return parsed;
    if(source!=='douban'){const rows=await page.evaluate(source=>[...document.querySelectorAll(source==='imdb'?'a[href*="/mediaviewer/"] img':'a[href*="/pin/"] img')].map(img=>({url:img.getAttribute('src')||img.getAttribute('data-src')||img.currentSrc||img.src,pageUrl:img.closest('a')?.href||'',title:img.alt})),source);const matched=rows.filter(x=>source==='imdb'?/^https:\/\/m\.media-amazon\.com\//.test(x.url):/^https:\/\/i\.pinimg\.com\//.test(x.url)).map(x=>({...x,thumbnail:x.url,kind:'作品图片',source:source==='imdb'?'IMDb 相册':'Pinterest 搜索',license:'版权归原权利人'}));if(!matched.length)console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'empty',httpStatus:response?.status(),title:(await page.title().catch(()=>'')).slice(0,80),bytes:html.length,rows:rows.length,anchors:await page.locator(source==='imdb'?'a[href*="/mediaviewer/"]':'a[href*="/pin/"]').count().catch(()=>0)}));return matched;}

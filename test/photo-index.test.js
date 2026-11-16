@@ -13,3 +13,20 @@ test('multi-year IMDb exact matches, regional Pinterest pins and long colon subt
  const res=parseImageIndex(pinDe+pinOld,'pinterest',hg);
  assert.equal(res.length,1);assert.equal(res[0].pageUrl,'https://www.pinterest.com/pin/555/');
 });
+
+test('indexed photos fall back to DuckDuckGo image index when Bing yields zero matches',async()=>{
+ const {indexedPhotos}=await import('../scripts/photo-index.mjs');
+ const hg={id:'tt10545296',title:'The Hunger Games: The Ballad of Songbirds & Snakes',kind:'film',year:2023};
+ const fetcher=async url=>{
+  if(url.includes('bing.com'))return new Response('<html><body>no matches</body></html>');
+  if(url.includes('duckduckgo.com/?'))return new Response('<script>vqd="4-123456-789";</script>');
+  if(url.includes('duckduckgo.com/i.js'))return Response.json({results:[
+   {url:'https://uk.pinterest.com/pin/the-ballad-of-songbirds-and-snakes--987654/',image:'https://i.pinimg.com/originals/aa/bb/ok.jpg',title:'The Ballad of Songbirds and Snakes (2023)'},
+   {url:'https://www.pinterest.com/pin/111111/',image:'https://i.pinimg.com/736x/aa/bb/old.jpg',title:'The Hunger Games (2012)'},
+   {url:'https://example.org/other',image:'https://i.pinimg.com/736x/aa/bb/bad.jpg',title:'The Ballad of Songbirds and Snakes'}
+  ]});
+  return new Response('',{status:404});
+ };
+ const images=await indexedPhotos('pinterest',hg,{fetcher});
+ assert.equal(images.length,1);assert.equal(images[0].pageUrl,'https://www.pinterest.com/pin/987654/');assert.match(images[0].thumbnail,/\/236x\//);
+});

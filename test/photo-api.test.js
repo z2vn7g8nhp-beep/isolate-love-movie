@@ -24,10 +24,17 @@ test('Douban gallery extraction excludes unrelated poster and avatar images',()=
 });
 
 test('Pinterest extracts public search pins and labels them as search candidates',()=>{
- const pins=[{id:'123',description:'Film still',images:{'236x':{url:'https://i.pinimg.com/236x/aa/bb/photo.jpg'},'736x':{url:'https://i.pinimg.com/736x/aa/bb/photo.jpg'}}},{id:'124',is_video:true,images:{}}];
+ const pins=[{id:'123',description:'Film still',images:{'236x':{url:'https://i.pinimg.com/236x/aa/bb/photo.jpg'},'736x':{url:'https://i.pinimg.com/736x/aa/bb/photo.jpg'}}},{id:'124',is_video:true,images:{}},{id:'125',is_promoted:true,description:'Ad',images:{'736x':{url:'https://i.pinimg.com/736x/aa/bb/ad.jpg'}}}];
  assert.equal(pinterestImages(pins).length,1);assert.equal(pinterestImages(pins)[0].source,'Pinterest 搜索');
  const html='<script id="__PWS_DATA__" type="application/json">'+JSON.stringify({resourceResponses:[{response:{data:{results:pins}}}]})+'</script>';
  assert.equal(parsePinterestHtml(html).length,1);
+});
+
+test('BaseSearchResource payload parser handles grid_title fallback and drops promoted entries',async()=>{
+ const {parsePinterestPayload}=await import('../server/photo-api.mjs');
+ const payload={resource_response:{status:'success',data:{results:[{id:'456',description:'',grid_title:'Songbirds & Snakes',images:{orig:{url:'https://i.pinimg.com/originals/11/22/still.jpg'},'236x':{url:'https://i.pinimg.com/236x/11/22/still.jpg'}}},{id:'789',promoter:{id:'1'},description:'Sponsored',images:{orig:{url:'https://i.pinimg.com/originals/11/22/ad.jpg'}}}]}}};
+ const images=parsePinterestPayload(payload);
+ assert.equal(images.length,1);assert.equal(images[0].title,'Songbirds & Snakes');assert.equal(images[0].pageUrl,'https://www.pinterest.com/pin/456/');
 });
 
 test('backend serves CORS only to the app and never treats a blocked source as success',async()=>{

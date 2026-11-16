@@ -32,35 +32,68 @@ export function matchesPhotoSubject(pageUrl,caption,source,item){
   return true;
  }catch{return false;}
 }
-function parseImageIndexDetailed(html,source,item){
+const CHROME_UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+let ddgBlockedUntil=0,ddgNextAt=0;
+function evaluateIndexCandidate(row,rule,source,item,seen,bump){
+ let image,page;try{image=new URL(row.murl);page=new URL(row.purl);}catch{bump('parse');return null;}
+ if(!['https:','http:'].includes(image.protocol)||page.protocol!=='https:'){bump('proto',row);return null;}
+ if(!rule.image.test(image.hostname)){bump('imgHost:'+image.hostname,row);return null;}
+ if(!rule.page.test(page.hostname)){bump('pageHost:'+page.hostname,row);return null;}
+ image.protocol='https:';const caption=decode(row.t||row.desc||'');
+ if(!matchesPhotoSubject(page.href,caption,source,item)){bump('yearOrId',row);return null;}
+ const imdbId=source==='imdb'?page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)(?:\/|$)/)?.[1]:'';
+ const exactId=source==='imdb'&&imdbId===item.id;
+ if(!titleMatches(caption+' '+(row.desc||''),page,source,item,exactId)){bump('title',row);return null;}
+ if(/\.gif(?:$|\?)/i.test(image.href)){bump('gif',row);return null;}
+ if(seen.has(image.href)){bump('dup',row);return null;}
+ seen.add(image.href);
+ let thumbnail=image.href;
+ if(source==='imdb')thumbnail=image.href.replace(/\._V1_.*(?=\.(?:jpg|png))/i,'._V1_QL80_UX360_');
+ if(source==='douban')thumbnail=image.href.replace(/\/view\/photo\/(l|raw|xl)\/public\//,'/view/photo/m/public/');
+ if(source==='pinterest'){thumbnail=image.href.replace(/\/(originals|736x|564x)\//,'/236x/');const pin=page.pathname.match(/\/pin\/(?:[^/]*--)?(\d+)\/?/);if(!pin){bump('noPin',row);return null;}page.href='https://www.pinterest.com/pin/'+pin[1]+'/';}
+ return {url:image.href,thumbnail,title:caption.slice(0,200)||item.title,kind:'搜索图片',source:names[source]+' · 搜索索引',license:'版权归原权利人',pageUrl:page.href,retrievedVia:'public-image-index'};
+}
+function parseRowsDetailed(rows,source,item){
  const rule=sources[source];if(!rule)return{result:[],reasons:{},samples:[]};const result=[],seen=new Set(),reasons={},samples=[];
  const bump=(reason,row)=>{reasons[reason]=(reasons[reason]||0)+1;if(samples.length<3&&row)samples.push({reason,purl:String(row.purl||'').slice(0,90),murl:String(row.murl||'').slice(0,70),t:String(row.t||'').slice(0,60)});};
- for(const match of html.matchAll(/\bm=("[^"]*"|'[^']*')/g))try{
-  const row=JSON.parse(decode(match[1].slice(1,-1))),image=new URL(row.murl),page=new URL(row.purl);
-  if(!['https:','http:'].includes(image.protocol)||page.protocol!=='https:'){bump('proto',row);continue;}
-  if(!rule.image.test(image.hostname)){bump('imgHost:'+image.hostname,row);continue;}
-  if(!rule.page.test(page.hostname)){bump('pageHost:'+page.hostname,row);continue;}
-  image.protocol='https:';const caption=decode(row.t||row.desc||'');if(!matchesPhotoSubject(page.href,caption,source,item)){bump('yearOrId',row);continue;}
-  const imdbId=source==='imdb'?page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)(?:\/|$)/)?.[1]:'';
-  const exactId=source==='imdb'&&imdbId===item.id;
-  if(!titleMatches(caption+' '+(row.desc||''),page,source,item,exactId)){bump('title',row);continue;}
-  if(/\.gif(?:$|\?)/i.test(image.href)){bump('gif',row);continue;}
-  if(seen.has(image.href)){bump('dup',row);continue;}seen.add(image.href);
-  let thumbnail=image.href;
-  if(source==='imdb')thumbnail=image.href.replace(/\._V1_.*(?=\.(?:jpg|png))/i,'._V1_QL80_UX360_');
-  if(source==='douban')thumbnail=image.href.replace(/\/view\/photo\/(l|raw|xl)\/public\//,'/view/photo/m/public/');
-  if(source==='pinterest'){thumbnail=image.href.replace(/\/(originals|736x|564x)\//,'/236x/');const pin=page.pathname.match(/\/pin\/(?:[^/]*--)?(\d+)\/?/);if(!pin){bump('noPin',row);continue;}page.href='https://www.pinterest.com/pin/'+pin[1]+'/';}
-  result.push({url:image.href,thumbnail,title:caption.slice(0,200)||item.title,kind:'搜索图片',source:names[source]+' · 搜索索引',license:'版权归原权利人',pageUrl:page.href,retrievedVia:'public-image-index'});
- }catch{bump('parse');}
+ for(const row of rows){const candidate=row?evaluateIndexCandidate(row,rule,source,item,seen,bump):null;if(candidate)result.push(candidate);}
  return {result,reasons,samples};
 }
+function parseImageIndexDetailed(html,source,item){
+ const rows=[];for(const match of html.matchAll(/\bm=("[^"]*"|'[^']*')/g))try{rows.push(JSON.parse(decode(match[1].slice(1,-1))));}catch{rows.push(null);}
+ return parseRowsDetailed(rows,source,item);
+}
 export function parseImageIndex(html,source,item){return parseImageIndexDetailed(html,source,item).result;}
+async function duckduckgoPhotos(source,item,queries,{signal,fetcher}={}){
+ if(fetcher===fetch&&Date.now()<ddgBlockedUntil)return[];
+ for(const [attempt,query]of queries.entries()){
+  if(fetcher===fetch){
+   const wait=ddgNextAt-Date.now();if(wait>0)await new Promise(r=>setTimeout(r,wait));
+   ddgNextAt=Date.now()+1200;
+  }
+  try{
+   const pageRes=await fetcher('https://duckduckgo.com/?'+new URLSearchParams({q:query,iax:'images',ia:'images'}),{signal:signal||AbortSignal.timeout(10000),headers:{'user-agent':CHROME_UA,'accept-language':'en-US,en;q=0.9'}});
+   if(!pageRes.ok)continue;
+   const html=await pageRes.text(),vqd=html.match(/vqd=["']?([\d-]+)["']?/)?.[1];
+   if(!vqd)continue;
+   const apiRes=await fetcher('https://duckduckgo.com/i.js?'+new URLSearchParams({l:'us-en',o:'json',q:query,vqd,f:',,,,',p:'1'}),{signal:signal||AbortSignal.timeout(10000),headers:{'user-agent':CHROME_UA,'accept-language':'en-US,en;q=0.9',referer:'https://duckduckgo.com/'}});
+   if(!apiRes.ok)continue;
+   const body=await apiRes.text();
+   if(!body.trimStart().startsWith('{')){if(fetcher===fetch)ddgBlockedUntil=Date.now()+60000;console.log(JSON.stringify({stage:'index',engine:'ddg',source,subject:item.id,status:'limited'}));return[];}
+   const data=JSON.parse(body),rows=(Array.isArray(data.results)?data.results:[]).map(r=>({murl:r?.image,purl:r?.url,t:r?.title,desc:''}));
+   const {result:images,reasons,samples}=parseRowsDetailed(rows,source,item);
+   console.log(JSON.stringify({stage:'index',engine:'ddg',source,subject:item.id,attempt:attempt+1,records:rows.length,matched:images.length,...(!images.length?{reasons,samples}:{})}));
+   if(images.length)return images;
+  }catch(error){if(signal?.aborted)throw error;}
+ }
+ return [];
+}
 export async function indexedPhotos(source,item,{first=1,signal,fetcher=fetch}={}){
  const scope={imdb:'imdb.com',douban:'movie.douban.com',pinterest:'pinterest.com'}[source];
  if(!scope)throw Error('未知图片来源');
  const title=source==='douban'?(item.zh||item.title):item.title;
  // Punctuation in a title (notably ':') and an over-specific site path can
- // produce unrelated fallback results. Try a bounded, quoted title as well.
+ // produce unrelated fallback results. Try unquoted clean terms when needed.
  const clean=s=>String(s||'').replaceAll('&',' and ').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
  const phrase=String(title||'').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
  const enPhrase=clean(item.title);
@@ -68,22 +101,25 @@ export async function indexedPhotos(source,item,{first=1,signal,fetcher=fetch}={
  const root=item.kind==='person'?'name':'title';
  const queries=[
   `"${phrase}" site:${scope}`,
-  'site:'+scope+(source==='imdb'?'/'+root+'/'+item.id:'')+' '+title,
+  'site:'+scope+(source==='imdb'?'/'+root+'/'+item.id:'')+' '+(enPhrase||title),
   ...(source==='imdb'?[`site:imdb.com/${root}/${item.id} mediaviewer`]:[]),
-  ...(source==='douban'&&item.zh&&enPhrase&&enPhrase!==phrase?[`"${enPhrase}" site:${scope}`]:[]),
-  ...(source==='pinterest'&&subPhrase&&subPhrase.length>=6?[`"${subPhrase}" site:${scope}`]:[]),
-  ...(source==='pinterest'?[`"${enPhrase}" ${item.kind==='person'?'portrait':'poster'} site:pinterest.com`]:[])
+  ...(source==='douban'&&item.zh&&enPhrase&&enPhrase!==phrase?[`${enPhrase} site:${scope}`]:[]),
+  ...(source==='pinterest'&&subPhrase&&subPhrase.length>=6?[`${subPhrase} site:${scope}`]:[]),
+  ...(source==='pinterest'?[`${enPhrase} ${item.kind==='person'?'portrait':'poster'} site:pinterest.com`]:[])
  ];
  let failure;
  for(const [attempt,query]of [...new Set(queries)].entries()){
   try{
    const url='https://www.bing.com/images/search?'+new URLSearchParams({q:query,first:String(attempt?1:first),count:'35',adlt:'strict'});
-   const response=await fetcher(url,{signal:signal||AbortSignal.timeout(12000),headers:{'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36','accept-language':'en-US,en;q=0.8,zh-CN;q=0.6'}});
+   const response=await fetcher(url,{signal:signal||AbortSignal.timeout(12000),headers:{'user-agent':CHROME_UA,'accept-language':'en-US,en;q=0.8,zh-CN;q=0.6'}});
    if(!response.ok)throw Error('公开图片索引返回 '+response.status);
    const html=await response.text(),{result:images,reasons,samples}=parseImageIndexDetailed(html,source,item);console.log(JSON.stringify({stage:'index',source,subject:item.id,attempt:attempt+1,bytes:html.length,records:(html.match(/murl/g)||[]).length,matched:images.length,...(!images.length?{reasons,samples}:{})}));
    if(images.length)return images;
   }catch(error){if(signal?.aborted)throw error;failure=error;}
  }
+ const ddgQueries=source==='pinterest'?[...new Set([`site:${scope} ${subPhrase&&subPhrase.length>=10?subPhrase:enPhrase}`,...(subPhrase&&subPhrase!==enPhrase?[`site:${scope} ${enPhrase}`]:[])])]:source==='imdb'?[...new Set([`site:imdb.com ${enPhrase}${item.year?' '+item.year:''}`,`${enPhrase}${item.year?' '+item.year:''} poster`])]:[`site:${scope} ${item.zh||enPhrase}`];
+ const ddgImages=await duckduckgoPhotos(source,item,ddgQueries,{signal,fetcher});
+ if(ddgImages.length)return ddgImages;
  if(failure)throw failure;return [];
 }
 
