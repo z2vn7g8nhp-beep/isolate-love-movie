@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTg0OTk2Njk2OF5BMl5BanBnXkFtZTgwNjQ5MjY2MzI@._V1_.jpg",
@@ -67,127 +65,39 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt1856101/",
           "retrievedVia": "public-metadata"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNDkxNzY5MjIxNF5BMl5BanBnXkFtZTgwNDg5NjUyMjI@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDkxNzY5MjIxNF5BMl5BanBnXkFtZTgwNDg5NjUyMjI@._V1_QL80_UX360_.jpg",
+          "title": "Blade Runner 2049 (2017)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1856101/mediaviewer/rm897987840/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNDc5NjM5MzY5N15BMl5BanBnXkFtZTgwNTQ5MjY2MzI@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDc5NjM5MzY5N15BMl5BanBnXkFtZTgwNTQ5MjY2MzI@._V1_QL80_UX360_.jpg",
+          "title": "Blade Runner 2049 (2017)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/es/title/tt1856101/mediaviewer/rm2023499520/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T15:11:23.630Z",
-      "checkedAt": "2026-11-16T15:11:23.630Z"
+      "updatedAt": "2026-11-16T15:36:00.539Z",
+      "checkedAt": "2026-11-16T15:36:00.539Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6MTgwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6MTkyfQ",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2561829240.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2561829240.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2561829240/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2503333566.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2503333566.jpg",
-          "title": "Officer K",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2503333566/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2502990925.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2502990925.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2502990925/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2498252660.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2498252660.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2498252660/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2503393528.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2503393528.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2503393528/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2503215104.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2503215104.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2503215104/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2498252605.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2498252605.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2498252605/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2838832721.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2838832721.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2838832721/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2500981899.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2500981899.jpg",
-          "title": "Officer K",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2500981899/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2498252592.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2498252592.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2498252592/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2498252552.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2498252552.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2498252552/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2560200743.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2560200743.jpg",
-          "title": "I'm so happy when I'm with you. 跟你在一起的时候，我好快乐。",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2560200743/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2503215110.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2503215110.jpg",
@@ -1159,14 +1069,122 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2509918396/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2458487776.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2458487776.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2458487776/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2550646499.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2550646499.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2550646499/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2509355989.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2509355989.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2509355989/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2513116414.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2513116414.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2513116414/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2509369973.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2509369973.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2509369973/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2508884922.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2508884922.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2508884922/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2508842797.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2508842797.jpg",
+          "title": "福利",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2508842797/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2501987506.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2501987506.jpg",
+          "title": "《银翼杀手2049》 vs 《银翼杀手》",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2501987506/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2550646503.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2550646503.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2550646503/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2509369886.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2509369886.jpg",
+          "title": "天啦，受不了安娜这张看到就有生理反应的唇",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2509369886/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2509206651.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2509206651.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2509206651/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2459417625.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2459417625.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2459417625/"
         }
       ],
-      "updatedAt": "2026-11-16T15:11:24.461Z",
-      "checkedAt": "2026-11-16T15:11:24.461Z"
+      "updatedAt": "2026-11-16T15:36:01.575Z",
+      "checkedAt": "2026-11-16T15:36:01.575Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "Pinterest",
       "status": "ok",
       "message": "从 Pinterest 官方公开组件读取",
@@ -1783,9 +1801,9 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T15:11:28.548Z",
-      "checkedAt": "2026-11-16T15:11:28.548Z"
+      "updatedAt": "2026-11-16T15:36:05.016Z",
+      "checkedAt": "2026-11-16T15:36:05.016Z"
     }
   },
-  "checkedAt": "2026-11-16T15:11:28.548Z"
+  "checkedAt": "2026-11-16T15:36:05.018Z"
 }
