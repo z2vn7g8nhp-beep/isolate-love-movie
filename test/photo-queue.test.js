@@ -91,3 +91,47 @@ test('collector identity requires a valid GitHub signature, this repository, wor
  for(const patch of [{repository:'someone/other'},{ref:'refs/heads/other'},{aud:'other-app'},{exp:0},{workflow_ref:'z2vn7g8nhp-beep/isolate-love-movie/.github/workflows/pages.yml@refs/heads/main'}])assert.equal(await verifyCollectorToken(await sign({...claims,...patch}),{fetcher}),false);
  const [head,body,signature]=good.split('.');assert.equal(await verifyCollectorToken(head+'.'+body+'.'+(signature[0]==='A'?'B':'A')+signature.slice(1),{fetcher}),false);
 });
+
+class D1Mock{
+ rows=new Map();
+ prepare(sql){
+  const db=this;
+  return {
+   args:[],
+   bind(...args){this.args=args;return this;},
+   async run(){
+    if(sql.startsWith('INSERT INTO kv'))db.rows.set(this.args[0],this.args[1]);
+    else if(sql.startsWith('DELETE FROM kv'))db.rows.delete(this.args[0]);
+    return {success:true};
+   },
+   async first(col){const v=db.rows.get(this.args[0]);return v==null?null:(col==='v'?v:{v});},
+   async all(){
+    const prefix=this.args[0].replace(/%$/,'').replace(/\\([%_\\])/g,'$1'),limit=Number(this.args[1])||200;
+    return {results:[...db.rows.keys()].filter(k=>k.startsWith(prefix)).sort().slice(0,limit).map(k=>({k}))};
+   }
+  };
+ }
+}
+
+test('D1 queue storage and wakeCollector trigger workflow_dispatch cleanly without dropping follow-up items',async()=>{
+ const dispatches=[],oldFetch=globalThis.fetch;
+ globalThis.fetch=async(url,init)=>{dispatches.push({url:String(url),auth:init?.headers?.Authorization});return new Response(null,{status:204});};
+ try{
+  const env={QUEUE_DB:new D1Mock(),CRAWL_KEY:'d1-key',GITHUB_DISPATCH_TOKEN:'pat-test'};
+  const health=await(await call(env,'health')).json();assert.equal(health.dispatch,true);
+  const {token}=await(await call(env,'api/session',{method:'POST'})).json();
+  assert.equal((await call(env,'api/requests',{method:'POST',token,body:{id:'tt1392170'}})).status,202);
+  assert.equal(dispatches.length,1);assert.equal(dispatches[0].auth,'Bearer pat-test');assert.match(dispatches[0].url,/\/actions\/workflows\/photo-queue\.yml\/dispatches$/);
+  await new Promise(resolve=>setTimeout(resolve,15));
+  // While collector has not checked /internal/pending yet, a second queued item reuses the pending dispatch.
+  assert.equal((await call(env,'api/requests',{method:'POST',token,body:{id:'tt10545296'}})).status,202);
+  assert.equal(dispatches.length,1);
+  // Once the running collector reads /internal/pending, a later request dispatches a fresh run immediately.
+  await new Promise(resolve=>setTimeout(resolve,15));
+  const pending=await(await call(env,'internal/pending',{token:'d1-key'})).json();
+  assert.deepEqual(pending,{items:[{id:'tt1392170'},{id:'tt10545296'}]});
+  await new Promise(resolve=>setTimeout(resolve,15));
+  assert.equal((await call(env,'api/requests',{method:'POST',token,body:{id:'tt32558705'}})).status,202);
+  assert.equal(dispatches.length,2);
+ }finally{globalThis.fetch=oldFetch;}
+});

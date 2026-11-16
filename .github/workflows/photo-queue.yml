@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 14
     env:
-      PHOTO_QUEUE_URL: https://isolate-photo-queue-z2vn.modestdrum3.chatgpt.site/
+      PHOTO_QUEUE_URL: https://isolate-photo-queue.chatliehunnam.workers.dev/
       PHOTO_QUEUE_PROGRESS: '1'
     steps:
       - uses: actions/checkout@v4

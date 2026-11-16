@@ -4,6 +4,17 @@ const validId=id=>/^(tt|nm)\d{5,12}$/.test(id||'');
 const hash=async value=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))].map(n=>n.toString(16).padStart(2,'0')).join('');
 const read=async(bucket,key)=>{const object=await bucket.get(key);return object?object.json():null;};
 const write=(bucket,key,data)=>bucket.put(key,JSON.stringify(data),{httpMetadata:{contentType:'application/json'}});
+function d1Bucket(db){
+ if(!db)return null;
+ let ready;
+ const ensure=()=>{if(!ready)ready=db.prepare('CREATE TABLE IF NOT EXISTS kv (k TEXT PRIMARY KEY, v TEXT NOT NULL)').run().catch(error=>{ready=null;throw error;});return ready;};
+ return {
+  async get(key){await ensure();const value=await db.prepare('SELECT v FROM kv WHERE k = ?1').bind(key).first('v');return value==null?null:{json:async()=>JSON.parse(value)};},
+  async put(key,value){await ensure();await db.prepare('INSERT INTO kv (k, v) VALUES (?1, ?2) ON CONFLICT(k) DO UPDATE SET v = excluded.v').bind(key,typeof value==='string'?value:JSON.stringify(value)).run();},
+  async delete(key){await ensure();await db.prepare('DELETE FROM kv WHERE k = ?1').bind(key).run();},
+  async list({prefix='',limit=200}={}){await ensure();const pattern=String(prefix).replace(/[\\%_]/g,ch=>'\\'+ch)+'%';const {results}=await db.prepare("SELECT k FROM kv WHERE k LIKE ?1 ESCAPE '\\' ORDER BY k LIMIT ?2").bind(pattern,limit).all();return {objects:(results||[]).map(row=>({key:row.k}))};}
+ };
+}
 async function limited(bucket,key,max){const now=Date.now(),old=await read(bucket,key),row=old&&old.until>now?old:{count:0,until:now+86400000};if(row.count>=max)return false;await write(bucket,key,{...row,count:row.count+1});return true;}
 async function json(request,max=600){if(Number(request.headers.get('content-length'))>max)throw Error('请求过大');const body=await request.text();if(body.length>max)throw Error('请求过大');return JSON.parse(body);}
 async function session(request,bucket,supplied){const token=request.headers.get('authorization')?.match(/^Bearer ([a-f0-9]{64})$/)?.[1]||supplied;if(!/^[a-f0-9]{64}$/.test(token||''))return null;const row=await read(bucket,'sessions/'+await hash(token));return row&&row.until>Date.now()?row:null;}
@@ -79,20 +90,24 @@ export async function verifyCollectorToken(token,{fetcher=fetch}={}){
  }catch{return false;}
 }
 async function wakeCollector(env,bucket){
- if(!env.GITHUB_DISPATCH_TOKEN)return;
- const now=Date.now(),last=await read(bucket,'collector/dispatched');
- if(last?.at&&now-last.at<60000)return;
- await write(bucket,'collector/dispatched',{at:now});
- try{await fetch('https://api.github.com/repos/z2vn7g8nhp-beep/isolate-love-movie/actions/workflows/photo-queue.yml/dispatches',{method:'POST',signal:AbortSignal.timeout(5000),headers:{Authorization:'Bearer '+env.GITHUB_DISPATCH_TOKEN,Accept:'application/vnd.github+json','User-Agent':'isolate-photo-queue','Content-Type':'application/json'},body:JSON.stringify({ref:'main'})});}catch{}
+ if(!env.GITHUB_DISPATCH_TOKEN)return false;
+ const now=Date.now(),last=await read(bucket,'collector/dispatched'),state=await read(bucket,'collector/state');
+ const checkedAt=state?.checkedAt?Date.parse(state.checkedAt):0;
+ if(last?.at&&last.at>checkedAt&&now-last.at<60000)return false;
+ try{
+  const response=await fetch('https://api.github.com/repos/z2vn7g8nhp-beep/isolate-love-movie/actions/workflows/photo-queue.yml/dispatches',{method:'POST',signal:AbortSignal.timeout(5000),headers:{Authorization:'Bearer '+env.GITHUB_DISPATCH_TOKEN,Accept:'application/vnd.github+json','User-Agent':'isolate-photo-queue','Content-Type':'application/json'},body:JSON.stringify({ref:'main'})});
+  if(response.ok){await write(bucket,'collector/dispatched',{at:now});return true;}
+ }catch{}
+ return false;
 }
 export default {async fetch(request,env){
  const url=new URL(request.url),origin=request.headers.get('origin'),allowed=origin===WEB_ORIGIN||origin===url.origin||env.ALLOW_LOCAL==='1'&&/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(origin||'');
  const headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','vary':'Origin',...(allowed?{'access-control-allow-origin':origin,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type'}:{})};
  const send=(value,status=200)=>new Response(JSON.stringify(value),{status,headers});
  if(request.method==='OPTIONS')return new Response(null,{status:allowed?204:403,headers});
- if(request.method==='GET'&&url.pathname==='/health')return send({service:'isolate-photo-queue',version:3,bridge:true,progress:true});
+ if(request.method==='GET'&&url.pathname==='/health')return send({service:'isolate-photo-queue',version:4,bridge:true,progress:true,dispatch:Boolean(env.GITHUB_DISPATCH_TOKEN)});
  if(request.method==='GET'&&url.pathname==='/bridge')return photoBridgeResponse();
- const bucket=env.BUCKET;if(!bucket)return send({error:'队列存储尚未启用'},503);
+ const bucket=env.BUCKET||d1Bucket(env.QUEUE_DB);if(!bucket)return send({error:'队列存储尚未启用'},503);
  try{
   if(url.pathname.startsWith('/internal/')){
    const bearer=request.headers.get('authorization')?.replace(/^Bearer /,'');if(!(env.CRAWL_KEY&&bearer===env.CRAWL_KEY)&&!await verifyCollectorToken(bearer))return send({error:'需要采集权限'},401);
@@ -124,11 +139,11 @@ export default {async fetch(request,env){
   const visitor=await session(request,bucket,body?.session);if(!visitor)return send({error:'请重新连接补图服务'},401);
   if(body&&(Object.keys(body).some(key=>!['id','session'].includes(key))||!validId(body.id)))return send({error:'只接收一个公开 IMDb 编号'},400);
   if(url.pathname==='/api/requests'&&request.method==='POST'){
-   const key='requests/'+body.id,old=await read(bucket,key);if(old&&(old.status==='queued'||old.status==='processing'&&Date.now()-Date.parse(old.updatedAt||old.startedAt)<900000||old.status==='done'&&Date.now()-Date.parse(old.finishedAt)<3600000))return send(await publicState(old,bucket));
+   const key='requests/'+body.id,old=await read(bucket,key);if(old&&(old.status==='queued'||old.status==='processing'&&Date.now()-Date.parse(old.updatedAt||old.startedAt)<900000||old.status==='done'&&Date.now()-Date.parse(old.finishedAt)<3600000)){if(old.status==='queued')await wakeCollector(env,bucket);return send(await publicState(old,bucket));}
    if(!await limited(bucket,'limits/device-'+visitor.key,30)||!await limited(bucket,'limits/all',100))return send({error:'今天补图条目较多，请明天继续'},429);
    const row={id:body.id,status:'queued',stage:'queued',requestedAt:new Date().toISOString(),attempts:0};await write(bucket,key,row);await write(bucket,'pending/'+body.id,row);await wakeCollector(env,bucket);return send(await publicState(row,bucket),202);
   }
-  const id=url.pathname.match(/^\/api\/requests\/((?:tt|nm)\d{5,12})$/)?.[1]||(url.pathname==='/api/status'?body?.id:null);if(id&&(request.method==='GET'||url.pathname==='/api/status'&&request.method==='POST')){const row=await read(bucket,'requests/'+id);return row?send(await publicState(row,bucket)):send({id,status:'missing'});}
+  const id=url.pathname.match(/^\/api\/requests\/((?:tt|nm)\d{5,12})$/)?.[1]||(url.pathname==='/api/status'?body?.id:null);if(id&&(request.method==='GET'||url.pathname==='/api/status'&&request.method==='POST')){const row=await read(bucket,'requests/'+id);if(row?.status==='queued'&&Date.now()-Date.parse(row.requestedAt||0)>=60000)await wakeCollector(env,bucket);return row?send(await publicState(row,bucket)):send({id,status:'missing'});}
   return send({error:'接口不存在'},404);
  }catch(error){return send({error:error instanceof SyntaxError?'请求格式无效':'补图服务暂时无法处理，请稍后重试'},error instanceof SyntaxError?400:503);}
 }};

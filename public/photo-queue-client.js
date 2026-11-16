@@ -1,7 +1,7 @@
 import {photoBridgeSupported,standalonePhotoApp,requestPhotoBridge} from './photo-bridge.js';
 // A simple CORS POST avoids preflight requests in mobile/home-screen browsers.
 // The session authorizes only this public-ID queue; it is never a GitHub credential.
-export const PHOTO_QUEUE_BASE='https://isolate-photo-queue-z2vn.modestdrum3.chatgpt.site/';
+export const PHOTO_QUEUE_BASE='https://isolate-photo-queue.chatliehunnam.workers.dev/';
 const SESSION='isolate.photo-queue-session.v1',memorySessions=new Map(),pendingSessions=new Map();
 export class PhotoQueueError extends Error{constructor(message,{code='service',status,retryable=false}={}){super(message);this.name='PhotoQueueError';this.code=code;this.status=status;this.retryable=retryable;}}
 async function send(fetcher,url,options){try{return await fetcher(url,options);}catch(error){if(error?.name==='TimeoutError'||error?.name==='AbortError')throw new PhotoQueueError('补图服务连接超时',{code:'timeout',retryable:true});throw new PhotoQueueError('暂时无法连接补图服务',{code:'network',retryable:true});}}
