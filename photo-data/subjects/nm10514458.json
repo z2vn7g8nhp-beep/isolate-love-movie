@@ -10,10 +10,10 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
+      "status": "blocked",
+      "message": "来源限制了当前请求",
       "method": "public-image-index",
       "images": [
         {
@@ -28,11 +28,11 @@
         }
       ],
       "updatedAt": "2026-11-16T06:10:44.322Z",
-      "checkedAt": "2026-11-16T06:10:44.322Z"
+      "checkedAt": "2026-11-16T09:25:32.442Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "豆瓣",
       "status": "unmatched",
       "message": "尚未核对到对应豆瓣档案",
@@ -40,15 +40,15 @@
       "previewLimit": 48,
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T06:10:49.185Z"
+      "checkedAt": "2026-11-16T09:25:37.782Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "Pinterest",
-      "status": "ok",
-      "message": "从原站读取",
-      "method": "public-pin-widget",
+      "status": "blocked",
+      "message": "来源要求验证访问",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://i.pinimg.com/564x/2b/3c/65/2b3c6548a5feebc9ef151ba11035e262.jpg",
@@ -90,8 +90,8 @@
         }
       ],
       "updatedAt": "2026-11-16T06:10:52.223Z",
-      "checkedAt": "2026-11-16T06:10:52.223Z"
+      "checkedAt": "2026-11-16T09:25:41.250Z"
     }
   },
-  "checkedAt": "2026-11-16T06:10:52.223Z"
+  "checkedAt": "2026-11-16T09:25:41.250Z"
 }
