@@ -25,7 +25,8 @@ async function imageResponse(request){
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url),base=new URL(self.registration.scope);
  if(event.request.method!=='GET')return;
- if(event.request.destination==='image'&&url.protocol==='https:'&&IMAGE_HOST.test(url.hostname)){event.respondWith(imageResponse(event.request));return;}
+ const ownPreview=url.origin===base.origin&&url.pathname.startsWith(base.pathname+'photo-data/images/')&&/^images\/(tt|nm)\d{5,12}\/[a-f0-9]{24}\.webp$/.test(url.pathname.slice((base.pathname+'photo-data/').length));
+ if(event.request.destination==='image'&&(url.protocol==='https:'&&IMAGE_HOST.test(url.hostname)||ownPreview)){event.respondWith(imageResponse(event.request));return;}
  if(url.origin!==base.origin||!url.pathname.startsWith(base.pathname))return;
  const rel=url.pathname.slice(base.pathname.length);if(!FILES.includes('./'+rel))return;
  event.respondWith(fetch(event.request,{cache:'no-cache'}).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(event.request,copy)));}return response;}).catch(async()=>{const cached=await caches.match(event.request,{ignoreSearch:true});return cached||new Response('离线资源不可用，请联网重试。',{status:503});}));

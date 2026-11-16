@@ -109,6 +109,14 @@ export async function retrievePhotos(subject){
  pending.set(key,task);try{return await task;}finally{pending.delete(key);}
 }
 function allowedRate(ip){const now=Date.now(),known=visitors.get(ip);if(!known||known.until<now){visitors.set(ip,{n:1,until:now+60000});while(visitors.size>500)visitors.delete(visitors.keys().next().value);return true;}return ++known.n<=30;}
+export async function retrievePhotoPages(subject,{pages=1,retrieve=retrievePhotos}={}){
+ let result=await retrieve(subject);const images=[...(result.images||[])];
+ for(let page=1;page<Math.max(1,Math.min(3,pages))&&result.nextCursor&&result.images?.length;page++){
+  const next=await retrieve({...subject,cursor:decodeCursor(result.nextCursor)});if(!next.images?.length)break;
+  result=next;images.push(...next.images);
+ }
+ return {...result,images:unique(images)};
+}
 export async function handlePhotoRequest(request){
  const url=new URL(request.url),origin=request.headers.get('origin');const headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','access-control-allow-origin':origin===ORIGIN||/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin||'')?origin:ORIGIN,'vary':'Origin'};
  const send=(body,status=200)=>new Response(JSON.stringify(body),{status,headers});

@@ -2,7 +2,7 @@ import {validImageUrl, cleanAlbum, photoKey} from './collection.js';
 
 export const PHOTO_BATCH = 12;
 export function thumbnailUrl(image, width = 360, shape = 'landscape') {
-  const value = typeof image === 'string' ? image : image?.thumbnail || image?.url || '';
+  const value = typeof image === 'string' ? image : image?.cachedUrl || image?.thumbnail || image?.url || '';
   if (!value) return '';
   try {
     const url = new URL(value);
@@ -16,7 +16,7 @@ export function thumbnailUrl(image, width = 360, shape = 'landscape') {
   return value;
 }
 
-export function mergePhotos(current, incoming) { const map=new Map(current.map(image=>[photoKey(image.url),image]));for(const image of incoming){const key=photoKey(image.url),old=map.get(key);map.set(key,old?{...old,thumbnail:image.thumbnail||old.thumbnail}:image);}return cleanAlbum([...map.values()]); }
+export function mergePhotos(current, incoming) { const map=new Map(current.map(image=>[photoKey(image.url),image]));for(const image of incoming){const key=photoKey(image.url),old=map.get(key);map.set(key,old?{...old,thumbnail:image.thumbnail||old.thumbnail,cachedUrl:image.cachedUrl||old.cachedUrl}:image);}return cleanAlbum([...map.values()]); }
 export function imageSourceLinks(item) {
   const query = [item.title, item.kind === 'character' ? item.work : '', item.kind === 'person' ? 'portrait' : 'stills'].filter(Boolean).join(' ');
   return [

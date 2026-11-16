@@ -14,6 +14,14 @@ test('thumbnail rendering retains original images and uses lightweight source si
  assert.equal(image.url,'https://static.tvmaze.com/uploads/images/original_untouched/1/2.jpg');
 });
 
+test('static previews survive imports and merges while preserving the original source image',()=>{
+ const cachedUrl='https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/'+ 'a'.repeat(24)+'.webp';
+ const original={url:'https://img9.doubanio.com/view/photo/l/public/p2412557885.jpg',title:'我的照片'};
+ const fresh={...original,cachedUrl,thumbnail:cachedUrl};const merged=mergePhotos([original],[fresh]);assert.equal(merged.length,1);assert.equal(merged[0].url,original.url);assert.equal(merged[0].cachedUrl,cachedUrl);assert.equal(thumbnailUrl(merged[0]),cachedUrl);
+ assert.equal(validImageUrl(cachedUrl),cachedUrl);assert.equal(validImageUrl(cachedUrl.replace('github.io','github.io.evil.example')),'');assert.equal(validImageUrl(cachedUrl.replace('a'.repeat(24),'../private')),'');
+ assert.equal(cleanAlbum([original,{url:original.url.replace('/l/','/m/').replace('img9','img3')}]).length,1);
+});
+
 test('photo pagination deduplicates resolution variants and preserves the saved order',()=>{
  const old={url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Photo.jpg/1100px-Photo.jpg',title:'我的图片',kind:'照片'};
  const fresh={url:'https://upload.wikimedia.org/wikipedia/commons/a/ab/Photo.jpg',thumbnail:'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Photo.jpg/480px-Photo.jpg'};
