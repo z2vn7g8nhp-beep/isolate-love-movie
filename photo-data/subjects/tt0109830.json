@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZTk0ZmUxZTktMDBlNC00YmZhLWJlNzgtMmY4M2NlNWIyYWZhXkEyXkFqcGc@._V1_.jpg",
@@ -967,11 +969,19 @@
           "retrievedVia": "public-image-index"
         }
       ],
+<<<<<<< Updated upstream
       "updatedAt": "2026-11-16T16:26:17.355Z",
       "checkedAt": "2026-11-16T16:26:17.355Z"
     },
     "douban": {
       "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkyNzIwIiwib2Zmc2V0IjoxODJ9",
+=======
+      "updatedAt": "2026-11-16T16:33:17.978Z",
+      "checkedAt": "2026-11-16T16:33:17.978Z"
+    },
+    "douban": {
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkyNzIwIiwib2Zmc2V0IjoxNzB9",
+>>>>>>> Stashed changes
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
@@ -979,6 +989,117 @@
       "method": "direct",
       "images": [
         {
+<<<<<<< Updated upstream
+=======
+          "url": "https://img9.doubanio.com/view/photo/s/public/p825965974.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p825965974.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/825965974/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p510865767.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p510865767.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/510865767/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2932878265.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2932878265.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2932878265/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2932878222.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2932878222.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2932878222/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2932878179.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2932878179.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2932878179/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2877467181.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2877467181.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2877467181/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2877467180.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2877467180.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2877467180/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2877467179.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2877467179.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2877467179/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2877467176.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2877467176.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2877467176/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p825973333.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p825973333.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/825973333/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p825966297.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p825966297.jpg",
+          "title": "拍摄现场可以参照这里http://movie.douban.com/photos/photo/825969680/",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/825966297/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p795554621.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p795554621.jpg",
+          "title": "Forrest Gump · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/795554621/"
+        },
+        {
+>>>>>>> Stashed changes
           "url": "https://img9.doubanio.com/view/photo/l/public/p2932878295.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2932878295.jpg",
           "title": "Forrest Gump · 豆瓣相册",
@@ -1949,6 +2070,7 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/1467795336/"
+<<<<<<< Updated upstream
         },
         {
           "url": "https://img9.doubanio.com/view/photo/s/public/p1452181645.jpg",
@@ -2061,6 +2183,12 @@
       ],
       "updatedAt": "2026-11-16T16:26:18.653Z",
       "checkedAt": "2026-11-16T16:26:18.653Z"
+=======
+        }
+      ],
+      "updatedAt": "2026-11-16T16:33:18.346Z",
+      "checkedAt": "2026-11-16T16:33:18.346Z"
+>>>>>>> Stashed changes
     },
     "pinterest": {
       "nextCursor": null,
@@ -2306,9 +2434,17 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Forrest%20Gump%201994%20stills"
         }
       ],
+<<<<<<< Updated upstream
       "updatedAt": "2026-11-16T16:26:22.469Z",
       "checkedAt": "2026-11-16T16:26:22.469Z"
     }
   },
   "checkedAt": "2026-11-16T16:26:22.469Z"
+=======
+      "updatedAt": "2026-11-16T16:33:21.651Z",
+      "checkedAt": "2026-11-16T16:33:21.651Z"
+    }
+  },
+  "checkedAt": "2026-11-16T16:33:21.651Z"
+>>>>>>> Stashed changes
 }
