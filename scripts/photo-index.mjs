@@ -7,16 +7,17 @@ const titleWords=s=>(String(s||'').toLowerCase().match(/[a-z]{3,}/g)||[]).filter
 function titleMatches(text,page,source,item,exactId){
  if(exactId)return true;
  const n=normalize(text),title=normalize(item.title),zh=normalize(item.zh);
- if(title&&n.includes(title)||zh&&n.includes(zh))return true;
+ const altTitle=normalize(String(item.title||'').replaceAll('&',' and '));
+ if(title&&n.includes(title)||altTitle&&n.includes(altTitle)||zh&&n.includes(zh))return true;
  const parts=String(item.title||'').split(/[:\-–—]/).map(s=>s.trim()).filter(Boolean);
  if(parts.length>1){
-  const sub=parts.slice(1).join(' '),subNorm=normalize(sub),subWords=titleWords(sub);
-  if(subNorm.length>=8&&subWords.length>=2&&!/^(part|chapter)(one|two|three|four|five|\d+)$/.test(subNorm)&&n.includes(subNorm))return true;
+  const sub=parts.slice(1).join(' '),subNorm=normalize(sub),subAlt=normalize(sub.replaceAll('&',' and ')),subWords=titleWords(sub);
+  if(subWords.length>=2&&!/^(part|chapter)(one|two|three|four|five|\d+)$/.test(subNorm)&&(subNorm.length>=8&&n.includes(subNorm)||subAlt.length>=8&&n.includes(subAlt)))return true;
  }
  if(source==='pinterest'){
   let path=page.pathname;try{path=decodeURIComponent(path);}catch{}
   const slug=path.split('--')[0].replace(/\/pin\//,' '),pinText=normalize(text+' '+slug);
-  if(title&&pinText.includes(title)||zh&&pinText.includes(zh))return true;
+  if(title&&pinText.includes(title)||altTitle&&pinText.includes(altTitle)||zh&&pinText.includes(zh))return true;
   const rawWords=String(item.title||'').toLowerCase().match(/[a-z]{3,}/g)||[],sig=rawWords.filter(w=>!stop.has(w));
   if(rawWords.length>=2&&rawWords.every(word=>pinText.includes(word)))return true;
   if(sig.length>=3&&sig.filter(word=>pinText.includes(word)).length>=Math.max(3,Math.ceil(sig.length*0.65)))return true;
@@ -31,33 +32,39 @@ export function matchesPhotoSubject(pageUrl,caption,source,item){
   return true;
  }catch{return false;}
 }
-export function parseImageIndex(html,source,item){
- const rule=sources[source];if(!rule)return[];const result=[],seen=new Set();
+function parseImageIndexDetailed(html,source,item){
+ const rule=sources[source];if(!rule)return{result:[],reasons:{},samples:[]};const result=[],seen=new Set(),reasons={},samples=[];
+ const bump=(reason,row)=>{reasons[reason]=(reasons[reason]||0)+1;if(samples.length<3&&row)samples.push({reason,purl:String(row.purl||'').slice(0,90),murl:String(row.murl||'').slice(0,70),t:String(row.t||'').slice(0,60)});};
  for(const match of html.matchAll(/\bm=("[^"]*"|'[^']*')/g))try{
   const row=JSON.parse(decode(match[1].slice(1,-1))),image=new URL(row.murl),page=new URL(row.purl);
-  if(!['https:','http:'].includes(image.protocol)||page.protocol!=='https:'||!rule.image.test(image.hostname)||!rule.page.test(page.hostname))continue;
-  image.protocol='https:';const caption=decode(row.t||row.desc||'');if(!matchesPhotoSubject(page.href,caption,source,item))continue;
+  if(!['https:','http:'].includes(image.protocol)||page.protocol!=='https:'){bump('proto',row);continue;}
+  if(!rule.image.test(image.hostname)){bump('imgHost:'+image.hostname,row);continue;}
+  if(!rule.page.test(page.hostname)){bump('pageHost:'+page.hostname,row);continue;}
+  image.protocol='https:';const caption=decode(row.t||row.desc||'');if(!matchesPhotoSubject(page.href,caption,source,item)){bump('yearOrId',row);continue;}
   const imdbId=source==='imdb'?page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)(?:\/|$)/)?.[1]:'';
   const exactId=source==='imdb'&&imdbId===item.id;
-  if(!titleMatches(caption+' '+(row.desc||''),page,source,item,exactId))continue;
-  if(/\.gif(?:$|\?)/i.test(image.href)||seen.has(image.href))continue;seen.add(image.href);
+  if(!titleMatches(caption+' '+(row.desc||''),page,source,item,exactId)){bump('title',row);continue;}
+  if(/\.gif(?:$|\?)/i.test(image.href)){bump('gif',row);continue;}
+  if(seen.has(image.href)){bump('dup',row);continue;}seen.add(image.href);
   let thumbnail=image.href;
   if(source==='imdb')thumbnail=image.href.replace(/\._V1_.*(?=\.(?:jpg|png))/i,'._V1_QL80_UX360_');
   if(source==='douban')thumbnail=image.href.replace(/\/view\/photo\/(l|raw|xl)\/public\//,'/view/photo/m/public/');
-  if(source==='pinterest'){thumbnail=image.href.replace(/\/(originals|736x|564x)\//,'/236x/');const pin=page.pathname.match(/\/pin\/(?:[^/]*--)?(\d+)\/?/);if(!pin)continue;page.href='https://www.pinterest.com/pin/'+pin[1]+'/';}
+  if(source==='pinterest'){thumbnail=image.href.replace(/\/(originals|736x|564x)\//,'/236x/');const pin=page.pathname.match(/\/pin\/(?:[^/]*--)?(\d+)\/?/);if(!pin){bump('noPin',row);continue;}page.href='https://www.pinterest.com/pin/'+pin[1]+'/';}
   result.push({url:image.href,thumbnail,title:caption.slice(0,200)||item.title,kind:'搜索图片',source:names[source]+' · 搜索索引',license:'版权归原权利人',pageUrl:page.href,retrievedVia:'public-image-index'});
- }catch{}
- return result;
+ }catch{bump('parse');}
+ return {result,reasons,samples};
 }
+export function parseImageIndex(html,source,item){return parseImageIndexDetailed(html,source,item).result;}
 export async function indexedPhotos(source,item,{first=1,signal,fetcher=fetch}={}){
  const scope={imdb:'imdb.com',douban:'movie.douban.com',pinterest:'pinterest.com'}[source];
  if(!scope)throw Error('未知图片来源');
  const title=source==='douban'?(item.zh||item.title):item.title;
  // Punctuation in a title (notably ':') and an over-specific site path can
  // produce unrelated fallback results. Try a bounded, quoted title as well.
+ const clean=s=>String(s||'').replaceAll('&',' and ').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
  const phrase=String(title||'').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
- const enPhrase=String(item.title||'').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
- const subPhrase=String(item.title||'').includes(':')?String(item.title).split(':').slice(1).join(' ').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim():'';
+ const enPhrase=clean(item.title);
+ const subPhrase=String(item.title||'').includes(':')?clean(String(item.title).split(':').slice(1).join(' ')):String(item.title||'').includes('&')?enPhrase:'';
  const root=item.kind==='person'?'name':'title';
  const queries=[
   `"${phrase}" site:${scope}`,
@@ -71,9 +78,9 @@ export async function indexedPhotos(source,item,{first=1,signal,fetcher=fetch}={
  for(const [attempt,query]of [...new Set(queries)].entries()){
   try{
    const url='https://www.bing.com/images/search?'+new URLSearchParams({q:query,first:String(attempt?1:first),count:'35',adlt:'strict'});
-   const response=await fetcher(url,{signal:signal||AbortSignal.timeout(12000),headers:{'user-agent':'Mozilla/5.0','accept-language':'en-US,en;q=0.8,zh-CN;q=0.6'}});
+   const response=await fetcher(url,{signal:signal||AbortSignal.timeout(12000),headers:{'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36','accept-language':'en-US,en;q=0.8,zh-CN;q=0.6'}});
    if(!response.ok)throw Error('公开图片索引返回 '+response.status);
-   const html=await response.text(),images=parseImageIndex(html,source,item);console.log(JSON.stringify({stage:'index',source,subject:item.id,attempt:attempt+1,bytes:html.length,records:(html.match(/murl/g)||[]).length,matched:images.length}));
+   const html=await response.text(),{result:images,reasons,samples}=parseImageIndexDetailed(html,source,item);console.log(JSON.stringify({stage:'index',source,subject:item.id,attempt:attempt+1,bytes:html.length,records:(html.match(/murl/g)||[]).length,matched:images.length,...(!images.length?{reasons,samples}:{})}));
    if(images.length)return images;
   }catch(error){if(signal?.aborted)throw error;failure=error;}
  }
