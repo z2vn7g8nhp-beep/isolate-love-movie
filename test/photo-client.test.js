@@ -11,4 +11,13 @@ test('a newly published subject is available on explicit retry after a missing a
 
 test('HTTP failures remain distinct from an archive that has not been built',async()=>{const old=globalThis.fetch;globalThis.fetch=async()=>({ok:false,status:503});try{await assert.rejects(fetchPhotoSource({id:'nm3641002',kind:'person'},{source:'douban',baseUrl:'https://photos.example/error/'}),/HTTP 503/);}finally{globalThis.fetch=old;}});
 
+test('a usable IMDb primary image retains the gallery limitation after its batch is read',async()=>{
+ const old=globalThis.fetch,baseUrl='https://photos.example/primary/',item={id:'tt21357150',kind:'film'};
+ const message='相册暂不可读，已读取 IMDb 公开主图';
+ globalThis.fetch=async()=>Response.json({item,sources:{imdb:{status:'ok',method:'public-metadata',limited:true,message,images:[{...image('poster'),source:'IMDb 公开主图'}]}}});
+ try{const first=await fetchPhotoSource(item,{source:'imdb',baseUrl});assert.equal(first.status,'ok');assert.equal(first.limited,true);assert.equal(first.message,message);
+ const read=await fetchPhotoSource(item,{source:'imdb',baseUrl,knownImages:first.images});assert.equal(read.images.length,0);assert.equal(read.message,message);assert.equal(read.limited,true);
+ }finally{globalThis.fetch=old;}
+});
+
 test('requests contain one public subject and omit private names, notes and collection fields',()=>{const url=new URL(photoRequestUrl({id:'nm3641002',title:'Austin Abrams',nickname:'secret name',note:'secret note',rating:9,collected:true,kind:'person'}));assert.equal(url.origin,'https://github.com');assert.equal(url.pathname,'/z2vn7g8nhp-beep/isolate-love-movie/issues/new');assert.match(url.searchParams.get('body'),/^<!-- isolate-photo-request:v1 -->\nIMDb: nm3641002\n/);assert.match(url.searchParams.get('title'),/Austin Abrams/);assert.doesNotMatch(url.href,/secret|rating|collected/);assert.equal(photoRequestUrl({id:'../../private',kind:'person'}),'');const role={id:'char-private',kind:'character',title:'secret nickname',workId:'tt0816692',actorId:'nm3641002'};assert.equal(photoSubjectId(role),'tt0816692');assert.doesNotMatch(photoRequestUrl(role),/secret|char-private|nm3641002/);});

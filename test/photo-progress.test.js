@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {photoProgressMarkup,photoPublicationReady,photoTaskStalled} from '../public/photo-progress.js';
+import {photoProgressMarkup,photoPublicationReady,photoTaskStalled,photoTaskWithSnapshot} from '../public/photo-progress.js';
 import {photoTaskDelay} from '../public/photo-outbox.js';
 import {summarizePhotoCrawl,reportPhotoProgress} from '../scripts/photo-queue-report.mjs';
 const now=Date.parse('2026-11-16T12:30:00Z'),requestedAt='2026-11-16T12:10:00Z';
@@ -19,6 +19,14 @@ test('per-source outcomes and publication are separate, and lost polling shows t
 test('a completed zero-image collection is explicit rather than an endless loading state',()=>{
  const html=photoProgressMarkup({status:'loaded',requestedAt,summary:{added:0,total:3},sources:{imdb:{status:'blocked',newImages:0,total:1},douban:{status:'unmatched',newImages:0,total:0},pinterest:{status:'ok',newImages:0,total:2}}},now);
  assert.match(html,/本次没有新增图片/);assert.match(html,/图库现有 3 张去重图片/);assert.match(html,/未找到图库/);assert.doesNotMatch(html,/正在读取|等待启动|每 20 秒检查/);
+});
+test('a published snapshot repairs missing outcomes without inventing per-request additions',()=>{
+ const task={status:'loaded',requestedAt},snapshot={registered:true,datasetAt:new Date(now).toISOString(),datasetTotal:73,datasetSources:{imdb:{status:'ok',total:1,limited:true},douban:{status:'ok',total:36},pinterest:{status:'ok',total:36}}};
+ const repaired=photoTaskWithSnapshot(task,snapshot),html=photoProgressMarkup(repaired,now);
+ assert.equal(repaired.summary.total,73);assert.equal(repaired.summary.added,undefined);assert.match(html,/仅公开主图/);assert.match(html,/图库共 36 张/);assert.doesNotMatch(html,/未提供结果|本次新增|新增 0/);
+ assert.equal(photoTaskWithSnapshot(task,{...snapshot,datasetAt:'2026-11-15T00:00:00Z'}),task);
+ const reported={...task,summary:{added:2,total:73},sources:{pinterest:{status:'ok',newImages:2,total:36}}};
+ assert.deepEqual(photoTaskWithSnapshot(reported,snapshot).sources.pinterest,reported.sources.pinterest);assert.equal(photoTaskWithSnapshot(reported,snapshot).summary.added,2);
 });
 test('publication waits for the expected dataset, retries stale data and accepts a later published revision',()=>{
  const task={status:'syncing',requestedAt,dataCheckedAt:'2026-11-16T12:25:00Z'};

@@ -10,14 +10,27 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 1,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T12:29:42.297Z"
+      "status": "ok",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
+      "images": [
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNGEwYWZkN2UtOTQ5Mi00MGQzLWEzNjYtMWMyNDBkMTkzMWNkXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGEwYWZkN2UtOTQ5Mi00MGQzLWEzNjYtMWMyNDBkMTkzMWNkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Avengers: Doomsday",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt21357150/",
+          "retrievedVia": "public-metadata"
+        }
+      ],
+      "updatedAt": "2026-11-16T13:19:06.062Z",
+      "checkedAt": "2026-11-16T13:19:06.062Z"
     },
     "douban": {
       "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjAxMTIwMiIsIm9mZnNldCI6MzZ9",
@@ -396,13 +409,374 @@
       "nextCursor": null,
       "indexOffset": 36,
       "name": "Pinterest",
-      "status": "blocked",
-      "message": "来源要求验证访问",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T12:30:57.135Z"
+      "status": "ok",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
+      "images": [
+        {
+          "url": "https://i.pinimg.com/564x/fd/84/34/fd8434cc3ae7c0626c4d344a79ecf4c4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fd/84/34/fd8434cc3ae7c0626c4d344a79ecf4c4.jpg",
+          "title": "avengers doomsday epic poster 4k",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422321635/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/9b/a3/45/9ba34565bc68357d19eaa44d42c958b2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9b/a3/45/9ba34565bc68357d19eaa44d42c958b2.jpg",
+          "title": "Avengers Doomsday Poster Epic 4k 2026 Doomsday is here Poster By Andrew VM",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079436622392/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/59/51/f3/5951f38e558bd8fb09ef180139c63214.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/59/51/f3/5951f38e558bd8fb09ef180139c63214.jpg",
+          "title": "Avengers Doomsday Poster 4k By Andrew VM Epic Vers",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079434622388/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d5/8c/9a/d58c9a186660fbc8f1f8842654be57cd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d5/8c/9a/d58c9a186660fbc8f1f8842654be57cd.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079434588841/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d1/43/02/d14302907ff6f535dc25b1a824a85132.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d1/43/02/d14302907ff6f535dc25b1a824a85132.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079434588840/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/31/76/72/31767218eacb5ee6e5cc39809452ab0e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/31/76/72/31767218eacb5ee6e5cc39809452ab0e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079434588839/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/87/9d/fd/879dfd3b9d1f7f932a0e3f204fc7e603.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/87/9d/fd/879dfd3b9d1f7f932a0e3f204fc7e603.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079434588838/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/2e/44/47/2e444724c5fdccb55010ab81349d1d96.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2e/44/47/2e444724c5fdccb55010ab81349d1d96.jpg",
+          "title": "Avengers Doomsday epic poster 4k 2026 andrew vm",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079431856899/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/9e/35/cd/9e35cd312bfdfe81727efb70ab33edc1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9e/35/cd/9e35cd312bfdfe81727efb70ab33edc1.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079431775685/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/41/5e/bd/415ebdcbdda684f40b048b4892677afd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/41/5e/bd/415ebdcbdda684f40b048b4892677afd.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079431775678/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/4f/17/ef/4f17ef770bcfc80bcfa58977110ba869.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4f/17/ef/4f17ef770bcfc80bcfa58977110ba869.jpg",
+          "title": "Avengers Doomsday poster Epic White",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079431775666/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/b2/3a/af/b23aaf69d8566db1ba5ecaa1187f44be.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b2/3a/af/b23aaf69d8566db1ba5ecaa1187f44be.jpg",
+          "title": "Avengers Doomsday POSTER 4k Epic By Andrew VM",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079431775654/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/37/06/8b/37068b45d4e014f1504961e0225bde7a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/37/06/8b/37068b45d4e014f1504961e0225bde7a.jpg",
+          "title": "Avengers Doomsday poster promo art",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079431775622/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/f4/ed/44/f4ed44f2a2d4c09c77772e697b031d43.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f4/ed/44/f4ed44f2a2d4c09c77772e697b031d43.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079427873814/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/a8/d6/dc/a8d6dc15b672cb4ad676e6473fdfa859.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a8/d6/dc/a8d6dc15b672cb4ad676e6473fdfa859.jpg",
+          "title": "AVENGERS DOOMSDAY Poster 4k 2026 Chris Evans",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079427873804/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/4f/e7/64/4fe764e8f93e4fa9aeef28971bf6c864.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4f/e7/64/4fe764e8f93e4fa9aeef28971bf6c864.jpg",
+          "title": "Avengers Doomsday Poster 4k 2026 HD Avengers Doomsday Poster 4k 2026 HD by Andrew VM",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079425235303/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/fa/06/6b/fa066b8fa5ecdd0ddb852ed3b9f7133d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fa/06/6b/fa066b8fa5ecdd0ddb852ed3b9f7133d.jpg",
+          "title": "Avengers Doomsday Poster Tobey Spider Man",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079425235275/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/85/95/48/859548df6f61b8283ff5ee9908ae01c7.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/85/95/48/859548df6f61b8283ff5ee9908ae01c7.jpg",
+          "title": "AVENGERS DOOMSDAY poster hd 2026 SUE STORM",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947799/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/1b/ed/d0/1bedd042455cdbc28f795b48780f0d62.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/1b/ed/d0/1bedd042455cdbc28f795b48780f0d62.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947794/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/72/17/91/72179120580165bb58cdf5fef210d1cf.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/72/17/91/72179120580165bb58cdf5fef210d1cf.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947789/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/08/e9/7b/08e97b011ed2790ec767e66b19d3a40b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/08/e9/7b/08e97b011ed2790ec767e66b19d3a40b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947783/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/e6/ce/48/e6ce48ef6216f4561ebb755a6178c508.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e6/ce/48/e6ce48ef6216f4561ebb755a6178c508.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947776/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/79/b2/91/79b291ebe6376c820f275c1fe1849073.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/79/b2/91/79b291ebe6376c820f275c1fe1849073.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947772/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/58/d1/51/58d1511e509727ee9c53c3b0566458e8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/58/d1/51/58d1511e509727ee9c53c3b0566458e8.jpg",
+          "title": "AVENGERS DOOMSDAY poster hd 2026 US AGENT",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079423947768/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/31/d4/1d/31d41da41e0f5726fcda2413d173cf52.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/31/d4/1d/31d41da41e0f5726fcda2413d173cf52.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533793/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/98/ea/a9/98eaa90dcca1e823c5d3e851b2488c89.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/98/ea/a9/98eaa90dcca1e823c5d3e851b2488c89.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533761/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/b6/bf/bf/b6bfbf6079ab8fb25b5d27037d3d233d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b6/bf/bf/b6bfbf6079ab8fb25b5d27037d3d233d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533751/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/2d/2f/12/2d2f125a598393826588a74b3056c88c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2d/2f/12/2d2f125a598393826588a74b3056c88c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533744/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/34/38/32/34383272abbd80e9aa283efc4fa409c2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/34/38/32/34383272abbd80e9aa283efc4fa409c2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533734/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/5f/3f/38/5f3f383ab35b64fe0fd34d59e8e2e6be.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5f/3f/38/5f3f383ab35b64fe0fd34d59e8e2e6be.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533720/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/cd/3d/06/cd3d06c833f38c7bcacc00aaff82230b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/cd/3d/06/cd3d06c833f38c7bcacc00aaff82230b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533715/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/ee/61/82/ee6182447e2ce6ffce16d97807792b91.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ee/61/82/ee6182447e2ce6ffce16d97807792b91.jpg",
+          "title": "Avengers Doomsday Poster Team 1",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422533706/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/71/31/c7/7131c763f48839b8698e4a879b4c221e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/71/31/c7/7131c763f48839b8698e4a879b4c221e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422321696/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/b7/35/6e/b7356e8cb3ee19401dc313f066a9231d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b7/35/6e/b7356e8cb3ee19401dc313f066a9231d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422321681/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/f8/ea/0b/f8ea0b777b78fbd94b4ee4ad8842f4f2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f8/ea/0b/f8ea0b777b78fbd94b4ee4ad8842f4f2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422321607/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/08/d1/f0/08d1f02644171099c29999cc1caa923b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/08/d1/f0/08d1f02644171099c29999cc1caa923b.jpg",
+          "title": "Avengers Doomsday poster 2027",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1079738079422321597/",
+          "retrievedVia": "public-pin-widget"
+        }
+      ],
+      "updatedAt": "2026-11-16T13:19:08.383Z",
+      "checkedAt": "2026-11-16T13:19:08.383Z"
     }
   },
-  "checkedAt": "2026-11-16T12:30:57.135Z"
+  "checkedAt": "2026-11-16T13:23:37.612Z"
 }
