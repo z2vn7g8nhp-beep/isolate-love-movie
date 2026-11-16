@@ -10,22 +10,54 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
+      "status": "ok",
+      "message": "三站公开图片经搜索索引发现",
       "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T04:45:36.407Z"
+      "images": [
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_QL80_UX360_.jpg",
+          "title": "Austin Abrams - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm3641002/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTM4NDM2NTY2Nl5BMl5BanBnXkFtZTcwMTM1OTg5OA@@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTM4NDM2NTY2Nl5BMl5BanBnXkFtZTcwMTM1OTg5OA@@._V1_QL80_UX360_.jpg",
+          "title": "Austin Abrams",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm3641002/mediaviewer/rm3822297600/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMzcxMDY3MTgzM15BMl5BanBnXkFtZTgwNDczMzYyODE@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzcxMDY3MTgzM15BMl5BanBnXkFtZTgwNDczMzYyODE@._V1_QL80_UX360_.jpg",
+          "title": "Austin Abrams",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm3641002/mediaviewer/rm2501580800",
+          "retrievedVia": "public-image-index"
+        }
+      ],
+      "updatedAt": "2026-11-16T04:57:39.159Z",
+      "checkedAt": "2026-11-16T04:57:39.159Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0Ijo0OH0",
-      "indexOffset": 71,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0Ijo4NH0",
+      "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
+      "previewLimit": 48,
       "images": [
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2412557885.jpg",
@@ -508,21 +540,31 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-16T04:45:39.068Z",
-      "checkedAt": "2026-11-16T04:45:39.068Z",
-      "previewLimit": 48
+      "updatedAt": "2026-11-16T04:57:42.918Z",
+      "checkedAt": "2026-11-16T04:57:42.918Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "Pinterest",
-      "status": "blocked",
-      "message": "来源要求验证访问",
+      "status": "ok",
+      "message": "三站公开图片经搜索索引发现",
       "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T04:45:40.014Z"
+      "images": [
+        {
+          "url": "https://i.pinimg.com/originals/af/c2/8d/afc28d3063b554853e5aa5345c5069d5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/af/c2/8d/afc28d3063b554853e5aa5345c5069d5.jpg",
+          "title": "Austin abrams dash | Tewkesbury enola holmes icons, Bloom characters ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/60728294968609369/",
+          "retrievedVia": "public-image-index"
+        }
+      ],
+      "updatedAt": "2026-11-16T04:57:46.212Z",
+      "checkedAt": "2026-11-16T04:57:46.212Z"
     }
   },
-  "checkedAt": "2026-11-16T04:45:40.014Z"
+  "checkedAt": "2026-11-16T04:57:46.212Z"
 }
