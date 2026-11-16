@@ -216,7 +216,7 @@ async function queuePhotoTask(item,{quiet=false}={}){
  if(quiet){try{const existing=await fetchPhotoSource(item,{source:'imdb',signal:AbortSignal.timeout(16000)});if(existing.registered!==false)return;}catch{return;}}
  if(photoTasks[id]&&['submitting','queued','processing'].includes(photoTasks[id].status))return;
  photoTasks[id]={status:'submitting'};updateDirectState();
- try{photoTasks[id]=await requestPhotoTask(id);if(photoTasks[id].status==='done')photoTasks[id].status='queued';persistPhotoTasks();if(!quiet)toast('补图已排队，完成后会自动读取');schedulePhotoTasks();}
+ try{photoTasks[id]=await requestPhotoTask(id);const completed=photoTasks[id].status==='done';if(completed){photoTasks[id].status='ready';photoChecks.delete(id);}persistPhotoTasks();if(completed&&selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}if(!quiet)toast(completed?'图库刚更新过，已重新读取':'补图已排队，完成后会自动读取');schedulePhotoTasks();}
  catch(error){photoTasks[id]={status:'failed',message:error.message};persistPhotoTasks();if(!quiet)toast(error.message);}
  if(selected&&photoSubjectId(selected)===id)updateDirectState();
 }
