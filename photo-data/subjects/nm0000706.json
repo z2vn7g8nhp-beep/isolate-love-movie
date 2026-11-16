@@ -10,44 +10,44 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
+      "status": "ok",
+      "message": "三站公开图片经搜索索引发现",
       "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTg0NTI0NDkzOF5BMl5BanBnXkFtZTcwMjYwMTIwNw@@._V1_FMjpg_UX1000_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTg0NTI0NDkzOF5BMl5BanBnXkFtZTcwMjYwMTIwNw@@._V1_QL80_UX360_.jpg",
-          "title": "Michelle Yeoh - Biography - IMDb",
+          "title": "Michelle Yeoh - IMDb",
           "kind": "搜索图片",
           "source": "IMDb · 搜索索引",
           "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0000706/bio/?ref_=nm_ov_bio_sm=",
+          "pageUrl": "https://www.imdb.com/name/nm0000706/filmotype",
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-15T15:41:43.291Z",
-      "checkedAt": "2026-11-16T04:03:48.503Z"
+      "updatedAt": "2026-11-16T04:13:25.264Z",
+      "checkedAt": "2026-11-16T04:13:25.264Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "豆瓣",
       "status": "unmatched",
       "message": "尚未核对到对应豆瓣档案",
       "method": "public-image-index",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T04:03:48.921Z"
+      "checkedAt": "2026-11-16T04:13:27.084Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "Pinterest",
-      "status": "blocked",
-      "message": "来源要求验证访问",
-      "method": "public-image-index",
+      "status": "ok",
+      "message": "从原站读取",
+      "method": "public-pin-widget",
       "images": [
         {
           "url": "https://i.pinimg.com/564x/11/fa/f6/11faf6bbfddd5000c9ac941375efb3de.jpg",
@@ -67,11 +67,30 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/152137293633990635/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/34/e4/22/34e4224ce5d7b6eda76ba6b038ae98ae.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/34/e4/22/34e4224ce5d7b6eda76ba6b038ae98ae.jpg",
+          "title": "Michelle Yeoh",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/21955116927852377/"
+        },
+        {
+          "url": "https://i.pinimg.com/736x/34/e4/22/34e4224ce5d7b6eda76ba6b038ae98ae.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/34/e4/22/34e4224ce5d7b6eda76ba6b038ae98ae.jpg",
+          "title": "Michelle Yeoh | Michelle yeoh, Bond girls, Girl",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/21955116927852377/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-15T15:41:43.969Z",
-      "checkedAt": "2026-11-16T04:03:49.151Z"
+      "updatedAt": "2026-11-16T04:13:27.705Z",
+      "checkedAt": "2026-11-16T04:13:27.705Z"
     }
   },
-  "checkedAt": "2026-11-16T04:03:49.151Z"
+  "checkedAt": "2026-11-16T04:13:27.705Z"
 }

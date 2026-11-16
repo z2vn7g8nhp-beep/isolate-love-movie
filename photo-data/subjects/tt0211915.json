@@ -10,10 +10,10 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
+      "status": "blocked",
+      "message": "来源限制了当前请求",
       "method": "public-image-index",
       "images": [
         {
@@ -308,22 +308,131 @@
         }
       ],
       "updatedAt": "2026-11-16T04:03:23.674Z",
-      "checkedAt": "2026-11-16T04:03:23.674Z"
+      "checkedAt": "2026-11-16T04:13:05.659Z"
     },
     "douban": {
-      "nextCursor": null,
-      "indexOffset": 71,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkyMjE1Iiwib2Zmc2V0IjoxMn0",
+      "indexOffset": 106,
       "name": "豆瓣",
-      "status": "empty",
-      "message": "该站本页没有更多可读图片",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T04:03:31.035Z"
+      "status": "ok",
+      "message": "从原站读取",
+      "method": "direct",
+      "images": [
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p477619026.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p477619026.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/477619026/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996612763.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996612763.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996612763/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p456301405.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p456301405.jpg",
+          "title": "Amélie Poulain（Audrey Tautou饰）与Nino Quincampoix（Mathieu Kassovitz饰）",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/456301405/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996603183.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996603183.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996603183/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996612342.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996612342.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996612342/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p835619962.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p835619962.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/835619962/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p579091716.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p579091716.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/579091716/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p835615475.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p835615475.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/835615475/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p456301336.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p456301336.jpg",
+          "title": "Amélie Poulain（Audrey Tautou饰）",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/456301336/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p835615702.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p835615702.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/835615702/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996603567.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996603567.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996603567/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p996615665.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p996615665.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996615665/"
+        }
+      ],
+      "updatedAt": "2026-11-16T04:13:06.011Z",
+      "checkedAt": "2026-11-16T04:13:06.011Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "Pinterest",
       "status": "blocked",
       "message": "来源要求验证访问",
@@ -350,8 +459,8 @@
         }
       ],
       "updatedAt": "2026-11-15T15:41:32.170Z",
-      "checkedAt": "2026-11-16T04:03:31.324Z"
+      "checkedAt": "2026-11-16T04:13:06.556Z"
     }
   },
-  "checkedAt": "2026-11-16T04:03:31.324Z"
+  "checkedAt": "2026-11-16T04:13:06.556Z"
 }
