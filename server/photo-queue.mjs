@@ -8,6 +8,48 @@ async function limited(bucket,key,max){const now=Date.now(),old=await read(bucke
 async function json(request){if(Number(request.headers.get('content-length'))>600)throw Error('请求过大');const body=await request.text();if(body.length>600)throw Error('请求过大');return JSON.parse(body);}
 async function session(request,bucket,supplied){const token=request.headers.get('authorization')?.match(/^Bearer ([a-f0-9]{64})$/)?.[1]||supplied;if(!/^[a-f0-9]{64}$/.test(token||''))return null;const row=await read(bucket,'sessions/'+await hash(token));return row&&row.until>Date.now()?row:null;}
 const publicState=row=>({id:row.id,status:row.status,requestedAt:row.requestedAt,finishedAt:row.finishedAt||null,message:row.message||''});
+// This page accepts only the archive's parent-window messages and calls its own origin.
+// It has no access to private archive records or to GitHub credentials.
+export function photoBridgeRuntime(){
+ const channel='isolate-photo-bridge-v1',parentOrigin='https://z2vn7g8nhp-beep.github.io';let currentSession,pendingSession,chain=Promise.resolve(),inflight=0;
+ const validId=id=>/^(tt|nm)\d{5,12}$/.test(id||'');
+ const reply=value=>window.parent.postMessage({channel,...value},parentOrigin);
+ async function read(path,body){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
+  try{const response=await fetch(new URL(path,window.location.origin).href,{method:'POST',mode:'same-origin',referrerPolicy:'same-origin',credentials:'omit',signal:controller.signal,headers:{'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});let value;
+   try{value=await response.json();}catch{throw Object.assign(Error('补图连接暂时没有返回有效响应'),{retryable:true});}
+   if(!response.ok)throw Object.assign(Error(value.error||'补图连接暂时不可用'),{status:response.status,retryable:response.status>=500||response.status===408});return value;
+  }finally{clearTimeout(timer);}
+ }
+ async function session(){
+  if(currentSession?.token&&currentSession.expiresAt>Date.now()+60000)return currentSession;
+  if(!pendingSession)pendingSession=(async()=>{const value=await read('/api/session');if(!/^[a-f0-9]{64}$/.test(value.token||''))throw Object.assign(Error('补图连接暂时未建立'),{retryable:true});currentSession={token:value.token,expiresAt:value.expiresAt};return currentSession;})();
+  try{return await pendingSession;}finally{pendingSession=null;}
+ }
+ window.addEventListener('message',event=>{
+  const data=event.data;if(event.origin!==parentOrigin||event.source!==window.parent||data?.channel!==channel)return;
+  if(data.kind==='ping'){reply({kind:'ready'});return;}
+  if(!['request','status'].includes(data.kind)||!validId(data.id)||!/^[a-z0-9-]{1,80}$/.test(data.requestId||'')||Object.keys(data).some(key=>!['channel','kind','requestId','id','session'].includes(key)))return;
+  if(inflight>=16){reply({kind:'result',requestId:data.requestId,error:'补图连接正忙，请稍后重试',retryable:true});return;}
+  inflight++;chain=chain.then(async()=>{
+   try{
+    if(!currentSession&&/^[a-f0-9]{64}$/.test(data.session?.token||'')&&Number(data.session.expiresAt)>Date.now())currentSession={token:data.session.token,expiresAt:data.session.expiresAt};
+    for(let attempt=0;attempt<2;attempt++){
+     const token=(await session()).token;try{const result=await read(data.kind==='status'?'/api/status':'/api/requests',{id:data.id,session:token});
+      if(result.id!==data.id||!['queued','processing','done','failed','missing'].includes(result.status))throw Object.assign(Error('补图状态暂时无法核对'),{retryable:true});reply({kind:'result',requestId:data.requestId,result,session:currentSession});return;
+     }catch(error){if(error.status===401&&attempt===0){currentSession=null;continue;}throw error;}
+    }
+   }catch(error){reply({kind:'result',requestId:data.requestId,error:error.status?String(error.message).slice(0,200):'备用补图连接暂时不可用',status:error.status,retryable:error.retryable!==false});}
+   finally{inflight--;}
+  }).catch(()=>{});
+ });
+ if(window.parent!==window)reply({kind:'ready'});
+}
+export function photoBridgeResponse(){
+ const nonce=[...crypto.getRandomValues(new Uint8Array(16))].map(n=>n.toString(16).padStart(2,'0')).join('');
+ const html='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>ISOLATE 图片连接</title><script nonce="'+nonce+'">('+photoBridgeRuntime.toString()+')();</script><body>ISOLATE 图片连接</body></html>';
+ return new Response(html,{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'same-origin','content-security-policy':"default-src 'none'; script-src 'nonce-"+nonce+"'; connect-src 'self'; frame-ancestors "+WEB_ORIGIN+"; base-uri 'none'; form-action 'none'"}});
+}
 let publicKeys;
 const unbase64=value=>Uint8Array.from(atob(value.replaceAll('-','+').replaceAll('_','/')),c=>c.charCodeAt(0));
 export async function verifyCollectorToken(token,{fetcher=fetch}={}){
@@ -20,11 +62,12 @@ export async function verifyCollectorToken(token,{fetcher=fetch}={}){
  }catch{return false;}
 }
 export default {async fetch(request,env){
- const url=new URL(request.url),origin=request.headers.get('origin'),allowed=origin===WEB_ORIGIN||env.ALLOW_LOCAL==='1'&&/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(origin||'');
+ const url=new URL(request.url),origin=request.headers.get('origin'),allowed=origin===WEB_ORIGIN||origin===url.origin||env.ALLOW_LOCAL==='1'&&/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(origin||'');
  const headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','vary':'Origin',...(allowed?{'access-control-allow-origin':origin,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type'}:{})};
  const send=(value,status=200)=>new Response(JSON.stringify(value),{status,headers});
  if(request.method==='OPTIONS')return new Response(null,{status:allowed?204:403,headers});
- if(request.method==='GET'&&url.pathname==='/health')return send({service:'isolate-photo-queue',version:1});
+ if(request.method==='GET'&&url.pathname==='/health')return send({service:'isolate-photo-queue',version:2,bridge:true});
+ if(request.method==='GET'&&url.pathname==='/bridge')return photoBridgeResponse();
  const bucket=env.BUCKET;if(!bucket)return send({error:'队列存储尚未启用'},503);
  try{
   if(url.pathname.startsWith('/internal/')){
