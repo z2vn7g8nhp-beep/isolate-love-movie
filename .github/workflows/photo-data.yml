@@ -42,6 +42,7 @@ jobs:
         with:
           name: photo-metadata
           path: photo-data/
+          retention-days: 1
       - name: Save independent public metadata
         run: |
           git config user.name 'isolate-photo-data'
