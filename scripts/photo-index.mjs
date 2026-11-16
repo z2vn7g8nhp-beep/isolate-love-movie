@@ -1,11 +1,34 @@
-const sources={imdb:{page:/(^|\.)imdb\.com$/,image:/^m\.media-amazon\.com$/},douban:{page:/(^|\.)douban\.com$/,image:/^img\d*\.doubanio\.com$/},pinterest:{page:/(^|\.)pinterest\.(com|co\.uk)$/,image:/^i\.pinimg\.com$/}};
+const sources={imdb:{page:/(^|\.)imdb\.com$/,image:/^m\.media-amazon\.com$/},douban:{page:/(^|\.)douban\.com$/,image:/^img\d*\.doubanio\.com$/},pinterest:{page:/(^|\.)pinterest\.(?:com(?:\.[a-z]{2})?|co\.[a-z]{2}|[a-z]{2})$/i,image:/^i\.pinimg\.com$/}};
 const names={imdb:'IMDb',douban:'豆瓣',pinterest:'Pinterest'};
 const decode=s=>String(s||'').replace(/&quot;/g,'"').replace(/&#39;|&#x27;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
 const normalize=s=>String(s||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
+const stop=new Set(['the','and','for','with','from','into','part','vol']);
+const titleWords=s=>(String(s||'').toLowerCase().match(/[a-z]{3,}/g)||[]).filter(w=>!stop.has(w));
+function titleMatches(text,page,source,item,exactId){
+ if(exactId)return true;
+ const n=normalize(text),title=normalize(item.title),zh=normalize(item.zh);
+ if(title&&n.includes(title)||zh&&n.includes(zh))return true;
+ const parts=String(item.title||'').split(/[:\-–—]/).map(s=>s.trim()).filter(Boolean);
+ if(parts.length>1){
+  const sub=parts.slice(1).join(' '),subNorm=normalize(sub),subWords=titleWords(sub);
+  if(subNorm.length>=8&&subWords.length>=2&&!/^(part|chapter)(one|two|three|four|five|\d+)$/.test(subNorm)&&n.includes(subNorm))return true;
+ }
+ if(source==='pinterest'){
+  let path=page.pathname;try{path=decodeURIComponent(path);}catch{}
+  const slug=path.split('--')[0].replace(/\/pin\//,' '),pinText=normalize(text+' '+slug);
+  if(title&&pinText.includes(title)||zh&&pinText.includes(zh))return true;
+  const rawWords=String(item.title||'').toLowerCase().match(/[a-z]{3,}/g)||[],sig=rawWords.filter(w=>!stop.has(w));
+  if(rawWords.length>=2&&rawWords.every(word=>pinText.includes(word)))return true;
+  if(sig.length>=3&&sig.filter(word=>pinText.includes(word)).length>=Math.max(3,Math.ceil(sig.length*0.65)))return true;
+ }
+ return false;
+}
 export function matchesPhotoSubject(pageUrl,caption,source,item){
- try{const page=new URL(pageUrl),id=page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)/)?.[1];if(source==='imdb'&&id&&id!==item.id)return false;
- const release=String(caption||'').match(/\(((?:19|20)\d{2})\)/)?.[1];if(item.year&&release&&Number(release)!==Number(item.year)&&!String(item.title).includes(release))return false;
- return true;
+ try{const page=new URL(pageUrl),id=page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)(?:\/|$)/)?.[1];
+  if(source==='imdb'&&id&&id!==item.id)return false;
+  if(source==='imdb'&&id===item.id)return true;
+  const release=String(caption||'').match(/\(((?:19|20)\d{2})\)/)?.[1];if(item.year&&release&&Number(release)!==Number(item.year)&&!String(item.title).includes(release))return false;
+  return true;
  }catch{return false;}
 }
 export function parseImageIndex(html,source,item){
@@ -13,9 +36,10 @@ export function parseImageIndex(html,source,item){
  for(const match of html.matchAll(/\bm=("[^"]*"|'[^']*')/g))try{
   const row=JSON.parse(decode(match[1].slice(1,-1))),image=new URL(row.murl),page=new URL(row.purl);
   if(!['https:','http:'].includes(image.protocol)||page.protocol!=='https:'||!rule.image.test(image.hostname)||!rule.page.test(page.hostname))continue;
-  image.protocol='https:';const caption=decode(row.t||row.desc||'');if(!matchesPhotoSubject(page.href,caption,source,item))continue;const n=normalize(caption+' '+(row.desc||'')),title=normalize(item.title),zh=normalize(item.zh);
-  const exactId=source==='imdb'&&page.pathname.includes('/'+item.id+'/');
-  const words=String(item.title||'').toLowerCase().match(/[a-z]{3,}/g)||[];const closePin=source==='pinterest'&&words.length>=2&&words.every(word=>n.includes(word));if(!exactId&&!closePin&&!(title&&n.includes(title))&&!(zh&&n.includes(zh)))continue;
+  image.protocol='https:';const caption=decode(row.t||row.desc||'');if(!matchesPhotoSubject(page.href,caption,source,item))continue;
+  const imdbId=source==='imdb'?page.pathname.match(/\/(?:title|name)\/((?:tt|nm)\d+)(?:\/|$)/)?.[1]:'';
+  const exactId=source==='imdb'&&imdbId===item.id;
+  if(!titleMatches(caption+' '+(row.desc||''),page,source,item,exactId))continue;
   if(/\.gif(?:$|\?)/i.test(image.href)||seen.has(image.href))continue;seen.add(image.href);
   let thumbnail=image.href;
   if(source==='imdb')thumbnail=image.href.replace(/\._V1_.*(?=\.(?:jpg|png))/i,'._V1_QL80_UX360_');
@@ -32,7 +56,17 @@ export async function indexedPhotos(source,item,{first=1,signal,fetcher=fetch}={
  // Punctuation in a title (notably ':') and an over-specific site path can
  // produce unrelated fallback results. Try a bounded, quoted title as well.
  const phrase=String(title||'').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
- const queries=[`"${phrase}" site:${scope}`,'site:'+scope+(source==='imdb'?'/'+(item.kind==='person'?'name':'title')+'/'+item.id:'')+' '+title];
+ const enPhrase=String(item.title||'').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim();
+ const subPhrase=String(item.title||'').includes(':')?String(item.title).split(':').slice(1).join(' ').replace(/[\p{P}\p{S}]/gu,' ').replace(/\s+/g,' ').trim():'';
+ const root=item.kind==='person'?'name':'title';
+ const queries=[
+  `"${phrase}" site:${scope}`,
+  'site:'+scope+(source==='imdb'?'/'+root+'/'+item.id:'')+' '+title,
+  ...(source==='imdb'?[`site:imdb.com/${root}/${item.id} mediaviewer`]:[]),
+  ...(source==='douban'&&item.zh&&enPhrase&&enPhrase!==phrase?[`"${enPhrase}" site:${scope}`]:[]),
+  ...(source==='pinterest'&&subPhrase&&subPhrase.length>=6?[`"${subPhrase}" site:${scope}`]:[]),
+  ...(source==='pinterest'?[`"${enPhrase}" ${item.kind==='person'?'portrait':'poster'} site:pinterest.com`]:[])
+ ];
  let failure;
  for(const [attempt,query]of [...new Set(queries)].entries()){
   try{
@@ -64,7 +98,7 @@ export async function enrichPinterest(images,item,{signal,fetcher=fetch}={}){
  const read=async path=>{const r=await fetcher('https://widgets.pinterest.com/v3/pidgets/'+path,{signal:signal||AbortSignal.timeout(10000)});if(!r.ok)throw Error('Pin widget unavailable');return r.json();};
  try{
   const {pinterestImages}=await import('../server/photo-api.mjs');const info=await read('pins/info/?pin_ids='+ids.join(',')),pins=(Array.isArray(info.data)?info.data:[]).filter(pin=>ids.includes(String(pin.id)));const result=pinterestImages(pins),boards=new Set();
-  for(const pin of pins){const board=pin.board;if(!board?.url)continue;const name=normalize((board.name||'')+' '+board.url);if(!name.includes(normalize(item.title))&&!(item.zh&&name.includes(normalize(item.zh))))continue;let url;try{url=new URL(board.url,'https://www.pinterest.com');}catch{continue;}if(!/(^|\.)pinterest\.com$/.test(url.hostname))continue;const path=url.pathname.match(/^\/([\w-]+)\/([^/]+)\/?$/);if(path)boards.add('boards/'+encodeURIComponent(path[1])+'/'+encodeURIComponent(decodeURIComponent(path[2]))+'/pins/');}
+  for(const pin of pins){const board=pin.board;if(!board?.url)continue;const name=normalize((board.name||'')+' '+board.url);const parts=String(item.title||'').split(/[:\-–—]/).map(s=>s.trim()).filter(Boolean),sub=parts.length>1?normalize(parts.slice(1).join(' ')):'';if(!name.includes(normalize(item.title))&&!(item.zh&&name.includes(normalize(item.zh)))&&!(sub.length>=8&&name.includes(sub)))continue;let url;try{url=new URL(board.url,'https://www.pinterest.com');}catch{continue;}if(!/(^|\.)pinterest\.com$/.test(url.hostname))continue;const path=url.pathname.match(/^\/([\w-]+)\/([^/]+)\/?$/);if(path)boards.add('boards/'+encodeURIComponent(path[1])+'/'+encodeURIComponent(decodeURIComponent(path[2]))+'/pins/');}
   for(const path of [...boards].slice(0,1))try{const data=await read(path);result.push(...pinterestImages(data.data?.pins||[]).filter(image=>matchesPhotoSubject(image.pageUrl,image.title,'pinterest',item)));}catch{/* Keep verified Pin results if the optional board cannot be read. */}
   return result.filter(image=>! /\.gif(?:$|\?)/i.test(image.url)).map(image=>({...image,retrievedVia:'public-pin-widget'}));
  }catch{return[];}

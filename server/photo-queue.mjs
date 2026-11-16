@@ -78,6 +78,13 @@ export async function verifyCollectorToken(token,{fetcher=fetch}={}){
   const key=await crypto.subtle.importKey('jwk',jwk,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['verify']);return crypto.subtle.verify('RSASSA-PKCS1-v1_5',key,unbase64(parts[2]),new TextEncoder().encode(parts[0]+'.'+parts[1]));
  }catch{return false;}
 }
+async function wakeCollector(env,bucket){
+ if(!env.GITHUB_DISPATCH_TOKEN)return;
+ const now=Date.now(),last=await read(bucket,'collector/dispatched');
+ if(last?.at&&now-last.at<60000)return;
+ await write(bucket,'collector/dispatched',{at:now});
+ try{await fetch('https://api.github.com/repos/z2vn7g8nhp-beep/isolate-love-movie/actions/workflows/photo-queue.yml/dispatches',{method:'POST',signal:AbortSignal.timeout(5000),headers:{Authorization:'Bearer '+env.GITHUB_DISPATCH_TOKEN,Accept:'application/vnd.github+json','User-Agent':'isolate-photo-queue','Content-Type':'application/json'},body:JSON.stringify({ref:'main'})});}catch{}
+}
 export default {async fetch(request,env){
  const url=new URL(request.url),origin=request.headers.get('origin'),allowed=origin===WEB_ORIGIN||origin===url.origin||env.ALLOW_LOCAL==='1'&&/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(origin||'');
  const headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','vary':'Origin',...(allowed?{'access-control-allow-origin':origin,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type'}:{})};
@@ -119,7 +126,7 @@ export default {async fetch(request,env){
   if(url.pathname==='/api/requests'&&request.method==='POST'){
    const key='requests/'+body.id,old=await read(bucket,key);if(old&&(old.status==='queued'||old.status==='processing'&&Date.now()-Date.parse(old.updatedAt||old.startedAt)<900000||old.status==='done'&&Date.now()-Date.parse(old.finishedAt)<3600000))return send(await publicState(old,bucket));
    if(!await limited(bucket,'limits/device-'+visitor.key,30)||!await limited(bucket,'limits/all',100))return send({error:'今天补图条目较多，请明天继续'},429);
-   const row={id:body.id,status:'queued',stage:'queued',requestedAt:new Date().toISOString(),attempts:0};await write(bucket,key,row);await write(bucket,'pending/'+body.id,row);return send(await publicState(row,bucket),202);
+   const row={id:body.id,status:'queued',stage:'queued',requestedAt:new Date().toISOString(),attempts:0};await write(bucket,key,row);await write(bucket,'pending/'+body.id,row);await wakeCollector(env,bucket);return send(await publicState(row,bucket),202);
   }
   const id=url.pathname.match(/^\/api\/requests\/((?:tt|nm)\d{5,12})$/)?.[1]||(url.pathname==='/api/status'?body?.id:null);if(id&&(request.method==='GET'||url.pathname==='/api/status'&&request.method==='POST')){const row=await read(bucket,'requests/'+id);return row?send(await publicState(row,bucket)):send({id,status:'missing'});}
   return send({error:'接口不存在'},404);

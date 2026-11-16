@@ -56,3 +56,20 @@ test('new archive requests collect bounded source pages and preserve the retry c
  const result=await retrievePhotoPages({source:'douban'},{pages:99,retrieve});assert.equal(calls,3);assert.equal(result.images.length,3);assert.deepEqual(JSON.parse(Buffer.from(result.nextCursor,'base64url').toString()),{source:'douban',offset:36});
  calls=0;const partial=await retrievePhotoPages({source:'douban'},{pages:3,retrieve:async subject=>{if(calls)return {status:'blocked',images:[],nextCursor:null};return retrieve(subject);}});assert.equal(partial.status,'ok');assert.equal(partial.images.length,1);assert.ok(partial.nextCursor);
 });
+test('person Douban lookup uses celebrity endpoints and blocked upstream is not reported as unmatched',async()=>{
+ const old=globalThis.fetch,urls=[];
+ globalThis.fetch=async url=>{
+  urls.push(url);
+  if(url.includes('subject_suggest'))return new Response(JSON.stringify([{id:'1420001',title:'Spike Fearn',type:'celebrity'}]));
+  if(url.includes('/rexxar/api/v2/celebrity/1420001/photos'))return new Response(JSON.stringify({total:1,photos:[{id:'777',owner_uri:'douban://douban.com/celebrity/1420001',image:{large:{url:'https://img3.doubanio.com/view/photo/l/public/p777.jpg'}}}]}));
+  if(url.includes('/rexxar/api/v2/celebrity/1420001'))return new Response(JSON.stringify({imdb:'nm10514458'}));
+  return new Response('Forbidden',{status:403});
+ };
+ try{
+  const ok=await(await handlePhotoRequest(new Request('https://reader.example/v1/photos?source=douban&id=nm10514458&kind=person&title=Spike%20Fearn'))).json();
+  assert.equal(ok.status,'ok');assert.equal(ok.images.length,1);assert.ok(urls.some(u=>u.includes('/v2/celebrity/1420001')));
+  globalThis.fetch=async()=>new Response('Forbidden',{status:403});
+  const blocked=await(await handlePhotoRequest(new Request('https://reader.example/v1/photos?source=douban&id=nm9999999&kind=person&title=Blocked%20Actor'))).json();
+  assert.equal(blocked.status,'blocked');
+ }finally{globalThis.fetch=old;}
+});

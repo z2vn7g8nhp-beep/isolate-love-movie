@@ -49,7 +49,7 @@ async function imdb(subject,signal){
  return {images:images.slice(offset,offset+BATCH),next:offset+BATCH<images.length?{source:'imdb',offset:offset+BATCH}:null};
 }
 export function parseDoubanHtml(html,subject){
- const candidates=[];const links=/<a\b[^>]*href=["']([^"']*(?:photos\/photo\/\d+)[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi;
+ const candidates=[];const links=/<a\b[^>]*href=["']([^"']*(?:(?:photos\/photo|personage\/\d+\/photo)\/\d+)[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi;
  for(const match of html.matchAll(links)){const image=match[2].match(/(?:data-original|src)=["']([^"']+)["']/i);if(!image)continue;const url=imageUrl(image[1]);if(!url||!/\/view\/photo\/(?:s|m|l|raw|xl)\/public\//.test(url))continue;const page=new URL(decode(match[1]),'https://movie.douban.com/');if(!/(^|\.)douban\.com$/.test(page.hostname))continue;candidates.push({url:url.replace(/\/view\/photo\/(s|m)\/public\//,'/view/photo/l/public/'),thumbnail:url.replace(/\/view\/photo\/(s|l|raw|xl)\/public\//,'/view/photo/m/public/'),title:subject.title+' · 豆瓣相册',kind:subject.kind==='person'?'人物照片':'作品图片',source:'豆瓣 相册',license:'版权归原权利人',pageUrl:page.href});}
  return unique(candidates);
 }
@@ -57,17 +57,29 @@ async function resolveDouban(subject,signal){
  if(subject.douban)return subject.douban;
  if(!subject.id)throw new SourceError('尚未核对到对应豆瓣档案','unmatched');
  const title=subject.kind==='character'&&subject.work?subject.work:subject.title;
- const suggestions=await read('https://movie.douban.com/j/subject_suggest?q='+encodeURIComponent(title),{signal,json:true,headers:{referer:'https://movie.douban.com/'}});
- const candidates=(Array.isArray(suggestions)?suggestions:[]).filter(x=>/^\d+$/.test(x.id||'')).slice(0,3);
+ const person=subject.kind==='person';
+ const subTitle=String(title||'').includes(':')?String(title).split(':').slice(1).join(' ').trim():'';
+ const terms=[...new Set([title,subject.zh,subject.id,subTitle].filter(Boolean))];
  const norm=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
- const exact=candidates.filter(x=>[x.title,x.sub_title].some(name=>norm(name)===norm(title))&&subject.year&&String(x.year)===String(subject.year));
- for(const candidate of candidates){
-  try{const details=await read('https://m.douban.com/rexxar/api/v2/movie/'+candidate.id,{signal,json:true,headers:{referer:'https://m.douban.com/'}});
-   if(details.imdb===subject.id)return candidate.id;
-   if(!details.imdb&&exact.length===1&&exact[0].id===candidate.id&&String(details.year)===String(subject.year)&&[details.original_title,details.title].some(name=>norm(name)===norm(title))&&!(subject.kind==='series'&&details.is_tv===false))return candidate.id;
-  }catch(error){if(signal.aborted)throw error;}
-  try{const html=await read('https://movie.douban.com/subject/'+candidate.id+'/',{signal});if(html.includes(subject.id))return candidate.id;}catch(error){if(signal.aborted)throw error;}
+ const names=[title,subject.zh].filter(Boolean).map(norm);
+ const rexxarKind=person?'celebrity':'movie',webKind=person?'celebrity':'subject';
+ const tried=new Set();let blocked=false;
+ for(const term of terms){
+  let suggestions;
+  try{suggestions=await read('https://movie.douban.com/j/subject_suggest?q='+encodeURIComponent(term),{signal,json:true,headers:{referer:'https://movie.douban.com/'}});}
+  catch(error){if(signal.aborted)throw error;if(error.status==='blocked')blocked=true;continue;}
+  const candidates=(Array.isArray(suggestions)?suggestions:[]).filter(x=>/^\d+$/.test(x.id||'')&&!tried.has(x.id)&&!(person&&x.type==='movie')&&!(!person&&x.type==='celebrity')).slice(0,5);
+  const exact=candidates.filter(x=>[x.title,x.sub_title].some(name=>names.includes(norm(name)))&&!person&&subject.year&&String(x.year)===String(subject.year));
+  for(const candidate of candidates){
+   tried.add(candidate.id);
+   try{const details=await read('https://m.douban.com/rexxar/api/v2/'+rexxarKind+'/'+candidate.id,{signal,json:true,headers:{referer:'https://m.douban.com/'}});
+    if(details.imdb===subject.id)return candidate.id;
+    if(!person&&!details.imdb&&exact.length===1&&exact[0].id===candidate.id&&String(details.year)===String(subject.year)&&[details.original_title,details.title].some(name=>names.includes(norm(name)))&&!(subject.kind==='series'&&details.is_tv===false))return candidate.id;
+   }catch(error){if(signal.aborted)throw error;if(error.status==='blocked')blocked=true;}
+   try{const html=await read('https://movie.douban.com/'+webKind+'/'+candidate.id+'/',{signal});if(html.includes(subject.id))return candidate.id;}catch(error){if(signal.aborted)throw error;if(error.status==='blocked')blocked=true;}
+  }
  }
+ if(blocked)throw new SourceError('豆瓣暂时限制了当前请求','blocked');
  throw new SourceError('尚未核对到对应豆瓣档案','unmatched');
 }
 function doubanPhotoPage(photo){try{const page=new URL(photo.url);if(/^(www|movie)\.douban\.com$/.test(page.hostname)&&/\/(?:photos\/photo|personage\/\d+\/photo)\/\d+/.test(page.pathname)){page.protocol='https:';return page.href;}}catch{}return 'https://movie.douban.com/photos/photo/'+photo.id+'/';}

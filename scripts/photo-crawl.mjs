@@ -1,5 +1,5 @@
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
-import {parseImdbHtml,parseDoubanHtml,parsePinterestHtml} from '../server/photo-api.mjs';
+import {parseImdbHtml,parseDoubanHtml,parsePinterestHtml,decodeCursor} from '../server/photo-api.mjs';
 import {detail} from '../public/data-client.js';
 import {collectPhotoSource} from './photo-source.mjs';
 import {cachePhotoPreviews} from './photo-cache.mjs';
@@ -14,14 +14,15 @@ const unique=items=>[...new Map(items.filter(x=>x?.url).map(x=>[x.url,x])).value
 async function browserPhotos(source,item){
  const key=source+':'+item.id;if(browserBlocked.has(source)||browserTried.has(key))return[];browserTried.add(key);
  try{
-  const {chromium}=await import('playwright');browser||=await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+  const {chromium}=await import('playwright');
+  if(!browser){try{browser=await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});}catch{browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});}}
   const page=await browser.newPage({locale:'en-US',viewport:{width:1440,height:1000}});await page.route('**/*',route=>['image','font','media'].includes(route.request().resourceType())?route.abort():route.continue());
   const urls={imdb:'https://www.imdb.com/'+(item.kind==='person'?'name':'title')+'/'+item.id+'/mediaindex/',douban:item.douban?'https://movie.douban.com/'+(item.kind==='person'?'celebrity':'subject')+'/'+item.douban+'/photos/?type='+(item.kind==='person'?'C':'S'):'',pinterest:'https://www.pinterest.com/search/pins/?q='+encodeURIComponent(item.title+' '+(item.year||'')+' '+(item.kind==='person'?'portrait':'stills'))};
   if(!urls[source]){await page.close();return[];}
-  try{const response=await page.goto(urls[source],{waitUntil:'domcontentloaded',timeout:22000});if([401,403,429].includes(response?.status())){browserBlocked.add(source);return[];}await page.waitForTimeout(1800);const html=await page.content(),visible=await page.locator('body').innerText().catch(()=>'');if(/verify you are human|access denied|异常请求|访问异常|请输入验证码/i.test(visible.slice(0,20000))){browserBlocked.add(source);return[];}
+  try{const response=await page.goto(urls[source],{waitUntil:'domcontentloaded',timeout:22000});if([401,403,429].includes(response?.status())){browserBlocked.add(source);console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'blocked',httpStatus:response?.status()}));return[];}await page.waitForTimeout(1800);const html=await page.content(),visible=await page.locator('body').innerText().catch(()=>'');if(/verify you are human|access denied|异常请求|访问异常|请输入验证码/i.test(visible.slice(0,20000))){browserBlocked.add(source);console.log(JSON.stringify({stage:'browser',source,subject:item.id,status:'blocked',reason:'challenge'}));return[];}
    const parsed=source==='imdb'?parseImdbHtml(html,item):source==='douban'?parseDoubanHtml(html,item):parsePinterestHtml(html);
    if(parsed.length)return parsed;
-   if(source!=='douban'){const rows=await page.evaluate(source=>[...document.querySelectorAll(source==='imdb'?'a[href*="/mediaviewer/"] img':'a[href*="/pin/"] img')].map(img=>({url:img.currentSrc||img.src,pageUrl:img.closest('a').href,title:img.alt})),source);return rows.filter(x=>source==='imdb'?/^https:\/\/m\.media-amazon\.com\//.test(x.url):/^https:\/\/i\.pinimg\.com\//.test(x.url)).map(x=>({...x,thumbnail:x.url,kind:'作品图片',source:source==='imdb'?'IMDb 相册':'Pinterest 搜索',license:'版权归原权利人'}));}
+   if(source!=='douban'){const rows=await page.evaluate(source=>[...document.querySelectorAll(source==='imdb'?'a[href*="/mediaviewer/"] img':'a[href*="/pin/"] img')].map(img=>({url:img.getAttribute('src')||img.getAttribute('data-src')||img.currentSrc||img.src,pageUrl:img.closest('a')?.href||'',title:img.alt})),source);return rows.filter(x=>source==='imdb'?/^https:\/\/m\.media-amazon\.com\//.test(x.url):/^https:\/\/i\.pinimg\.com\//.test(x.url)).map(x=>({...x,thumbnail:x.url,kind:'作品图片',source:source==='imdb'?'IMDb 相册':'Pinterest 搜索',license:'版权归原权利人'}));}
    return[];
   }finally{await page.close();}
  }catch(error){console.log(JSON.stringify({stage:'browser',source,status:'unavailable',message:error.message.slice(0,160)}));return[];}
@@ -38,8 +39,11 @@ const external=await getJson(new URL('external-ids.json',root),{});
 const results={};
 try{for(const raw of ordered.slice(0,max)){
  let item={...raw};await reportPhotoProgress(item.id,{stage:'collecting'});
- if(!item.douban){try{const metadata=external[item.id]||await detail(item.id,item.title,{signal:AbortSignal.timeout(15000)});if(metadata.item?.douban){external[item.id]=metadata;item={...item,douban:metadata.item.douban};}}catch{}}
+ const known=external[item.id];
+ if(known?.item)item={...item,...(!item.zh&&known.item.zh?{zh:known.item.zh}:{}),...(!item.douban&&known.item.douban?{douban:known.item.douban}:{})};
+ if(!item.douban||!item.zh){try{const metadata=known?.item?.douban&&known?.item?.zh?known:await detail(item.id,item.title,{signal:AbortSignal.timeout(15000)});if(metadata?.item&&(metadata.item.douban||metadata.item.zh||metadata.item.wikidata)){external[item.id]=metadata;item={...item,...(!item.zh&&metadata.item.zh?{zh:metadata.item.zh}:{}),...(!item.douban&&metadata.item.douban?{douban:metadata.item.douban}:{})};}}catch{}}
  const path=new URL('subjects/'+item.id+'.json',root),old=await getJson(path,{sources:{}}),sources={};
+ if(!item.zh&&old.item?.zh)item={...item,zh:old.item.zh};
  for(const source of ['imdb','douban','pinterest']){
   const progress={stage:'collecting',source,sourceStatus:'fetching'};await reportPhotoProgress(item.id,progress);
   const heartbeat=process.env.PHOTO_QUEUE_PROGRESS==='1'?setInterval(()=>{reportPhotoProgress(item.id,progress);},30000):null;heartbeat?.unref();
@@ -47,6 +51,7 @@ try{for(const raw of ordered.slice(0,max)){
   const summary=summarizePhotoCrawl({[source]:old.sources[source]},{[source]:sources[source]});
   await reportPhotoProgress(item.id,{stage:'collecting',source,sourceStatus:sources[source].status,total:summary.total,newImages:summary.added});
  }
+ if(!item.douban&&sources.douban?.nextCursor){try{const resolved=decodeCursor(sources.douban.nextCursor)?.douban;if(/^\d+$/.test(String(resolved||''))){item={...item,douban:String(resolved)};external[item.id]={...(external[item.id]||{}),item:{...(external[item.id]?.item||{}),...(item.zh?{zh:item.zh}:{}),douban:String(resolved)},fetchedAt:new Date().toISOString()};}}catch{}}
  const record={version:1,item:{id:item.id,title:item.title,zh:item.zh||'',kind:item.kind,year:item.year||null},sources,checkedAt:new Date().toISOString()};
  await writeFile(path,JSON.stringify(record,null,2)+'\n');manifest.subjects[item.id]={title:item.title,path:'subjects/'+item.id+'.json',checkedAt:record.checkedAt,counts:Object.fromEntries(Object.entries(sources).map(([key,value])=>[key,value.images.length]))};
  results[item.id]={summary:summarizePhotoCrawl(old.sources,sources),dataCheckedAt:record.checkedAt};
