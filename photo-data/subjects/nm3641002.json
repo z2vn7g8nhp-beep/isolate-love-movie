@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -77,11 +79,11 @@
           "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-16T15:35:53.569Z",
-      "checkedAt": "2026-11-16T15:35:53.569Z"
+      "updatedAt": "2026-11-16T16:00:25.333Z",
+      "checkedAt": "2026-11-16T16:00:25.333Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyMjh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyNDB9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -569,8 +571,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-16T15:35:54.150Z",
-      "checkedAt": "2026-11-16T15:35:54.150Z",
+      "updatedAt": "2026-11-16T16:00:26.340Z",
+      "checkedAt": "2026-11-16T16:00:26.340Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -578,8 +580,8 @@
       "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/af/c2/8d/afc28d3063b554853e5aa5345c5069d5.jpg",
@@ -1050,11 +1052,227 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/380554237282192035/"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/88/b3/cd/88b3cd25d5194b412990155e07e4c200.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/88/b3/cd/88b3cd25d5194b412990155e07e4c200.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/43/7d/81/437d8166e78c23d530f38983a684a6ac.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/43/7d/81/437d8166e78c23d530f38983a684a6ac.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d1/8e/46/d18e463f63bf7766be46776b94dbe77c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d1/8e/46/d18e463f63bf7766be46776b94dbe77c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/b8/d6/d3/b8d6d30dd0aa595fb4b639f0d01c496a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b8/d6/d3/b8d6d30dd0aa595fb4b639f0d01c496a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/93/b2/63/93b263e77eb3b5176a6da6d8884ec978.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/93/b2/63/93b263e77eb3b5176a6da6d8884ec978.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/0a/c3/53/0ac35390fa1c1a3e6e05dcba7b842cfc.png",
+          "thumbnail": "https://i.pinimg.com/236x/0a/c3/53/0ac35390fa1c1a3e6e05dcba7b842cfc.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/8a/ca/3c/8aca3c6d7b3a1a527a79b0507f548b23.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/8a/ca/3c/8aca3c6d7b3a1a527a79b0507f548b23.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/03/35/8b/03358bd465aa0b54fb25f91b893de6a5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/03/35/8b/03358bd465aa0b54fb25f91b893de6a5.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/6d/a1/a0/6da1a05b8b75aa5109bcd0ee9def0e7f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/6d/a1/a0/6da1a05b8b75aa5109bcd0ee9def0e7f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/3e/60/34/3e6034447f752524e530eef63f30ebd2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/3e/60/34/3e6034447f752524e530eef63f30ebd2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/9b/0c/e2/9b0ce28548ca22ff3bf3d9c65577687c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9b/0c/e2/9b0ce28548ca22ff3bf3d9c65577687c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/84/9c/30/849c308b151ebe48cb044d511c0129d6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/84/9c/30/849c308b151ebe48cb044d511c0129d6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/61/7f/47/617f47a79d3190090c774919baee1c5c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/61/7f/47/617f47a79d3190090c774919baee1c5c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2d/93/d7/2d93d70d072904e9115bcfb7735a897f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2d/93/d7/2d93d70d072904e9115bcfb7735a897f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c9/2f/d1/c92fd1dfbcdce946241cbe2522db8748.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c9/2f/d1/c92fd1dfbcdce946241cbe2522db8748.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/37/1c/86/371c865fd14072905a40a543f66d3727.png",
+          "thumbnail": "https://i.pinimg.com/236x/37/1c/86/371c865fd14072905a40a543f66d3727.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/84/37/72/843772c3fd2ef3eb27c0eb275822a0b6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/84/37/72/843772c3fd2ef3eb27c0eb275822a0b6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/b4/0e/73/b40e7327eee28244928b3c1fa4d2395a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b4/0e/73/b40e7327eee28244928b3c1fa4d2395a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/a1/1a/8a/a11a8a0dead77cdf842b399db3ff1891.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a1/1a/8a/a11a8a0dead77cdf842b399db3ff1891.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d3/ff/0e/d3ff0e3fabe2482bdd23575b79a7a73b.png",
+          "thumbnail": "https://i.pinimg.com/236x/d3/ff/0e/d3ff0e3fabe2482bdd23575b79a7a73b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/55/9d/56/559d569251327c50013714ae57a49de6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/55/9d/56/559d569251327c50013714ae57a49de6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4c/61/ee/4c61eeb6aad62dd2f757e1cff2abc42d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4c/61/ee/4c61eeb6aad62dd2f757e1cff2abc42d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/bb/be/cf/bbbecff6f8328ede2c553224e19c10dc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/bb/be/cf/bbbecff6f8328ede2c553224e19c10dc.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/1f/73/82/1f7382ba3cbc0241ef3c89abc370faad.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/1f/73/82/1f7382ba3cbc0241ef3c89abc370faad.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
         }
       ],
-      "updatedAt": "2026-11-16T15:35:57.766Z",
-      "checkedAt": "2026-11-16T15:35:57.766Z"
+      "updatedAt": "2026-11-16T16:00:29.036Z",
+      "checkedAt": "2026-11-16T16:00:29.036Z"
     }
   },
-  "checkedAt": "2026-11-16T15:35:57.767Z"
+  "checkedAt": "2026-11-16T16:00:29.039Z"
 }

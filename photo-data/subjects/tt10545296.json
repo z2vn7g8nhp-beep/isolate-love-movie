@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZDk2YjNhYzEtYzg2ZC00OWEwLWJhYzgtMGUzMWVjNDFmYzI5XkEyXkFqcGc@._V1_.jpg",
@@ -897,11 +899,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T15:36:35.409Z",
-      "checkedAt": "2026-11-16T15:36:35.409Z"
+      "updatedAt": "2026-11-16T16:00:59.370Z",
+      "checkedAt": "2026-11-16T16:00:59.370Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6NjB9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6NzJ9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1389,8 +1391,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-16T15:36:35.828Z",
-      "checkedAt": "2026-11-16T15:36:35.828Z",
+      "updatedAt": "2026-11-16T16:00:59.785Z",
+      "checkedAt": "2026-11-16T16:00:59.785Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1398,8 +1400,8 @@
       "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/564x/28/c6/8d/28c68d2fbeb412a4f8c8957ae6d348bf.jpg",
@@ -2350,11 +2352,236 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/508343876724194808/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/0a/ba/d3/0abad3d4a82fe080ccd8cda08657b878.png",
+          "thumbnail": "https://i.pinimg.com/236x/0a/ba/d3/0abad3d4a82fe080ccd8cda08657b878.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/42/cc/db/42ccdb5d8558fda0247dd604c802913e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/42/cc/db/42ccdb5d8558fda0247dd604c802913e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4e/5b/08/4e5b089ecc442acd343b9805d8fca431.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4e/5b/08/4e5b089ecc442acd343b9805d8fca431.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/97/3a/ce/973aceb5a78d005ce0336e5ba1705dbd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/97/3a/ce/973aceb5a78d005ce0336e5ba1705dbd.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/92/ea/bc/92eabcdf53e3bfdeb1a4470f11c4eeaa.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/92/ea/bc/92eabcdf53e3bfdeb1a4470f11c4eeaa.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/fa/b1/b4/fab1b4f745f16a62d98845d4c0aa0ec9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fa/b1/b4/fab1b4f745f16a62d98845d4c0aa0ec9.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/09/00/6c/09006c17770f3abe5576e454c2b2888b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/09/00/6c/09006c17770f3abe5576e454c2b2888b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/87/16/9f/87169fa64f0c3751cbde10be3f17d416.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/87/16/9f/87169fa64f0c3751cbde10be3f17d416.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/b4/80/95/b48095a56fd9701eb60e3b0e06c2cb2c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b4/80/95/b48095a56fd9701eb60e3b0e06c2cb2c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/51/4c/e8/514ce861b8e8a450baed2668a77fcb75.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/51/4c/e8/514ce861b8e8a450baed2668a77fcb75.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/28/be/3d/28be3da55d54c508ad9ed0dfd9167edb.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/28/be/3d/28be3da55d54c508ad9ed0dfd9167edb.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/46/56/0a/46560ade325adc44811b6d6f738fa058.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/46/56/0a/46560ade325adc44811b6d6f738fa058.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4e/46/6d/4e466daaa73e7c0ecb3f0b925bf18c8e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4e/46/6d/4e466daaa73e7c0ecb3f0b925bf18c8e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/30/bb/1e/30bb1e8e436e69f9d1c63caaeb82d87c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/30/bb/1e/30bb1e8e436e69f9d1c63caaeb82d87c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/76/d7/f2/76d7f228fb1ee56d0232317a178f8099.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/76/d7/f2/76d7f228fb1ee56d0232317a178f8099.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/50/33/01/5033016367c756a2a042ee91c9abe10a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/50/33/01/5033016367c756a2a042ee91c9abe10a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/19/43/e4/1943e4607f85a8a20e3dc7ad1db539bb.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/19/43/e4/1943e4607f85a8a20e3dc7ad1db539bb.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4c/d5/8a/4cd58a128e8b37e60ac228c694b45afc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4c/d5/8a/4cd58a128e8b37e60ac228c694b45afc.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4f/ad/20/4fad205d049888e94c2d45bf81774787.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4f/ad/20/4fad205d049888e94c2d45bf81774787.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/fb/b1/47/fbb1470e7a295c317b5a4a6dc7e21e8f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fb/b1/47/fbb1470e7a295c317b5a4a6dc7e21e8f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/71/d0/c3/71d0c3d73df2fce001c3272ac6a1d837.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/71/d0/c3/71d0c3d73df2fce001c3272ac6a1d837.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/05/29/0e/05290e6d11ba72cd003460837f00e4f5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/05/29/0e/05290e6d11ba72cd003460837f00e4f5.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5f/a5/13/5fa513091247e9e39f842f342770b3ea.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5f/a5/13/5fa513091247e9e39f842f342770b3ea.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/68/83/f0/6883f061ee99b5cf009e97d146d21639.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/68/83/f0/6883f061ee99b5cf009e97d146d21639.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/91/f9/00/91f900cfea963a6a3a3a7704dda9227d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/91/f9/00/91f900cfea963a6a3a3a7704dda9227d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
         }
       ],
-      "updatedAt": "2026-11-16T15:36:40.028Z",
-      "checkedAt": "2026-11-16T15:36:40.028Z"
+      "updatedAt": "2026-11-16T16:01:02.536Z",
+      "checkedAt": "2026-11-16T16:01:02.536Z"
     }
   },
-  "checkedAt": "2026-11-16T15:36:40.029Z"
+  "checkedAt": "2026-11-16T16:01:02.541Z"
 }

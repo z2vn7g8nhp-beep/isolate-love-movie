@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTM1NTgwODI0NF5BMl5BanBnXkFtZTcwNTg0NjgzNA@@._V1_.jpg",
@@ -97,11 +99,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T15:35:44.674Z",
-      "checkedAt": "2026-11-16T15:35:44.674Z"
+      "updatedAt": "2026-11-16T16:00:17.556Z",
+      "checkedAt": "2026-11-16T16:00:17.556Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0IjoxMjB9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0IjoxMzJ9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
@@ -589,8 +591,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm0079273/58a5713edbf7f773cc65455b.webp"
         }
       ],
-      "updatedAt": "2026-11-16T15:35:47.013Z",
-      "checkedAt": "2026-11-16T15:35:47.013Z",
+      "updatedAt": "2026-11-16T16:00:18.062Z",
+      "checkedAt": "2026-11-16T16:00:18.062Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -598,8 +600,8 @@
       "indexOffset": 106,
       "name": "Pinterest",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/57/b3/73/57b373dcb059d294d51f996cdc71a735.jpg",
@@ -610,11 +612,218 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/180144053815561024/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f7/5e/87/f75e87259e131de99d02cf5d851510e5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f7/5e/87/f75e87259e131de99d02cf5d851510e5.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/72/31/93/7231932d0301324cbc1fc4e96e032a1b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/72/31/93/7231932d0301324cbc1fc4e96e032a1b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e9/d5/1a/e9d51ac8ca311c63a1869c346b8a7210.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e9/d5/1a/e9d51ac8ca311c63a1869c346b8a7210.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4b/c6/29/4bc629092daa806b52ddf3af003a2038.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4b/c6/29/4bc629092daa806b52ddf3af003a2038.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d9/0e/47/d90e477c987dec5e95762be6edd7b7fe.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d9/0e/47/d90e477c987dec5e95762be6edd7b7fe.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d3/48/a8/d348a8dec7a7e8cc13da260a0ef2420d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d3/48/a8/d348a8dec7a7e8cc13da260a0ef2420d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4a/57/aa/4a57aa17b3a9edb1d8aa65eeea94e1ef.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4a/57/aa/4a57aa17b3a9edb1d8aa65eeea94e1ef.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/38/5d/b6/385db6189e9b87e35cf0bee08daaf717.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/38/5d/b6/385db6189e9b87e35cf0bee08daaf717.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/76/2a/fa/762afabfe0352d3ec068be46edd6447a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/76/2a/fa/762afabfe0352d3ec068be46edd6447a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/95/26/fb/9526fb580751215893d65561075af3a4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/95/26/fb/9526fb580751215893d65561075af3a4.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/04/ec/cb/04eccb1b1a1834e57a4cef4ed011c2de.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/04/ec/cb/04eccb1b1a1834e57a4cef4ed011c2de.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f3/e7/52/f3e7523beee849ab23b705de7cc7b257.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f3/e7/52/f3e7523beee849ab23b705de7cc7b257.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/aa/e1/0e/aae10e9751cf4e71dfa5c031c7271d9b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/aa/e1/0e/aae10e9751cf4e71dfa5c031c7271d9b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5c/52/43/5c52436bb8106937ef0289387b264c60.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5c/52/43/5c52436bb8106937ef0289387b264c60.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c1/61/9c/c1619ca482628dd4f261eb3fe2cc9827.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c1/61/9c/c1619ca482628dd4f261eb3fe2cc9827.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/16/89/9d/16899d0a5ac08854062d664182d2c3ac.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/16/89/9d/16899d0a5ac08854062d664182d2c3ac.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2e/64/ab/2e64ab71e2c8a39570182054d97a4175.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2e/64/ab/2e64ab71e2c8a39570182054d97a4175.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5d/eb/8c/5deb8cce2f85d84eb0c42026f1fa598d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5d/eb/8c/5deb8cce2f85d84eb0c42026f1fa598d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f3/7e/99/f37e997fecb81017cfac449a60994f43.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f3/7e/99/f37e997fecb81017cfac449a60994f43.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/a2/7c/69/a27c69460a28e9380189c0e61f9bfe71.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a2/7c/69/a27c69460a28e9380189c0e61f9bfe71.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/75/8b/85/758b85f348545ef851d2d4ab060bf024.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/75/8b/85/758b85f348545ef851d2d4ab060bf024.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e2/52/41/e25241d5ec4c97866953a0d4c4c7d09d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e2/52/41/e25241d5ec4c97866953a0d4c4c7d09d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d5/1b/ad/d51badaf9e14f2439f7a2160f0a85bbf.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d5/1b/ad/d51badaf9e14f2439f7a2160f0a85bbf.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
         }
       ],
-      "updatedAt": "2026-11-16T15:35:50.754Z",
-      "checkedAt": "2026-11-16T15:35:50.754Z"
+      "updatedAt": "2026-11-16T16:00:20.794Z",
+      "checkedAt": "2026-11-16T16:00:20.794Z"
     }
   },
-  "checkedAt": "2026-11-16T15:35:50.755Z"
+  "checkedAt": "2026-11-16T16:00:20.795Z"
 }
