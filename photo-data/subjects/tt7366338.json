@@ -10,32 +10,45 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T12:44:23.289Z"
+      "status": "ok",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
+      "images": [
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNzU0OTI4YTQtNGQ1ZS00ZjA4LTg3MTMtZjkyZWNjN2RiZDJmXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzU0OTI4YTQtNGQ1ZS00ZjA4LTg3MTMtZjkyZWNjN2RiZDJmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/",
+          "retrievedVia": "public-metadata"
+        }
+      ],
+      "updatedAt": "2026-11-16T13:29:10.559Z",
+      "checkedAt": "2026-11-16T13:29:10.559Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "豆瓣",
       "status": "unmatched",
       "message": "尚未核对到对应豆瓣档案",
-      "method": "public-image-index",
+      "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T12:44:23.691Z"
+      "checkedAt": "2026-11-16T13:29:11.203Z"
     },
     "pinterest": {
       "nextCursor": null,
       "indexOffset": 106,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
+      "message": "从 Pinterest 官方公开组件读取",
       "method": "public-pin-widget",
       "images": [
         {
@@ -560,81 +573,11 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/346566133837131425/",
           "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/67/63/18/67631872beea58e852781f34440a4f01.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/67/63/18/67631872beea58e852781f34440a4f01.jpg",
-          "title": "Chernobyl - A Haunting Reminder of the Past | Chernobyl 1986, Chernobyl reactor, Chernobyl ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/729864683374660736/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/b1/7d/87/b17d87442dd40ef0fdcfb4351190b18a.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/b1/7d/87/b17d87442dd40ef0fdcfb4351190b18a.jpg",
-          "title": "Chernobyl nuclear reactor | Chernobyl reactor 5 pictures, What happened in chernobyl, Old structures",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/83738874315455951/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/2e/f3/44/2ef3446cae134d3cdb5317c5b7636e6e.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/2e/f3/44/2ef3446cae134d3cdb5317c5b7636e6e.jpg",
-          "title": "Chernobyl Series, Part 3: Post-Accident - Imgur | Chernobyl images, Chernobyl construction ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/794392821778774493/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/30/60/8d/30608d91da2287399b42ebe2b3268130.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/30/60/8d/30608d91da2287399b42ebe2b3268130.jpg",
-          "title": "Le foto di Chernobyl: Il reattore N.4 è esploso - PareStrano.it | Chernobyl, Foto, Le foto",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/794392821778862714/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/a1/70/32/a1703259c027b210a5a759622a673c4e.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/a1/70/32/a1703259c027b210a5a759622a673c4e.jpg",
-          "title": "Chernobyl Series, Part 3: Post-Accident - Imgur | 체르노빌",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/472526185907274407/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/e3/82/88/e382883559315d8d749a5b8d7b656ba9.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/e3/82/88/e382883559315d8d749a5b8d7b656ba9.jpg",
-          "title": "Industrial Architecture in Chernobyl",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/18225573480846223/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/77/64/d4/7764d4a3f3fef68cc68821b9d659e00b.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/77/64/d4/7764d4a3f3fef68cc68821b9d659e00b.jpg",
-          "title": "Chernobyl April 26, 1986. Reactor 4 suffered a power increase, leading to explosions in its core ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/14636767512838932/",
-          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T12:44:24.837Z",
-      "checkedAt": "2026-11-16T12:44:24.837Z"
+      "updatedAt": "2026-11-16T13:29:14.300Z",
+      "checkedAt": "2026-11-16T13:29:14.300Z"
     }
   },
-  "checkedAt": "2026-11-16T12:44:24.838Z"
+  "checkedAt": "2026-11-16T13:29:14.300Z"
 }

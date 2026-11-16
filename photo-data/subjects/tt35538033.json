@@ -10,23 +10,35 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 1,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T12:28:52.847Z"
+      "status": "ok",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
+      "images": [
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Resident Evil",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt35538033/",
+          "retrievedVia": "public-metadata"
+        }
+      ],
+      "updatedAt": "2026-11-16T13:27:44.030Z",
+      "checkedAt": "2026-11-16T13:27:44.030Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6MzZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6NDh9",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
-      "previewLimit": 48,
       "images": [
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2932025317.jpg",
@@ -387,18 +399,139 @@
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2935971656/",
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/cfdba326f4dd126223d4b46b.webp"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2935971595.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/33143d2afcfcd48b973b8efd.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971595/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/33143d2afcfcd48b973b8efd.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971670.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/f6cb27fe42f18599c4aa506f.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971670/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/f6cb27fe42f18599c4aa506f.webp"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2935971654.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/c6995b80497027f068d3c29b.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971654/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/c6995b80497027f068d3c29b.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971553.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/f59c4a44d421ebfe97c18013.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971553/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/f59c4a44d421ebfe97c18013.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971537.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/678233828ea0e80d9734fa75.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971537/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/678233828ea0e80d9734fa75.webp"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2932077421.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/541f163de370d62767aeef2d.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2932077421/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/541f163de370d62767aeef2d.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971669.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/a9fd7f890b649c6051b4a7a5.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971669/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/a9fd7f890b649c6051b4a7a5.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971663.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/16ea10c875821bec2328359c.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971663/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/16ea10c875821bec2328359c.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971652.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/84a40be460b8b0898aaa81b3.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971652/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/84a40be460b8b0898aaa81b3.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2934716477.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/9377ea9732927100709817cb.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2934716477/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/9377ea9732927100709817cb.webp"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2934716481.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/9d658daddeb71a7b32a49601.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2934716481/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/9d658daddeb71a7b32a49601.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935971668.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp",
+          "title": "Resident Evil · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935971668/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp"
         }
       ],
-      "updatedAt": "2026-11-16T12:29:41.416Z",
-      "checkedAt": "2026-11-16T12:29:41.416Z"
+      "updatedAt": "2026-11-16T13:27:44.518Z",
+      "checkedAt": "2026-11-16T13:27:44.518Z",
+      "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
       "indexOffset": 36,
       "name": "Pinterest",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "status": "blocked",
+      "message": "来源要求验证访问",
+      "method": "direct",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/64/cc/ef/64ccefc0e96a090254bd7fc6a2804448.jpg",
@@ -412,8 +545,8 @@
         }
       ],
       "updatedAt": "2026-11-16T12:29:41.878Z",
-      "checkedAt": "2026-11-16T12:29:41.878Z"
+      "checkedAt": "2026-11-16T13:28:05.269Z"
     }
   },
-  "checkedAt": "2026-11-16T12:29:41.878Z"
+  "checkedAt": "2026-11-16T13:28:05.269Z"
 }

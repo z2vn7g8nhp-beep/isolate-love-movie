@@ -12,9 +12,11 @@
       "nextCursor": null,
       "indexOffset": 106,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
-      "method": "public-image-index",
+      "status": "ok",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMmU0NjJkNzUtZjgwNS00ODEyLTlkNTctMTNiNDU0ODA3OTliXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UX500_CR0,47,500,281_.jpg",
@@ -25,29 +27,39 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0903747/videogallery/?contentTypes=trailer",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Breaking Bad",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0903747/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-16T04:56:33.515Z",
-      "checkedAt": "2026-11-16T12:44:18.054Z"
+      "updatedAt": "2026-11-16T13:29:00.190Z",
+      "checkedAt": "2026-11-16T13:29:00.190Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "豆瓣",
       "status": "unmatched",
       "message": "尚未核对到对应豆瓣档案",
-      "method": "public-image-index",
+      "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T12:44:21.245Z"
+      "checkedAt": "2026-11-16T13:29:06.606Z"
     },
     "pinterest": {
       "nextCursor": null,
       "indexOffset": 106,
       "name": "Pinterest",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/61/8e/98/618e9835b41191c2a5a757464710111e.jpg",
@@ -574,26 +586,6 @@
           "retrievedVia": "public-image-index"
         },
         {
-          "url": "https://i.pinimg.com/originals/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
-          "title": "Tribute to Breaking Bad By WARENDT | Breaking bad, Nghệ thuật",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585913337297/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
-          "title": "Pinterest | Breaking bad, Breaking bad poster, Anime faces expressions",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/790381803380088578/",
-          "retrievedVia": "public-image-index"
-        },
-        {
           "url": "https://i.pinimg.com/originals/2f/e4/80/2fe480a470b47b10e2393ef232f5589c.jpg?nii=t",
           "thumbnail": "https://i.pinimg.com/236x/2f/e4/80/2fe480a470b47b10e2393ef232f5589c.jpg?nii=t",
           "title": "Awesome Breaking Bad Wallpaper 4k | Breaking bad, Filmes, Pôsteres de ...",
@@ -614,26 +606,6 @@
           "retrievedVia": "public-image-index"
         },
         {
-          "url": "https://i.pinimg.com/originals/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
-          "title": "This item is unavailable - Etsy in 2025 | Bad gifts, Breaking bad ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/782711610279552378/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
-          "title": "Pin di ΛMĪŔ🌱 su Breaking Bad | Sfondi per iphone, Sfondi, Arte araba",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/140667188356009884/",
-          "retrievedVia": "public-image-index"
-        },
-        {
           "url": "https://i.pinimg.com/236x/fa/1f/0d/fa1f0dad70ec9887873a97a23f04ca4e--walter-breaking-bad-portrait-illustration.jpg?nii=t",
           "thumbnail": "https://i.pinimg.com/236x/fa/1f/0d/fa1f0dad70ec9887873a97a23f04ca4e--walter-breaking-bad-portrait-illustration.jpg?nii=t",
           "title": "Caricatures of Breaking Bad Characters by Anthony Geoffroy | Breaking ...",
@@ -642,21 +614,11 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/844987948855947485/",
           "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
-          "title": "Pin by Florencia Nob on Breaking Bad | Breaking bad, Breaking bad ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/301389400075914854/",
-          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T12:44:21.895Z",
-      "checkedAt": "2026-11-16T12:44:21.895Z"
+      "updatedAt": "2026-11-16T13:29:09.751Z",
+      "checkedAt": "2026-11-16T13:29:09.751Z"
     }
   },
-  "checkedAt": "2026-11-16T12:44:21.896Z"
+  "checkedAt": "2026-11-16T13:29:09.752Z"
 }
