@@ -273,6 +273,28 @@ dialog{background:var(--panel);border:1px solid var(--line);border-radius:10px 3
 .photo-request-card p{font-size:.88rem;line-height:1.9;margin:0 0 16px;color:var(--muted)}
 .photo-request-card .button{font-size:.86rem;text-decoration:none;min-height:44px}
 .photo-request-card small{display:block;font-size:.76rem;line-height:1.9;color:var(--muted);margin-top:12px}
+.photo-progress{display:block;min-width:0}
+.photo-progress-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 14px}
+.photo-progress-heading h4{margin:0;font-size:1.02rem;line-height:1.6}
+.photo-progress-age{font-size:.82rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.photo-progress-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;list-style:none;margin:23px 0 20px;padding:0}
+.photo-progress-steps li{position:relative;display:flex;align-items:center;gap:7px;color:var(--muted);font-size:.8rem;white-space:nowrap}
+.photo-progress-steps i{display:grid;place-items:center;flex:none;width:25px;height:25px;border:1px solid var(--line);border-radius:50%;font-size:.73rem;font-style:normal}
+.photo-progress-steps .is-current{color:var(--accent);font-weight:600}
+.photo-progress-steps .is-current i{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.photo-progress-steps .is-complete i{border-color:var(--accent);color:var(--accent)}
+.photo-progress p{margin:0 0 18px;font-size:.88rem}
+.photo-progress-sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.photo-progress-sources li{display:flex;flex-direction:column;gap:6px;min-width:0;overflow-wrap:anywhere}
+.photo-progress-sources b{font-size:.83rem;font-weight:500;color:var(--accent)}
+.photo-progress-sources span{font-size:.79rem;color:var(--muted)}
+.photo-progress-sources small{font-size:.76rem;margin:0;line-height:1.7}
+.photo-progress-sources .is-reading span{color:var(--accent)}
+.photo-progress-meta{display:flex;flex-wrap:wrap;gap:3px 16px;margin-top:13px;color:var(--muted);font-size:.76rem;line-height:1.9;font-variant-numeric:tabular-nums}
+.photo-progress .photo-progress-warning{margin:14px 0 0;color:var(--accent)}
+.photo-progress .button{margin-top:16px}
+.photo-progress.is-delayed{border-color:var(--accent)}
+@media(max-width:400px){.photo-progress-steps{gap:5px}.photo-progress-steps li{flex-direction:column;align-items:flex-start;gap:5px}.photo-progress-sources{gap:10px}}
 .photo-request-details{margin-top:8px;color:var(--muted);font-size:.78rem;line-height:1.8}
 .photo-request-details summary{cursor:pointer;min-height:32px}
 .photo-request-details .text-button{font-size:.85rem}

@@ -16,6 +16,7 @@ jobs:
     timeout-minutes: 14
     env:
       PHOTO_QUEUE_URL: https://isolate-photo-queue-z2vn.modestdrum3.chatgpt.site/
+      PHOTO_QUEUE_PROGRESS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

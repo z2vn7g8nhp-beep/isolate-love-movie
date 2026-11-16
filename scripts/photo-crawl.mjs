@@ -3,6 +3,7 @@ import {retrievePhotoPages,parseImdbHtml,parseDoubanHtml,parsePinterestHtml,deco
 import {detail} from '../public/data-client.js';
 import {indexedPhotos,enrichPinterest,matchesPhotoSubject} from './photo-index.mjs';
 import {cachePhotoPreviews} from './photo-cache.mjs';
+import {reportPhotoProgress,summarizePhotoCrawl} from './photo-queue-report.mjs';
 const root=new URL('../photo-data/',import.meta.url),subjects=JSON.parse(await readFile(new URL('subjects.json',root),'utf8'));
 const max=Math.max(1,Math.min(40,Number(process.env.PHOTO_SUBJECT_LIMIT)||3));
 const requested=(process.env.PHOTO_SUBJECT_IDS||'').split(',').filter(Boolean);
@@ -39,7 +40,26 @@ async function crawl(item,source,old){
 await mkdir(new URL('subjects/',root),{recursive:true});const manifest=await getJson(new URL('index.json',root),{version:1,subjects:{}});
 const ordered=subjects.filter(item=>!requested.length||requested.includes(item.id)).sort((a,b)=>Date.parse(manifest.subjects[a.id]?.checkedAt||'1970-01-01')-Date.parse(manifest.subjects[b.id]?.checkedAt||'1970-01-01'));
 const external=await getJson(new URL('external-ids.json',root),{});
-try{for(const raw of ordered.slice(0,max)){let item={...raw};if(!item.douban){try{const metadata=external[item.id]||await detail(item.id,item.title,{signal:AbortSignal.timeout(15000)});if(metadata.item?.douban){external[item.id]=metadata;item={...item,douban:metadata.item.douban};}}catch{}}const path=new URL('subjects/'+item.id+'.json',root),old=await getJson(path,{sources:{}}),sources={};for(const source of ['imdb','douban','pinterest'])sources[source]=await crawl(item,source,old.sources[source]);const record={version:1,item:{id:item.id,title:item.title,zh:item.zh||'',kind:item.kind,year:item.year||null},sources,checkedAt:new Date().toISOString()};await writeFile(path,JSON.stringify(record,null,2)+'\n');manifest.subjects[item.id]={title:item.title,path:'subjects/'+item.id+'.json',checkedAt:record.checkedAt,counts:Object.fromEntries(Object.entries(sources).map(([key,value])=>[key,value.images.length]))};}}
+const results={};
+try{for(const raw of ordered.slice(0,max)){
+ let item={...raw};await reportPhotoProgress(item.id,{stage:'collecting'});
+ if(!item.douban){try{const metadata=external[item.id]||await detail(item.id,item.title,{signal:AbortSignal.timeout(15000)});if(metadata.item?.douban){external[item.id]=metadata;item={...item,douban:metadata.item.douban};}}catch{}}
+ const path=new URL('subjects/'+item.id+'.json',root),old=await getJson(path,{sources:{}}),sources={};
+ for(const source of ['imdb','douban','pinterest']){
+  const progress={stage:'collecting',source,sourceStatus:'fetching'};await reportPhotoProgress(item.id,progress);
+  const heartbeat=process.env.PHOTO_QUEUE_PROGRESS==='1'?setInterval(()=>{reportPhotoProgress(item.id,progress);},30000):null;heartbeat?.unref();
+  try{sources[source]=await crawl(item,source,old.sources[source]);}finally{clearInterval(heartbeat);}
+  const summary=summarizePhotoCrawl({[source]:old.sources[source]},{[source]:sources[source]});
+  await reportPhotoProgress(item.id,{stage:'collecting',source,sourceStatus:sources[source].status,total:summary.total,newImages:summary.added});
+ }
+ const record={version:1,item:{id:item.id,title:item.title,zh:item.zh||'',kind:item.kind,year:item.year||null},sources,checkedAt:new Date().toISOString()};
+ await writeFile(path,JSON.stringify(record,null,2)+'\n');manifest.subjects[item.id]={title:item.title,path:'subjects/'+item.id+'.json',checkedAt:record.checkedAt,counts:Object.fromEntries(Object.entries(sources).map(([key,value])=>[key,value.images.length]))};
+ results[item.id]={summary:summarizePhotoCrawl(old.sources,sources),dataCheckedAt:record.checkedAt};
+}}
 finally{await browser?.close();}
 await writeFile(new URL('external-ids.json',root),JSON.stringify(external,null,2)+'\n');
 manifest.updatedAt=new Date().toISOString();await writeFile(new URL('index.json',root),JSON.stringify(manifest,null,2)+'\n');
+if(process.env.PHOTO_QUEUE_PROGRESS==='1'){
+ await mkdir(new URL('../.data/',root),{recursive:true});await writeFile(new URL('../.data/photo-queue-results.json',root),JSON.stringify(results));
+ for(const [id,result]of Object.entries(results))await reportPhotoProgress(id,{stage:'publishing',...result});
+}
