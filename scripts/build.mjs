@@ -18,7 +18,7 @@ await writeFile(new URL('image-tools.js', output), imageTools.replaceAll("'./col
 let photoClient = await readFile(new URL('photo-client.js', output), 'utf8');
 await writeFile(new URL('photo-client.js', output), photoClient.replaceAll("'./collection.js'", "'./collection.js?v="+collectionHash+"'"));
 let app = await readFile(new URL('app.js', output), 'utf8');
-for (const file of ['collection.js', 'data-client.js', 'visual-data.js', 'image-tools.js', 'photo-client.js', 'photo-queue-client.js']) {
+for (const file of ['collection.js', 'data-client.js', 'visual-data.js', 'image-tools.js', 'photo-client.js', 'photo-queue-client.js', 'photo-outbox.js']) {
   const hash = createHash('sha256').update(await readFile(new URL(file, output))).digest('hex').slice(0, 12);
   app = app.replaceAll(`'./${file}'`, `'./${file}?v=${hash}'`);
 }
@@ -27,7 +27,7 @@ await writeFile(new URL('app.js', output), app);
 // Give changed UI assets new URLs so existing installations see each update.
 let html = await readFile(new URL('index.html', output), 'utf8');
 const version = createHash('sha256');
-for (const file of ['style.css', 'app.js', 'reading.js', 'collection.js', 'data-client.js', 'visual-data.js', 'image-tools.js', 'photo-client.js', 'photo-queue-client.js', 'icon.svg', 'manifest.webmanifest']) {
+for (const file of ['style.css', 'app.js', 'reading.js', 'collection.js', 'data-client.js', 'visual-data.js', 'image-tools.js', 'photo-client.js', 'photo-queue-client.js', 'photo-outbox.js', 'icon.svg', 'manifest.webmanifest']) {
   const contents = await readFile(new URL(file, output));
   const hash = createHash('sha256').update(contents).digest('hex').slice(0, 12);
   version.update(contents);

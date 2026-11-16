@@ -1,5 +1,6 @@
 import {fetchPhotoSource, DIRECT_SOURCES, photoSubjectId} from './photo-client.js';
 import {requestPhotoTask} from './photo-queue-client.js';
+import {restorePhotoTasks,deferPhotoTask,photoTaskDelay} from './photo-outbox.js';
 import {thumbnailUrl, mergePhotos, imageSourceLinks, imagesFromLink, PHOTO_BATCH, boundedCache} from './image-tools.js';
 import {visualDossier, fillPortrait, seriesPhotoPage} from './visual-data.js';
 import {pagesApi, dossier, refreshOwned, fetchGallery} from './data-client.js';
@@ -12,7 +13,7 @@ let preferences=read(PREFS,{}),records={},metadata=read(META,{}),galleries=read(
 const discoveries=new Map(), renderedMarkup=new WeakMap();
 let directController,directBusy=new Set();
 const photoChecks=new Map();
-const photoTasks=read('isolate.photo-tasks.v1',{});let photoTaskTimer;
+const photoTasks=restorePhotoTasks(read('isolate.photo-tasks.v1',{}));let photoTaskTimer,photoPollBusy=false;
 let galleryVisible=PHOTO_BATCH, castExpanded=false, galleryBusyId='', importImages=[], importController, deferredRender=false;
 function requestRender(){if($('#detail-dialog').open)deferredRender=true;else render();}
 function replaceMarkup(node,html){if(!node||renderedMarkup.get(node)===html)return false;node.innerHTML=html;renderedMarkup.set(node,html);return true;}
@@ -124,7 +125,7 @@ async function loadGallery(force=false,more=false){
   const nextOffset=!more&&cached?.version>=5&&cached.reference===reference?cached.nextOffset:base?base.nextOffset:cached?.nextOffset??null;
   galleries[item.id]={...galleries[item.id],version:5,reference,images:combined,nextOffset,tvCursor:tv?tv.cursor:cached?.tvCursor,tvDone:tv?!tv.cursor:cached?.tvDone||false,fetchedAt:new Date().toISOString()};
   try{galleries=boundedCache(galleries,24,480000,item.id);localStorage.setItem(GALLERY,JSON.stringify(galleries));}catch{}
-  if(selected?.id===item.id){if(more)galleryVisible=Math.min(availableImages(item).length,galleryVisible+PHOTO_BATCH);updatePhotoGrid();updatePhotoRibbon();if($('#aux-gallery-state'))$('#aux-gallery-state').textContent=more?(added?'这次新增 '+added+' 张 · 已有图片已保留':'这次没有新图。可到原站选图，或稍后再试。'):'已关联 '+availableImages(item).length+' 张图片 · 分批显示';}
+  if(selected?.id===item.id){if(more)galleryVisible=Math.min(availableImages(item).length,galleryVisible+PHOTO_BATCH);updatePhotoGrid();updatePhotoRibbon();if($('#aux-gallery-state'))$('#aux-gallery-state').textContent=more?(added?'这次新增 '+added+' 张 · 已有图片已保留':'暂未找到其他图片，已有图片会保留。'):'已关联 '+availableImages(item).length+' 张图片 · 分批显示';}
  }catch{if(!controller.signal.aborted&&selected?.id===item.id&&$('#aux-gallery-state'))$('#aux-gallery-state').textContent='来源暂不可用，已有图片已保留，可稍后再试。';}
  finally{if(galleryController===controller){galleryBusyId='';if(selected?.id===item.id&&$('#refresh-aux-gallery')){$('#refresh-aux-gallery').disabled=false;$('#refresh-aux-gallery').textContent='继续读取其他公开图源 ＋';}}}
 }
@@ -136,7 +137,7 @@ $('#gallery-prev').onclick=()=>{activeGalleryIndex=(activeGalleryIndex-1+activeG
 $('#gallery-dialog').addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();$('#gallery-prev').click();}if(e.key==='ArrowRight'){e.preventDefault();$('#gallery-next').click();}});
 $('#gallery-save').onclick=()=>{const item=activeGalleryItem,image=activeGallery[activeGalleryIndex],old=recordFor(item).album,exists=old.some(x=>x.url===image.url);saveRecord(item,{album:exists?old.filter(x=>x.url!==image.url):cleanAlbum([image,...old])});updateLightbox();if(selected?.id===item.id&&$('#photo-grid')){updatePhotoGrid();}toast(exists?'相片已移出我的相册':'相片已收藏到我的相册');};
 $('#gallery-cover').onclick=()=>{const item=activeGalleryItem,image=activeGallery[activeGalleryIndex];saveRecord(item,{coverImage:validImageUrl(image.cachedUrl||image.url)});updateLightbox();if(selected?.id===item.id){updateVisualSections();}toast('已换成你选的私藏封面');};
-function handleDetailExtras(e){const tab=e.target.closest('[data-detail-tab]'),photo=e.target.closest('[data-photo]'),remove=e.target.closest('[data-delete-memory]');if(tab){commitDraft();detailTab=tab.dataset.detailTab;applyDetailTab();scrollDetailPanel();if(detailTab==='gallery')loadGallery(false);return true;}if(photo){openGallery(selected,availableImages(selected),Number(photo.dataset.photo));return true;}if(e.target.closest('#refresh-gallery')){const task=photoTasks[photoSubjectId(selected)];if(task&&['queued','processing'].includes(task.status))pollPhotoTasks();else if(photoChecks.get(photoSubjectId(selected))?.status==='ready')loadDirectPhotos('all',{requestMore:true});else queuePhotoTask(selected);return true;}if(e.target.closest('[data-request-photos]')){queuePhotoTask(selected);return true;}const source=e.target.closest('[data-fetch-source]');if(source){loadDirectPhotos(source.dataset.fetchSource,{requestMore:true});return true;}if(e.target.closest('#refresh-aux-gallery')){loadGallery(false,true);return true;}if(e.target.closest('#show-cached-photos')){galleryVisible+=PHOTO_BATCH;updatePhotoGrid();return true;}if(e.target.closest('#add-import-photos')){addImportedPhotos();return true;}if(remove){commitDraft();const item=selected,old=[...recordFor(item).memories];saveRecord(item,{memories:old.filter(x=>x.id!==remove.dataset.deleteMemory)});updateMemoriesUI(item);toast('这则手记已移出',()=>{saveRecord(item,{memories:old});if(selected?.id===item.id&&$('#memory-list'))updateMemoriesUI(item);});return true;}return false;}
+function handleDetailExtras(e){const tab=e.target.closest('[data-detail-tab]'),photo=e.target.closest('[data-photo]'),remove=e.target.closest('[data-delete-memory]');if(tab){commitDraft();detailTab=tab.dataset.detailTab;applyDetailTab();scrollDetailPanel();if(detailTab==='gallery')loadGallery(false);return true;}if(photo){openGallery(selected,availableImages(selected),Number(photo.dataset.photo));return true;}if(e.target.closest('#refresh-gallery')){const task=photoTasks[photoSubjectId(selected)];if(task?.status==='waiting-network')queuePhotoTask(selected);else if(task&&['queued','processing'].includes(task.status))pollPhotoTasks();else if(photoChecks.get(photoSubjectId(selected))?.status==='ready')loadDirectPhotos('all',{requestMore:true});else queuePhotoTask(selected);return true;}if(e.target.closest('[data-request-photos]')){queuePhotoTask(selected);return true;}const source=e.target.closest('[data-fetch-source]');if(source){loadDirectPhotos(source.dataset.fetchSource,{requestMore:true});return true;}if(e.target.closest('#refresh-aux-gallery')){loadGallery(false,true);return true;}if(e.target.closest('#show-cached-photos')){galleryVisible+=PHOTO_BATCH;updatePhotoGrid();return true;}if(e.target.closest('#add-import-photos')){addImportedPhotos();return true;}if(remove){commitDraft();const item=selected,old=[...recordFor(item).memories];saveRecord(item,{memories:old.filter(x=>x.id!==remove.dataset.deleteMemory)});updateMemoriesUI(item);toast('这则手记已移出',()=>{saveRecord(item,{memories:old});if(selected?.id===item.id&&$('#memory-list'))updateMemoriesUI(item);});return true;}return false;}
 function openCalendar(){const events=[];for(const item of own()){const r=recordFor(item),data=metadata[item.id];const birthday=data?.birthday||(data?.facts||[]).find(x=>x.label==='出生日期')?.value;if(item.kind==='person'&&birthday){const next=nextAnniversary(birthday);if(next)events.push({item,type:'生日',...next});}if(r.addedAt){const date=new Date(r.addedAt),local=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-'),next=nextAnniversary(local);if(next)events.push({item,type:'入藏纪念',...next});}}events.sort((a,b)=>a.days-b.days);$('#calendar-content').innerHTML=events.length?events.slice(0,60).map(event=>`<button class="anniversary-row" data-calendar-item="${esc(event.item.id)}"><span class="anniversary-date"><b>${event.date.getDate()}</b><small>${event.date.getMonth()+1}月</small></span><span class="anniversary-name"><strong>${esc(displayName(event.item))}</strong><small>${event.type} · ${event.days===0?'就是今天':event.days+' 天后'}</small></span><span>◇</span></button>`).join(''):'<div class="calendar-empty"><span>◇</span><p>暂时没有可显示的纪念日。</p><small>已收藏人物的生日在核对资料后显示，新入藏的条目会记录入藏日期。</small></div>';$('#calendar-dialog').showModal();}
 $('#calendar-content').onclick=e=>{const button=e.target.closest('[data-calendar-item]');if(button){$('#calendar-dialog').close();showDetail(findItem(button.dataset.calendarItem));}};
 
@@ -186,9 +187,10 @@ function directStateMarkup(item){const state=galleries[item.id]?.sourceState||{}
 function photoAvailabilityMarkup(item){
  const id=photoSubjectId(item),check=photoChecks.get(id),task=photoTasks[id];
  if(!/^(tt|nm)\d{5,12}$/.test(id))return '<p class="quiet-copy">将角色关联到影视或人物后，可读取对应图库。</p>';
+ if(task?.status==='waiting-network')return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>补图请求待发送</h4><p>暂时连不上补图服务，请求已保存在本机。</p><button class="button button-light" data-request-photos>重试连接 ↻</button><small>恢复连接或回到应用后会自动重试，已有图片与手记都会保留。</small></div></div>`;
  if(task&&['submitting','queued','processing'].includes(task.status))return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>${task.status==='submitting'?'正在提交补图…':task.status==='processing'?'正在采集这个条目的图片':'补图已排队'}</h4><p>你可以继续浏览，完成后会自动读取新图。</p><small>通常需要几分钟；GitHub 调度繁忙时可能延迟。</small></div></div>`;
  if(!check||check.status==='checking')return '<p class="quiet-copy">正在检查这个条目的图库…</p>';
- if(check.status==='missing')return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>还没有这个条目的图库</h4><p>${task?.status==='failed'?esc(task.message||'上次采集未完成，可以再试一次。'):'在这里补图，采集完成后自动读取。'}</p><button class="button button-light" data-request-photos>为这个条目补图 ＋</button><small>仅提交公开 IMDb 编号，手记与评分留在本机。</small></div></div>`;
+ if(check.status==='missing')return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>${task?.status==='failed'?'本次补图未完成':'还没有这个条目的图库'}</h4><p>${task?.status==='failed'?esc(task.message||'上次采集未完成，可以再试一次。'):'在这里补图，采集完成后自动读取。'}</p><button class="button button-light" data-request-photos>为这个条目补图 ＋</button><small>仅提交公开 IMDb 编号，手记与评分留在本机。</small></div></div>`;
  if(check.status==='error')return `<p class="quiet-copy">${esc(check.message)}。你的已有图片仍可查看。</p>`;
  return `<details class="photo-request-details"><summary>想再补充这个条目的图片？</summary><p class="quiet-copy">${task?.status==='failed'?esc(task.message):'可在这里申请补图，完成后自动读取。'}</p><button class="text-button" data-request-photos>继续补图 ＋</button></details>`;
 }
@@ -197,37 +199,58 @@ function updateDirectState(){
  const state=$('#direct-source-state');if(state){replaceMarkup(state,directStateMarkup(selected));state.hidden=!hasSubject||!!check&&!ready;}
  const availability=$('#photo-availability');if(availability)replaceMarkup(availability,photoAvailabilityMarkup(selected));
  const controls=$('#detail-content .direct-source-controls');if(controls)controls.hidden=!hasSubject||!!check&&!ready;
- const main=$('#refresh-gallery');if(main){main.hidden=!hasSubject;const task=photoTasks[photoSubjectId(selected)];main.disabled=directBusy.size>0||checking||task?.status==='submitting';main.textContent=task&&['queued','processing'].includes(task.status)?'查看补图进度 ↻':directBusy.size?'正在读取三站图库…':checking?'正在检查图库…':ready?'从三站图库读取更多 ＋':check?.status==='missing'?'为这个条目补图 ＋':'重新读取图库 ↻';}
+ const main=$('#refresh-gallery');if(main){main.hidden=!hasSubject;const task=photoTasks[photoSubjectId(selected)];main.disabled=directBusy.size>0||checking||task?.status==='submitting';main.textContent=task?.status==='waiting-network'?'重试连接 ↻':task&&['queued','processing'].includes(task.status)?'查看补图进度 ↻':directBusy.size?'正在读取三站图库…':checking?'正在检查图库…':ready?'从三站图库读取更多 ＋':check?.status==='missing'?'为这个条目补图 ＋':'重新读取图库 ↻';}
  for(const button of $$('#detail-content [data-fetch-source]'))button.disabled=directBusy.has(button.dataset.fetchSource)||checking;
 }
 async function checkPhotoAvailability(refresh=false){
  const item=selected;if(!item)return;const id=photoSubjectId(item);if(!/^(tt|nm)\d+$/.test(id)){updateDirectState();return;}
  const old=photoChecks.get(id);if(!refresh&&old&&(old.status==='checking'||Date.now()-old.at<60000)){updateDirectState();return;}
  photoChecks.set(id,{status:'checking',at:Date.now()});updateDirectState();
- try{const result=await fetchPhotoSource(item,{source:'imdb',refresh:refresh||photoTasks[id]?.status==='ready',signal:AbortSignal.timeout(16000)});photoChecks.set(id,{status:result.registered===false?'missing':'ready',at:Date.now()});if(result.registered===false&&isCollected(recordFor(item))&&!photoTasks[id])queuePhotoTask(item,{quiet:true});if(result.registered!==false&&selected?.id===item.id){const sourceState=galleries[item.id]?.sourceState;for(const name of Object.keys(sourceState||{}))if(sourceState[name].status==='unavailable')delete sourceState[name];if((old?.status==='missing'||photoTasks[id]?.status==='ready')&&detailTab==='gallery'){if(photoTasks[id]?.status==='ready'){photoTasks[id].status='loaded';persistPhotoTasks();}loadDirectPhotos('all');}}}
+ try{const result=await fetchPhotoSource(item,{source:'imdb',refresh:refresh||photoTasks[id]?.status==='ready',signal:AbortSignal.timeout(16000)});photoChecks.set(id,{status:result.registered===false?'missing':'ready',at:Date.now(),dataAt:result.checkedAt||''});if(result.registered===false&&isCollected(recordFor(item))&&!photoTasks[id])queuePhotoTask(item,{quiet:true});if(result.registered!==false&&photoTasks[id]?.status==='waiting-network'&&(!photoTasks[id].previousDataAt||photoTasks[id].previousDataAt!==result.checkedAt)){photoTasks[id].status='ready';persistPhotoTasks();}if(result.registered!==false&&selected?.id===item.id){const sourceState=galleries[item.id]?.sourceState;for(const name of Object.keys(sourceState||{}))if(sourceState[name].status==='unavailable')delete sourceState[name];if((old?.status==='missing'||photoTasks[id]?.status==='ready')&&detailTab==='gallery'){if(photoTasks[id]?.status==='ready'){photoTasks[id].status='loaded';persistPhotoTasks();}loadDirectPhotos('all');}}}
  catch(error){photoChecks.set(id,{status:'error',message:error.message||'暂时无法连接图库',at:Date.now()});}
  if(selected&&photoSubjectId(selected)===id)updateDirectState();
 }
 function persistPhotoTasks(){try{localStorage.setItem('isolate.photo-tasks.v1',JSON.stringify(Object.fromEntries(Object.entries(photoTasks).slice(-60))));}catch{}}
-function schedulePhotoTasks(){clearTimeout(photoTaskTimer);if(document.visibilityState!=='hidden'&&Object.values(photoTasks).some(task=>['queued','processing'].includes(task.status)))photoTaskTimer=setTimeout(pollPhotoTasks,20000);}
+function schedulePhotoTasks(){
+ clearTimeout(photoTaskTimer);let delay=photoTaskDelay(photoTasks);if(delay===null||document.visibilityState==='hidden')return;
+ if(navigator.onLine===false)delay=Math.max(delay,60000);photoTaskTimer=setTimeout(pollPhotoTasks,delay);
+}
+async function applyPhotoCompletion(id){
+ photoTasks[id]={...photoTasks[id],status:'ready',message:''};photoChecks.delete(id);persistPhotoTasks();
+ if(selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}
+}
 async function queuePhotoTask(item,{quiet=false}={}){
  const id=photoSubjectId(item);if(!/^(tt|nm)\d{5,12}$/.test(id||''))return;
  if(photoTasks[id]&&['submitting','queued','processing'].includes(photoTasks[id].status)){schedulePhotoTasks();return;}
- if(quiet){try{const existing=await fetchPhotoSource(item,{source:'imdb',signal:AbortSignal.timeout(16000)});if(existing.registered!==false)return;}catch{return;}}
+ const prior=photoTasks[id]||{},waiting=prior.status==='waiting-network';
+ if(quiet||waiting){try{const existing=await fetchPhotoSource(item,{source:'imdb',refresh:waiting,signal:AbortSignal.timeout(16000)});if(existing.registered!==false&&(!waiting||!prior.previousDataAt||prior.previousDataAt!==existing.checkedAt)){if(waiting)await applyPhotoCompletion(id);schedulePhotoTasks();return;}}catch{}}
  if(photoTasks[id]&&['submitting','queued','processing'].includes(photoTasks[id].status))return;
- photoTasks[id]={status:'submitting'};updateDirectState();
- try{photoTasks[id]=await requestPhotoTask(id);const completed=photoTasks[id].status==='done';if(completed){photoTasks[id].status='ready';photoChecks.delete(id);}persistPhotoTasks();if(completed&&selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}if(!quiet)toast(completed?'图库刚更新过，已重新读取':'补图已排队，完成后会自动读取');schedulePhotoTasks();}
- catch(error){photoTasks[id]={status:'failed',message:error.message};persistPhotoTasks();if(!quiet)toast(error.message);}
- if(selected&&photoSubjectId(selected)===id)updateDirectState();
+ const info={attempts:prior.attempts||0,intentAt:prior.intentAt||Date.now(),previousDataAt:prior.previousDataAt??photoChecks.get(id)?.dataAt??''};
+ photoTasks[id]={...info,status:'submitting'};persistPhotoTasks();updateDirectState();
+ try{
+  if(navigator.onLine===false)throw Object.assign(Error('暂时无法连接补图服务'),{retryable:true});
+  const result=await requestPhotoTask(id);photoTasks[id]={...info,...result};
+  if(result.status==='done'){await applyPhotoCompletion(id);if(!quiet)toast('图库刚更新过，已重新读取');}
+  else{persistPhotoTasks();if(!quiet)toast('补图已排队，完成后会自动读取');}
+ }catch(error){photoTasks[id]={...info,...deferPhotoTask(info,error)};persistPhotoTasks();if(!quiet)toast(error.retryable?'请求已保存在本机，恢复连接后自动重试':error.message);}
+ if(selected&&photoSubjectId(selected)===id)updateDirectState();schedulePhotoTasks();
 }
-async function pollPhotoTasks(){
- clearTimeout(photoTaskTimer);const pending=Object.entries(photoTasks).filter(([,task])=>['queued','processing'].includes(task.status)).slice(0,8);
- await Promise.allSettled(pending.map(async([id])=>{try{const result=await requestPhotoTask(id,{readOnly:true});photoTasks[id]=result;if(result.status==='done'){
-  photoTasks[id].status='ready';photoChecks.delete(id);if(selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}
- }}catch(error){photoTasks[id]={...photoTasks[id],message:error.message};}}));persistPhotoTasks();updateDirectState();schedulePhotoTasks();
+async function pollPhotoTasks({retryNow=false}={}){
+ if(photoPollBusy)return;clearTimeout(photoTaskTimer);if(navigator.onLine===false){schedulePhotoTasks();return;}photoPollBusy=true;
+ try{
+  const waiting=Object.entries(photoTasks).filter(([,task])=>task.status==='waiting-network'&&(retryNow||!task.retryAt||task.retryAt<=Date.now())).slice(0,4);
+  await Promise.allSettled(waiting.map(([id])=>queuePhotoTask({id,kind:id.startsWith('nm')?'person':'film'},{quiet:true})));
+  const pending=Object.entries(photoTasks).filter(([,task])=>['queued','processing'].includes(task.status)).slice(0,8);
+  await Promise.allSettled(pending.map(async([id])=>{try{const result=await requestPhotoTask(id,{readOnly:true});photoTasks[id]={...photoTasks[id],...result};if(result.status==='done')await applyPhotoCompletion(id);}catch(error){photoTasks[id]={...photoTasks[id],message:error.message};}}));
+ }finally{photoPollBusy=false;persistPhotoTasks();updateDirectState();schedulePhotoTasks();}
 }
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){pollPhotoTasks();if(selected&&detailTab==='gallery'){const check=photoChecks.get(photoSubjectId(selected));if(check?.status==='missing'&&Date.now()-check.at>15000)checkPhotoAvailability(true);}}else clearTimeout(photoTaskTimer);});
-schedulePhotoTasks();
+function resumePhotoTasks(){
+ if(document.visibilityState==='hidden')return;for(const task of Object.values(photoTasks))if(task.status==='waiting-network')task.retryAt=Date.now();persistPhotoTasks();clearTimeout(photoTaskTimer);
+ photoTaskTimer=setTimeout(()=>{pollPhotoTasks({retryNow:true});if(selected&&detailTab==='gallery')checkPhotoAvailability(true);},1000);
+}
+window.addEventListener('online',resumePhotoTasks);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')resumePhotoTasks();else clearTimeout(photoTaskTimer);});
+persistPhotoTasks();schedulePhotoTasks();
 async function loadDirectPhotos(source,{requestMore=false}={}){
  const item=selected;if(!item||directBusy.size)return;commitDraft();directController?.abort();const controller=new AbortController();directController=controller;const sources=source==='all'?Object.keys(DIRECT_SOURCES):[source];for(const name of sources)directBusy.add(name);updateDirectState();
  const subject={...item,...metadata[item.id]?.item};let totalAdded=0;

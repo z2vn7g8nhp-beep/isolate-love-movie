@@ -6,7 +6,7 @@ const read=async(bucket,key)=>{const object=await bucket.get(key);return object?
 const write=(bucket,key,data)=>bucket.put(key,JSON.stringify(data),{httpMetadata:{contentType:'application/json'}});
 async function limited(bucket,key,max){const now=Date.now(),old=await read(bucket,key),row=old&&old.until>now?old:{count:0,until:now+86400000};if(row.count>=max)return false;await write(bucket,key,{...row,count:row.count+1});return true;}
 async function json(request){if(Number(request.headers.get('content-length'))>600)throw Error('请求过大');const body=await request.text();if(body.length>600)throw Error('请求过大');return JSON.parse(body);}
-async function session(request,bucket){const token=request.headers.get('authorization')?.match(/^Bearer ([a-f0-9]{64})$/)?.[1];if(!token)return null;const row=await read(bucket,'sessions/'+await hash(token));return row&&row.until>Date.now()?row:null;}
+async function session(request,bucket,supplied){const token=request.headers.get('authorization')?.match(/^Bearer ([a-f0-9]{64})$/)?.[1]||supplied;if(!/^[a-f0-9]{64}$/.test(token||''))return null;const row=await read(bucket,'sessions/'+await hash(token));return row&&row.until>Date.now()?row:null;}
 const publicState=row=>({id:row.id,status:row.status,requestedAt:row.requestedAt,finishedAt:row.finishedAt||null,message:row.message||''});
 let publicKeys;
 const unbase64=value=>Uint8Array.from(atob(value.replaceAll('-','+').replaceAll('_','/')),c=>c.charCodeAt(0));
@@ -44,14 +44,15 @@ export default {async fetch(request,env){
    const ip=request.headers.get('cf-connecting-ip')||'shared';if(!await limited(bucket,'limits/sessions-'+await hash(ip),12))return send({error:'今天连接次数较多，请稍后重试'},429);
    const token=[...crypto.getRandomValues(new Uint8Array(32))].map(n=>n.toString(16).padStart(2,'0')).join(''),key=await hash(token);await write(bucket,'sessions/'+key,{key,until:Date.now()+30*86400000});return send({token,expiresAt:Date.now()+30*86400000});
   }
-  const visitor=await session(request,bucket);if(!visitor)return send({error:'请重新连接补图服务'},401);
+  const body=request.method==='POST'&&['/api/requests','/api/status'].includes(url.pathname)?await json(request):null;
+  const visitor=await session(request,bucket,body?.session);if(!visitor)return send({error:'请重新连接补图服务'},401);
+  if(body&&(Object.keys(body).some(key=>!['id','session'].includes(key))||!validId(body.id)))return send({error:'只接收一个公开 IMDb 编号'},400);
   if(url.pathname==='/api/requests'&&request.method==='POST'){
-   const body=await json(request);if(Object.keys(body).length!==1||!validId(body.id))return send({error:'只接收一个公开 IMDb 编号'},400);
    const key='requests/'+body.id,old=await read(bucket,key);if(old&&(old.status==='queued'||old.status==='processing'&&Date.now()-Date.parse(old.startedAt)<900000||old.status==='done'&&Date.now()-Date.parse(old.finishedAt)<3600000))return send(publicState(old));
    if(!await limited(bucket,'limits/device-'+visitor.key,30)||!await limited(bucket,'limits/all',100))return send({error:'今天补图条目较多，请明天继续'},429);
    const row={id:body.id,status:'queued',requestedAt:new Date().toISOString(),attempts:0};await write(bucket,key,row);await write(bucket,'pending/'+body.id,row);return send(publicState(row),202);
   }
-  const id=url.pathname.match(/^\/api\/requests\/((?:tt|nm)\d{5,12})$/)?.[1];if(id&&request.method==='GET'){const row=await read(bucket,'requests/'+id);return row?send(publicState(row)):send({id,status:'missing'});}
+  const id=url.pathname.match(/^\/api\/requests\/((?:tt|nm)\d{5,12})$/)?.[1]||(url.pathname==='/api/status'?body?.id:null);if(id&&(request.method==='GET'||url.pathname==='/api/status'&&request.method==='POST')){const row=await read(bucket,'requests/'+id);return row?send(publicState(row)):send({id,status:'missing'});}
   return send({error:'接口不存在'},404);
  }catch(error){return send({error:error instanceof SyntaxError?'请求格式无效':'补图服务暂时无法处理，请稍后重试'},error instanceof SyntaxError?400:503);}
 }};
