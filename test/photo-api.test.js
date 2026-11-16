@@ -32,9 +32,15 @@ test('Pinterest extracts public search pins and labels them as search candidates
 
 test('BaseSearchResource payload parser handles grid_title fallback and drops promoted entries',async()=>{
  const {parsePinterestPayload}=await import('../server/photo-api.mjs');
- const payload={resource_response:{status:'success',data:{results:[{id:'456',description:'',grid_title:'Songbirds & Snakes',images:{orig:{url:'https://i.pinimg.com/originals/11/22/still.jpg'},'236x':{url:'https://i.pinimg.com/236x/11/22/still.jpg'}}},{id:'789',promoter:{id:'1'},description:'Sponsored',images:{orig:{url:'https://i.pinimg.com/originals/11/22/ad.jpg'}}}]}}};
- const images=parsePinterestPayload(payload);
- assert.equal(images.length,1);assert.equal(images[0].title,'Songbirds & Snakes');assert.equal(images[0].pageUrl,'https://www.pinterest.com/pin/456/');
+ const payload={resource_response:{status:'success',data:{results:[
+  {id:'456',description:'',grid_title:'Songbirds & Snakes',images:{orig:{url:'https://i.pinimg.com/originals/11/22/still.jpg'},'236x':{url:'https://i.pinimg.com/236x/11/22/still.jpg'}}},
+  {id:'e1_AfqPShwFGH7Ttrnh',type:'pin',description:'',images:{orig:{url:'https://i.pinimg.com/originals/22/33/search.jpg'},'236x':{url:'https://i.pinimg.com/236x/22/33/search.jpg'}}},
+  {id:'not-a-pin',type:'story',images:{orig:{url:'https://i.pinimg.com/originals/33/44/story.jpg'}}},
+  {id:'789',promoter:{id:'1'},description:'Sponsored',images:{orig:{url:'https://i.pinimg.com/originals/11/22/ad.jpg'}}}
+ ]}}};
+ const images=parsePinterestPayload(payload,{fallbackUrl:'https://www.pinterest.com/search/pins/?q=test'});
+ assert.equal(images.length,2);assert.equal(images[0].title,'Songbirds & Snakes');assert.equal(images[0].pageUrl,'https://www.pinterest.com/pin/456/');
+ assert.equal(images[1].pageUrl,'https://www.pinterest.com/search/pins/?q=test');
 });
 
 test('backend serves CORS only to the app and never treats a blocked source as success',async()=>{
