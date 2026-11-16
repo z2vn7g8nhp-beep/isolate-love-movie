@@ -1,0 +1,69 @@
+name: Process in-app photo requests
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      PHOTO_QUEUE_URL: https://isolate-photo-queue-z2vn.modestdrum3.chatgpt.site/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Read queued public identifiers
+        id: queue
+        run: node scripts/photo-queue.mjs
+      - name: Install public-page reader and preview encoder
+        if: steps.queue.outputs.has_requests == 'true'
+        run: |
+          npm install --no-save --ignore-scripts --package-lock=false playwright@1.56.1
+          python3 -m pip install --quiet Pillow==11.3.0
+      - name: Collect requested archives
+        if: steps.queue.outputs.has_requests == 'true'
+        env:
+          PHOTO_SUBJECT_IDS: ${{ steps.queue.outputs.subject_ids }}
+          PHOTO_SUBJECT_LIMIT: '8'
+          PHOTO_SOURCE_PAGES: '3'
+        run: node scripts/photo-crawl.mjs
+      - name: Test and save public data
+        if: steps.queue.outputs.has_requests == 'true'
+        run: |
+          npm test
+          git config user.name 'isolate-photo-data'
+          git config user.email 'isolate-photo-data@users.noreply.github.com'
+          git pull --rebase --autostash
+          git add photo-data/
+          if ! git diff --cached --quiet; then
+            git commit -m "Process in-app public photo requests"
+            git push
+          fi
+          npm run build
+      - uses: actions/configure-pages@v5
+        if: steps.queue.outputs.has_requests == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.queue.outputs.has_requests == 'true'
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        if: steps.queue.outputs.has_requests == 'true'
+      - name: Report published requests
+        if: steps.queue.outputs.has_requests == 'true'
+        env:
+          PHOTO_QUEUE_RESULT: done
+        run: node scripts/photo-queue.mjs
+      - name: Report incomplete requests
+        if: failure() && steps.queue.outputs.has_requests == 'true'
+        env:
+          PHOTO_QUEUE_RESULT: failed
+        run: node scripts/photo-queue.mjs

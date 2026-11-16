@@ -1,4 +1,5 @@
-import {fetchPhotoSource, DIRECT_SOURCES, photoSubjectId, photoRequestUrl} from './photo-client.js';
+import {fetchPhotoSource, DIRECT_SOURCES, photoSubjectId} from './photo-client.js';
+import {requestPhotoTask} from './photo-queue-client.js';
 import {thumbnailUrl, mergePhotos, imageSourceLinks, imagesFromLink, PHOTO_BATCH, boundedCache} from './image-tools.js';
 import {visualDossier, fillPortrait, seriesPhotoPage} from './visual-data.js';
 import {pagesApi, dossier, refreshOwned, fetchGallery} from './data-client.js';
@@ -11,6 +12,7 @@ let preferences=read(PREFS,{}),records={},metadata=read(META,{}),galleries=read(
 const discoveries=new Map(), renderedMarkup=new WeakMap();
 let directController,directBusy=new Set();
 const photoChecks=new Map();
+const photoTasks=read('isolate.photo-tasks.v1',{});let photoTaskTimer;
 let galleryVisible=PHOTO_BATCH, castExpanded=false, galleryBusyId='', importImages=[], importController, deferredRender=false;
 function requestRender(){if($('#detail-dialog').open)deferredRender=true;else render();}
 function replaceMarkup(node,html){if(!node||renderedMarkup.get(node)===html)return false;node.innerHTML=html;renderedMarkup.set(node,html);return true;}
@@ -29,7 +31,7 @@ function toast(message,undo){clearTimeout(toastTimer);undoAction=undo||null;$('#
 $('#toast').addEventListener('click',e=>{if(e.target.closest('#toast-undo')&&undoAction){undoAction();undoAction=null;$('#toast').classList.remove('visible');}});
 function savePreferences(patch){preferences={...preferences,...patch};if(patch.theme)applyTheme(patch.theme);try{localStorage.setItem(PREFS,JSON.stringify(preferences));}catch{}render();}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(records));}catch{toast('本机空间不足，请导出藏柜备份');}}
-function saveRecord(item,patch){const old=recordFor(item),now=new Date().toISOString();records[item.id]={...old,...patch,item:cleanItem(item),collected:patch.collected??true,serial:old.serial||nextSerial(records),addedAt:old.addedAt||(records[item.id]?null:now),updatedAt:now};persist();requestRender();}
+function saveRecord(item,patch){const old=recordFor(item),now=new Date().toISOString();records[item.id]={...old,...patch,item:cleanItem(item),collected:patch.collected??true,serial:old.serial||nextSerial(records),addedAt:old.addedAt||(records[item.id]?null:now),updatedAt:now};persist();requestRender();if(!isCollected(old)&&isCollected(records[item.id]))queuePhotoTask(item,{quiet:true});}
 function applyReadingSize(size){const valid=['default','large','extra'].includes(size)?size:'default';document.documentElement.dataset.textSize=valid;$$('.reading-options [data-text-size]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.textSize===valid)));}
 applyReadingSize(preferences.textSize);
 $('.reading-options').addEventListener('click',e=>{const button=e.target.closest('[data-text-size]');if(button){applyReadingSize(button.dataset.textSize);savePreferences({textSize:button.dataset.textSize});}});
@@ -134,7 +136,7 @@ $('#gallery-prev').onclick=()=>{activeGalleryIndex=(activeGalleryIndex-1+activeG
 $('#gallery-dialog').addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();$('#gallery-prev').click();}if(e.key==='ArrowRight'){e.preventDefault();$('#gallery-next').click();}});
 $('#gallery-save').onclick=()=>{const item=activeGalleryItem,image=activeGallery[activeGalleryIndex],old=recordFor(item).album,exists=old.some(x=>x.url===image.url);saveRecord(item,{album:exists?old.filter(x=>x.url!==image.url):cleanAlbum([image,...old])});updateLightbox();if(selected?.id===item.id&&$('#photo-grid')){updatePhotoGrid();}toast(exists?'相片已移出我的相册':'相片已收藏到我的相册');};
 $('#gallery-cover').onclick=()=>{const item=activeGalleryItem,image=activeGallery[activeGalleryIndex];saveRecord(item,{coverImage:validImageUrl(image.cachedUrl||image.url)});updateLightbox();if(selected?.id===item.id){updateVisualSections();}toast('已换成你选的私藏封面');};
-function handleDetailExtras(e){const tab=e.target.closest('[data-detail-tab]'),photo=e.target.closest('[data-photo]'),remove=e.target.closest('[data-delete-memory]');if(tab){commitDraft();detailTab=tab.dataset.detailTab;applyDetailTab();scrollDetailPanel();if(detailTab==='gallery')loadGallery(false);return true;}if(photo){openGallery(selected,availableImages(selected),Number(photo.dataset.photo));return true;}if(e.target.closest('#refresh-gallery')){if(photoChecks.get(photoSubjectId(selected))?.status==='ready')loadDirectPhotos('all');else checkPhotoAvailability(true);return true;}const source=e.target.closest('[data-fetch-source]');if(source){loadDirectPhotos(source.dataset.fetchSource);return true;}if(e.target.closest('#refresh-aux-gallery')){loadGallery(false,true);return true;}if(e.target.closest('#show-cached-photos')){galleryVisible+=PHOTO_BATCH;updatePhotoGrid();return true;}if(e.target.closest('#add-import-photos')){addImportedPhotos();return true;}if(remove){commitDraft();const item=selected,old=[...recordFor(item).memories];saveRecord(item,{memories:old.filter(x=>x.id!==remove.dataset.deleteMemory)});updateMemoriesUI(item);toast('这则手记已移出',()=>{saveRecord(item,{memories:old});if(selected?.id===item.id&&$('#memory-list'))updateMemoriesUI(item);});return true;}return false;}
+function handleDetailExtras(e){const tab=e.target.closest('[data-detail-tab]'),photo=e.target.closest('[data-photo]'),remove=e.target.closest('[data-delete-memory]');if(tab){commitDraft();detailTab=tab.dataset.detailTab;applyDetailTab();scrollDetailPanel();if(detailTab==='gallery')loadGallery(false);return true;}if(photo){openGallery(selected,availableImages(selected),Number(photo.dataset.photo));return true;}if(e.target.closest('#refresh-gallery')){const task=photoTasks[photoSubjectId(selected)];if(task&&['queued','processing'].includes(task.status))pollPhotoTasks();else if(photoChecks.get(photoSubjectId(selected))?.status==='ready')loadDirectPhotos('all',{requestMore:true});else queuePhotoTask(selected);return true;}if(e.target.closest('[data-request-photos]')){queuePhotoTask(selected);return true;}const source=e.target.closest('[data-fetch-source]');if(source){loadDirectPhotos(source.dataset.fetchSource,{requestMore:true});return true;}if(e.target.closest('#refresh-aux-gallery')){loadGallery(false,true);return true;}if(e.target.closest('#show-cached-photos')){galleryVisible+=PHOTO_BATCH;updatePhotoGrid();return true;}if(e.target.closest('#add-import-photos')){addImportedPhotos();return true;}if(remove){commitDraft();const item=selected,old=[...recordFor(item).memories];saveRecord(item,{memories:old.filter(x=>x.id!==remove.dataset.deleteMemory)});updateMemoriesUI(item);toast('这则手记已移出',()=>{saveRecord(item,{memories:old});if(selected?.id===item.id&&$('#memory-list'))updateMemoriesUI(item);});return true;}return false;}
 function openCalendar(){const events=[];for(const item of own()){const r=recordFor(item),data=metadata[item.id];const birthday=data?.birthday||(data?.facts||[]).find(x=>x.label==='出生日期')?.value;if(item.kind==='person'&&birthday){const next=nextAnniversary(birthday);if(next)events.push({item,type:'生日',...next});}if(r.addedAt){const date=new Date(r.addedAt),local=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-'),next=nextAnniversary(local);if(next)events.push({item,type:'入藏纪念',...next});}}events.sort((a,b)=>a.days-b.days);$('#calendar-content').innerHTML=events.length?events.slice(0,60).map(event=>`<button class="anniversary-row" data-calendar-item="${esc(event.item.id)}"><span class="anniversary-date"><b>${event.date.getDate()}</b><small>${event.date.getMonth()+1}月</small></span><span class="anniversary-name"><strong>${esc(displayName(event.item))}</strong><small>${event.type} · ${event.days===0?'就是今天':event.days+' 天后'}</small></span><span>◇</span></button>`).join(''):'<div class="calendar-empty"><span>◇</span><p>暂时没有可显示的纪念日。</p><small>已收藏人物的生日在核对资料后显示，新入藏的条目会记录入藏日期。</small></div>';$('#calendar-dialog').showModal();}
 $('#calendar-content').onclick=e=>{const button=e.target.closest('[data-calendar-item]');if(button){$('#calendar-dialog').close();showDetail(findItem(button.dataset.calendarItem));}};
 
@@ -182,31 +184,51 @@ function addImportedPhotos(){if(!selected)return;const indices=$$('#photo-import
 
 function directStateMarkup(item){const state=galleries[item.id]?.sourceState||{};return Object.entries(DIRECT_SOURCES).map(([source,name])=>{const row=state[source],busy=directBusy.has(source),label=busy?'正在读取…':!row?'尚未请求':row.status==='ok'?row.lastAdded?'本次新增 '+row.lastAdded+' 张':'本次图片已收录':row.status==='empty'?'已读完，等待图库更新':row.status==='blocked'?'来源暂时限制访问':row.status==='unmatched'?'暂无该条目图库':row.message||'暂不可用';return `<span data-source-result="${source}" class="${busy?'is-loading':''}"><b>${name}</b><small>${esc(label)}${row?.updatedAt?' · '+esc(new Date(row.updatedAt).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})):''}${row?.method==='public-image-index'?' · 搜索索引':''}</small></span>`;}).join('');}
 function photoAvailabilityMarkup(item){
- const check=photoChecks.get(photoSubjectId(item)),link=photoRequestUrl(item);
- if(!link)return '<p class="quiet-copy">将角色关联到影视或人物后，可读取对应图库。</p>';
+ const id=photoSubjectId(item),check=photoChecks.get(id),task=photoTasks[id];
+ if(!/^(tt|nm)\d{5,12}$/.test(id))return '<p class="quiet-copy">将角色关联到影视或人物后，可读取对应图库。</p>';
+ if(task&&['submitting','queued','processing'].includes(task.status))return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>${task.status==='submitting'?'正在提交补图…':task.status==='processing'?'正在采集这个条目的图片':'补图已排队'}</h4><p>你可以继续浏览，完成后会自动读取新图。</p><small>通常需要几分钟；GitHub 调度繁忙时可能延迟。</small></div></div>`;
  if(!check||check.status==='checking')return '<p class="quiet-copy">正在检查这个条目的图库…</p>';
- if(check.status==='missing')return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>还没有这个条目的图库</h4><p>提交一次补图请求，采集完成后即可读取，之后会定时补充。</p><a class="button button-light" href="${esc(link)}" target="_blank" rel="noopener noreferrer">为这个条目补图 ↗</a><small>需在 GitHub 登录并提交 · 仅公开条目名和 IMDb 编号，手记与评分留在本机。</small><small>提交后约需几分钟；完成通知会出现在 GitHub 请求页。</small></div></div>`;
+ if(check.status==='missing')return `<div class="photo-request-card"><span class="photo-request-symbol" aria-hidden="true">✧</span><div><h4>还没有这个条目的图库</h4><p>${task?.status==='failed'?esc(task.message||'上次采集未完成，可以再试一次。'):'在这里补图，采集完成后自动读取。'}</p><button class="button button-light" data-request-photos>为这个条目补图 ＋</button><small>仅提交公开 IMDb 编号，手记与评分留在本机。</small></div></div>`;
  if(check.status==='error')return `<p class="quiet-copy">${esc(check.message)}。你的已有图片仍可查看。</p>`;
- return `<details class="photo-request-details"><summary>想再补充这个条目的图片？</summary><p class="quiet-copy">图库会定时补充，也可提交一次补图请求。</p><a class="text-button" href="${esc(link)}" target="_blank" rel="noopener noreferrer">申请补图 ↗</a><p class="quiet-copy">需在 GitHub 登录并提交；仅公开条目名和 IMDb 编号。</p></details>`;
+ return `<details class="photo-request-details"><summary>想再补充这个条目的图片？</summary><p class="quiet-copy">${task?.status==='failed'?esc(task.message):'可在这里申请补图，完成后自动读取。'}</p><button class="text-button" data-request-photos>继续补图 ＋</button></details>`;
 }
 function updateDirectState(){
  if(!selected)return;const hasSubject=/^(tt|nm)\d+$/.test(photoSubjectId(selected)),check=photoChecks.get(photoSubjectId(selected)),ready=check?.status==='ready',checking=check?.status==='checking';
  const state=$('#direct-source-state');if(state){replaceMarkup(state,directStateMarkup(selected));state.hidden=!hasSubject||!!check&&!ready;}
  const availability=$('#photo-availability');if(availability)replaceMarkup(availability,photoAvailabilityMarkup(selected));
  const controls=$('#detail-content .direct-source-controls');if(controls)controls.hidden=!hasSubject||!!check&&!ready;
- const main=$('#refresh-gallery');if(main){main.hidden=!hasSubject;main.disabled=directBusy.size>0||checking;main.textContent=directBusy.size?'正在读取三站图库…':checking?'正在检查图库…':ready?'从三站图库读取更多 ＋':check?.status==='missing'?'检查图库是否已建立 ↻':'重新读取图库 ↻';}
+ const main=$('#refresh-gallery');if(main){main.hidden=!hasSubject;const task=photoTasks[photoSubjectId(selected)];main.disabled=directBusy.size>0||checking||task?.status==='submitting';main.textContent=task&&['queued','processing'].includes(task.status)?'查看补图进度 ↻':directBusy.size?'正在读取三站图库…':checking?'正在检查图库…':ready?'从三站图库读取更多 ＋':check?.status==='missing'?'为这个条目补图 ＋':'重新读取图库 ↻';}
  for(const button of $$('#detail-content [data-fetch-source]'))button.disabled=directBusy.has(button.dataset.fetchSource)||checking;
 }
 async function checkPhotoAvailability(refresh=false){
  const item=selected;if(!item)return;const id=photoSubjectId(item);if(!/^(tt|nm)\d+$/.test(id)){updateDirectState();return;}
  const old=photoChecks.get(id);if(!refresh&&old&&(old.status==='checking'||Date.now()-old.at<60000)){updateDirectState();return;}
  photoChecks.set(id,{status:'checking',at:Date.now()});updateDirectState();
- try{const result=await fetchPhotoSource(item,{source:'imdb',refresh,signal:AbortSignal.timeout(16000)});photoChecks.set(id,{status:result.registered===false?'missing':'ready',at:Date.now()});if(result.registered!==false&&selected?.id===item.id){const sourceState=galleries[item.id]?.sourceState;for(const name of Object.keys(sourceState||{}))if(sourceState[name].status==='unavailable')delete sourceState[name];if(old?.status==='missing'&&detailTab==='gallery')loadDirectPhotos('all');}}
+ try{const result=await fetchPhotoSource(item,{source:'imdb',refresh,signal:AbortSignal.timeout(16000)});photoChecks.set(id,{status:result.registered===false?'missing':'ready',at:Date.now()});if(result.registered===false&&isCollected(recordFor(item))&&!photoTasks[id])queuePhotoTask(item,{quiet:true});if(result.registered!==false&&selected?.id===item.id){const sourceState=galleries[item.id]?.sourceState;for(const name of Object.keys(sourceState||{}))if(sourceState[name].status==='unavailable')delete sourceState[name];if(old?.status==='missing'&&detailTab==='gallery')loadDirectPhotos('all');}}
  catch(error){photoChecks.set(id,{status:'error',message:error.message||'暂时无法连接图库',at:Date.now()});}
  if(selected&&photoSubjectId(selected)===id)updateDirectState();
 }
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&selected&&detailTab==='gallery'){const check=photoChecks.get(photoSubjectId(selected));if(check?.status==='missing'&&Date.now()-check.at>15000)checkPhotoAvailability(true);}});
-async function loadDirectPhotos(source){
+function persistPhotoTasks(){try{localStorage.setItem('isolate.photo-tasks.v1',JSON.stringify(Object.fromEntries(Object.entries(photoTasks).slice(-60))));}catch{}}
+function schedulePhotoTasks(){clearTimeout(photoTaskTimer);if(document.visibilityState!=='hidden'&&Object.values(photoTasks).some(task=>['queued','processing'].includes(task.status)))photoTaskTimer=setTimeout(pollPhotoTasks,20000);}
+async function queuePhotoTask(item,{quiet=false}={}){
+ const id=photoSubjectId(item);if(!/^(tt|nm)\d{5,12}$/.test(id||''))return;
+ if(photoTasks[id]&&['submitting','queued','processing'].includes(photoTasks[id].status)){schedulePhotoTasks();return;}
+ if(quiet){try{const existing=await fetchPhotoSource(item,{source:'imdb',signal:AbortSignal.timeout(16000)});if(existing.registered!==false)return;}catch{return;}}
+ if(photoTasks[id]&&['submitting','queued','processing'].includes(photoTasks[id].status))return;
+ photoTasks[id]={status:'submitting'};updateDirectState();
+ try{photoTasks[id]=await requestPhotoTask(id);if(photoTasks[id].status==='done')photoTasks[id].status='queued';persistPhotoTasks();if(!quiet)toast('补图已排队，完成后会自动读取');schedulePhotoTasks();}
+ catch(error){photoTasks[id]={status:'failed',message:error.message};persistPhotoTasks();if(!quiet)toast(error.message);}
+ if(selected&&photoSubjectId(selected)===id)updateDirectState();
+}
+async function pollPhotoTasks(){
+ clearTimeout(photoTaskTimer);const pending=Object.entries(photoTasks).filter(([,task])=>['queued','processing'].includes(task.status)).slice(0,8);
+ await Promise.allSettled(pending.map(async([id])=>{try{const result=await requestPhotoTask(id,{readOnly:true});photoTasks[id]=result;if(result.status==='done'){
+  photoTasks[id].status='ready';if(selected&&photoSubjectId(selected)===id){await checkPhotoAvailability(true);if(photoChecks.get(id)?.status==='ready'&&!directBusy.size)loadDirectPhotos('all');}
+ }}catch(error){photoTasks[id]={...photoTasks[id],message:error.message};}}));persistPhotoTasks();updateDirectState();schedulePhotoTasks();
+}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){pollPhotoTasks();if(selected&&detailTab==='gallery'){const check=photoChecks.get(photoSubjectId(selected));if(check?.status==='missing'&&Date.now()-check.at>15000)checkPhotoAvailability(true);}}else clearTimeout(photoTaskTimer);});
+schedulePhotoTasks();
+async function loadDirectPhotos(source,{requestMore=false}={}){
  const item=selected;if(!item||directBusy.size)return;commitDraft();directController?.abort();const controller=new AbortController();directController=controller;const sources=source==='all'?Object.keys(DIRECT_SOURCES):[source];for(const name of sources)directBusy.add(name);updateDirectState();
  const subject={...item,...metadata[item.id]?.item};let totalAdded=0;
  await Promise.allSettled(sources.map(async name=>{
@@ -219,5 +241,5 @@ async function loadDirectPhotos(source){
   }catch(error){if(controller.signal.aborted||selected?.id!==item.id)return;const current=galleries[item.id]||{};galleries[item.id]={...current,sourceState:{...current.sourceState,[name]:{...prior,status:'unavailable',lastAdded:0,message:error.message||'请求失败'}}};}
   finally{if(selected?.id===item.id&&!controller.signal.aborted){directBusy.delete(name);updateDirectState();}}
  }));
- if(selected?.id===item.id&&!controller.signal.aborted){if($('#gallery-state'))$('#gallery-state').textContent=totalAdded?'本次从公开图库新增 '+totalAdded+' 张 · 已去重并保留已有图片':photoChecks.get(photoSubjectId(item))?.status==='missing'?'图库尚未建立，可在下方提交补图请求。':'当前没有新图片，可查看各站状态或前往原始页面。';updateDirectState();}
+ if(selected?.id===item.id&&!controller.signal.aborted){if($('#gallery-state'))$('#gallery-state').textContent=totalAdded?'本次从公开图库新增 '+totalAdded+' 张 · 已去重并保留已有图片':photoChecks.get(photoSubjectId(item))?.status==='missing'?'图库尚未建立，可在这里直接补图。':'当前没有新图片，可查看各站状态或前往原始页面。';updateDirectState();if(requestMore&&!totalAdded&&sources.some(name=>galleries[item.id]?.sourceState?.[name]?.status!=='complete'))queuePhotoTask(item);}
 }
