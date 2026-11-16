@@ -21,3 +21,12 @@ test('image requests have bounded concurrency and old UI cache cleanup keeps pho
 test('image caching only intercepts known image providers',()=>{
  const {handlers}=worker(memoryCaches(),()=>{throw Error('unexpected network');});let intercepted=false;handlers.fetch({request:{url:'https://example.org/private.jpg',method:'GET',destination:'image'},respondWith(){intercepted=true;}});assert.equal(intercepted,false);
 });
+
+test('same-origin static previews use the persistent image cache and do not intercept unrelated files',async()=>{
+ const caches=memoryCaches();let requests=0;const {handlers}=worker(caches,async()=>{requests++;return new Response('preview',{headers:{'content-type':'image/webp'}});});
+ const url='https://example.com/app/photo-data/images/nm3641002/'+'a'.repeat(24)+'.webp';
+ async function read(address){let task;const request=new Request(address);Object.defineProperty(request,'destination',{value:'image'});handlers.fetch({request,respondWith(result){task=result;}});return task;}
+ const first=await read(url);assert.equal(await first.text(),'preview');const second=await read(url);assert.equal(await second.text(),'preview');assert.equal(requests,1);
+ assert.equal(await read('https://example.com/app/photo-data/images/private.json'),undefined);
+ assert.equal(await read(url.replace('example.com','other.example')),undefined);
+});

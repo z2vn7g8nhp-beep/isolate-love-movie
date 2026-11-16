@@ -1,0 +1,88 @@
+name: Build requested photo archive
+on:
+  issues:
+    types: [opened, reopened]
+  workflow_dispatch:
+    inputs:
+      imdb_id:
+        description: 'Public IMDb identifier (tt… or nm…)'
+        required: true
+        type: string
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (startsWith(github.event.issue.body, '<!-- isolate-photo-request:v1 -->') &&
+       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association))
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Read latest public registry
+        run: git pull --ff-only
+      - name: Verify public identifier and register subject
+        id: subject
+        env:
+          PHOTO_REQUEST_ID: ${{ inputs.imdb_id }}
+        run: node scripts/photo-request.mjs
+      - name: Install optional public-page reader
+        run: npm install --no-save --ignore-scripts --package-lock=false playwright@1.56.1
+      - name: Install preview encoder
+        run: python3 -m pip install --quiet Pillow==11.3.0
+      - name: Collect this subject
+        env:
+          PHOTO_SUBJECT_IDS: ${{ steps.subject.outputs.subject_id }}
+          PHOTO_SUBJECT_LIMIT: '1'
+          PHOTO_SOURCE_PAGES: '3'
+        run: node scripts/photo-crawl.mjs
+      - name: Test and build
+        run: |
+          npm test
+          npm run build
+      - name: Save public metadata
+        run: |
+          git config user.name 'isolate-photo-data'
+          git config user.email 'isolate-photo-data@users.noreply.github.com'
+          git pull --rebase --autostash
+          git add photo-data/
+          if ! git diff --cached --quiet; then
+            git commit -m "Build requested public photo archive"
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Publish archive
+        uses: actions/deploy-pages@v4
+      - name: Update the request
+        if: always() && github.event_name == 'issues'
+        uses: actions/github-script@v7
+        env:
+          REQUEST_STATUS: ${{ job.status }}
+          SUBJECT_ID: ${{ steps.subject.outputs.subject_id }}
+        with:
+          script: |
+            const ok = process.env.REQUEST_STATUS === 'success';
+            const subject = process.env.SUBJECT_ID;
+            let body = '采集或发布未完成。可查看本次任务日志，稍后重新打开此请求重试。';
+            if (ok) {
+              const fs = require('fs');
+              const data = JSON.parse(fs.readFileSync(`photo-data/subjects/${subject}.json`, 'utf8'));
+              const counts = Object.entries(data.sources).map(([key, value]) => `${value.name || key}：${value.images.length} 条图片记录`).join('；');
+              body = `已发布 ${data.item.title} 的图库。${counts}。\n\n返回 ISOLATE，点击「检查图库是否已建立」或重新打开相册即可读取。图片会继续随定时任务更新；原站限制访问时可能没有新增图片。`;
+            }
+            body += `\n\n[查看本次任务](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`;
+            await github.rest.issues.createComment({...context.repo, issue_number: context.issue.number, body});
+            if (ok) await github.rest.issues.update({...context.repo, issue_number: context.issue.number, state: 'closed', state_reason: 'completed'});
