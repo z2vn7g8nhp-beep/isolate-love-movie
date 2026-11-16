@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTQyMTExNTMxOF5BMl5BanBnXkFtZTcwNDg1NzkzNw@@._V1_FMjpg_UX1000_.jpg",
@@ -927,127 +925,29 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/name/nm0000128/mediaviewer/rm4215430656/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTczODI0MTUzN15BMl5BanBnXkFtZTYwMzY0Mzk1._V1_FMjpg_UY397_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTczODI0MTUzN15BMl5BanBnXkFtZTYwMzY0Mzk1._V1_QL80_UX360_.jpg",
+          "title": "Russell Crowe",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/media/rm2963904512/nm0000128",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T21:32:35.394Z",
-      "checkedAt": "2026-11-16T21:32:35.394Z"
+      "updatedAt": "2026-11-16T23:27:10.406Z",
+      "checkedAt": "2026-11-16T23:27:10.406Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDE2Njc0Iiwib2Zmc2V0IjoyMjh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDE2Njc0Iiwib2Zmc2V0IjoyNDB9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p1902077983.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1902077983.jpg",
-          "title": "歌手罗素",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1902077983/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p1865245178.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1865245178.jpg",
-          "title": "悲惨世界",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1865245178/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p1854026209.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1854026209.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1854026209/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1752368876.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1752368876.jpg",
-          "title": "Russell Crowe fighting in china",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1752368876/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1429151590.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429151590.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429151590/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1406663716.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1406663716.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1406663716/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1032195576.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1032195576.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1032195576/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p643156759.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643156759.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/643156759/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2500189119.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2500189119.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2500189119/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2494419481.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2494419481.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2494419481/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2371168545.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2371168545.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2371168545/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2371168529.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2371168529.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2371168529/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2367069486.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2367069486.jpg",
@@ -2019,10 +1919,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27222397/photo/1885429402/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p1854026109.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1854026109.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1854026109/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1752366177.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1752366177.jpg",
+          "title": "【Russell Crowe】fighting around the world",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1752366177/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1564240510.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1564240510.jpg",
+          "title": "from \"The Quick and the Dead\" (1995)",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1564240510/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p1537894591.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1537894591.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1537894591/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1429144627.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429144627.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429144627/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1429134870.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429134870.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429134870/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1429134834.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1429134834.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429134834/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1429123482.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429123482.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429123482/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1429122032.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429122032.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429122032/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1406427256.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1406427256.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1406427256/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1361908966.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1361908966.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908966/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1361908778.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361908778.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908778/"
         }
       ],
-      "updatedAt": "2026-11-16T21:32:35.880Z",
-      "checkedAt": "2026-11-16T21:32:35.880Z"
+      "updatedAt": "2026-11-16T23:27:10.958Z",
+      "checkedAt": "2026-11-16T23:27:10.958Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2032,15 +2040,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/81/5e/89/815e890df348955aa703a3142358e74c.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/81/5e/89/815e890df348955aa703a3142358e74c.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229650300253/"
-        },
         {
           "url": "https://i.pinimg.com/564x/94/97/59/9497590f5af781cd7d52df38b01e489d.jpg",
           "thumbnail": "https://i.pinimg.com/236x/94/97/59/9497590f5af781cd7d52df38b01e489d.jpg",
@@ -3112,11 +3111,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/35/34/d4/3534d4219659cecf62ae634200492ff4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/35/34/d4/3534d4219659cecf62ae634200492ff4.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
         }
       ],
-      "updatedAt": "2026-11-16T21:32:38.837Z",
-      "checkedAt": "2026-11-16T21:32:38.837Z"
+      "updatedAt": "2026-11-16T23:27:13.871Z",
+      "checkedAt": "2026-11-16T23:27:13.871Z"
     }
   },
-  "checkedAt": "2026-11-16T21:32:38.839Z"
+  "checkedAt": "2026-11-16T23:27:13.873Z"
 }

@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTk4MDM0MDUzM15BMl5BanBnXkFtZTcwOTI4MzU1Mw@@._V1_FMjpg_UX1000_.jpg",
@@ -487,125 +489,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T22:29:18.805Z",
-      "checkedAt": "2026-11-16T22:29:18.805Z"
+      "updatedAt": "2026-11-16T23:27:40.055Z",
+      "checkedAt": "2026-11-16T23:27:40.055Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTMxIiwib2Zmc2V0IjoyMDR9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTMxIiwib2Zmc2V0IjoyMTZ9",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2189976517.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2189976517.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2189976517/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2185053063.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2185053063.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2185053063/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2184976192.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2184976192.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2184976192/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2184829301.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2184829301.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2184829301/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2184827995.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2184827995.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2184827995/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2170500079.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2170500079.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2170500079/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2111231378.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2111231378.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2111231378/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2042616072.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2042616072.jpg",
-          "title": "新宿事件",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2042616072/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p730830356.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p730830356.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/730830356/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p730830233.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p730830233.jpg",
-          "title": "Jackie Chan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/730830233/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2896015540.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2896015540.jpg",
-          "title": "娇姐",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2896015540/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2559453007.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2559453007.jpg",
-          "title": "童年成龙",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260298/photo/2559453007/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2541744272.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2541744272.jpg",
@@ -1577,10 +1471,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27260298/photo/2885475523/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2870856842.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2870856842.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2870856842/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2870856831.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2870856831.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2870856831/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2747484752.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2747484752.jpg",
+          "title": "港港的三大人生赢家",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2747484752/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2678148933.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2678148933.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2678148933/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2643059966.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2643059966.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2643059966/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2636894206.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2636894206.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2636894206/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2630722860.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630722860.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2630722860/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2630722855.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2630722855.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2630722855/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2630722524.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2630722524.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2630722524/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2630722508.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630722508.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2630722508/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2564289705.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2564289705.jpg",
+          "title": "by zhaoxiaodanzzzzz（插画师）",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2564289705/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2545810113.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2545810113.jpg",
+          "title": "Jackie Chan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260298/photo/2545810113/"
         }
       ],
-      "updatedAt": "2026-11-16T22:29:19.991Z",
-      "checkedAt": "2026-11-16T22:29:19.991Z"
+      "updatedAt": "2026-11-16T23:27:40.605Z",
+      "checkedAt": "2026-11-16T23:27:40.605Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2257,9 +2259,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Jackie%20Chan%20portrait"
         }
       ],
-      "updatedAt": "2026-11-16T22:29:23.357Z",
-      "checkedAt": "2026-11-16T22:29:23.357Z"
+      "updatedAt": "2026-11-16T23:27:43.415Z",
+      "checkedAt": "2026-11-16T23:27:43.415Z"
     }
   },
-  "checkedAt": "2026-11-16T22:29:23.360Z"
+  "checkedAt": "2026-11-16T23:27:43.417Z"
 }
