@@ -4,6 +4,20 @@
 
 https://z2vn7g8nhp-beep.github.io/isolate-love-movie/
 
+## 独立的 GitHub 图片数据
+
+当前项目自己维护 `photo-data/`，GitHub Actions 每小时读取公开片目清单，抓取 IMDb、豆瓣与 Pinterest 的图片元数据，再发布为静态 JSON。网页的「从三站图库读取更多」直接读取下一批（每站最多 12 张），不要求复制链接，也不需要常驻后台。图片文件仍来自原站 CDN，本机缓存沿用。
+
+数据流：`photo-data/subjects.json` → `.github/workflows/photo-data.yml` → `photo-data/subjects/<IMDb ID>.json` → GitHub Pages → 私藏档案。
+
+- 数据目录只有公开标识、公开图片地址、来源、检索方式及更新时间。收藏、评分、笔记、专属称呼不会上传。首页仍只展示亲自收藏的条目。
+- 豆瓣使用无需登录的公开相册数据，核对相册所属条目；IMDb / Pinterest 的原站请求受限时，尝试公开页面或图片搜索索引。索引结果要求原站页面与原站图片 CDN 对应，并匹配当前标题，分别标为「搜索索引」。Pinterest 可从公开 Pin 和名称匹配的主题图板补充图片。
+- 每站独立记录状态。失败保留旧图片，不用其他来源冒充；网页显示数据更新时间。受限来源和没有索引的条目可能暂时没有新增图片。
+- **更多按钮读取已抓取数据，不能无授权地即时触发 GitHub 工作流。** 后台按小时补充，GitHub 调度可能延迟。新条目需要加入公开清单；此过程不会自动发布私人收藏列表。
+- 当前 GitHub 连接不具备创建仓库的权限，所以先使用 ISOLATE 本项目内的独立数据目录。后续可拆到单独的数据仓库，调整发布路径及 `PHOTO_DATA_BASE` 即可。不接入或复用其他项目。
+
+`server/photo-api.mjs` 提供独立来源读取和本地开发适配；`scripts/photo-crawl.mjs` 运行抓取任务；`scripts/photo-index.mjs` 发现并验证公开图片索引；`public/photo-client.js` 只读取静态数据。接口契约测试与实际 GitHub Runner 抓取验证分开记录，不把任务结束视为每站抓取成功。
+
 ## 收藏由你决定
 
 - 首页和各个分柜只展示你亲自收入的藏品。没有默认推荐片单、未关注人物或预填角色。

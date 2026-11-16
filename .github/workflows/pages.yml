@@ -28,6 +28,10 @@ jobs:
       - name: Refresh public IMDb catalog
         run: node scripts/refresh-catalog.mjs
         continue-on-error: true
+      - name: Read latest independent photo metadata
+        run: |
+          git fetch origin main
+          git checkout origin/main -- photo-data
       - name: Build static Web App
         run: npm run build
       - name: Configure GitHub Pages

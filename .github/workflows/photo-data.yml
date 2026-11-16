@@ -1,0 +1,68 @@
+name: Refresh independent photo data
+on:
+  push:
+    branches: [main, feat/direct-source-photos]
+    paths:
+      - '.github/workflows/photo-data.yml'
+      - 'scripts/photo-*.mjs'
+      - 'server/photo-api.mjs'
+      - 'photo-data/subjects.json'
+  workflow_dispatch:
+    inputs:
+      subjects:
+        description: 'Maximum subjects to refresh (public metadata only)'
+        default: '20'
+        required: false
+  schedule:
+    - cron: '43 * * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: ${{ github.ref == 'refs/heads/main' && 'github-pages' || format('independent-photo-data-{0}', github.ref) }}
+  cancel-in-progress: false
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install optional public-page browser reader
+        run: npm install --no-save --ignore-scripts --package-lock=false playwright@1.56.1
+      - name: Fetch image metadata from the three sources
+        env:
+          PHOTO_SUBJECT_LIMIT: ${{ inputs.subjects || '20' }}
+        run: node scripts/photo-crawl.mjs
+      - name: Preserve metadata results for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: photo-metadata
+          path: photo-data/
+      - name: Save independent public metadata
+        run: |
+          git config user.name 'isolate-photo-data'
+          git config user.email 'isolate-photo-data@users.noreply.github.com'
+          git pull --rebase --autostash
+          git add photo-data/
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh public photo metadata"
+            git push
+          fi
+      - name: Build updated data and app
+        if: github.ref == 'refs/heads/main'
+        run: npm run build
+      - name: Configure Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+      - name: Upload updated Pages data
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Publish updated public data
+        if: github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
