@@ -10,17 +10,30 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T12:44:25.153Z"
+      "status": "ok",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
+      "images": [
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNGYxOGJkMjItZjVkZC00OGEzLWExNjktOTZmNGZhZmRlMTk2XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGYxOGJkMjItZjVkZC00OGEzLWExNjktOTZmNGZhZmRlMTk2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/",
+          "retrievedVia": "public-metadata"
+        }
+      ],
+      "updatedAt": "2026-11-16T14:08:53.398Z",
+      "checkedAt": "2026-11-16T14:08:53.398Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxMDh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxMjB9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
@@ -998,22 +1011,130 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/1166594917/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1166594704.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1166594704.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1166594704/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2881542455.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2881542455.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2881542455/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2881531232.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2881531232.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2881531232/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2881531134.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2881531134.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2881531134/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2881530873.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2881530873.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2881530873/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2555115377.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2555115377.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2555115377/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2151216770.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2151216770.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2151216770/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2151216741.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2151216741.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2151216741/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2151210183.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2151210183.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2151210183/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p923378391.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p923378391.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/923378391/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p905031533.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p905031533.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/905031533/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p792867185.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p792867185.jpg",
+          "title": "Game of Thrones · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/792867185/"
         }
       ],
-      "updatedAt": "2026-11-16T12:44:25.731Z",
-      "checkedAt": "2026-11-16T12:44:25.731Z"
+      "updatedAt": "2026-11-16T14:08:57.454Z",
+      "checkedAt": "2026-11-16T14:08:57.454Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "Pinterest",
       "status": "blocked",
       "message": "来源要求验证访问",
-      "method": "public-image-index",
+      "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T12:44:26.188Z"
+      "checkedAt": "2026-11-16T14:09:00.806Z"
     }
   },
-  "checkedAt": "2026-11-16T12:44:26.188Z"
+  "checkedAt": "2026-11-16T14:09:00.806Z"
 }
