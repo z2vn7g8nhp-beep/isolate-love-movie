@@ -10,33 +10,44 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
-      "status": "blocked",
-      "message": "来源限制了当前请求",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T04:27:27.412Z"
-    },
-    "douban": {
-      "nextCursor": null,
-      "indexOffset": 36,
-      "name": "豆瓣",
-      "status": "unmatched",
-      "message": "尚未核对到对应豆瓣档案",
-      "method": "public-image-index",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-16T04:27:31.934Z"
-    },
-    "pinterest": {
-      "nextCursor": null,
-      "indexOffset": 36,
-      "name": "Pinterest",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
       "method": "public-image-index",
+      "images": [
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMmU0NjJkNzUtZjgwNS00ODEyLTlkNTctMTNiNDU0ODA3OTliXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UX500_CR0,47,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMmU0NjJkNzUtZjgwNS00ODEyLTlkNTctMTNiNDU0ODA3OTliXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL80_UX360_.jpg",
+          "title": "Breaking Bad (TV Series 2008–2013) - Videos - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0903747/videogallery/?contentTypes=trailer",
+          "retrievedVia": "public-image-index"
+        }
+      ],
+      "updatedAt": "2026-11-16T04:56:33.515Z",
+      "checkedAt": "2026-11-16T04:56:33.515Z"
+    },
+    "douban": {
+      "nextCursor": null,
+      "indexOffset": 71,
+      "name": "豆瓣",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
+      "method": "public-image-index",
+      "images": [],
+      "updatedAt": null,
+      "checkedAt": "2026-11-16T04:56:46.738Z"
+    },
+    "pinterest": {
+      "nextCursor": null,
+      "indexOffset": 71,
+      "name": "Pinterest",
+      "status": "ok",
+      "message": "从原站读取",
+      "method": "public-pin-widget",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/61/8e/98/618e9835b41191c2a5a757464710111e.jpg",
@@ -47,11 +58,605 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/562950022156775228/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
+          "title": "Breaking Bad poster by&#160;Fabien Mathe (aka WARENDT) in Toulouse, France",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585913337297/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/790381803380088578/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/87/b8/5e/87b85e0b0cc7976b732f06aadc09808b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/87/b8/5e/87b85e0b0cc7976b732f06aadc09808b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/35114072084573651/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/782711610279552378/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/140667188356009884/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/301389400075914854/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/2d/78/19/2d78197f8bd5bd19290b2adf461dbe2a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2d/78/19/2d78197f8bd5bd19290b2adf461dbe2a.jpg",
+          "title": "Breaking Bad.... Walter White AKA Heisenberg ...",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585926083958/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/1d/bd/7a/1dbd7a1f401d44a3d9e55e8a3fad39df.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/1d/bd/7a/1dbd7a1f401d44a3d9e55e8a3fad39df.jpg",
+          "title": "Bryan Cranston and Aaron Paul, Breaking Bad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585926083954/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/41/b2/de/41b2decf60974ff0dfee7ec5c209e5ec.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/41/b2/de/41b2decf60974ff0dfee7ec5c209e5ec.jpg",
+          "title": "Breaking Bad | ''I've never had a better year in my life than 2013. Thirteen is now my new lucky number,'' admits creator Vince Gilligan. A ...",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585926083947/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/f1/58/21/f15821c07aa621dd2d6161b56bdf234f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f1/58/21/f15821c07aa621dd2d6161b56bdf234f.jpg",
+          "title": "Breaking Bad ~ Aaron Paul as Jesse Pinkman",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585926083933/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/81/75/bc/8175bca556a034b05eb351d3e8c81694.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/81/75/bc/8175bca556a034b05eb351d3e8c81694.jpg",
+          "title": "I love this episode, when Hank is asking this store girl about Jesse, and he's like: 'yes, yes dreamy blue eyes...' #JessePinkman #BreakingBad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585926083929/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/82/da/b8/82dab8c6d6573de4d23c8917e2b87132.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/82/da/b8/82dab8c6d6573de4d23c8917e2b87132.jpg",
+          "title": "Aaron Paul as Jesse Pinkman in Breaking Bad, as a former student of Walter White who helps him become a meth cook",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585926055715/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d4/08/91/d408911e0b59c7d83c63531898144138.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d4/08/91/d408911e0b59c7d83c63531898144138.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925842394/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/74/6f/9b/746f9b131bbde7681c58a716d3717324.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/74/6f/9b/746f9b131bbde7681c58a716d3717324.jpg",
+          "title": "hahahahah Jesse is the best part of Breaking Bad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925751575/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/a3/b9/a4/a3b9a42d05a35c27fd211167e66f77f1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a3/b9/a4/a3b9a42d05a35c27fd211167e66f77f1.jpg",
+          "title": "Breaking Bad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925740964/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d9/5d/4e/d95d4ecae48782f46d59dcc50c9b7d05.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d9/5d/4e/d95d4ecae48782f46d59dcc50c9b7d05.jpg",
+          "title": "Death toll in Breaking Bad.",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925701361/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/8d/fa/a4/8dfaa4d75407586425baf94e231f3e1a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/8d/fa/a4/8dfaa4d75407586425baf94e231f3e1a.jpg",
+          "title": "Breaking Bad.... Walter White AKA Heisenberg ...",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925631186/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/89/8c/1e/898c1eefff545f900036a2ae6a45a4bc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/89/8c/1e/898c1eefff545f900036a2ae6a45a4bc.jpg",
+          "title": "Breaking Bad episode posters - Zsutti",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925317454/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/c0/d6/83/c0d68320a7e15c268fd26d292cf41655.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c0/d6/83/c0d68320a7e15c268fd26d292cf41655.jpg",
+          "title": "Breaking Bad (Or Breaking Good) &#8211; How Did Twitter Judge Walter White? -- BOOM! Roasted!",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925125031/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/eb/e4/96/ebe49612c4df7bfbcefe23b6fca8d8ac.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/eb/e4/96/ebe49612c4df7bfbcefe23b6fca8d8ac.jpg",
+          "title": "This imaginary Facebook exchange. | 31 Things Only \"Breaking Bad\" Obsessives Will Find Funny",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925125010/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/fb/1e/41/fb1e41a6677909f99938d845ffc108f1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fb/1e/41/fb1e41a6677909f99938d845ffc108f1.jpg",
+          "title": "I am the one who laughs.",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585925124990/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/fa/eb/46/faeb462326ab639eb1128df4c154afd0.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fa/eb/46/faeb462326ab639eb1128df4c154afd0.jpg",
+          "title": "Breaking Bad - I love, love, did I say love?, this show. If you haven't seen it, you should - Netflix.",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585924864335/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/53/bf/35/53bf35934e15185ce9052481d30249cf.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/53/bf/35/53bf35934e15185ce9052481d30249cf.jpg",
+          "title": "28 Times \"Breaking Bad\" Was Really Fucking Funny",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585924837751/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/5c/e3/c4/5ce3c438427398b197add851a623a7ad.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5c/e3/c4/5ce3c438427398b197add851a623a7ad.jpg",
+          "title": "34 Things You Probably Didn't Know About \"Breaking Bad\"",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585924793959/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/7c/cc/8f/7ccc8fe32d7a65a781a8ecc21d3b070e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/7c/cc/8f/7ccc8fe32d7a65a781a8ecc21d3b070e.jpg",
+          "title": "Gustavo &#8230;",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585924772665/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/ab/55/b2/ab55b24ae15fbff52269d6b867d357c4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ab/55/b2/ab55b24ae15fbff52269d6b867d357c4.jpg",
+          "title": "Heisenberg",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585924734486/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/04/58/3b/04583bbdce93ef735c40d27bb267ccf5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/04/58/3b/04583bbdce93ef735c40d27bb267ccf5.jpg",
+          "title": "If Breaking Bad&#8217;s Cast Of Criminals Were Arrested. . . #infographic",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923867434/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/b1/93/68/b1936803892ad064ec437227a8338ee3.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b1/93/68/b1936803892ad064ec437227a8338ee3.jpg",
+          "title": "Breaking Bad Houses on Behance More",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923805375/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/5c/cb/13/5ccb13fec5161d523c956b14a3be6494.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5c/cb/13/5ccb13fec5161d523c956b14a3be6494.jpg",
+          "title": "breaking bad 20 Missing Breaking Bad yet? (23 photos)",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923787182/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/48/ab/a7/48aba741d89be7e0cd0293f72c0cec08.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/48/ab/a7/48aba741d89be7e0cd0293f72c0cec08.jpg",
+          "title": "Breaking Bad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923725840/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/ff/bd/22/ffbd2221f646f48eb01b3e61075155ad.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ff/bd/22/ffbd2221f646f48eb01b3e61075155ad.jpg",
+          "title": "Breaking Bad - sharply focused poster #GangsterFlick",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923703785/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/8c/05/4d/8c054dab7170db6d0a1e243bf7287a58.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/8c/05/4d/8c054dab7170db6d0a1e243bf7287a58.jpg",
+          "title": "Breaking Bad by Guillaume Vasseur",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923697131/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/52/d7/8a/52d78a88e72b4e344ef2472aaaae35c9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/52/d7/8a/52d78a88e72b4e344ef2472aaaae35c9.jpg",
+          "title": "Illustrations by CranioDsgn",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923689198/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/a8/03/80/a80380a3d2e5dcb7c7b4ac0cb0d61647.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a8/03/80/a80380a3d2e5dcb7c7b4ac0cb0d61647.jpg",
+          "title": "Breaking Bad love. Oh, Flynn.",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923674339/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/15/f2/73/15f2733a2d0b3d35f9a9d25215f4ca79.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/15/f2/73/15f2733a2d0b3d35f9a9d25215f4ca79.jpg",
+          "title": "Can you? Breaking Bad (500&#215;600)",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923674334/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/91/97/d1/9197d1c26b56085b2a1e123c3a9060b4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/91/97/d1/9197d1c26b56085b2a1e123c3a9060b4.jpg",
+          "title": "I had a lot of love-hate relationships in this show... ----29 Times \"Breaking Bad\" Broke Your Goddamn Heart",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923674328/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/b3/0c/ba/b30cbad1f762f0282f5fd54210e6e760.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b3/0c/ba/b30cbad1f762f0282f5fd54210e6e760.jpg",
+          "title": "Breaking Bad Illustrations | Abduzeedo Design Inspiration",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923668790/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/f3/7f/28/f37f2832a346ff15b9cf2b1520c2808e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f3/7f/28/f37f2832a346ff15b9cf2b1520c2808e.jpg",
+          "title": "Breaking Bad - I am the one who knocks!",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923631713/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/6f/d2/a0/6fd2a0a8de0f5e7720eb66bff152cf63.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/6f/d2/a0/6fd2a0a8de0f5e7720eb66bff152cf63.jpg",
+          "title": "Erich Paiva",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923599265/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/70/ee/a8/70eea861b284e6e47efc22be02732737.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/70/ee/a8/70eea861b284e6e47efc22be02732737.jpg",
+          "title": "Heisenberg by Joelle Jones",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923568054/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d6/c0/85/d6c085a30e61670ee5417291dfae453c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d6/c0/85/d6c085a30e61670ee5417291dfae453c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923333215/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/9e/f9/e8/9ef9e8c12b06c1f1f489bacc1d0762e1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9e/f9/e8/9ef9e8c12b06c1f1f489bacc1d0762e1.jpg",
+          "title": "breaking bad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923333212/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/fd/9e/14/fd9e14b8996dccb252b4f7e720fd5350.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fd/9e/14/fd9e14b8996dccb252b4f7e720fd5350.jpg",
+          "title": "Breaking Bad - jesse pinkman meme",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923251061/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/4a/6a/4a/4a6a4acbdf6a2ddb863820e385b1233c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4a/6a/4a/4a6a4acbdf6a2ddb863820e385b1233c.jpg",
+          "title": "Breaking Bad Art Print",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585923247630/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/2a/94/5f/2a945f07ddb91b9105beda12360d3e4a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2a/94/5f/2a945f07ddb91b9105beda12360d3e4a.jpg",
+          "title": "Caricatures des personnages de Breaking Bad par Anthony Geoffroy",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585922239112/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/c3/2e/2c/c32e2c69e226a310f23c9e81d8d4b1e4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c3/2e/2c/c32e2c69e226a310f23c9e81d8d4b1e4.jpg",
+          "title": "One of the best performed scenes I have ever seen on Breaking Bad. Bravo, Aaron Paul! &lt;3",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585922233062/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/57/f9/10/57f9107b5cd424398c558ac0186aa18e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/57/f9/10/57f9107b5cd424398c558ac0186aa18e.jpg",
+          "title": "Breaking Bad - Tread Lightly by Madex103.deviantart.com on @deviantART",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585922233040/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/9d/72/25/9d72252bed1181ccd0248bef1390d7e2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9d/72/25/9d72252bed1181ccd0248bef1390d7e2.jpg",
+          "title": "Breaking Bad.",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585922232563/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/f3/bd/43/f3bd434619fdb868d96718ecd36bb4d4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f3/bd/43/f3bd434619fdb868d96718ecd36bb4d4.jpg",
+          "title": "Breaking Bad",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585921695749/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/e2/53/a5/e253a5708c7434b1526ac44677783fc7.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e2/53/a5/e253a5708c7434b1526ac44677783fc7.jpg",
+          "title": "I will never be 1/10 as cool as this picture",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585921455790/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/db/7e/62/db7e624a010d97d49184d95d82e6f7da.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/db/7e/62/db7e624a010d97d49184d95d82e6f7da.jpg",
+          "title": "Breaking Bad - \"The one who knocks\" | by lacie h #GangsterFlick Mais",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585921166860/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/bd/6a/44/bd6a44cb9cb4675316005895814373fe.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/bd/6a/44/bd6a44cb9cb4675316005895814373fe.jpg",
+          "title": "BREAKING BAD",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585921166796/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/13/56/8a/13568ab0067f21e9dc274576d5475eb1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/13/56/8a/13568ab0067f21e9dc274576d5475eb1.jpg",
+          "title": "hahaha this is fantastic",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585921001670/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/e1/69/92/e1699226000b1fbe14c086a70bf54e08.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e1/69/92/e1699226000b1fbe14c086a70bf54e08.jpg",
+          "title": "Breaking Bad - The changing personality of Walter White depicted in this awesome artwork by Alyssa Smith #GangsterFlick",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585920957471/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/11/21/83/112183d5ad5b6f947bfce2041f4ce9bd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/11/21/83/112183d5ad5b6f947bfce2041f4ce9bd.jpg",
+          "title": "Breaking Bad montage. More",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585920953341/"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/76/e1/74/76e1746d153df72ac9c324ae929cc6a9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/76/e1/74/76e1746d153df72ac9c324ae929cc6a9.jpg",
+          "title": "Breaking Bad Terrarium. http://www.jeffreymarkell.com @Megan Maxwell Foley",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585920937773/"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4c/04/32/4c04320202e11b765a13d65eae46cd35.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4c/04/32/4c04320202e11b765a13d65eae46cd35.jpg",
+          "title": "Classic TV Show Breaking Bad Retro Poster Kraft Paper Posters DIY ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/1092897034582137951/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
+          "title": "Tribute to Breaking Bad By WARENDT | Breaking bad, Nghệ thuật",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/169940585913337297/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
+          "title": "Pinterest | Breaking bad, Breaking bad poster, Anime faces expressions",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/790381803380088578/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2f/e4/80/2fe480a470b47b10e2393ef232f5589c.jpg?nii=t",
+          "thumbnail": "https://i.pinimg.com/236x/2f/e4/80/2fe480a470b47b10e2393ef232f5589c.jpg?nii=t",
+          "title": "Awesome Breaking Bad Wallpaper 4k | Breaking bad, Filmes, Pôsteres de ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/35114072084573651/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f7/cb/b8/f7cbb8851f57f2ba05b885b6def6e88f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f7/cb/b8/f7cbb8851f57f2ba05b885b6def6e88f.jpg",
+          "title": "Breaking Bad HD Screencap | Breaking bad, Better call saul, Walter white",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/596586281921163302/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
+          "title": "This item is unavailable - Etsy in 2025 | Bad gifts, Breaking bad ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/782711610279552378/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
+          "title": "Pin di ΛMĪŔ🌱 su Breaking Bad | Sfondi per iphone, Sfondi, Arte araba",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/140667188356009884/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/236x/fa/1f/0d/fa1f0dad70ec9887873a97a23f04ca4e--walter-breaking-bad-portrait-illustration.jpg?nii=t",
+          "thumbnail": "https://i.pinimg.com/236x/fa/1f/0d/fa1f0dad70ec9887873a97a23f04ca4e--walter-breaking-bad-portrait-illustration.jpg?nii=t",
+          "title": "Caricatures of Breaking Bad Characters by Anthony Geoffroy | Breaking ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/844987948855947485/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
+          "title": "Pin by Florencia Nob on Breaking Bad | Breaking bad, Breaking bad ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/301389400075914854/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T04:27:32.985Z",
-      "checkedAt": "2026-11-16T04:27:32.985Z"
+      "updatedAt": "2026-11-16T04:56:47.637Z",
+      "checkedAt": "2026-11-16T04:56:47.637Z"
     }
   },
-  "checkedAt": "2026-11-16T04:27:32.985Z"
+  "checkedAt": "2026-11-16T04:56:47.637Z"
 }
