@@ -10,10 +10,10 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
+      "status": "blocked",
+      "message": "来源限制了当前请求",
       "method": "public-image-index",
       "images": [
         {
@@ -28,26 +28,26 @@
         }
       ],
       "updatedAt": "2026-11-16T04:56:33.515Z",
-      "checkedAt": "2026-11-16T04:56:33.515Z"
+      "checkedAt": "2026-11-16T05:41:04.545Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "public-image-index",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-16T04:56:46.738Z"
+      "checkedAt": "2026-11-16T05:41:10.205Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "Pinterest",
-      "status": "ok",
-      "message": "从原站读取",
-      "method": "public-pin-widget",
+      "status": "blocked",
+      "message": "来源要求验证访问",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/61/8e/98/618e9835b41191c2a5a757464710111e.jpg",
@@ -655,8 +655,8 @@
         }
       ],
       "updatedAt": "2026-11-16T04:56:47.637Z",
-      "checkedAt": "2026-11-16T04:56:47.637Z"
+      "checkedAt": "2026-11-16T05:41:10.549Z"
     }
   },
-  "checkedAt": "2026-11-16T04:56:47.637Z"
+  "checkedAt": "2026-11-16T05:41:10.549Z"
 }
