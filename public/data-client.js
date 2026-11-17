@@ -71,7 +71,7 @@ export async function search(query,type='all',{signal}={}){
   const useCine=type!=='person'&&(!chinese||directId.startsWith('tt'));
   const [wikiRes,cineRes]=await Promise.allSettled([wikiTask,useCine?cinemetaSearch(directId||q,type,signal):Promise.resolve([])]);
   if(signal?.aborted)throw signal.reason;
-  const merge=(incoming,preferNew=false)=>{const index=items.findIndex(x=>x.id===incoming.id);if(index>=0){const old=items[index];items[index]={...old,...(preferNew?{title:incoming.title||old.title,kind:incoming.kind||old.kind,year:incoming.year||incoming.year,subtitle:incoming.subtitle||old.subtitle,image:incoming.image||old.image}:{}),...(incoming.zh&&!old.zh?{zh:incoming.zh}:{}),...(incoming.wikidata?{wikidata:incoming.wikidata}:{}),...(incoming.douban?{douban:incoming.douban}:{})};}else items.push(incoming);};
+  const merge=(incoming,preferNew=false)=>{const index=items.findIndex(x=>x.id===incoming.id);if(index>=0){const old=items[index];items[index]={...old,...(preferNew?{title:incoming.title||old.title,kind:incoming.kind||old.kind,year:old.year||incoming.year,subtitle:incoming.subtitle||old.subtitle,image:incoming.image||old.image}:{}),...(incoming.zh&&!old.zh?{zh:incoming.zh}:{}),...(incoming.wikidata?{wikidata:incoming.wikidata}:{}),...(incoming.douban?{douban:incoming.douban}:{})};}else items.push(incoming);};
   if(cineRes.status==='fulfilled'){for(const c of cineRes.value){merge(c,true);usedCine=true;}}else if(useCine)cineFailed=true;
   if(wikiRes.status==='fulfilled'){
    const linked=wikiRes.value;usedWiki=linked.length>0;
