@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -719,11 +717,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-17T18:35:51.454Z",
-      "checkedAt": "2026-11-17T18:35:51.454Z"
+      "updatedAt": "2026-11-17T21:34:39.715Z",
+      "checkedAt": "2026-11-17T21:34:39.715Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6NzJ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6ODR9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1210,8 +1208,8 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-17T18:35:51.811Z",
-      "checkedAt": "2026-11-17T18:35:51.811Z",
+      "updatedAt": "2026-11-17T21:34:40.048Z",
+      "checkedAt": "2026-11-17T21:34:40.048Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1446,11 +1444,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d0/90/7b/d0907b896425b49e45ad80906f0b3d6b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d0/90/7b/d0907b896425b49e45ad80906f0b3d6b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-17T18:35:56.530Z",
-      "checkedAt": "2026-11-17T18:35:56.530Z"
+      "updatedAt": "2026-11-17T21:34:44.086Z",
+      "checkedAt": "2026-11-17T21:34:44.086Z"
     }
   },
-  "checkedAt": "2026-11-17T18:35:56.532Z"
+  "checkedAt": "2026-11-17T21:34:44.088Z"
 }
