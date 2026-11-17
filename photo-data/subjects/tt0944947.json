@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODkzNzUzYjYtNTM3Yi00ZmNiLWFiZDEtZjY3ZjY4ZWFkYmVhXkEyXkFqcGc@._V1_.jpg",
@@ -1217,15 +1219,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-17T09:45:37.014Z",
-      "checkedAt": "2026-11-17T09:45:37.014Z"
+      "updatedAt": "2026-11-17T12:38:13.589Z",
+      "checkedAt": "2026-11-17T12:38:13.589Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxMn0",
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "ok",
+      "message": "从原站读取",
       "method": "direct",
       "images": [
         {
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt0944947/33843911e63231510119d769.webp"
         }
       ],
-      "updatedAt": "2026-11-17T08:00:42.346Z",
-      "checkedAt": "2026-11-17T09:45:54.504Z",
+      "updatedAt": "2026-11-17T12:38:14.997Z",
+      "checkedAt": "2026-11-17T12:38:14.997Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2037,9 +2039,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Game%20of%20Thrones%202011%20stills"
         }
       ],
-      "updatedAt": "2026-11-17T09:45:57.428Z",
-      "checkedAt": "2026-11-17T09:45:57.428Z"
+      "updatedAt": "2026-11-17T12:38:17.822Z",
+      "checkedAt": "2026-11-17T12:38:17.822Z"
     }
   },
-  "checkedAt": "2026-11-17T09:45:57.430Z"
+  "checkedAt": "2026-11-17T12:38:17.823Z"
 }
