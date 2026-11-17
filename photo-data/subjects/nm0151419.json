@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNTM5NDM4ODg3MV5BMl5BanBnXkFtZTcwNTA3MTk3Mw@@._V1_FMjpg_UX1000_.jpg",
@@ -69,44 +67,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-16T23:28:49.948Z",
-      "checkedAt": "2026-11-16T23:28:49.948Z"
+      "updatedAt": "2026-11-17T01:56:36.864Z",
+      "checkedAt": "2026-11-17T01:56:36.864Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDQ5NjA3Iiwib2Zmc2V0IjoxMn0",
       "indexOffset": 71,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2558623923.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2558623923.jpg",
-          "title": "Kyle Chandler · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27255370/photo/2558623923/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2558623217.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2558623217.jpg",
-          "title": "Kyle Chandler · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27255370/photo/2558623217/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2231434138.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2231434138.jpg",
-          "title": "Kyle Chandler · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27255370/photo/2231434138/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2558897032.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2558897032.jpg",
@@ -1159,10 +1130,37 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27255370/photo/1366604363/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p1843676931.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p1843676931.jpg",
+          "title": "Kyle Chandler · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27255370/photo/1843676931/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2558623320.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2558623320.jpg",
+          "title": "Kyle Chandler · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27255370/photo/2558623320/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2199121744.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2199121744.jpg",
+          "title": "Kyle Chandler · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27255370/photo/2199121744/"
         }
       ],
-      "updatedAt": "2026-11-16T23:28:50.470Z",
-      "checkedAt": "2026-11-16T23:28:50.470Z"
+      "updatedAt": "2026-11-17T01:56:37.386Z",
+      "checkedAt": "2026-11-17T01:56:37.386Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1854,9 +1852,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Kyle%20Chandler%20portrait"
         }
       ],
-      "updatedAt": "2026-11-16T23:28:53.269Z",
-      "checkedAt": "2026-11-16T23:28:53.269Z"
+      "updatedAt": "2026-11-17T01:56:40.102Z",
+      "checkedAt": "2026-11-17T01:56:40.102Z"
     }
   },
-  "checkedAt": "2026-11-16T23:28:53.271Z"
+  "checkedAt": "2026-11-17T01:56:40.103Z"
 }
