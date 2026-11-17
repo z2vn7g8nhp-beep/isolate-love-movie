@@ -65,11 +65,12 @@ export async function refreshOwned(items,{signal}={}) {
 export function plainMetadata(value) {
   return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/\s+/g,' ').trim().slice(0,500);
 }
+const cleanWikiUrl=raw=>{try{const parsed=new URL(raw);for(const key of [...parsed.searchParams.keys()])if(key.startsWith('utm_'))parsed.searchParams.delete(key);return parsed.href;}catch{return '';}};
 export function commonsImages(data) {
   return Object.values(data?.query?.pages||{}).map(page=>{
     const info=page.imageinfo?.[0],meta=info?.extmetadata||{};
     if(!info)return null;const photographic=info.mime?/^image\/(jpeg|png|webp)$/.test(info.mime):/\.(jpe?g|png|webp)$/i.test(page.title||'');if(!photographic)return null;
-    let url=info.url||info.thumburl;try{const parsed=new URL(url);for(const key of [...parsed.searchParams.keys()])if(key.startsWith('utm_'))parsed.searchParams.delete(key);url=parsed.href;}catch{return null;}return {url,thumbnail:info.thumburl||url,title:plainMetadata(page.title?.replace(/^File:/,'')),source:'Wikimedia Commons',author:plainMetadata(meta.Artist?.value),license:plainMetadata(meta.LicenseShortName?.value),pageUrl:info.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title)};
+    const url=cleanWikiUrl(info.url||info.thumburl),thumb=cleanWikiUrl(info.thumburl);if(!url)return null;return {url,thumbnail:thumb||url,title:plainMetadata(page.title?.replace(/^File:/,'')),source:'Wikimedia Commons',author:plainMetadata(meta.Artist?.value),license:plainMetadata(meta.LicenseShortName?.value),pageUrl:info.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title)};
   }).filter(Boolean).filter(image=>/^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(image.url||''));
 }
 export async function fetchGallery(item,data={}, {signal,offset=0}={}) {
@@ -87,6 +88,6 @@ export async function fetchGallery(item,data={}, {signal,offset=0}={}) {
       images.push(...commonsImages(body));nextOffset=body.continue?.gsroffset??null;
     }catch(e){if(signal?.aborted)throw e;failed=true;nextOffset=offset;}
   }
-  if(!offset)for(const file of data.wikiImages||[]){const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=1100';if(!images.some(x=>decodeURIComponent(x.url).includes(file.replaceAll(' ','_'))))images.push({url,thumbnail:url.replace('width=1100','width=360'),title:file,source:'Wikidata 指定配图',license:'授权见原图来源',pageUrl:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file)});}
+  if(!offset)for(const file of data.wikiImages||[]){const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=960';if(!images.some(x=>decodeURIComponent(x.url).includes(file.replaceAll(' ','_'))))images.push({url,thumbnail:url.replace('width=960','width=330'),title:file,source:'Wikidata 指定配图',license:'授权见原图来源',pageUrl:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file)});}
   const used=new Set();return {images:images.filter(image=>!used.has(image.url)&&used.add(image.url)),nextOffset,failed,fetchedAt:new Date().toISOString()};
 }

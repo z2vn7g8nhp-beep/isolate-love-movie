@@ -30,3 +30,51 @@ test('same-origin static previews use the persistent image cache and do not inte
  assert.equal(await read('https://example.com/app/photo-data/images/private.json'),undefined);
  assert.equal(await read(url.replace('example.com','other.example')),undefined);
 });
+
+test('image cache retains over 150 CORS images and 50 opaque images with LRU refresh',async()=>{
+ const caches=memoryCaches();let requests=0;
+ const {context}=worker(caches,async req=>{
+  requests++;
+  if(req.url.includes('img9.doubanio.com')){
+   if(req.mode==='cors')throw new TypeError('CORS blocked');
+   return {ok:false,type:'opaque',headers:new Headers(),clone(){return this;},text:async()=>'opaque'};
+  }
+  return new Response('ok',{headers:{'content-type':'image/jpeg','content-length':'2'}});
+ });
+ for(let i=0;i<160;i++)await vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/"+i+".jpg'))",context);
+ for(let i=0;i<50;i++)await vm.runInContext("imageResponse(new Request('https://img9.doubanio.com/"+i+".jpg'))",context);
+ const before=requests;
+ await vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/0.jpg'))",context);
+ await vm.runInContext("imageResponse(new Request('https://img9.doubanio.com/0.jpg'))",context);
+ assert.equal(requests,before);
+});
+
+test('non-image responses are not cached and evict-image message clears broken entries',async()=>{
+ const caches=memoryCaches();let requests=0;
+ const {context,handlers}=worker(caches,async req=>{
+  requests++;
+  if(req.url.includes('html.jpg'))return new Response('<html>error</html>',{headers:{'content-type':'text/html'}});
+  return new Response('img',{headers:{'content-type':'image/jpeg'}});
+ });
+ await vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/html.jpg'))",context);
+ await vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/html.jpg'))",context);
+ assert.equal(requests,2);
+ await vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/good.jpg'))",context);
+ let done;handlers.message({data:{type:'evict-image',url:'https://static.tvmaze.com/good.jpg'},waitUntil(p){done=p;}});await done;
+ await vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/good.jpg'))",context);
+ assert.equal(requests,4);
+});
+
+test('aborted caller signal does not fail shared pending image download',async()=>{
+ const caches=memoryCaches();let resolveFetch;
+ const {context}=worker(caches,()=>new Promise(r=>{resolveFetch=r;}));
+ const ac=new AbortController();context.ac=ac;
+ const p1=vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/shared.jpg',{signal:ac.signal}))",context);
+ const p2=vm.runInContext("imageResponse(new Request('https://static.tvmaze.com/shared.jpg'))",context);
+ while(!resolveFetch)await new Promise(r=>setTimeout(r,2));
+ ac.abort();
+ resolveFetch(new Response('shared bytes',{headers:{'content-type':'image/jpeg'}}));
+ const [r1,r2]=await Promise.all([p1,p2]);
+ assert.equal(await r1.text(),'shared bytes');
+ assert.equal(await r2.text(),'shared bytes');
+});

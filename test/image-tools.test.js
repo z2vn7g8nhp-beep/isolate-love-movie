@@ -11,6 +11,8 @@ test('thumbnail rendering retains original images and uses lightweight source si
  assert.equal(thumbnailUrl(image.url,300,'portrait'),'https://static.tvmaze.com/uploads/images/medium_portrait/1/2.jpg');
  assert.match(thumbnailUrl('https://commons.wikimedia.org/wiki/Special:FilePath/Photo.jpg?width=1100',360),/width=360/);
  assert.match(thumbnailUrl('https://m.media-amazon.com/images/M/photo._V1_.jpg',300),/UX300/);
+ assert.equal(thumbnailUrl('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Photo.jpg/500px-Photo.jpg?utm_source=commons',360),'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Photo.jpg/500px-Photo.jpg?utm_source=commons');
+ assert.equal(thumbnailUrl('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Photo.jpg/1280px-Photo.jpg',720),'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Photo.jpg/960px-Photo.jpg');
  assert.equal(image.url,'https://static.tvmaze.com/uploads/images/original_untouched/1/2.jpg');
 });
 

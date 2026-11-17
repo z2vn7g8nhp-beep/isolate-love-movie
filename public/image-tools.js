@@ -1,6 +1,12 @@
 import {validImageUrl, cleanAlbum, photoKey} from './collection.js';
 
 export const PHOTO_BATCH = 12;
+function wikimediaStep(width) {
+  if (width <= 250) return 250;
+  if (width <= 330) return 330;
+  if (width <= 500) return 500;
+  return 960;
+}
 export function thumbnailUrl(image, width = 360, shape = 'landscape') {
   const value = typeof image === 'string' ? image : image?.cachedUrl || image?.thumbnail || image?.url || '';
   if (!value) return '';
@@ -9,7 +15,7 @@ export function thumbnailUrl(image, width = 360, shape = 'landscape') {
     if (url.hostname === 'm.media-amazon.com') return value.replace(/\._V1_.*(?=\.(?:jpg|png))/i, '._V1_QL80_UX' + width + '_');
     if (url.hostname === 'static.tvmaze.com') return value.replace('/original_untouched/', shape === 'portrait' ? '/medium_portrait/' : '/medium_landscape/');
     if (url.hostname === 'commons.wikimedia.org' && url.pathname.includes('Special:FilePath/')) { url.searchParams.set('width', String(width)); return url.href; }
-    if (/^(upload|thumb)\.wikimedia\.org$/.test(url.hostname)) return value.replace(/\/\d+px-([^/]+)$/, '/' + width + 'px-$1');
+    if (/^(upload|thumb)\.wikimedia\.org$/.test(url.hostname)) return value.replace(/\/\d+px-([^/?#]+)/, '/' + wikimediaStep(width) + 'px-$1');
     if (/^img\d*\.doubanio\.com$/.test(url.hostname)) return value.replace(/\/view\/photo\/(l|raw|xl)\/public\//, '/view/photo/m/public/');
     if (url.hostname === 'i.pinimg.com') return value.replace(/\/(originals|736x|564x)\//, '/236x/');
   } catch { return ''; }
