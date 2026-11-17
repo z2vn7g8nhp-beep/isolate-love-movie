@@ -13,19 +13,11 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMGZkMWNhYTAtNjkyMS00NGFhLWEwYWUtMjU2ZGExNDc3NjIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGZkMWNhYTAtNjkyMS00NGFhLWEwYWUtMjU2ZGExNDc3NjIyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Catching Fire (2013)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm3776736001/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYjYyZDEyZTMtYjc4MC00OTE0LTk5ZjctMDBkZWE4NjNkZDA3XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UY281_CR0,0,500,281_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjYyZDEyZTMtYjc4MC00OTE0LTk5ZjctMDBkZWE4NjNkZDA3XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL80_UX360_.jpg",
@@ -1215,13 +1207,23 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm2818806273/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Catching Fire",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1951264/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-17T21:34:25.649Z",
-      "checkedAt": "2026-11-17T21:34:25.649Z"
+      "updatedAt": "2026-11-17T22:38:22.671Z",
+      "checkedAt": "2026-11-17T22:38:22.671Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiI2ODc0NDU2Iiwib2Zmc2V0Ijo4NH0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiI2ODc0NDU2Iiwib2Zmc2V0Ijo5Nn0",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt1951264/4ca32e17c9fa4e3f88108b4f.webp"
         }
       ],
-      "updatedAt": "2026-11-17T21:34:26.041Z",
-      "checkedAt": "2026-11-17T21:34:26.041Z",
+      "updatedAt": "2026-11-17T22:38:23.006Z",
+      "checkedAt": "2026-11-17T22:38:23.006Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1981,11 +1983,83 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/97/fa/b1/97fab1a5aa006b67b6f0ff63a9ed571e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/97/fa/b1/97fab1a5aa006b67b6f0ff63a9ed571e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/17/81/c9/1781c9356f186d84bfdb57b0daa29d01.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/17/81/c9/1781c9356f186d84bfdb57b0daa29d01.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/19/40/12/194012968f1abb698c3343b6150cf2c6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/19/40/12/194012968f1abb698c3343b6150cf2c6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d6/f6/d2/d6f6d24145a09a20c35edfb70ec03df9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d6/f6/d2/d6f6d24145a09a20c35edfb70ec03df9.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/23/33/2f/23332f852a05a036d7fc9fda69ee51df.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/23/33/2f/23332f852a05a036d7fc9fda69ee51df.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/58/f6/44/58f6445b0641bef3316dfe041d40a088.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/58/f6/44/58f6445b0641bef3316dfe041d40a088.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/1c/74/c8/1c74c87e6447020cf50fa274ed8b2a3e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/1c/74/c8/1c74c87e6447020cf50fa274ed8b2a3e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d5/3e/69/d53e694e8ced487b001ed1f16870ea63.png",
+          "thumbnail": "https://i.pinimg.com/236x/d5/3e/69/d53e694e8ced487b001ed1f16870ea63.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
         }
       ],
-      "updatedAt": "2026-11-17T21:34:29.114Z",
-      "checkedAt": "2026-11-17T21:34:29.114Z"
+      "updatedAt": "2026-11-17T22:38:25.819Z",
+      "checkedAt": "2026-11-17T22:38:25.819Z"
     }
   },
-  "checkedAt": "2026-11-17T21:34:29.115Z"
+  "checkedAt": "2026-11-17T22:38:25.820Z"
 }

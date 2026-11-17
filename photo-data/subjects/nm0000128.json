@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTQyMTExNTMxOF5BMl5BanBnXkFtZTcwNDg1NzkzNw@@._V1_FMjpg_UX1000_.jpg",
@@ -1029,98 +1027,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-17T19:48:12.296Z",
-      "checkedAt": "2026-11-17T19:48:12.296Z"
+      "updatedAt": "2026-11-17T22:37:22.884Z",
+      "checkedAt": "2026-11-17T22:37:22.884Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDE2Njc0Iiwib2Zmc2V0IjozNjB9",
+      "nextCursor": null,
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1361908743.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361908743.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908743/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1361908577.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361908577.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908577/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/s/public/p1303010281.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1303010281.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1303010281/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1184943079.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1184943079.jpg",
-          "title": "Cool",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/1184943079/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p827467465.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p827467465.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/827467465/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p825374632.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p825374632.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/825374632/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2937151971.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2937151971.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2937151971/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2934856645.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2934856645.jpg",
-          "title": "《悲惨世界》",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2934856645/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2923018185.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2923018185.jpg",
-          "title": "《惊曝内幕》",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2923018185/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2917283472.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2917283472.jpg",
@@ -2119,10 +2036,91 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27222397/photo/1416614417/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1361908640.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361908640.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908640/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1361908520.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361908520.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908520/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1361908450.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361908450.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908450/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1361908354.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1361908354.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361908354/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1184942935.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1184942935.jpg",
+          "title": "kinda old..",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1184942935/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p934278924.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p934278924.jpg",
+          "title": "生日快乐啊。你这个我最心爱的野蛮的家伙。",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/934278924/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p825376232.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p825376232.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/825376232/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p825374111.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p825374111.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/825374111/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643156963.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643156963.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/643156963/"
         }
       ],
-      "updatedAt": "2026-11-17T19:48:12.850Z",
-      "checkedAt": "2026-11-17T19:48:12.850Z"
+      "updatedAt": "2026-11-17T22:37:23.292Z",
+      "checkedAt": "2026-11-17T22:37:23.292Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2132,114 +2130,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/2a/f8/47/2af847457057fff495938bb71bb3e898.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/2a/f8/47/2af847457057fff495938bb71bb3e898.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648982716/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/51/37/58/5137588a7073485e2a49836dd54844a1.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/51/37/58/5137588a7073485e2a49836dd54844a1.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648982704/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/74/92/be/7492be0c3930add28a0c89a5a49bda9e.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/74/92/be/7492be0c3930add28a0c89a5a49bda9e.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648392339/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/b8/f8/e3/b8f8e3d8c13116e0134ebe7f16558199.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/b8/f8/e3/b8f8e3d8c13116e0134ebe7f16558199.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648392338/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/a3/29/a0/a329a01780f82049f67775e64e1cfc06.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/a3/29/a0/a329a01780f82049f67775e64e1cfc06.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648392337/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/de/02/b1/de02b1e259c95b501589c2c486d43a5f.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/de/02/b1/de02b1e259c95b501589c2c486d43a5f.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368780/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/0d/d7/ab/0dd7ab799c219b412b807866742022f8.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/0d/d7/ab/0dd7ab799c219b412b807866742022f8.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368771/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/62/5b/e7/625be7ebebba99ea8ddd7f8573a44010.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/62/5b/e7/625be7ebebba99ea8ddd7f8573a44010.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368766/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/d3/9e/ba/d39ebaf282964aba5e6fde2208ac5a50.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/d3/9e/ba/d39ebaf282964aba5e6fde2208ac5a50.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368764/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/92/b1/bd/92b1bda9cc0b6a9d77cae28ebb8e919f.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/92/b1/bd/92b1bda9cc0b6a9d77cae28ebb8e919f.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368759/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/35/29/41/352941973c2fa42694643362caeadc32.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/35/29/41/352941973c2fa42694643362caeadc32.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368738/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/f9/8a/fc/f98afc08c24f0d7e1dc63bb6e9030d55.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/f9/8a/fc/f98afc08c24f0d7e1dc63bb6e9030d55.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/321585229648368735/"
-        },
         {
           "url": "https://i.pinimg.com/564x/4c/e3/d3/4ce3d355e04eb23d042733e7fbc6810f.jpg",
           "thumbnail": "https://i.pinimg.com/236x/4c/e3/d3/4ce3d355e04eb23d042733e7fbc6810f.jpg",
@@ -3212,11 +3102,119 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/1a/66/3e/1a663e009707734c3fe31474bac9ea84.png",
+          "thumbnail": "https://i.pinimg.com/236x/1a/66/3e/1a663e009707734c3fe31474bac9ea84.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/a4/52/4d/a4524dd95123ecf8a19cf4ae873f644e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a4/52/4d/a4524dd95123ecf8a19cf4ae873f644e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d3/99/ee/d399ee3936296ab58b1ce6dc629e5879.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d3/99/ee/d399ee3936296ab58b1ce6dc629e5879.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/18/48/2c/18482c7adddd560e1f0d86056dd4f978.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/18/48/2c/18482c7adddd560e1f0d86056dd4f978.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/af/ac/62/afac62f38bbf6eda1e5191721df00000.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/af/ac/62/afac62f38bbf6eda1e5191721df00000.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e1/c3/2f/e1c32f7c3ac52f2359f2dc29ce1d1286.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e1/c3/2f/e1c32f7c3ac52f2359f2dc29ce1d1286.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2a/e4/ac/2ae4ac311064e5d085f0e681678682b5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2a/e4/ac/2ae4ac311064e5d085f0e681678682b5.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5f/c6/9a/5fc69a80451dcd3ed295f49b98aa4cf7.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5f/c6/9a/5fc69a80451dcd3ed295f49b98aa4cf7.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/6e/4a/60/6e4a600f88e1d2dbd828ab30530414e2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/6e/4a/60/6e4a600f88e1d2dbd828ab30530414e2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/da/4c/c6/da4cc679e51572ff41506023ec4c6e95.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/da/4c/c6/da4cc679e51572ff41506023ec4c6e95.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/76/b5/41/76b5416b2b3b0170607904f0d36ff39f.png",
+          "thumbnail": "https://i.pinimg.com/236x/76/b5/41/76b5416b2b3b0170607904f0d36ff39f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/34/51/be/3451bea720cea911e506d42de320fde7.png",
+          "thumbnail": "https://i.pinimg.com/236x/34/51/be/3451bea720cea911e506d42de320fde7.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Russell%20Crowe%20portrait"
         }
       ],
-      "updatedAt": "2026-11-17T19:48:15.450Z",
-      "checkedAt": "2026-11-17T19:48:15.450Z"
+      "updatedAt": "2026-11-17T22:37:26.006Z",
+      "checkedAt": "2026-11-17T22:37:26.006Z"
     }
   },
-  "checkedAt": "2026-11-17T19:48:15.455Z"
+  "checkedAt": "2026-11-17T22:37:26.009Z"
 }
