@@ -1,21 +1,104 @@
 const IMDbOrigin='https://sg.media-imdb.com';
 const WikiOrigin='https://www.wikidata.org/w/api.php';
+const CinemetaOrigin='https://v3-cinemeta.strem.io';
+const claim=(e,p)=>e?.claims?.[p]?.[0]?.mainsnak?.datavalue?.value;
+const values=(entity,property)=>(entity.claims?.[property]||[]).filter(x=>x.rank!=='deprecated').map(x=>x.mainsnak?.datavalue?.value).filter(x=>x!=null);
+const entityId=value=>value?.id;
+const unique=list=>[...new Set(list.filter(Boolean))];
 export function imdbQuery(input){const q=String(input).trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'').slice(0,120);if(!q)throw Error('请使用英文名或 IMDb ID；中文名由 Wikidata 匹配');return q;}
 export function fromImdb(d,fetchedAt=new Date().toISOString()){return {id:d.id,title:d.l,kind:d.id.startsWith('nm')?'person':/tv|series/i.test(d.qid||d.q||'')?'series':'film',year:d.y||null,subtitle:d.s||'',image:Array.isArray(d.i)?d.i[0]:d.i?.imageUrl||'',source:'IMDb',fetchedAt};}
 const pending=new Map(),cache=new Map();
 function abortable(promise,signal){if(!signal)return promise;if(signal.aborted)return Promise.reject(signal.reason||new DOMException('已取消','AbortError'));return new Promise((resolve,reject)=>{const abort=()=>reject(signal.reason||new DOMException('已取消','AbortError'));signal.addEventListener('abort',abort,{once:true});promise.then(resolve,reject).finally(()=>signal.removeEventListener('abort',abort));});}
 export function imdbSearch(query,{signal,document:doc=globalThis.document,scope=globalThis}={}){let q;try{q=imdbQuery(query);}catch(e){return Promise.reject(e);}if(cache.get(q)?.until>Date.now())return abortable(Promise.resolve(cache.get(q).items),signal);if(pending.has(q))return abortable(pending.get(q),signal);
-const promise=new Promise((resolve,reject)=>{const callback='imdb$'+q,script=doc.createElement('script');let timer;const cleanup=()=>{clearTimeout(timer);script.remove();delete scope[callback];pending.delete(q);};scope[callback]=data=>{try{const items=(data.d||[]).filter(x=>/^(tt|nm)\d+$/.test(x.id)).map(x=>fromImdb(x));if(cache.size>100)cache.delete(cache.keys().next().value);cache.set(q,{items,until:Date.now()+300000});resolve(items);}catch(e){reject(e);}finally{cleanup();}};script.src=IMDbOrigin+'/suggests/'+q[0]+'/'+encodeURIComponent(q)+'.json';script.async=true;script.referrerPolicy='no-referrer';script.onerror=()=>{cleanup();reject(Error('IMDb 搜索暂不可用'));};timer=setTimeout(()=>{cleanup();reject(Error('IMDb 搜索超时'));},10000);doc.head.append(script);});pending.set(q,promise);return abortable(promise,signal);}
+const promise=new Promise((resolve,reject)=>{const callback='imdb$'+q,script=doc.createElement('script');let timer;const cleanup=()=>{clearTimeout(timer);script.remove();delete scope[callback];pending.delete(q);};scope[callback]=data=>{try{const items=(data.d||[]).filter(x=>/^(tt|nm)\d+$/.test(x.id)).map(x=>fromImdb(x));if(cache.size>100)cache.delete(cache.keys().next().value);cache.set(q,{items,until:Date.now()+300000});resolve(items);}catch(e){reject(e);}finally{cleanup();}};script.src=IMDbOrigin+'/suggests/'+q[0]+'/'+encodeURIComponent(q)+'.json';script.async=true;script.referrerPolicy='no-referrer';script.onerror=()=>{cleanup();reject(Error('IMDb 搜索暂不可用'));};timer=setTimeout(()=>{cleanup();reject(Error('IMDb 搜索超时'));},7000);doc.head.append(script);});pending.set(q,promise);return abortable(promise,signal);}
 async function wikiRequest(params,signal){const url=new URL(WikiOrigin);url.search=new URLSearchParams({...params,format:'json',origin:'*'});const r=await fetch(url,{signal:signal||AbortSignal.timeout(12000),credentials:'omit'});if(!r.ok)throw Error('Wikidata 暂不可用');const d=await r.json();if(d.error)throw Error('Wikidata 返回错误');return d;}
-async function wikiSearch(query,signal){const d=await wikiRequest({action:'wbsearchentities',search:query,language:/[\u3400-\u9fff]/.test(query)?'zh':'en',uselang:'zh',limit:'6'},signal);return d.search||[];}
-const claim=(e,p)=>e?.claims?.[p]?.[0]?.mainsnak?.datavalue?.value;
+async function wikiSearch(query,signal){const d=await wikiRequest({action:'wbsearchentities',search:query,language:/[\u3400-\u9fff]/.test(query)?'zh':'en',uselang:'zh',limit:'8'},signal);return d.search||[];}
+function safeSrQuery(q){return q.replace(/["'()[\]{}!*+~|<>\\/]/g,' ').replace(/(^|\s)-+/g,' ').replace(/\s+/g,' ').trim();}
+async function wikiSearchImdb(query,type,signal){const clean=safeSrQuery(query);const sr='haswbstatement:P345'+(type==='person'?' haswbstatement:P31=Q5':'')+(clean?' '+clean:'');const d=await wikiRequest({action:'query',list:'search',srsearch:sr,srnamespace:'0',srlimit:'10'},signal);return (d.query?.search||[]).map(x=>x.title).filter(x=>/^Q\d+$/.test(x));}
 export function wikiFields(entity){const zh=entity.labels?.['zh-cn']?.value||entity.labels?.zh?.value||entity.labels?.['zh-hans']?.value||entity.labels?.['zh-tw']?.value||entity.labels?.['zh-hk']?.value||entity.labels?.['zh-hant']?.value;const douban=claim(entity,'P4529')||claim(entity,'P5284');return {wikidata:entity.id,...(zh?{zh}:{}),...(douban?{douban}:{} )};}
+export function itemFromWiki(entity,fetchedAt=new Date().toISOString()){
+ const id=claim(entity,'P345');if(!/^(tt|nm)\d+$/.test(id||''))return null;
+ const fields=wikiFields(entity),en=entity.labels?.en?.value||entity.labels?.mul?.value||'';
+ const person=id.startsWith('nm')||values(entity,'P31').some(x=>x.id==='Q5');
+ const series=!person&&values(entity,'P31').some(x=>['Q5398426','Q1259759','Q581714'].includes(x.id));
+ const kind=person?'person':series?'series':'film';
+ const date=values(entity,'P577').find(x=>/^\+\d{4}/.test(x?.time||''))?.time;
+ const year=date?Number(date.slice(1,5)):null;
+ const file=claim(entity,'P18');
+ const commons=typeof file==='string'&&/\.(jpe?g|png|webp)$/i.test(file)?'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=500':'';
+ const image=id.startsWith('tt')?'https://images.metahub.space/poster/medium/'+id+'/img':commons;
+ const subtitle=entity.descriptions?.['zh-cn']?.value||entity.descriptions?.zh?.value||entity.descriptions?.['zh-hans']?.value||entity.descriptions?.['zh-tw']?.value||entity.descriptions?.en?.value||'';
+ return {id,title:en||fields.zh||id,kind,year,subtitle,image,source:'Wikidata',fetchedAt,...fields};
+}
 async function entities(ids,signal){if(!ids.length)return[];const d=await wikiRequest({action:'wbgetentities',ids:ids.join('|'),props:'labels|claims|descriptions|sitelinks',sitefilter:'enwiki|zhwiki',languages:'zh-cn|zh|zh-hans|zh-tw|zh-hk|zh-hant|en|mul'},signal);return Object.values(d.entities||{});}
 async function wikiByImdb(id,signal){try{const found=await wikiRequest({action:'query',list:'search',srsearch:'haswbstatement:P345='+id,srnamespace:'0',srlimit:'5'},signal);const ids=(found.query?.search||[]).map(x=>x.title).filter(x=>/^Q\d+$/.test(x));if(!ids.length)return null;return (await entities(ids,signal)).find(x=>claim(x,'P345')===id)||null;}catch(e){if(signal?.aborted)throw e;return null;}}
-export async function search(query,type='all',{signal}={}){const q=query.trim();if(!q||q.length>150)throw Error('请输入不超过 150 字的关键词');const chinese=/[\u3400-\u9fff]/.test(q);let items=[],source='IMDb',warning;
-if(!chinese)try{items=await imdbSearch(q,{signal});}catch(e){if(signal?.aborted)throw e;warning='IMDb 暂不可用，尝试 Wikidata 关联';}
-if(chinese||!items.length){try{const results=await wikiSearch(q,signal),es=await entities(results.map(x=>x.id),signal);const linked=es.filter(e=>/^(tt|nm)\d+$/.test(claim(e,'P345')||''));const fetched=await Promise.allSettled(linked.slice(0,5).map(async e=>{const id=claim(e,'P345');const matches=await imdbSearch(id,{signal});const item=matches.find(x=>x.id===id);return item?{...item,...wikiFields(e)}:null;}));for(const r of fetched)if(r.status==='fulfilled'&&r.value){const index=items.findIndex(x=>x.id===r.value.id);if(index>=0)items[index]={...items[index],...r.value};else items.push(r.value);}source='IMDb + Wikidata';if(!items.length&&linked.length)warning='IMDb 暂不可用，请稍后重试';else if(items.length)warning=undefined;}catch(e){if(signal?.aborted)throw e;warning=items.length?'Wikidata 暂不可用，显示 IMDb 结果':'数据源暂不可用，请稍后重试';}}
-if(type==='person')items=items.filter(x=>x.kind==='person');else if(type==='title')items=items.filter(x=>x.kind!=='person');return {items,source,warning,fetchedAt:new Date().toISOString()};}
+async function fetchJson(url,signal,ms=9000){const r=await fetch(url,{signal:signal||AbortSignal.timeout(ms),credentials:'omit'});if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
+function cinemetaItem(meta,fetchedAt=new Date().toISOString()){
+ const id=meta?.imdb_id||meta?.id;if(!/^tt\d+$/.test(id||'')||!meta?.name)return null;
+ const yearMatch=String(meta.releaseInfo||'').match(/\d{4}/);
+ const poster=typeof meta.poster==='string'&&/^https:\/\/(images\.metahub\.space|m\.media-amazon\.com)\//.test(meta.poster)?meta.poster.replace('https://images.metahub.space/poster/small/','https://images.metahub.space/poster/medium/'):'https://images.metahub.space/poster/medium/'+id+'/img';
+ const genres=Array.isArray(meta.genres)?meta.genres:Array.isArray(meta.genre)?meta.genre:[];
+ return {id,title:String(meta.name).slice(0,300),kind:meta.type==='series'?'series':'film',year:yearMatch?Number(yearMatch[0]):null,subtitle:genres.slice(0,3).join(' · '),image:poster,source:'Cinemeta',fetchedAt};
+}
+async function cinemetaSearch(query,type,signal){
+ if(type==='person')return [];
+ const direct=query.match(/^(tt\d+)$/i)?.[1]?.toLowerCase();
+ if(direct){const res=await Promise.allSettled(['movie','series'].map(k=>fetchJson(`${CinemetaOrigin}/meta/${k}/${direct}.json`,signal)));if(res.every(r=>r.status==='rejected'))throw res[0].reason;return res.filter(r=>r.status==='fulfilled').map(r=>cinemetaItem(r.value?.meta)).filter(Boolean);}
+ const res=await Promise.allSettled(['movie','series'].map(k=>fetchJson(`${CinemetaOrigin}/catalog/${k}/top/search=${encodeURIComponent(query)}.json`,signal)));
+ if(res.every(r=>r.status==='rejected'))throw res[0].reason;
+ const lists=res.map(r=>r.status==='fulfilled'?(r.value?.metas||[]).map(m=>cinemetaItem(m)).filter(Boolean):[]),out=[];
+ for(let i=0;i<8;i++)for(const list of lists)if(list[i])out.push(list[i]);
+ return out;
+}
+export async function search(query,type='all',{signal}={}){
+ const raw=query.trim();if(!raw||raw.length>150)throw Error('请输入不超过 150 字的关键词');
+ const imdbUrl=raw.match(/imdb\.com\/(?:title|name)\/((?:tt|nm)\d+)/i);
+ const q=imdbUrl?imdbUrl[1].toLowerCase():raw,directId=q.match(/^((?:tt|nm)\d+)$/i)?.[1]?.toLowerCase()||'';
+ const chinese=/[\u3400-\u9fff]/.test(q);
+ let items=[],imdbDown=false,wikiFailed=false,cineFailed=false,usedWiki=false,usedCine=false;
+ if(!chinese)try{items=await imdbSearch(directId||q,{signal});}catch(e){if(signal?.aborted)throw e;imdbDown=true;}
+ const needFallback=chinese||!items.length;
+ if(needFallback){
+  const wikiTask=(async()=>{
+   if(directId){const e=await wikiByImdb(directId,signal);return e?[e]:[];}
+   const [byLabel,byImdb]=await Promise.allSettled([wikiSearch(q,signal),wikiSearchImdb(q,type,signal)]);
+   if(signal?.aborted)throw signal.reason;
+   if(byLabel.status==='rejected'&&byImdb.status==='rejected')throw byLabel.reason;
+   const ids=unique([...(byLabel.status==='fulfilled'?byLabel.value.map(x=>x.id):[]),...(byImdb.status==='fulfilled'?byImdb.value:[])]).slice(0,12);
+   const es=await entities(ids,signal);
+   return es.filter(e=>/^(tt|nm)\d+$/.test(claim(e,'P345')||''));
+  })();
+  const useCine=type!=='person'&&(!chinese||directId.startsWith('tt'));
+  const [wikiRes,cineRes]=await Promise.allSettled([wikiTask,useCine?cinemetaSearch(directId||q,type,signal):Promise.resolve([])]);
+  if(signal?.aborted)throw signal.reason;
+  const merge=(incoming,preferNew=false)=>{const index=items.findIndex(x=>x.id===incoming.id);if(index>=0){const old=items[index];items[index]={...old,...(preferNew?{title:incoming.title||old.title,kind:incoming.kind||old.kind,year:incoming.year||incoming.year,subtitle:incoming.subtitle||old.subtitle,image:incoming.image||old.image}:{}),...(incoming.zh&&!old.zh?{zh:incoming.zh}:{}),...(incoming.wikidata?{wikidata:incoming.wikidata}:{}),...(incoming.douban?{douban:incoming.douban}:{})};}else items.push(incoming);};
+  if(cineRes.status==='fulfilled'){for(const c of cineRes.value){merge(c,true);usedCine=true;}}else if(useCine)cineFailed=true;
+  if(wikiRes.status==='fulfilled'){
+   const linked=wikiRes.value;usedWiki=linked.length>0;
+   const enriched=imdbDown?[]:await Promise.allSettled(linked.slice(0,5).map(async e=>{const id=claim(e,'P345');try{const matches=await imdbSearch(id,{signal});const match=matches.find(x=>x.id===id);return match?{...match,...wikiFields(e)}:null;}catch{imdbDown=true;return null;}}));
+   linked.forEach((e,i)=>{const hit=enriched[i]?.status==='fulfilled'?enriched[i].value:null;const candidate=hit||itemFromWiki(e);if(candidate)merge(candidate,false);});
+  }else wikiFailed=true;
+ }
+ if(type==='person')items=items.filter(x=>x.kind==='person');else if(type==='title')items=items.filter(x=>x.kind!=='person');
+ const norm=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
+ const target=norm(directId||q);
+ items=[...items].sort((a,b)=>{
+  const exact=x=>x.id.toLowerCase()===directId||norm(x.title)===target||norm(x.zh)===target?0:1;
+  return exact(a)-exact(b);
+ });
+ let source=usedCine&&usedWiki?'Wikidata + Cinemeta':usedCine?'Cinemeta':usedWiki?'Wikidata':'IMDb',warning;
+ if(!chinese&&!imdbDown)source=usedWiki?'IMDb + Wikidata':'IMDb';
+ if(!items.length){
+  if(imdbDown&&wikiFailed&&(!usedCine||cineFailed))warning='IMDb 与备用索引暂时不可用，请稍后重试';
+  else if(imdbDown)warning='IMDb 暂不可用；备用索引暂无匹配条目';
+  else if(wikiFailed&&(cineFailed||type==='person'))warning='数据源暂不可用，请稍后重试';
+ }else if(imdbDown){
+  warning='IMDb 暂不可用，已通过 '+(usedCine&&usedWiki?'Wikidata 与公开影视库':usedCine?'公开影视库':'Wikidata')+' 找到结果';
+ }else if(wikiFailed&&!items.length){
+  warning='数据源暂不可用，请稍后重试';
+ }
+ return {items,source,warning,fetchedAt:new Date().toISOString()};
+}
 export async function detail(id,title,{signal}={}){if(!/^(tt|nm)\d+$/.test(id))throw Error('IMDb 标识无效');let e=await wikiByImdb(id,signal);if(!e){const result=await wikiSearch(title||id,signal);const es=await entities(result.map(x=>x.id),signal);e=es.find(x=>claim(x,'P345')===id);}return {item:e?wikiFields(e):{},...(!e?{warning:'未找到可核对的 Wikidata 关联，保留 IMDb 档案'}:{}),fetchedAt:new Date().toISOString()};}
 export async function pagesApi(path,options={}){const url=new URL(path,'https://isolate.invalid/'),signal=options.signal;if(url.pathname==='/search')return search(url.searchParams.get('q')||'',url.searchParams.get('type')||'all',{signal});if(url.pathname==='/detail')return detail(url.searchParams.get('id'),url.searchParams.get('title'),{signal});if(url.pathname==='/library')return {available:false,records:{}};if(url.pathname==='/refresh'){const r=await fetch('./catalog.json?updated='+Date.now(),{cache:'no-store',signal:signal||AbortSignal.timeout(15000)});if(!r.ok)throw Error('目录更新暂不可用');const catalog=await r.json();const ids=catalog.filter(x=>['film','series'].includes(x.kind)).slice(0,6).map(x=>x.id);const refreshed=await Promise.allSettled(ids.map(id=>imdbSearch(id,{signal})));const items=new Map(catalog.map(x=>[x.id,x]));let count=0;refreshed.forEach((r,i)=>{const item=r.status==='fulfilled'?r.value.find(x=>x.id===ids[i]):null;if(item){items.set(item.id,{...items.get(item.id),...item});count++;}});return {items:[...items.values()],fetchedAt:new Date().toISOString(),warning:count<ids.length?'已更新公开目录；部分 IMDb 数据暂不可用':undefined};}throw Error('静态版不支持此操作');}
 
@@ -24,9 +107,6 @@ function wikiDate(value) {
   const date=value.time.slice(1,11);
   return value.precision>=11?date:value.precision===10?date.slice(0,7):date.slice(0,4);
 }
-const values=(entity,property)=>(entity.claims?.[property]||[]).filter(x=>x.rank!=='deprecated').map(x=>x.mainsnak?.datavalue?.value).filter(x=>x!=null);
-const entityId=value=>value?.id;
-const unique=list=>[...new Set(list.filter(Boolean))];
 export function describeEntity(entity,lookup={}) {
   const label=id=>lookup[id]?.labels?.['zh-cn']?.value||lookup[id]?.labels?.zh?.value||lookup[id]?.labels?.['zh-hans']?.value||lookup[id]?.labels?.['zh-tw']?.value||lookup[id]?.labels?.['zh-hk']?.value||lookup[id]?.labels?.en?.value||lookup[id]?.labels?.mul?.value||'';
   const labels=prop=>unique(values(entity,prop).map(v=>label(entityId(v))));
