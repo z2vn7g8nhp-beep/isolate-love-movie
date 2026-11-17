@@ -13,19 +13,11 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMGY1MjgxNmQtZGEzYi00NTZkLWIwNWUtNDdiODY3MGI4OWExXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGY1MjgxNmQtZGEzYi00NTZkLWIwNWUtNDdiODY3MGI4OWExXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Breaking Bad (2008)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm4168944129",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjU3OTdkNTUtYTQzYS00MzE1LWIwOTgtODAxMTg1ZTEwYjA1XkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjU3OTdkNTUtYTQzYS00MzE1LWIwOTgtODAxMTg1ZTEwYjA1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1215,14 +1207,24 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/media/rm1391161088/tt0903747",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Breaking Bad",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0903747/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-17T22:36:57.731Z",
-      "checkedAt": "2026-11-17T22:36:57.731Z"
+      "updatedAt": "2026-11-17T23:34:55.611Z",
+      "checkedAt": "2026-11-17T23:34:55.611Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
@@ -1249,8 +1251,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-17T22:37:06.823Z",
-      "checkedAt": "2026-11-17T22:37:06.823Z"
+      "updatedAt": "2026-11-17T23:35:03.629Z",
+      "checkedAt": "2026-11-17T23:35:03.629Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2139,9 +2141,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-17T22:37:09.315Z",
-      "checkedAt": "2026-11-17T22:37:09.315Z"
+      "updatedAt": "2026-11-17T23:35:06.952Z",
+      "checkedAt": "2026-11-17T23:35:06.952Z"
     }
   },
-  "checkedAt": "2026-11-17T22:37:09.317Z"
+  "checkedAt": "2026-11-17T23:35:06.959Z"
 }
