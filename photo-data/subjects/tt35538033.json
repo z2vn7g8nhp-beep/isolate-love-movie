@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_.jpg",
@@ -817,13 +815,43 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt35538033/news/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNTRiNzgwNTktOTUyZC00ZmZmLTgxMzgtNTFlYjFiMjcwNzVjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTRiNzgwNTktOTUyZC00ZmZmLTgxMzgtNTFlYjFiMjcwNzVjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Resident Evil (2026) - Release info - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt35538033/releaseinfo/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNWY4NDg0ZmUtM2Q4Ny00NDE3LTgxMDgtYzRjNmFiNWJjNmI0XkEyXkFqcGc@._V1_QL75_UY107_CR59,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNWY4NDg0ZmUtM2Q4Ny00NDE3LTgxMDgtYzRjNmFiNWJjNmI0XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Resident Evil Worldwide Box Office: Officially Surpasses Backrooms To ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66100226/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYjY4NTk5YjQtMWQwZi00OTJiLWJjNTYtN2I0MzI1ZmRjNjhjXkEyXkFqcGc@._V1_QL75_UY107_CR59,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjY4NTk5YjQtMWQwZi00OTJiLWJjNTYtN2I0MzI1ZmRjNjhjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Resident Evil Worldwide Box Office: Here's How Much It Needs To Beat ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni65988476/?_ssoLoop=1",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-17T04:42:46.680Z",
-      "checkedAt": "2026-11-17T04:42:46.680Z"
+      "updatedAt": "2026-11-17T07:59:49.113Z",
+      "checkedAt": "2026-11-17T07:59:49.113Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6MjE2fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6MjI4fQ",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1311,8 +1339,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp"
         }
       ],
-      "updatedAt": "2026-11-17T04:42:47.074Z",
-      "checkedAt": "2026-11-17T04:42:47.074Z",
+      "updatedAt": "2026-11-17T07:59:49.989Z",
+      "checkedAt": "2026-11-17T07:59:49.989Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1584,11 +1612,38 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4c/8f/5d/4c8f5d2b0b92c944c2f3de7879b1eb5c.png",
+          "thumbnail": "https://i.pinimg.com/236x/4c/8f/5d/4c8f5d2b0b92c944c2f3de7879b1eb5c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2b/18/f7/2b18f7c7120e68ee2c88e3ac36217f32.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2b/18/f7/2b18f7c7120e68ee2c88e3ac36217f32.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c9/08/25/c90825bb7514d5d91077a93295eb3800.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c9/08/25/c90825bb7514d5d91077a93295eb3800.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-17T04:42:50.025Z",
-      "checkedAt": "2026-11-17T04:42:50.025Z"
+      "updatedAt": "2026-11-17T07:59:52.341Z",
+      "checkedAt": "2026-11-17T07:59:52.341Z"
     }
   },
-  "checkedAt": "2026-11-17T04:42:50.026Z"
+  "checkedAt": "2026-11-17T07:59:52.342Z"
 }
