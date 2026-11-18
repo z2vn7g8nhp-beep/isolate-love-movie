@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -977,11 +979,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T20:41:36.146Z",
-      "checkedAt": "2026-11-18T20:41:36.146Z"
+      "updatedAt": "2026-11-18T22:36:57.710Z",
+      "checkedAt": "2026-11-18T22:36:57.710Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyMjh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyNDB9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1469,8 +1471,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-18T20:41:36.563Z",
-      "checkedAt": "2026-11-18T20:41:36.563Z",
+      "updatedAt": "2026-11-18T22:36:58.185Z",
+      "checkedAt": "2026-11-18T22:36:58.185Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1481,15 +1483,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/0e/72/00/0e7200dbc0e58fed883a9734bd6aa7ec.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/0e/72/00/0e7200dbc0e58fed883a9734bd6aa7ec.jpg",
-          "title": "'Chemical Hearts' Star Austin Abrams Takes On The Bustle Booth",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/380554237282665030/"
-        },
         {
           "url": "https://i.pinimg.com/564x/32/17/49/3217491b7fdf3046bcb867e9a4b57d87.jpg",
           "thumbnail": "https://i.pinimg.com/236x/32/17/49/3217491b7fdf3046bcb867e9a4b57d87.jpg",
@@ -2560,11 +2553,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/32/64/14/32641458962868382feb66069d8de79a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/32/64/14/32641458962868382feb66069d8de79a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
         }
       ],
-      "updatedAt": "2026-11-18T20:41:39.934Z",
-      "checkedAt": "2026-11-18T20:41:39.934Z"
+      "updatedAt": "2026-11-18T22:37:00.665Z",
+      "checkedAt": "2026-11-18T22:37:00.665Z"
     }
   },
-  "checkedAt": "2026-11-18T20:41:39.937Z"
+  "checkedAt": "2026-11-18T22:37:00.668Z"
 }
