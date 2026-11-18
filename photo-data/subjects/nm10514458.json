@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -399,8 +397,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T16:45:44.860Z",
-      "checkedAt": "2026-11-18T16:45:44.860Z"
+      "updatedAt": "2026-11-18T19:43:05.176Z",
+      "checkedAt": "2026-11-18T19:43:05.176Z"
     },
     "douban": {
       "nextCursor": null,
@@ -411,7 +409,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-18T16:45:54.737Z",
+      "checkedAt": "2026-11-18T19:43:08.071Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -817,11 +815,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/42/ec/26/42ec267feec4183be18b71b36ea88b89.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/42/ec/26/42ec267feec4183be18b71b36ea88b89.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-18T16:45:57.643Z",
-      "checkedAt": "2026-11-18T16:45:57.643Z"
+      "updatedAt": "2026-11-18T19:43:11.129Z",
+      "checkedAt": "2026-11-18T19:43:11.129Z"
     }
   },
-  "checkedAt": "2026-11-18T16:45:57.644Z"
+  "checkedAt": "2026-11-18T19:43:11.130Z"
 }
