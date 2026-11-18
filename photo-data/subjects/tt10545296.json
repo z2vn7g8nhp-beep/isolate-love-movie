@@ -13,19 +13,11 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZDJmNDIxZjktYjA3YS00ZDQzLWJmMGYtOTBkY2FjOGY3ZDZjXkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDJmNDIxZjktYjA3YS00ZDQzLWJmMGYtOTBkY2FjOGY3ZDZjXkEyXkFqcGdeQWFybm8@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: The Ballad of Songbirds & Snakes (2023) - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt10545296/?language=es-es",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BM2U3MTg2MTgtYWEyNi00ZmFjLTkyNDgtMDYyMGNhZjk2OWZlXkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2U3MTg2MTgtYWEyNi00ZmFjLTkyNDgtMDYyMGNhZjk2OWZlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1215,13 +1207,23 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt10545296/mediaviewer/rm3606270977/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZDk2YjNhYzEtYzg2ZC00OWEwLWJhYzgtMGUzMWVjNDFmYzI5XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDk2YjNhYzEtYzg2ZC00OWEwLWJhYzgtMGUzMWVjNDFmYzI5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt10545296/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-18T14:35:18.493Z",
-      "checkedAt": "2026-11-18T14:35:18.493Z"
+      "updatedAt": "2026-11-18T15:39:52.038Z",
+      "checkedAt": "2026-11-18T15:39:52.038Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzYwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzcyfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-18T14:35:19.665Z",
-      "checkedAt": "2026-11-18T14:35:19.665Z",
+      "updatedAt": "2026-11-18T15:39:52.441Z",
+      "checkedAt": "2026-11-18T15:39:52.441Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2878,9 +2880,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
         }
       ],
-      "updatedAt": "2026-11-18T14:35:35.786Z",
-      "checkedAt": "2026-11-18T14:35:35.786Z"
+      "updatedAt": "2026-11-18T15:39:55.219Z",
+      "checkedAt": "2026-11-18T15:39:55.219Z"
     }
   },
-  "checkedAt": "2026-11-18T14:35:35.791Z"
+  "checkedAt": "2026-11-18T15:39:55.224Z"
 }
