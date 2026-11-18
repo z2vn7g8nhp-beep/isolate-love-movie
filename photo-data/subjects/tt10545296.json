@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNjc4NGE4YzQtN2Y4Yi00N2IwLWIxNDEtOGZmMzRkNjIwNjRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T03:37:36.384Z",
-      "checkedAt": "2026-11-18T03:37:36.384Z"
+      "updatedAt": "2026-11-18T04:44:07.571Z",
+      "checkedAt": "2026-11-18T04:44:07.571Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzAwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzEyfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-18T03:37:36.690Z",
-      "checkedAt": "2026-11-18T03:37:36.690Z",
+      "updatedAt": "2026-11-18T04:44:08.008Z",
+      "checkedAt": "2026-11-18T04:44:08.008Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1721,26 +1723,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/originals/77/00/4d/77004df018910dfebee595eb2056059c.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/77/00/4d/77004df018910dfebee595eb2056059c.jpg",
-          "title": "The Hunger Games: The Ballad of Songbirds and Snakes Movie 2023 Teaser Poster | Televisión, Cine ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/433119689172558140/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/736x/77/ee/42/77ee42936b0577c43f83d54d2acf4f72.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/77/ee/42/77ee42936b0577c43f83d54d2acf4f72.jpg",
-          "title": "The Hunger Games: The Ballad of Songbirds and Snakes Minimalist Poster | Hunger games ballad of ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/42150946506911039/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/originals/e9/98/09/e9980955c0d77b36a447c561838549d4.jpg",
           "thumbnail": "https://i.pinimg.com/236x/e9/98/09/e9980955c0d77b36a447c561838549d4.jpg",
@@ -2879,11 +2861,29 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/91/cc/e1/91cce144bd20d4ce7cd10de753bba60c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/91/cc/e1/91cce144bd20d4ce7cd10de753bba60c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4f/7d/97/4f7d97d33d169a8ddef1983a9701156d.png",
+          "thumbnail": "https://i.pinimg.com/236x/4f/7d/97/4f7d97d33d169a8ddef1983a9701156d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
         }
       ],
-      "updatedAt": "2026-11-18T03:37:39.506Z",
-      "checkedAt": "2026-11-18T03:37:39.506Z"
+      "updatedAt": "2026-11-18T04:44:10.472Z",
+      "checkedAt": "2026-11-18T04:44:10.472Z"
     }
   },
-  "checkedAt": "2026-11-18T03:37:39.508Z"
+  "checkedAt": "2026-11-18T04:44:10.474Z"
 }

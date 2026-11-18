@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYjc2MjgwYTYtOTY0NC00ZjdlLTg2M2QtMDk2MDJhOGMxODk4XkEyXkFqcGc@._V1_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T03:37:21.043Z",
-      "checkedAt": "2026-11-18T03:37:21.043Z"
+      "updatedAt": "2026-11-18T04:43:51.936Z",
+      "checkedAt": "2026-11-18T04:43:51.936Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6OTZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MTA4fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt32558705/088a9a5279b2b1f79a34141f.webp"
         }
       ],
-      "updatedAt": "2026-11-18T03:37:21.348Z",
-      "checkedAt": "2026-11-18T03:37:21.348Z",
+      "updatedAt": "2026-11-18T04:43:52.374Z",
+      "checkedAt": "2026-11-18T04:43:52.374Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1721,56 +1723,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/f1/35/4e/f1354e4cd94fde0bda226f6cb7ecd0ce.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/f1/35/4e/f1354e4cd94fde0bda226f6cb7ecd0ce.jpg",
-          "title": "not my photo | film | the hunger games | aesthetic",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/647814727698093258/",
-          "retrievedVia": "public-pin-widget"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/99/33/33/993333ebb6c7e8777702f7821365ef91.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/99/33/33/993333ebb6c7e8777702f7821365ef91.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/647814727698093176/",
-          "retrievedVia": "public-pin-widget"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/96/4e/2c/964e2c1aa07847405c0a2971561aaf8a.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/96/4e/2c/964e2c1aa07847405c0a2971561aaf8a.jpg",
-          "title": "not my photo | media | the hunger games | aesthetic",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/647814727698093168/",
-          "retrievedVia": "public-pin-widget"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/15/19/20/151920ef9763b534130d90112701b35c.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/15/19/20/151920ef9763b534130d90112701b35c.jpg",
-          "title": "not my photo | film | the hunger games | aesthetic",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/647814727698093153/",
-          "retrievedVia": "public-pin-widget"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/3c/af/a4/3cafa48e58c6ab20ff77152f2ab9dbb3.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/3c/af/a4/3cafa48e58c6ab20ff77152f2ab9dbb3.jpg",
-          "title": "not my photo | film | the hunger games | aesthetic",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/647814727698093150/",
-          "retrievedVia": "public-pin-widget"
-        },
         {
           "url": "https://i.pinimg.com/564x/30/89/18/308918dd65d07a78f0d58ddc23a84808.jpg",
           "thumbnail": "https://i.pinimg.com/236x/30/89/18/308918dd65d07a78f0d58ddc23a84808.jpg",
@@ -2872,11 +2824,56 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/98/77/55/987755aad399b19dc8916cec8d144155.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/98/77/55/987755aad399b19dc8916cec8d144155.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/42/76/5b/42765bf07ad830b61489f5c1f34b4e8b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/42/76/5b/42765bf07ad830b61489f5c1f34b4e8b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e3/6b/4a/e36b4ab58ebb5b41bf0710f945f90e55.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e3/6b/4a/e36b4ab58ebb5b41bf0710f945f90e55.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/8e/2a/36/8e2a368ebe0309d89096f964eb19d61e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/8e/2a/36/8e2a368ebe0309d89096f964eb19d61e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c6/9e/33/c69e33bc252a70d18730fa2671fce8b8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c6/9e/33/c69e33bc252a70d18730fa2671fce8b8.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-18T03:37:24.306Z",
-      "checkedAt": "2026-11-18T03:37:24.306Z"
+      "updatedAt": "2026-11-18T04:43:54.957Z",
+      "checkedAt": "2026-11-18T04:43:54.957Z"
     }
   },
-  "checkedAt": "2026-11-18T03:37:24.309Z"
+  "checkedAt": "2026-11-18T04:43:54.968Z"
 }
