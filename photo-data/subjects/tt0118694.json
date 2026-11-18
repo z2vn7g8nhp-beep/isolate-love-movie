@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZjAzZTliN2EtZmZkMC00YTE5LThlYWItNjZhOTE3YjIwZTg3XkEyXkFqcGc@._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T15:39:59.533Z",
-      "checkedAt": "2026-11-18T15:39:59.533Z"
+      "updatedAt": "2026-11-18T18:30:51.804Z",
+      "checkedAt": "2026-11-18T18:30:51.804Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxNTU3Iiwib2Zmc2V0Ijo1MDl9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxNTU3Iiwib2Zmc2V0Ijo1MjF9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2366366085.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2366366085.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2366366085/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2356555221.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2356555221.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2356555221/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2255753292.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2255753292.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2255753292/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2255753258.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2255753258.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2255753258/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2162710688.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2162710688.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2162710688/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1715389847.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1715389847.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1715389847/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p963984977.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p963984977.jpg",
-          "title": "只怕这杯中的咖啡，像我的心，吹皱了一池春水...",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/963984977/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2499470487.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2499470487.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2499470487/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2449159880.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2449159880.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2449159880/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2343398916.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2343398916.jpg",
-          "title": "In the Mood for Love · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2343398916/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2918273339.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2918273339.jpg",
-          "title": "2000年香港预告片",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2918273339/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2536185770.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2536185770.jpg",
-          "title": "他这就这样看着她，可望而不可及",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2536185770/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2499469167.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2499469167.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2499470204/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2499469241.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2499469241.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2499469241/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2499469016.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2499469016.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2499469016/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2499468307.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2499468307.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2499468307/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2497204882.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2497204882.jpg",
+          "title": "Criterion Collection - Spine #147 - Region 'A' - Blu-ray",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2497204882/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2449162041.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2449162041.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2449162041/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2422324439.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2422324439.jpg",
+          "title": "七十年代相见",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2422324439/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2355712713.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2355712713.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2355712713/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2338559178.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2338559178.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2338559178/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2338559068.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2338559068.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2338559068/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2338559066.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2338559066.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2338559066/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2318262987.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2318262987.jpg",
+          "title": "In the Mood for Love · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2318262987/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2292431459.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2292431459.jpg",
+          "title": "《花样年华》里的23套旗袍，均由铜锣湾朗光时装的梁朗光师傅所制，设计师是张叔平。",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2292431459/"
         }
       ],
-      "updatedAt": "2026-11-18T15:40:00.396Z",
-      "checkedAt": "2026-11-18T15:40:00.396Z"
+      "updatedAt": "2026-11-18T18:30:52.258Z",
+      "checkedAt": "2026-11-18T18:30:52.258Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3016,9 +3014,9 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T15:40:03.913Z",
-      "checkedAt": "2026-11-18T15:40:03.913Z"
+      "updatedAt": "2026-11-18T18:30:55.084Z",
+      "checkedAt": "2026-11-18T18:30:55.084Z"
     }
   },
-  "checkedAt": "2026-11-18T15:40:03.914Z"
+  "checkedAt": "2026-11-18T18:30:55.085Z"
 }
