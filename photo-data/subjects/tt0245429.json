@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZmYzYjIzNzEtYmIyOS00ZTM2LTkxNTYtYmZhNzcyNjg1NmZmXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_FMjpg_UX1000_.jpg",
@@ -1217,125 +1219,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T10:42:42.882Z",
-      "checkedAt": "2026-11-18T10:42:42.882Z"
+      "updatedAt": "2026-11-18T11:43:22.120Z",
+      "checkedAt": "2026-11-18T11:43:22.120Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxNTYxIiwib2Zmc2V0Ijo0Nzl9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxNTYxIiwib2Zmc2V0Ijo0OTF9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1435084584.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1435084584.jpg",
-          "title": "更多http://www.douban.com/people/hadelee/photos",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1435084584/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1435041545.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1435041545.jpg",
-          "title": "更多http://www.douban.com/people/hadelee/photos",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1435041545/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1429207137.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429207137.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1429207137/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1429120936.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1429120936.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1429120936/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p672969487.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p672969487.jpg",
-          "title": "到底是获野千寻还是荻野千寻？明明是获么~~",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/672969487/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p501235846.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p501235846.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/501235846/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2587920216.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2587920216.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2587920216/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2571817660.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2571817660.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2571817660/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2554553583.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2554553583.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2554553583/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2509238580.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2509238580.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2509238580/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2509189346.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2509189346.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2509189346/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2431597607.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2431597607.jpg",
-          "title": "Spirited Away · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2431597607/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2408717473.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2408717473.jpg",
@@ -2307,10 +2201,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2189923612/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2189923344.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2189923344.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2189923344/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2189922874.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2189922874.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2189922874/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2189922841.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2189922841.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2189922841/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2189922359.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2189922359.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2189922359/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2189922318.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2189922318.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2189922318/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2189922156.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2189922156.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2189922156/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2146868846.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2146868846.jpg",
+          "title": "钱婆婆说的是boyfriend= =。。。。~",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2146868846/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p1816575669.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1816575669.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1816575669/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1772003227.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1772003227.jpg",
+          "title": "zp",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1772003227/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1691084005.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1691084005.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1691084005/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1536407716.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1536407716.jpg",
+          "title": "Spirited Away · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1536407716/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1435045349.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1435045349.jpg",
+          "title": "更多http://www.douban.com/people/hadelee/photos",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1435045349/"
         }
       ],
-      "updatedAt": "2026-11-18T10:42:44.308Z",
-      "checkedAt": "2026-11-18T10:42:44.308Z"
+      "updatedAt": "2026-11-18T11:43:22.645Z",
+      "checkedAt": "2026-11-18T11:43:22.645Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2916,9 +2918,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spirited%20Away%202001%20stills"
         }
       ],
-      "updatedAt": "2026-11-18T10:42:46.559Z",
-      "checkedAt": "2026-11-18T10:42:46.559Z"
+      "updatedAt": "2026-11-18T11:43:25.458Z",
+      "checkedAt": "2026-11-18T11:43:25.458Z"
     }
   },
-  "checkedAt": "2026-11-18T10:42:46.561Z"
+  "checkedAt": "2026-11-18T11:43:25.461Z"
 }
