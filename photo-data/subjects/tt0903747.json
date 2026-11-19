@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjAxMTcxNjg0NV5BMl5BanBnXkFtZTgwNDgxMTU5NTM@._V1_FMjpg_UX1000_.jpg",
@@ -1217,12 +1219,12 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T23:33:43.252Z",
-      "checkedAt": "2026-11-18T23:33:43.252Z"
+      "updatedAt": "2026-11-19T00:37:47.216Z",
+      "checkedAt": "2026-11-19T00:37:47.216Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "豆瓣",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
@@ -1249,8 +1251,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-18T23:33:57.206Z",
-      "checkedAt": "2026-11-18T23:33:57.206Z"
+      "updatedAt": "2026-11-19T00:37:58.393Z",
+      "checkedAt": "2026-11-19T00:37:58.393Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2182,11 +2184,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/46/d7/8e/46d78e2009c84936328fdbc50a40a878.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/46/d7/8e/46d78e2009c84936328fdbc50a40a878.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-18T23:34:00.092Z",
-      "checkedAt": "2026-11-18T23:34:00.092Z"
+      "updatedAt": "2026-11-19T00:38:01.302Z",
+      "checkedAt": "2026-11-19T00:38:01.302Z"
     }
   },
-  "checkedAt": "2026-11-18T23:34:00.095Z"
+  "checkedAt": "2026-11-19T00:38:01.309Z"
 }
