@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOWQwNWE0MDMtZjA4OS00NjY2LTliZGQtNmUxYTNlYzM3MmIzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -1217,19 +1219,19 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T22:33:03.884Z",
-      "checkedAt": "2026-11-19T22:33:03.884Z"
+      "updatedAt": "2026-11-19T23:29:51.887Z",
+      "checkedAt": "2026-11-19T23:29:51.887Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-19T22:33:17.504Z"
+      "checkedAt": "2026-11-19T23:30:00.295Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2168,9 +2170,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Chernobyl%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-19T22:33:19.906Z",
-      "checkedAt": "2026-11-19T22:33:19.906Z"
+      "updatedAt": "2026-11-19T23:30:03.055Z",
+      "checkedAt": "2026-11-19T23:30:03.055Z"
     }
   },
-  "checkedAt": "2026-11-19T22:33:19.917Z"
+  "checkedAt": "2026-11-19T23:30:03.059Z"
 }
