@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMWYyODU3NDMtZTI4NC00NWE1LTk2ODUtYzE0M2QzOTM2ZDIyXkEyXkFqcGc@._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T19:47:16.968Z",
-      "checkedAt": "2026-11-19T19:47:16.968Z"
+      "updatedAt": "2026-11-19T22:32:32.772Z",
+      "checkedAt": "2026-11-19T22:32:32.772Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxODQzIiwib2Zmc2V0Ijo2NDh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxODQzIiwib2Zmc2V0Ijo2NjB9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2630806425.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2630806425.jpg",
-          "title": "01:19:43",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806425/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806423.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806423.jpg",
-          "title": "01:18:39",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806423/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806422.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806422.jpg",
-          "title": "01:18:29",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806422/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806420.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806420.jpg",
-          "title": "01:18:24 Cypher",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806420/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806370.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806370.jpg",
-          "title": "01:09:20",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806370/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2630806364.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2630806364.jpg",
-          "title": "01:13:57",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806364/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806363.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806363.jpg",
-          "title": "01:12:25",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806363/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806362.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806362.jpg",
-          "title": "01:12:23",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806362/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2630806361.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2630806361.jpg",
-          "title": "01:11:33",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806361/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806360.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806360.jpg",
-          "title": "01:11:09",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806360/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2630806358.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806358.jpg",
-          "title": "01:10:27",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806358/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2630806341.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2630806341.jpg",
-          "title": "01:00:57",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2630806341/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2630806338.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2630806338.jpg",
@@ -2309,18 +2199,126 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2627512252/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2627512251.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2627512251.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627512251/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2627512201.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2627512201.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627512201/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2627512176.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2627512176.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627512176/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2627512101.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2627512101.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627512101/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2627512086.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2627512086.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627512086/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2627512005.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2627512005.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627512005/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2627511996.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2627511996.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627511996/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2627511963.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2627511963.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627511963/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2627511957.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2627511957.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627511957/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2627511921.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2627511921.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2627511921/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2621908952.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2621908952.jpg",
+          "title": "I just thought...",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2621908952/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2621908902.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2621908902.jpg",
+          "title": "you were a guy.",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2621908902/"
         }
       ],
-      "updatedAt": "2026-11-19T19:47:17.480Z",
-      "checkedAt": "2026-11-19T19:47:17.480Z"
+      "updatedAt": "2026-11-19T22:32:33.277Z",
+      "checkedAt": "2026-11-19T22:32:33.277Z"
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
         {
           "url": "https://i.pinimg.com/564x/f8/c3/39/f8c3397c560855e9a9184668a1fcf48e.jpg",
@@ -3175,11 +3173,151 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Matrix%201999%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/33/2a/8b/332a8b0cad6d1d164543076571af7cd5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/33/2a/8b/332a8b0cad6d1d164543076571af7cd5.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/311663236733990689/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d2/49/ce/d249ce3c2a76f652c9546ac9a87c967a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d2/49/ce/d249ce3c2a76f652c9546ac9a87c967a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/355362226848488502/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/37/40/ff/3740ff650d8e4ffc06f306558bb69c96.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/37/40/ff/3740ff650d8e4ffc06f306558bb69c96.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/22025485652573112/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/2c/1a/78/2c1a7853bac8baf1e23aa2ec618d5496.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2c/1a/78/2c1a7853bac8baf1e23aa2ec618d5496.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/26951297764799294/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/b7/bb/de/b7bbdedd30035233113bf4214767e269.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b7/bb/de/b7bbdedd30035233113bf4214767e269.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/745275438368697500/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/25/21/9d/25219df9583bb48d685f335b9c617293.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/25/21/9d/25219df9583bb48d685f335b9c617293.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/300474606408916731/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/71/cb/a9/71cba9ef2497bfc9c050cfbe036ceed1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/71/cb/a9/71cba9ef2497bfc9c050cfbe036ceed1.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/335447872260427122/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/de/b7/33/deb7335fa11d8cb0e7d0ce6acf4033bc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/de/b7/33/deb7335fa11d8cb0e7d0ce6acf4033bc.jpg",
+          "title": "The Matrix, Revolutions ( Part 3 )",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/20055160826234277/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/9e/22/2f/9e222f850c3487b99406a6d70589114f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9e/22/2f/9e222f850c3487b99406a6d70589114f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/85920305381502602/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d4/b8/e2/d4b8e2521375286c58ba9d5dec74b506.png",
+          "thumbnail": "https://i.pinimg.com/236x/d4/b8/e2/d4b8e2521375286c58ba9d5dec74b506.png",
+          "title": "The Matrix by Richard Luong | Matrix poster art, Matrix movie poster ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/90353536271937846/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/9e/22/2f/9e222f850c3487b99406a6d70589114f.png",
+          "thumbnail": "https://i.pinimg.com/236x/9e/22/2f/9e222f850c3487b99406a6d70589114f.png",
+          "title": "The Matrix | Movie Poster Giclee Print - Etsy | Green background movie ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/85920305381502602/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/736x/b7/53/35/b7533588edf7c51f7d86315463b2d2bf.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b7/53/35/b7533588edf7c51f7d86315463b2d2bf.jpg",
+          "title": "Pin by laralais on Design | Matrix film, The matrix movie, Movie ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/5559199531340731/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/736x/7a/96/db/7a96db708cec7fd0eca1fc4ac9bde5e5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/7a/96/db/7a96db708cec7fd0eca1fc4ac9bde5e5.jpg",
+          "title": "The Matrix Revolutions (Paint Streak Poster - Version 2) | Keanu reeves ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/372109987979739521/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/de/9b/b6/de9bb660827d1d6e2636fc39390ec3fd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/de/9b/b6/de9bb660827d1d6e2636fc39390ec3fd.jpg",
+          "title": "The Matrix – Neo vs Agent Smith | The matrix wallpapers, The matrix ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/511510470198786892/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T19:47:20.428Z",
-      "checkedAt": "2026-11-19T19:47:20.428Z"
+      "updatedAt": "2026-11-19T22:32:40.428Z",
+      "checkedAt": "2026-11-19T22:32:40.428Z"
     }
   },
-  "checkedAt": "2026-11-19T19:47:20.431Z"
+  "checkedAt": "2026-11-19T22:32:40.429Z"
 }
