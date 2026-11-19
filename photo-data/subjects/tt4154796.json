@@ -13,19 +13,11 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNjMzN2Q1OTMtNTVjYS00Y2EzLWI4MWQtYmZiZmM0YjQ5NTlkXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjMzN2Q1OTMtNTVjYS00Y2EzLWI4MWQtYmZiZmM0YjQ5NTlkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Avengers: Endgame (2019)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt4154796/mediaviewer/rm3252582144/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjEzNjE4MzI0Ml5BMl5BanBnXkFtZTgwOTY5MDQ4NzM@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjEzNjE4MzI0Ml5BMl5BanBnXkFtZTgwOTY5MDQ4NzM@._V1_QL80_UX360_.jpg",
@@ -1215,13 +1207,23 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt4154796/mediaviewer/rm1832017920/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_QL80_UX360_.jpg",
+          "title": "Avengers: Endgame",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt4154796/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-19T18:39:02.197Z",
-      "checkedAt": "2026-11-19T18:39:02.197Z"
+      "updatedAt": "2026-11-19T21:33:34.672Z",
+      "checkedAt": "2026-11-19T21:33:34.672Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIyNjEwMDk1OCIsIm9mZnNldCI6MzYwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIyNjEwMDk1OCIsIm9mZnNldCI6MzcyfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt4154796/6e601953357cfb3af26033de.webp"
         }
       ],
-      "updatedAt": "2026-11-19T18:39:02.576Z",
-      "checkedAt": "2026-11-19T18:39:02.576Z",
+      "updatedAt": "2026-11-19T21:33:35.043Z",
+      "checkedAt": "2026-11-19T21:33:35.043Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2226,9 +2228,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Avengers%20Endgame%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-19T18:39:05.692Z",
-      "checkedAt": "2026-11-19T18:39:05.692Z"
+      "updatedAt": "2026-11-19T21:33:37.982Z",
+      "checkedAt": "2026-11-19T21:33:37.982Z"
     }
   },
-  "checkedAt": "2026-11-19T18:39:05.693Z"
+  "checkedAt": "2026-11-19T21:33:37.984Z"
 }

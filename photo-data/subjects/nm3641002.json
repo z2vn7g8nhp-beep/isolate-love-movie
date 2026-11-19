@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -977,11 +979,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T18:39:29.528Z",
-      "checkedAt": "2026-11-19T18:39:29.528Z"
+      "updatedAt": "2026-11-19T21:34:08.321Z",
+      "checkedAt": "2026-11-19T21:34:08.321Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoxMn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyNH0",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1469,8 +1471,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-19T18:39:29.941Z",
-      "checkedAt": "2026-11-19T18:39:29.941Z",
+      "updatedAt": "2026-11-19T21:34:08.722Z",
+      "checkedAt": "2026-11-19T21:34:08.722Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1478,18 +1480,9 @@
       "indexOffset": 71,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/b0/a5/cf/b0a5cf9fc3e98a1a01baab151bfa7c8c.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/b0/a5/cf/b0a5cf9fc3e98a1a01baab151bfa7c8c.jpg",
-          "title": "The Cast Of Euphoria Before Euphoria",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/380554237282397313/"
-        },
         {
           "url": "https://i.pinimg.com/564x/df/48/75/df4875387ac1d0ead38abab36740c270.jpg",
           "thumbnail": "https://i.pinimg.com/236x/df/48/75/df4875387ac1d0ead38abab36740c270.jpg",
@@ -2575,11 +2568,20 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/380554237282665028/",
           "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/7b/bd/b0/7bbdb0fa0dd091d592d83e99ff44bddc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/7b/bd/b0/7bbdb0fa0dd091d592d83e99ff44bddc.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
         }
       ],
-      "updatedAt": "2026-11-19T18:39:37.496Z",
-      "checkedAt": "2026-11-19T18:39:37.496Z"
+      "updatedAt": "2026-11-19T21:34:11.738Z",
+      "checkedAt": "2026-11-19T21:34:11.738Z"
     }
   },
-  "checkedAt": "2026-11-19T18:39:37.498Z"
+  "checkedAt": "2026-11-19T21:34:11.741Z"
 }
