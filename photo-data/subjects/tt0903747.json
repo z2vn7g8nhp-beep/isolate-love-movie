@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BM2FiN2MzZDgtZjRkMy00YmEzLWFlYjItNTYyZmFjNDA2YTdmXkEyXkFqcGc@._V1_.jpg",
@@ -1217,8 +1219,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T18:37:36.002Z",
-      "checkedAt": "2026-11-19T18:37:36.002Z"
+      "updatedAt": "2026-11-19T19:47:24.968Z",
+      "checkedAt": "2026-11-19T19:47:24.968Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1250,7 +1252,7 @@
         }
       ],
       "updatedAt": "2026-11-19T00:37:58.393Z",
-      "checkedAt": "2026-11-19T18:37:38.825Z"
+      "checkedAt": "2026-11-19T19:47:29.342Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2209,11 +2211,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/fe/3c/e4/fe3ce4e7652c7e3aa2effb25aeb7724d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fe/3c/e4/fe3ce4e7652c7e3aa2effb25aeb7724d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-19T18:37:41.913Z",
-      "checkedAt": "2026-11-19T18:37:41.913Z"
+      "updatedAt": "2026-11-19T19:47:32.273Z",
+      "checkedAt": "2026-11-19T19:47:32.273Z"
     }
   },
-  "checkedAt": "2026-11-19T18:37:41.921Z"
+  "checkedAt": "2026-11-19T19:47:32.277Z"
 }
