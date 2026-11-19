@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BM2FiN2MzZDgtZjRkMy00YmEzLWFlYjItNTYyZmFjNDA2YTdmXkEyXkFqcGc@._V1_.jpg",
@@ -1217,15 +1219,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T14:37:55.260Z",
-      "checkedAt": "2026-11-19T14:37:55.260Z"
+      "updatedAt": "2026-11-19T15:41:18.087Z",
+      "checkedAt": "2026-11-19T15:41:18.087Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 71,
       "name": "豆瓣",
-      "status": "unmatched",
-      "message": "尚未核对到对应豆瓣档案",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
       "method": "direct",
       "images": [
         {
@@ -1250,7 +1252,7 @@
         }
       ],
       "updatedAt": "2026-11-19T00:37:58.393Z",
-      "checkedAt": "2026-11-19T14:38:07.072Z"
+      "checkedAt": "2026-11-19T15:41:31.708Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2200,11 +2202,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/58/dd/0e/58dd0ebe5e2a3ace83b286a3b7e3a87e.png",
+          "thumbnail": "https://i.pinimg.com/236x/58/dd/0e/58dd0ebe5e2a3ace83b286a3b7e3a87e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-19T14:38:11.695Z",
-      "checkedAt": "2026-11-19T14:38:11.695Z"
+      "updatedAt": "2026-11-19T15:41:34.469Z",
+      "checkedAt": "2026-11-19T15:41:34.469Z"
     }
   },
-  "checkedAt": "2026-11-19T14:38:11.699Z"
+  "checkedAt": "2026-11-19T15:41:34.472Z"
 }
