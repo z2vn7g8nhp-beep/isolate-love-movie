@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BM2FiN2MzZDgtZjRkMy00YmEzLWFlYjItNTYyZmFjNDA2YTdmXkEyXkFqcGc@._V1_.jpg",
@@ -1219,8 +1217,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T23:29:31.338Z",
-      "checkedAt": "2026-11-19T23:29:31.338Z"
+      "updatedAt": "2026-11-20T01:55:04.738Z",
+      "checkedAt": "2026-11-20T01:55:04.738Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1252,7 +1250,7 @@
         }
       ],
       "updatedAt": "2026-11-19T00:37:58.393Z",
-      "checkedAt": "2026-11-19T23:29:45.050Z"
+      "checkedAt": "2026-11-20T01:55:18.505Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2220,11 +2218,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/65/81/6d/65816d17ed5640dea15152174002cc82.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/65/81/6d/65816d17ed5640dea15152174002cc82.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-19T23:29:47.839Z",
-      "checkedAt": "2026-11-19T23:29:47.839Z"
+      "updatedAt": "2026-11-20T01:55:21.425Z",
+      "checkedAt": "2026-11-20T01:55:21.425Z"
     }
   },
-  "checkedAt": "2026-11-19T23:29:47.842Z"
+  "checkedAt": "2026-11-20T01:55:21.430Z"
 }
