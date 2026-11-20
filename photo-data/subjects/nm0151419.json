@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNTM5NDM4ODg3MV5BMl5BanBnXkFtZTcwNTA3MTk3Mw@@._V1_FMjpg_UX1000_.jpg",
@@ -1079,11 +1077,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T04:44:00.138Z",
-      "checkedAt": "2026-11-20T04:44:00.138Z"
+      "updatedAt": "2026-11-20T07:59:12.034Z",
+      "checkedAt": "2026-11-20T07:59:12.034Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDQ5NjA3Iiwib2Zmc2V0Ijo2MH0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDQ5NjA3Iiwib2Zmc2V0Ijo3Mn0",
       "indexOffset": 71,
       "name": "豆瓣",
       "status": "ok",
@@ -2171,8 +2169,8 @@
           "pageUrl": "https://www.douban.com/personage/27255370/photo/2558623226/"
         }
       ],
-      "updatedAt": "2026-11-20T04:44:00.774Z",
-      "checkedAt": "2026-11-20T04:44:00.774Z"
+      "updatedAt": "2026-11-20T07:59:12.518Z",
+      "checkedAt": "2026-11-20T07:59:12.518Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3078,11 +3076,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Kyle%20Chandler%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/9e/7f/86/9e7f86f820b43c31e485a79ffc6ab5a6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9e/7f/86/9e7f86f820b43c31e485a79ffc6ab5a6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Kyle%20Chandler%20portrait"
         }
       ],
-      "updatedAt": "2026-11-20T04:44:03.463Z",
-      "checkedAt": "2026-11-20T04:44:03.463Z"
+      "updatedAt": "2026-11-20T07:59:15.092Z",
+      "checkedAt": "2026-11-20T07:59:15.092Z"
     }
   },
-  "checkedAt": "2026-11-20T04:44:03.466Z"
+  "checkedAt": "2026-11-20T07:59:15.096Z"
 }

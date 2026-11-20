@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOTNmYzY0MWQtZGZmNy00Y2Y4LWFmMDQtMTZjYTdiYzEwZGQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -957,125 +959,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T05:46:23.240Z",
-      "checkedAt": "2026-11-20T05:46:23.240Z"
+      "updatedAt": "2026-11-20T08:00:06.872Z",
+      "checkedAt": "2026-11-20T08:00:06.872Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkyMjE1Iiwib2Zmc2V0Ijo3MDh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkyMjE1Iiwib2Zmc2V0Ijo3MjB9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2905230085.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2905230085.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905230085/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2905230084.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2905230084.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905230084/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2905230081.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2905230081.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905230081/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2905230078.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2905230078.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905230078/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2905229966.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2905229966.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905229966/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2905229962.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2905229962.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905229962/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2905229961.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2905229961.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905229961/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2905229960.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2905229960.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905229960/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2905229959.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2905229959.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2905229959/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2903720857.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2903720857.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2903720857/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2903720855.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2903720855.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2903720855/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2903720854.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2903720854.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2903720854/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2903720834.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2903720834.jpg",
@@ -2047,10 +1941,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2619934878/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2619934877.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2619934877.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2619934877/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556762.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556762.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556762/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2603556761.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2603556761.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556761/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556760.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556760.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556760/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556697.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556697.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556697/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556693.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556693.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556693/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556692.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556692.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556692/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2603556691.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2603556691.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556691/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556690.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556690.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556690/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556689.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556689.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556689/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2603556688.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2603556688.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2603556688/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2593995352.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2593995352.jpg",
+          "title": "等着能用这张当头像的那天(ˊ• •ˋ)",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2593995352/"
         }
       ],
-      "updatedAt": "2026-11-20T05:46:23.733Z",
-      "checkedAt": "2026-11-20T05:46:23.733Z"
+      "updatedAt": "2026-11-20T08:00:07.268Z",
+      "checkedAt": "2026-11-20T08:00:07.268Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2690,11 +2692,29 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Am%C3%A9lie%202001%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/44/b2/fc/44b2fc0deb44a79ef78b1ef239a32df2.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/44/b2/fc/44b2fc0deb44a79ef78b1ef239a32df2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Am%C3%A9lie%202001%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/43/91/5c/43915caf8fbbc6470f20f1d3ef132de9.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/43/91/5c/43915caf8fbbc6470f20f1d3ef132de9.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Am%C3%A9lie%202001%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T05:46:26.562Z",
-      "checkedAt": "2026-11-20T05:46:26.562Z"
+      "updatedAt": "2026-11-20T08:00:10.173Z",
+      "checkedAt": "2026-11-20T08:00:10.173Z"
     }
   },
-  "checkedAt": "2026-11-20T05:46:26.565Z"
+  "checkedAt": "2026-11-20T08:00:10.176Z"
 }
