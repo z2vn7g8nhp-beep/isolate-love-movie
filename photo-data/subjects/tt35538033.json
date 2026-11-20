@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_.jpg",
@@ -1067,15 +1069,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T11:41:16.492Z",
-      "checkedAt": "2026-11-20T11:41:16.492Z"
+      "updatedAt": "2026-11-20T12:46:37.936Z",
+      "checkedAt": "2026-11-20T12:46:37.936Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6MTJ9",
       "indexOffset": 36,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "ok",
+      "message": "从原站读取",
       "method": "direct",
       "images": [
         {
@@ -1559,8 +1561,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp"
         }
       ],
-      "updatedAt": "2026-11-20T09:40:45.018Z",
-      "checkedAt": "2026-11-20T11:41:52.440Z",
+      "updatedAt": "2026-11-20T12:46:38.220Z",
+      "checkedAt": "2026-11-20T12:46:38.220Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2086,9 +2088,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T11:41:55.188Z",
-      "checkedAt": "2026-11-20T11:41:55.188Z"
+      "updatedAt": "2026-11-20T12:46:40.970Z",
+      "checkedAt": "2026-11-20T12:46:40.970Z"
     }
   },
-  "checkedAt": "2026-11-20T11:41:55.189Z"
+  "checkedAt": "2026-11-20T12:46:40.971Z"
 }
