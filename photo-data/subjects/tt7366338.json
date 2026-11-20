@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BN2ZkYjFiMTktOWNiMy00M2RhLTk5MWItOGM4ZmFjYjQ1YjkzXkEyXkFqcGc@._V1_QL75_UY281_CR32,0,500,281_.jpg",
@@ -1219,8 +1217,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T19:45:25.946Z",
-      "checkedAt": "2026-11-20T19:45:25.946Z"
+      "updatedAt": "2026-11-20T22:28:06.031Z",
+      "checkedAt": "2026-11-20T22:28:06.031Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1231,7 +1229,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-20T19:45:27.233Z"
+      "checkedAt": "2026-11-20T22:28:11.037Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2177,11 +2175,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Chernobyl%202019%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/97/25/fd/9725fd2f248c57182c54891fc6000303.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/97/25/fd/9725fd2f248c57182c54891fc6000303.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Chernobyl%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T19:45:29.593Z",
-      "checkedAt": "2026-11-20T19:45:29.593Z"
+      "updatedAt": "2026-11-20T22:28:13.980Z",
+      "checkedAt": "2026-11-20T22:28:13.980Z"
     }
   },
-  "checkedAt": "2026-11-20T19:45:29.596Z"
+  "checkedAt": "2026-11-20T22:28:13.986Z"
 }
