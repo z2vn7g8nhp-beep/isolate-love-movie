@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BM2FiN2MzZDgtZjRkMy00YmEzLWFlYjItNTYyZmFjNDA2YTdmXkEyXkFqcGc@._V1_.jpg",
@@ -1217,15 +1219,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T12:44:58.624Z",
-      "checkedAt": "2026-11-20T12:44:58.624Z"
+      "updatedAt": "2026-11-20T14:37:50.716Z",
+      "checkedAt": "2026-11-20T14:37:50.716Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 71,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [
         {
@@ -1250,7 +1252,7 @@
         }
       ],
       "updatedAt": "2026-11-19T00:37:58.393Z",
-      "checkedAt": "2026-11-20T12:45:12.407Z"
+      "checkedAt": "2026-11-20T14:38:03.836Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1260,106 +1262,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/originals/61/8e/98/618e9835b41191c2a5a757464710111e.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/61/8e/98/618e9835b41191c2a5a757464710111e.jpg",
-          "title": "Breaking Bad Tribute Poster by JoshSummana | Breaking bad poster 4k, Breaking bad poster art ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/562950022156775228/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/8f/aa/0e/8faa0e3ccfbf6d2e80a4a534f84c70bb.jpg",
-          "title": "Breaking Bad poster by&#160;Fabien Mathe (aka WARENDT) in Toulouse, France",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585913337297/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/55/35/13/55351378f44807b255e63151bb11c9f2.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/790381803380088578/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/87/b8/5e/87b85e0b0cc7976b732f06aadc09808b.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/87/b8/5e/87b85e0b0cc7976b732f06aadc09808b.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/35114072084573651/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/03/fc/1d/03fc1d9916c004c2e1e05c71acf5ffb7.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/782711610279552378/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/ad/c1/a5/adc1a5979127cd0d55e1f3578a5051c9.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/140667188356009884/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/c9/ef/27/c9ef2763a447ec10651b60c21bf87dba.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/301389400075914854/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/2d/78/19/2d78197f8bd5bd19290b2adf461dbe2a.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/2d/78/19/2d78197f8bd5bd19290b2adf461dbe2a.jpg",
-          "title": "Breaking Bad.... Walter White AKA Heisenberg ...",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585926083958/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/1d/bd/7a/1dbd7a1f401d44a3d9e55e8a3fad39df.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/1d/bd/7a/1dbd7a1f401d44a3d9e55e8a3fad39df.jpg",
-          "title": "Bryan Cranston and Aaron Paul, Breaking Bad",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585926083954/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/41/b2/de/41b2decf60974ff0dfee7ec5c209e5ec.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/41/b2/de/41b2decf60974ff0dfee7ec5c209e5ec.jpg",
-          "title": "Breaking Bad | ''I've never had a better year in my life than 2013. Thirteen is now my new lucky number,'' admits creator Vince Gilligan. A ...",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585926083947/"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/f1/58/21/f15821c07aa621dd2d6161b56bdf234f.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/f1/58/21/f15821c07aa621dd2d6161b56bdf234f.jpg",
-          "title": "Breaking Bad ~ Aaron Paul as Jesse Pinkman",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585926083933/"
-        },
         {
           "url": "https://i.pinimg.com/564x/81/75/bc/8175bca556a034b05eb351d3e8c81694.jpg",
           "thumbnail": "https://i.pinimg.com/236x/81/75/bc/8175bca556a034b05eb351d3e8c81694.jpg",
@@ -2254,11 +2156,200 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c2/1b/fe/c21bfeeeefd0d02b79bc74bb606d483f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c2/1b/fe/c21bfeeeefd0d02b79bc74bb606d483f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/49/3e/56/493e5666a1e953229162309ca0178f7e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/49/3e/56/493e5666a1e953229162309ca0178f7e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/43/5d/a5/435da55ff47340ffc3bb2565e40ed96f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/43/5d/a5/435da55ff47340ffc3bb2565e40ed96f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/92/61/33/926133df81cf274799cca8b5bb310f3e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/92/61/33/926133df81cf274799cca8b5bb310f3e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/7f/6f/f8/7f6ff836faa3fcbf09d8de3578a19640.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/7f/6f/f8/7f6ff836faa3fcbf09d8de3578a19640.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/13/73/1c/13731c10dcfb08b4515183d51b05bf22.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/13/73/1c/13731c10dcfb08b4515183d51b05bf22.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/31/1a/80/311a80e9cc4012cca45bcbbb4787a3f4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/31/1a/80/311a80e9cc4012cca45bcbbb4787a3f4.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/93/a5/ba/93a5ba043a7b1cca66a94ed2fb4c05cd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/93/a5/ba/93a5ba043a7b1cca66a94ed2fb4c05cd.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/bd/9d/00/bd9d00a04d13da4b583ee1c0818a8967.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/bd/9d/00/bd9d00a04d13da4b583ee1c0818a8967.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/b3/00/c6/b300c6c5f5a344f98fe628f04916ce6d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/b3/00/c6/b300c6c5f5a344f98fe628f04916ce6d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d8/30/35/d83035ecd86c247fb0f58f6596e8eddc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d8/30/35/d83035ecd86c247fb0f58f6596e8eddc.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2b/43/a9/2b43a949d2dc19809f331bc11d83b389.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2b/43/a9/2b43a949d2dc19809f331bc11d83b389.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/17/36/ce/1736cefe782abcb12b06cbfcefe723b8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/17/36/ce/1736cefe782abcb12b06cbfcefe723b8.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/77/3a/f8/773af83097cbcad63fdfd52d4ebd3536.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/77/3a/f8/773af83097cbcad63fdfd52d4ebd3536.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/77/a3/6f/77a36fa6b986f4410072e500c14ab0b8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/77/a3/6f/77a36fa6b986f4410072e500c14ab0b8.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/23/af/57/23af57de4c90b061dc42e07fbd3321ce.png",
+          "thumbnail": "https://i.pinimg.com/236x/23/af/57/23af57de4c90b061dc42e07fbd3321ce.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/19/27/63/192763e91c0702a4901c4bbd68b852c4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/19/27/63/192763e91c0702a4901c4bbd68b852c4.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/cb/7e/82/cb7e820f5f9f3002324949e2cb898c8a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/cb/7e/82/cb7e820f5f9f3002324949e2cb898c8a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/9f/4c/5b/9f4c5b77f07a1fa473f2e3d1a0329f20.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/9f/4c/5b/9f4c5b77f07a1fa473f2e3d1a0329f20.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ca/7c/28/ca7c28e8aa5aa418ff18339a8e8f253d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ca/7c/28/ca7c28e8aa5aa418ff18339a8e8f253d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/24/96/60/2496604087091c2e2c8709ed26e059fd.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/24/96/60/2496604087091c2e2c8709ed26e059fd.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T12:45:15.430Z",
-      "checkedAt": "2026-11-20T12:45:15.430Z"
+      "updatedAt": "2026-11-20T14:38:06.536Z",
+      "checkedAt": "2026-11-20T14:38:06.536Z"
     }
   },
-  "checkedAt": "2026-11-20T12:45:15.434Z"
+  "checkedAt": "2026-11-20T14:38:06.537Z"
 }
