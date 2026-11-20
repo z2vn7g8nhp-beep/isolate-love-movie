@@ -10,22 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
       "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZDExMmM0MTEtNzNiOS00ZjE1LTkwNWQtNGFkODNmZGU1NjliXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDExMmM0MTEtNzNiOS00ZjE1LTkwNWQtNGFkODNmZGU1NjliXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Chernobyl (2019)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm1213444609/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNWU2ZjNkZTQtNmQwMS00YzhlLWI4N2EtMzY1ZDhjNzI4Zjk2XkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BNWU2ZjNkZTQtNmQwMS00YzhlLWI4N2EtMzY1ZDhjNzI4Zjk2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1215,21 +1205,31 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm55554561/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BOWQwNWE0MDMtZjA4OS00NjY2LTliZGQtNmUxYTNlYzM3MmIzXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWQwNWE0MDMtZjA4OS00NjY2LTliZGQtNmUxYTNlYzM3MmIzXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl (2019)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm1213379073",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T01:55:24.678Z",
-      "checkedAt": "2026-11-20T01:55:24.678Z"
+      "updatedAt": "2026-11-20T04:41:34.212Z",
+      "checkedAt": "2026-11-20T04:41:34.212Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unmatched",
-      "message": "尚未核对到对应豆瓣档案",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-20T01:55:31.999Z"
+      "checkedAt": "2026-11-20T04:41:48.222Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2168,9 +2168,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Chernobyl%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T01:55:34.790Z",
-      "checkedAt": "2026-11-20T01:55:34.790Z"
+      "updatedAt": "2026-11-20T04:41:51.455Z",
+      "checkedAt": "2026-11-20T04:41:51.455Z"
     }
   },
-  "checkedAt": "2026-11-20T01:55:34.793Z"
+  "checkedAt": "2026-11-20T04:41:51.458Z"
 }
