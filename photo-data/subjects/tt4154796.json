@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMGYxMjMyY2QtMGE3ZC00NWQyLTk4YzgtOTdjZDc5Mjc2ODQ1XkEyXkFqcGc@._V1_FMjpg_UX1024_.jpg",
@@ -1219,11 +1217,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T12:46:50.624Z",
-      "checkedAt": "2026-11-20T12:46:50.624Z"
+      "updatedAt": "2026-11-20T15:39:36.644Z",
+      "checkedAt": "2026-11-20T15:39:36.644Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIyNjEwMDk1OCIsIm9mZnNldCI6NDY4fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIyNjEwMDk1OCIsIm9mZnNldCI6NDgwfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt4154796/6e601953357cfb3af26033de.webp"
         }
       ],
-      "updatedAt": "2026-11-20T12:46:51.604Z",
-      "checkedAt": "2026-11-20T12:46:51.604Z",
+      "updatedAt": "2026-11-20T15:39:37.129Z",
+      "checkedAt": "2026-11-20T15:39:37.129Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2235,11 +2233,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Avengers%20Endgame%202019%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/31/b7/df/31b7df59d7f7852682bcb56600904c38.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/31/b7/df/31b7df59d7f7852682bcb56600904c38.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Avengers%20Endgame%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T12:46:54.096Z",
-      "checkedAt": "2026-11-20T12:46:54.096Z"
+      "updatedAt": "2026-11-20T15:39:39.978Z",
+      "checkedAt": "2026-11-20T15:39:39.978Z"
     }
   },
-  "checkedAt": "2026-11-20T12:46:54.098Z"
+  "checkedAt": "2026-11-20T15:39:39.980Z"
 }

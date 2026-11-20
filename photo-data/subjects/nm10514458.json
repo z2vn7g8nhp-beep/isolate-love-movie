@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -397,21 +395,31 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/es/name/nm10514458/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTRjOTE3MTktNThhOC00Y2Q1LWI5OTQtYThlOTQwMmY2ODgyXkEyXkFqcGc@._V1_QL75_UY133_CR2,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTRjOTE3MTktNThhOC00Y2Q1LWI5OTQtYThlOTQwMmY2ODgyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Spike Fearn - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm10514458/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T12:46:17.472Z",
-      "checkedAt": "2026-11-20T12:46:17.472Z"
+      "updatedAt": "2026-11-20T15:39:06.282Z",
+      "checkedAt": "2026-11-20T15:39:06.282Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-20T12:46:30.995Z",
+      "checkedAt": "2026-11-20T15:39:19.065Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -882,9 +890,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-20T12:46:33.789Z",
-      "checkedAt": "2026-11-20T12:46:33.789Z"
+      "updatedAt": "2026-11-20T15:39:21.731Z",
+      "checkedAt": "2026-11-20T15:39:21.731Z"
     }
   },
-  "checkedAt": "2026-11-20T12:46:33.791Z"
+  "checkedAt": "2026-11-20T15:39:21.733Z"
 }
