@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -977,11 +979,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-19T23:27:07.410Z",
-      "checkedAt": "2026-11-19T23:27:07.410Z"
+      "updatedAt": "2026-11-20T00:28:55.641Z",
+      "checkedAt": "2026-11-20T00:28:55.641Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjozNn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0Ijo0OH0",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1469,8 +1471,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-19T23:27:07.930Z",
-      "checkedAt": "2026-11-19T23:27:07.930Z",
+      "updatedAt": "2026-11-20T00:28:56.106Z",
+      "checkedAt": "2026-11-20T00:28:56.106Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1481,15 +1483,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/df/48/75/df4875387ac1d0ead38abab36740c270.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/df/48/75/df4875387ac1d0ead38abab36740c270.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/380554237282397311/"
-        },
         {
           "url": "https://i.pinimg.com/564x/fc/4d/78/fc4d78768a7fb31e06415605d0aceb28.jpg",
           "thumbnail": "https://i.pinimg.com/236x/fc/4d/78/fc4d78768a7fb31e06415605d0aceb28.jpg",
@@ -2575,11 +2568,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/cf/7a/25/cf7a25fe64da5c898d5463818b252e08.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/cf/7a/25/cf7a25fe64da5c898d5463818b252e08.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
         }
       ],
-      "updatedAt": "2026-11-19T23:27:10.673Z",
-      "checkedAt": "2026-11-19T23:27:10.673Z"
+      "updatedAt": "2026-11-20T00:28:59.058Z",
+      "checkedAt": "2026-11-20T00:28:59.058Z"
     }
   },
-  "checkedAt": "2026-11-19T23:27:10.676Z"
+  "checkedAt": "2026-11-20T00:28:59.062Z"
 }
