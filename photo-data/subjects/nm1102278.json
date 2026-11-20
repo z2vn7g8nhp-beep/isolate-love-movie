@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMzBhMDE2ZDgtNmRlYi00N2M0LWE5NTEtM2U4OTM5ZDY3YjIzXkEyXkFqcGc@._V1_.jpg",
@@ -45,10 +47,20 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm738629378/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTQxMDg1Nzc0OV5BMl5BanBnXkFtZTcwODc4NTkyNw@@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTQxMDg1Nzc0OV5BMl5BanBnXkFtZTcwODc4NTkyNw@@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "人物肖像",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-20T17:04:44.019Z",
-      "checkedAt": "2026-11-20T17:04:44.019Z"
+      "updatedAt": "2026-11-20T18:42:20.042Z",
+      "checkedAt": "2026-11-20T18:42:20.042Z"
     },
     "douban": {
       "nextCursor": null,
@@ -59,7 +71,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-20T17:04:50.670Z",
+      "checkedAt": "2026-11-20T18:42:22.258Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -278,9 +290,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
         }
       ],
-      "updatedAt": "2026-11-20T17:04:55.834Z",
-      "checkedAt": "2026-11-20T17:04:55.834Z"
+      "updatedAt": "2026-11-20T18:42:24.815Z",
+      "checkedAt": "2026-11-20T18:42:24.815Z"
     }
   },
-  "checkedAt": "2026-11-20T17:04:56.687Z"
+  "checkedAt": "2026-11-20T18:42:24.819Z"
 }

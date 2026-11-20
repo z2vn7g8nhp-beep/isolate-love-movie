@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZjU0NTcxM2QtMDZiNC00NTFjLTg0YTYtM2ZiODQzYTM5NmUxXkEyXkFqcGc@._V1_FMjpg_UX2160_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T17:41:34.525Z",
-      "checkedAt": "2026-11-20T17:41:34.525Z"
+      "updatedAt": "2026-11-20T18:43:12.063Z",
+      "checkedAt": "2026-11-20T18:43:12.063Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MTA4fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MTIwfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,38 +1711,18 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-20T17:41:34.877Z",
-      "checkedAt": "2026-11-20T17:41:34.877Z",
+      "updatedAt": "2026-11-20T18:43:12.449Z",
+      "checkedAt": "2026-11-20T18:43:12.449Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
-        {
-          "url": "https://i.pinimg.com/736x/1f/a4/c2/1fa4c2ca1563ea646064429c1b524237.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/1f/a4/c2/1fa4c2ca1563ea646064429c1b524237.jpg",
-          "title": "Lucy Gray & Corionalus - The Ballad of Songbirds & Snakes | Hunger games, Hunger games fan art ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/1477812372236781/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/e8/ee/be/e8eebe8826e727b31b0234c4c561f4d3.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/e8/ee/be/e8eebe8826e727b31b0234c4c561f4d3.jpg",
-          "title": "The hunger games the ballad of songbirds and snakes | Голодные игры, Мужчины знаменитости, Мотивация",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/9710955441204867/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/originals/b9/63/9d/b9639d0dd9e31b8dcc619623d13fe055.jpg",
           "thumbnail": "https://i.pinimg.com/236x/b9/63/9d/b9639d0dd9e31b8dcc619623d13fe055.jpg",
@@ -2854,11 +2836,31 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/c7/c0/5c/c7c05cedb1d667c7dd713865d5e19d5c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c7/c0/5c/c7c05cedb1d667c7dd713865d5e19d5c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/327988785382017723/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/87/45/f1/8745f1fe04c12e06e2ce61da1a4ed8a4.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/87/45/f1/8745f1fe04c12e06e2ce61da1a4ed8a4.jpg",
+          "title": "The Hunger Games: The Ballad of Songbirds and Snakes (2023) Rachel Zegler, Tom Blyth Minimalist Polaroid Movie Poster",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/2885187255897570/",
+          "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-20T17:41:37.949Z",
-      "checkedAt": "2026-11-20T17:41:37.949Z"
+      "updatedAt": "2026-11-20T18:43:19.352Z",
+      "checkedAt": "2026-11-20T18:43:19.352Z"
     }
   },
-  "checkedAt": "2026-11-20T17:41:37.952Z"
+  "checkedAt": "2026-11-20T18:43:19.354Z"
 }
