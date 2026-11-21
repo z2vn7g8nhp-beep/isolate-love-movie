@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZGE2YTJmZWUtMDQ4Yi00MjY5LTg2MmMtZDIyMzNiY2YyOGJiXkEyXkFqcGc@._V1_.jpg",
@@ -1219,16 +1217,16 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T08:32:57.510Z",
-      "checkedAt": "2026-11-21T08:32:57.510Z"
+      "updatedAt": "2026-11-21T10:30:21.889Z",
+      "checkedAt": "2026-11-21T10:30:21.889Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
+      "method": "direct",
       "images": [
         {
           "url": "https://img2.doubanio.com/view/photo/sqxs/public/p2534660211.jpg",
@@ -1252,7 +1250,7 @@
         }
       ],
       "updatedAt": "2026-11-21T08:33:10.754Z",
-      "checkedAt": "2026-11-21T08:33:10.754Z"
+      "checkedAt": "2026-11-21T10:30:35.709Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1262,15 +1260,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/82/da/b8/82dab8c6d6573de4d23c8917e2b87132.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/82/da/b8/82dab8c6d6573de4d23c8917e2b87132.jpg",
-          "title": "Aaron Paul as Jesse Pinkman in Breaking Bad, as a former student of Walter White who helps him become a meth cook",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585926055715/"
-        },
         {
           "url": "https://i.pinimg.com/564x/d4/08/91/d408911e0b59c7d83c63531898144138.jpg",
           "thumbnail": "https://i.pinimg.com/236x/d4/08/91/d408911e0b59c7d83c63531898144138.jpg",
@@ -2345,11 +2334,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/33/59/50/33595007955c581fcf543b09e5448410.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/33/59/50/33595007955c581fcf543b09e5448410.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T08:33:13.769Z",
-      "checkedAt": "2026-11-21T08:33:13.769Z"
+      "updatedAt": "2026-11-21T10:30:39.473Z",
+      "checkedAt": "2026-11-21T10:30:39.473Z"
     }
   },
-  "checkedAt": "2026-11-21T08:33:13.772Z"
+  "checkedAt": "2026-11-21T10:30:39.476Z"
 }
