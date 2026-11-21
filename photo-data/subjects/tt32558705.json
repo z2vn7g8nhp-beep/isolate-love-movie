@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BODUwOTMxNzYtMmE2MC00NDRkLTkxNGEtNGQ4MWNiOTQwYmFlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BODUwOTMxNzYtMmE2MC00NDRkLTkxNGEtNGQ4MWNiOTQwYmFlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Sunrise on the Reaping (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm2969695490/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BY2MwYmE4ZGEtNDMzMi00ODc4LTlkNDgtZGY2NGY0M2QxNDk1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2MwYmE4ZGEtNDMzMi00ODc4LTlkNDgtZGY2NGY0M2QxNDk1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Sunrise on the Reaping (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm441906434/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNGJiNjkyNDEtMmY1MC00NWQ1LTlmYjUtZmViY2NkN2E1ZDEwXkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGJiNjkyNDEtMmY1MC00NWQ1LTlmYjUtZmViY2NkN2E1ZDEwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1195,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm1901393154/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZWRjZTVlYWItZDdiYy00NWE0LWJkYzYtN2MyMjg4MDEwYzlhXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZWRjZTVlYWItZDdiYy00NWE0LWJkYzYtN2MyMjg4MDEwYzlhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Sunrise on the Reaping (2026)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm315159810/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZTBiMzNjZjctYzVmNy00NDVlLTg5ZTAtODg2NWVhODkwMWE1XkEyXkFqcGc@._V1_QL75_UY281_CR30,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTBiMzNjZjctYzVmNy00NDVlLTg5ZTAtODg2NWVhODkwMWE1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Does Maysilee Die in 'Sunrise on the Reaping'? Her Tragic Fate ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66115356/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T14:35:54.302Z",
-      "checkedAt": "2026-11-21T14:35:54.302Z"
+      "updatedAt": "2026-11-21T16:26:18.192Z",
+      "checkedAt": "2026-11-21T16:26:18.192Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MTU2fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MTY4fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt32558705/088a9a5279b2b1f79a34141f.webp"
         }
       ],
-      "updatedAt": "2026-11-21T14:35:54.688Z",
-      "checkedAt": "2026-11-21T14:35:54.688Z",
+      "updatedAt": "2026-11-21T16:26:20.178Z",
+      "checkedAt": "2026-11-21T16:26:20.178Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2849,9 +2847,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T14:35:57.784Z",
-      "checkedAt": "2026-11-21T14:35:57.784Z"
+      "updatedAt": "2026-11-21T16:26:22.767Z",
+      "checkedAt": "2026-11-21T16:26:22.767Z"
     }
   },
-  "checkedAt": "2026-11-21T14:35:57.785Z"
+  "checkedAt": "2026-11-21T16:26:22.770Z"
 }
