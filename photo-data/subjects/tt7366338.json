@@ -10,44 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BN2ZkYjFiMTktOWNiMy00M2RhLTk5MWItOGM4ZmFjYjQ1YjkzXkEyXkFqcGc@._V1_QL75_UY281_CR32,0,500,281_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BN2ZkYjFiMTktOWNiMy00M2RhLTk5MWItOGM4ZmFjYjQ1YjkzXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Chernobyl (TV Mini Series 2019) - Episode list - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt7366338/episodes/?year=2019",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BODgwMjU5NGUtNWIyMS00MWQ1LWJkNTQtZTYzOThmNzEwOGU5XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BODgwMjU5NGUtNWIyMS00MWQ1LWJkNTQtZTYzOThmNzEwOGU5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Chernobyl (2019)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm3612586497/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMzMzMDkwODItODUzNi00NDM0LWJkZmQtN2U1NDRjODU1ZGY1XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzMzMDkwODItODUzNi00NDM0LWJkZmQtN2U1NDRjODU1ZGY1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Chernobyl (2019)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm3344151041",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BY2UzYTMxMTEtYzJjMC00OGE4LWI1NmQtODU0MGFkN2I2ODIyXkEyXkFqcGc@._V1_QL75_UY281_CR32,0,500,281_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2UzYTMxMTEtYzJjMC00OGE4LWI1NmQtODU0MGFkN2I2ODIyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,10 +1185,40 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm2588979713",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BODFjY2E2ZDgtMjY0ZC00ODRiLTk4MTAtMjNkMjE3ZmE1ZjEyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BODFjY2E2ZDgtMjY0ZC00ODRiLTk4MTAtMjNkMjE3ZmE1ZjEyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl (2019)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm3757546241",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMDQ4NDRhZDEtMTgwNS00ODY3LWI4MzMtYTM2MDgwZmZlOTNiXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDQ4NDRhZDEtMTgwNS00ODY3LWI4MzMtYTM2MDgwZmZlOTNiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl (2019)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm89371137/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYjYxNjFiMzUtY2RkMC00MzNhLTg5NDItZDAzN2FhOThlYTZhXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjYxNjFiMzUtY2RkMC00MzNhLTg5NDItZDAzN2FhOThlYTZhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl (2019)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm3478368769/?fv1=still_frame",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T01:56:13.781Z",
-      "checkedAt": "2026-11-21T01:56:13.781Z"
+      "updatedAt": "2026-11-21T04:39:20.041Z",
+      "checkedAt": "2026-11-21T04:39:20.041Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1231,7 +1229,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-21T01:56:18.112Z"
+      "checkedAt": "2026-11-21T04:39:30.176Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2188,9 +2186,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Chernobyl%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T01:56:20.885Z",
-      "checkedAt": "2026-11-21T01:56:20.885Z"
+      "updatedAt": "2026-11-21T04:39:32.945Z",
+      "checkedAt": "2026-11-21T04:39:32.945Z"
     }
   },
-  "checkedAt": "2026-11-21T01:56:20.888Z"
+  "checkedAt": "2026-11-21T04:39:32.947Z"
 }
