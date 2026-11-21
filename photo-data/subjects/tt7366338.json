@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZDI2ZDZhMzktY2ZjZi00NWZiLTliNTgtYmZjODNiNGIxOWU3XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDI2ZDZhMzktY2ZjZi00NWZiLTliNTgtYmZjODNiNGIxOWU3XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Chernobyl (2019)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm1347662337",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMzcwZjM5M2MtNjBlZi00NjAzLWI1ZGQtYTA5ZjkxMzgwYWU1XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzcwZjM5M2MtNjBlZi00NjAzLWI1ZGQtYTA5ZjkxMzgwYWU1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Chernobyl (2019)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm507746817",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BM2ZmNGFjNTYtNTg2My00OGJmLWIyODYtNDY0NDk3ZDVhYTM5XkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2ZmNGFjNTYtNTg2My00OGJmLWIyODYtNDY0NDk3ZDVhYTM5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,21 +1195,41 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm427799041",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYzU1OTZkYTEtYTQxMi00ODkyLWJmNGItNzQ2OTAzM2YwYTFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzU1OTZkYTEtYTQxMi00ODkyLWJmNGItNzQ2OTAzM2YwYTFjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl (2019)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm928231937",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNDBlYTMyMzYtZDhmOS00ZDRlLTk2N2EtZDFhNTdjNzc0MjVhXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDBlYTMyMzYtZDhmOS00ZDRlLTk2N2EtZDFhNTdjNzc0MjVhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Chernobyl (2019)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt7366338/mediaviewer/rm72331777",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T13:43:21.938Z",
-      "checkedAt": "2026-11-21T13:43:21.938Z"
+      "updatedAt": "2026-11-21T15:27:15.424Z",
+      "checkedAt": "2026-11-21T15:27:15.424Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unmatched",
-      "message": "尚未核对到对应豆瓣档案",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-21T13:43:32.758Z"
+      "checkedAt": "2026-11-21T15:27:29.420Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2206,9 +2204,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Chernobyl%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T13:43:35.736Z",
-      "checkedAt": "2026-11-21T13:43:35.736Z"
+      "updatedAt": "2026-11-21T15:27:33.086Z",
+      "checkedAt": "2026-11-21T15:27:33.086Z"
     }
   },
-  "checkedAt": "2026-11-21T13:43:35.739Z"
+  "checkedAt": "2026-11-21T15:27:33.090Z"
 }
