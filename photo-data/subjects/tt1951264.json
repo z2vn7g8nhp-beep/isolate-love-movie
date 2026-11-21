@@ -10,54 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BY2MzMmZkNjgtMmVjMC00NjhjLTk3OGEtZjI4MzUzMTE1MmI0XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2MzMmZkNjgtMmVjMC00NjhjLTk3OGEtZjI4MzUzMTE1MmI0XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Catching Fire (2013)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm4177760769",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTQzMDU4NTY1M15BMl5BanBnXkFtZTcwMjM0MjM1OQ@@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTQzMDU4NTY1M15BMl5BanBnXkFtZTcwMjM0MjM1OQ@@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Catching Fire (2013)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm1272358656",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMzQ0NDVlNTUtZWRlZS00NGQwLWI3MzAtYTVhOWFmOTk0YjRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzQ0NDVlNTUtZWRlZS00NGQwLWI3MzAtYTVhOWFmOTk0YjRiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Catching Fire (2013)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm1136270848/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTk4N2E0Y2MtMDcyMS00ZmZjLTg1ZjItODQ5MjE5NjUzMDE4XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTk4N2E0Y2MtMDcyMS00ZmZjLTg1ZjItODQ5MjE5NjUzMDE4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Catching Fire (2013)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm1136270848/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYjYyZDEyZTMtYjc4MC00OTE0LTk5ZjctMDBkZWE4NjNkZDA3XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UY281_CR0,0,500,281_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjYyZDEyZTMtYjc4MC00OTE0LTk5ZjctMDBkZWE4NjNkZDA3XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1175,53 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm3079328512/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTY5MDQyODk4NF5BMl5BanBnXkFtZTgwNTE3NzY2MDE@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTY5MDQyODk4NF5BMl5BanBnXkFtZTgwNTE3NzY2MDE@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Catching Fire (2013)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm2961888000",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYmQxNzgzODYtYTJjZC00MmYxLWI2YjUtZTRkZDY1NDljZDFkXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmQxNzgzODYtYTJjZC00MmYxLWI2YjUtZTRkZDY1NDljZDFkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Catching Fire (2013)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm3456340481/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTY3OTUwNDMzMl5BMl5BanBnXkFtZTgwMjE3NzY2MDE@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTY3OTUwNDMzMl5BMl5BanBnXkFtZTgwMjE3NzY2MDE@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Catching Fire (2013)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm2978665216",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMGZkMWNhYTAtNjkyMS00NGFhLWEwYWUtMjU2ZGExNDc3NjIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGZkMWNhYTAtNjkyMS00NGFhLWEwYWUtMjU2ZGExNDc3NjIyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Catching Fire (2013)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm3776736001/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T15:28:46.052Z",
-      "checkedAt": "2026-11-21T15:28:46.052Z"
+      "updatedAt": "2026-11-21T17:25:29.196Z",
+      "checkedAt": "2026-11-21T17:25:29.196Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiI2ODc0NDU2Iiwib2Zmc2V0IjoxODB9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiI2ODc0NDU2Iiwib2Zmc2V0IjoxOTJ9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt1951264/4ca32e17c9fa4e3f88108b4f.webp"
         }
       ],
-      "updatedAt": "2026-11-21T15:28:46.499Z",
-      "checkedAt": "2026-11-21T15:28:46.499Z",
+      "updatedAt": "2026-11-21T17:25:29.570Z",
+      "checkedAt": "2026-11-21T17:25:29.570Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2210,9 +2208,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Catching%20Fire%202013%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T15:28:49.270Z",
-      "checkedAt": "2026-11-21T15:28:49.270Z"
+      "updatedAt": "2026-11-21T17:25:32.287Z",
+      "checkedAt": "2026-11-21T17:25:32.287Z"
     }
   },
-  "checkedAt": "2026-11-21T15:28:49.272Z"
+  "checkedAt": "2026-11-21T17:25:32.289Z"
 }
