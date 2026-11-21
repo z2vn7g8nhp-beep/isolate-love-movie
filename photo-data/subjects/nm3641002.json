@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -997,13 +995,53 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/es/name/nm3641002/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNmJmNWZlN2EtZDg2My00NWJiLTgyODMtOTczM2EzOTc5YzVkXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmJmNWZlN2EtZDg2My00NWJiLTgyODMtOTczM2EzOTc5YzVkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Austin Abrams Confirmed to Star in Zach Cregger's Upcoming Film \"He's ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni65423613/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BOWJkMjA4M2MtODRkMi00NzI4LTk4MDQtNDZlODdhNDdkYmM3XkEyXkFqcGc@._V1_QL75_UX90_CR0,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWJkMjA4M2MtODRkMi00NzI4LTk4MDQtNDZlODdhNDdkYmM3XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Austin Abrams - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/de/name/nm3641002/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BOWEyMmYwNTUtZDg2Zi00ZGJlLTg0MTktMGU3YjQwYjNiNTEzXkEyXkFqcGc@._V1_QL75_UY107_CR65,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWEyMmYwNTUtZDg2Zi00ZGJlLTg0MTktMGU3YjQwYjNiNTEzXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Who Is Bryan in 'Resident Evil'? Meet Austin Abrams' Terrified Hero at ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66021980/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNDk4ODY1MDEtMTA2Ny00NzQ2LTg2OWMtMDhhZDJjMDE2ZWJmXkEyXkFqcGc@._V1_QL75_UY133_CR8,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDk4ODY1MDEtMTA2Ny00NzQ2LTg2OWMtMDhhZDJjMDE2ZWJmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Austin Abrams - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/pt/name/nm3641002/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T12:30:24.683Z",
-      "checkedAt": "2026-11-21T12:30:24.683Z"
+      "updatedAt": "2026-11-21T14:35:26.056Z",
+      "checkedAt": "2026-11-21T14:35:26.056Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyNjR9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyNzZ9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1491,8 +1529,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-21T12:30:25.168Z",
-      "checkedAt": "2026-11-21T12:30:25.168Z",
+      "updatedAt": "2026-11-21T14:35:26.541Z",
+      "checkedAt": "2026-11-21T14:35:26.541Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2599,9 +2637,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
         }
       ],
-      "updatedAt": "2026-11-21T12:30:28.558Z",
-      "checkedAt": "2026-11-21T12:30:28.558Z"
+      "updatedAt": "2026-11-21T14:35:29.074Z",
+      "checkedAt": "2026-11-21T14:35:29.074Z"
     }
   },
-  "checkedAt": "2026-11-21T12:30:28.565Z"
+  "checkedAt": "2026-11-21T14:35:29.077Z"
 }
