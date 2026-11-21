@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -899,11 +897,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-20T22:29:33.050Z",
-      "checkedAt": "2026-11-20T22:29:33.050Z"
+      "updatedAt": "2026-11-21T00:31:58.085Z",
+      "checkedAt": "2026-11-21T00:31:58.085Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6MTJ9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1390,8 +1388,8 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-20T22:29:33.335Z",
-      "checkedAt": "2026-11-20T22:29:33.335Z",
+      "updatedAt": "2026-11-21T00:31:58.511Z",
+      "checkedAt": "2026-11-21T00:31:58.511Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1932,11 +1930,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f7/1d/7f/f71d7f560c7bc7c351744bc254c367d5.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f7/1d/7f/f71d7f560c7bc7c351744bc254c367d5.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-20T22:29:36.750Z",
-      "checkedAt": "2026-11-20T22:29:36.750Z"
+      "updatedAt": "2026-11-21T00:32:02.081Z",
+      "checkedAt": "2026-11-21T00:32:02.081Z"
     }
   },
-  "checkedAt": "2026-11-20T22:29:36.752Z"
+  "checkedAt": "2026-11-21T00:32:02.083Z"
 }
