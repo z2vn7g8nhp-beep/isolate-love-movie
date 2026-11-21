@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -907,13 +905,53 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt34890576/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZGNlOTJhNzctNTZlYS00MDgyLWJhYjctOGM1ZTMxZTQ2ODkwXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGNlOTJhNzctNTZlYS00MDgyLWJhYjctOGM1ZTMxZTQ2ODkwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Clayface Director Officially Opens Up About Sequel Idea After Major ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66080999/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTAwODdkZDctY2RkMi00NTk4LTk2OTUtMzc3ZDEwZjA2YjM5XkEyXkFqcGc@._V1_QL75_UY107_CR59,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAwODdkZDctY2RkMi00NTk4LTk2OTUtMzc3ZDEwZjA2YjM5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "'Clayface' edges out 'You Can See Everything' with $24M box-office win ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66074741/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNWRlMTg1NDItNGI3OC00MmMzLTg5NGItN2QyYjQ3ODRhNjlkXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNWRlMTg1NDItNGI3OC00MmMzLTg5NGItN2QyYjQ3ODRhNjlkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "DC's Biggest Box Office Surprise of 2026? 'Clayface' Has Now Beaten ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66114934/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMGVkODU0OTAtZWNjMS00Y2E4LWFhMDctNTExM2M3NmMwNTQ5XkEyXkFqcGc@._V1_QL75_UY107_CR59,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGVkODU0OTAtZWNjMS00Y2E4LWFhMDctNTExM2M3NmMwNTQ5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "'Clayface' Rolls to $24M Box Office Opening as 'You Can See Everything ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66078173/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T04:40:59.043Z",
-      "checkedAt": "2026-11-21T04:40:59.043Z"
+      "updatedAt": "2026-11-21T06:45:09.249Z",
+      "checkedAt": "2026-11-21T06:45:09.249Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6MzZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6NDh9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1400,8 +1438,8 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-21T04:40:59.424Z",
-      "checkedAt": "2026-11-21T04:40:59.424Z",
+      "updatedAt": "2026-11-21T06:45:10.106Z",
+      "checkedAt": "2026-11-21T06:45:10.106Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1989,9 +2027,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T04:41:02.713Z",
-      "checkedAt": "2026-11-21T04:41:02.713Z"
+      "updatedAt": "2026-11-21T06:45:13.524Z",
+      "checkedAt": "2026-11-21T06:45:13.524Z"
     }
   },
-  "checkedAt": "2026-11-21T04:41:02.714Z"
+  "checkedAt": "2026-11-21T06:45:13.525Z"
 }
