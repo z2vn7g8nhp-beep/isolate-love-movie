@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_.jpg",
@@ -1077,11 +1079,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T00:31:38.935Z",
-      "checkedAt": "2026-11-21T00:31:38.935Z"
+      "updatedAt": "2026-11-21T01:57:21.239Z",
+      "checkedAt": "2026-11-21T01:57:21.239Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6ODR9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6OTZ9",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1569,17 +1571,17 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp"
         }
       ],
-      "updatedAt": "2026-11-21T00:31:39.371Z",
-      "checkedAt": "2026-11-21T00:31:39.371Z",
+      "updatedAt": "2026-11-21T01:57:21.578Z",
+      "checkedAt": "2026-11-21T01:57:21.578Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/64/cc/ef/64ccefc0e96a090254bd7fc6a2804448.jpg",
@@ -2103,11 +2105,21 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/36/5f/04/365f04db8785a443a6804a3b997885c3.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/36/5f/04/365f04db8785a443a6804a3b997885c3.jpg",
+          "title": "Resident Evil 2 - E3 Cover, Riccardo Minervino | Re4 remake cover art, Resident evil 8 poster ...",
+          "kind": "搜索图片",
+          "source": "Pinterest · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/553661347935992806/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T00:31:42.167Z",
-      "checkedAt": "2026-11-21T00:31:42.167Z"
+      "updatedAt": "2026-11-21T01:57:29.243Z",
+      "checkedAt": "2026-11-21T01:57:29.243Z"
     }
   },
-  "checkedAt": "2026-11-21T00:31:42.169Z"
+  "checkedAt": "2026-11-21T01:57:29.244Z"
 }
