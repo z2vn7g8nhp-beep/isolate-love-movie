@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMzY4ZThlMmItMWJjMS00YzEwLTg4YWUtZGVkNGRmMzEwMjA0XkEyXkFqcGc@._V1_.jpg",
@@ -1219,11 +1217,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T18:22:39.118Z",
-      "checkedAt": "2026-11-21T18:22:39.118Z"
+      "updatedAt": "2026-11-21T20:25:25.717Z",
+      "checkedAt": "2026-11-21T20:25:25.717Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjEzNzc4NCIsIm9mZnNldCI6NzJ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjEzNzc4NCIsIm9mZnNldCI6ODR9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt23112594/9a69e22900791bda0fd19d14.webp"
         }
       ],
-      "updatedAt": "2026-11-21T18:22:40.885Z",
-      "checkedAt": "2026-11-21T18:22:40.885Z",
+      "updatedAt": "2026-11-21T20:25:27.951Z",
+      "checkedAt": "2026-11-21T20:25:27.951Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1720,8 +1718,8 @@
       "indexOffset": 71,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/564x/81/9c/e7/819ce7c951cfa71b2c0adaa8b08c140b.jpg",
@@ -2591,11 +2589,20 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/567242515538610608/",
           "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4d/ad/c1/4dadc1b6b0758b0906243db63bae400c.png",
+          "thumbnail": "https://i.pinimg.com/236x/4d/ad/c1/4dadc1b6b0758b0906243db63bae400c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=VisionQuest%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T18:22:48.410Z",
-      "checkedAt": "2026-11-21T18:22:48.410Z"
+      "updatedAt": "2026-11-21T20:25:30.790Z",
+      "checkedAt": "2026-11-21T20:25:30.790Z"
     }
   },
-  "checkedAt": "2026-11-21T18:22:48.411Z"
+  "checkedAt": "2026-11-21T20:25:30.794Z"
 }

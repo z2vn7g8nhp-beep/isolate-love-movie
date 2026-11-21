@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNGJiNjkyNDEtMmY1MC00NWQ1LTlmYjUtZmViY2NkN2E1ZDEwXkEyXkFqcGc@._V1_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T19:31:51.213Z",
-      "checkedAt": "2026-11-21T19:31:51.213Z"
+      "updatedAt": "2026-11-21T20:27:25.916Z",
+      "checkedAt": "2026-11-21T20:27:25.916Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MTkyfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MjA0fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt32558705/088a9a5279b2b1f79a34141f.webp"
         }
       ],
-      "updatedAt": "2026-11-21T19:31:51.521Z",
-      "checkedAt": "2026-11-21T19:31:51.521Z",
+      "updatedAt": "2026-11-21T20:27:26.326Z",
+      "checkedAt": "2026-11-21T20:27:26.326Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1721,16 +1723,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/originals/e3/c4/39/e3c439649a051d76262085c245ba985b.png",
-          "thumbnail": "https://i.pinimg.com/236x/e3/c4/39/e3c439649a051d76262085c245ba985b.png",
-          "title": "Sunrise on the Reaping fanart.⁠ Haymitch, Maysilee, Wyatt, Louella and Lou Lou | Hunger games ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/45176802506658516/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/736x/7c/68/08/7c6808d3cbbb483cdd0d01add6bc9746.jpg",
           "thumbnail": "https://i.pinimg.com/236x/7c/68/08/7c6808d3cbbb483cdd0d01add6bc9746.jpg",
@@ -2845,11 +2837,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/a1/02/15/a10215aa607afbcfe1a05346dbce8d7f.png",
+          "thumbnail": "https://i.pinimg.com/236x/a1/02/15/a10215aa607afbcfe1a05346dbce8d7f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T19:31:54.083Z",
-      "checkedAt": "2026-11-21T19:31:54.083Z"
+      "updatedAt": "2026-11-21T20:27:28.954Z",
+      "checkedAt": "2026-11-21T20:27:28.954Z"
     }
   },
-  "checkedAt": "2026-11-21T19:31:54.087Z"
+  "checkedAt": "2026-11-21T20:27:28.959Z"
 }

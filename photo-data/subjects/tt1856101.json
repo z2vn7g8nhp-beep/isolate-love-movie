@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMmQwMWFjNTYtNzk0OS00MTgwLWFjMDItZjVlY2M2OWEwYjUyXkEyXkFqcGc@._V1_.jpg",
@@ -1217,125 +1219,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T19:31:32.770Z",
-      "checkedAt": "2026-11-21T19:31:32.770Z"
+      "updatedAt": "2026-11-21T20:27:05.878Z",
+      "checkedAt": "2026-11-21T20:27:05.878Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6OTcyfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6OTg0fQ",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271292.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271292.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271292/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2529271291.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2529271291.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271291/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271289.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271289.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271289/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2529271281.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2529271281.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271281/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271280.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271280.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271280/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2529271276.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2529271276.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271276/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271263.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271263.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271263/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271262.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271262.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271262/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2529271261.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2529271261.jpg",
-          "title": "The difference",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271261/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271260.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271260.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271260/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271259.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271259.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271259/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2529271258.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271258.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2529271258/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2529271240.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2529271240.jpg",
@@ -2307,10 +2201,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2520847975/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2520847941.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2520847941.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847941/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847939.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847939.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847939/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847937.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847937.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847937/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847932.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847932.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847932/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847929.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847929.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847929/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847927.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847927.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847927/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2520847926.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2520847926.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847926/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2520847925.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2520847925.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847925/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847923.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847923.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847923/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847879.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847879.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847879/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847872.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847872.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847872/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2520847869.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2520847869.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2520847869/"
         }
       ],
-      "updatedAt": "2026-11-21T19:31:33.184Z",
-      "checkedAt": "2026-11-21T19:31:33.184Z"
+      "updatedAt": "2026-11-21T20:27:06.348Z",
+      "checkedAt": "2026-11-21T20:27:06.348Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3354,9 +3356,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Blade%20Runner%202049%202017%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T19:31:36.122Z",
-      "checkedAt": "2026-11-21T19:31:36.122Z"
+      "updatedAt": "2026-11-21T20:27:09.038Z",
+      "checkedAt": "2026-11-21T20:27:09.038Z"
     }
   },
-  "checkedAt": "2026-11-21T19:31:36.124Z"
+  "checkedAt": "2026-11-21T20:27:09.042Z"
 }
