@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZGE2YTJmZWUtMDQ4Yi00MjY5LTg2MmMtZDIyMzNiY2YyOGJiXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGE2YTJmZWUtMDQ4Yi00MjY5LTg2MmMtZDIyMzNiY2YyOGJiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Breaking Bad (2008)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm1303913985/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTYzNzA5NTQzM15BMl5BanBnXkFtZTcwNDIyMjM0OA@@._V1_FMjpg_UX320_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTYzNzA5NTQzM15BMl5BanBnXkFtZTcwNDIyMjM0OA@@._V1_QL80_UX360_.jpg",
-          "title": "Breaking Bad (2008)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm734177536",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTA2ZmQ3ZDAtZTlmOS00M2Y4LTk0NTItYjQwMTRmOWI3YmU0XkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTA2ZmQ3ZDAtZTlmOS00M2Y4LTk0NTItYjQwMTRmOWI3YmU0XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,17 +1195,37 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm2805186048/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNzU2NTk1ODA4N15BMl5BanBnXkFtZTgwMDc2MDU5NTM@._V1_FMjpg_UX1024_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzU2NTk1ODA4N15BMl5BanBnXkFtZTgwMDc2MDU5NTM@._V1_QL80_UX360_.jpg",
+          "title": "Breaking Bad (2008)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm3010872320",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTAxMDkzODUwNTBeQTJeQWpwZ15BbWU3MDc5ODQ0NDY@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAxMDkzODUwNTBeQTJeQWpwZ15BbWU3MDc5ODQ0NDY@._V1_QL80_UX360_.jpg",
+          "title": "Breaking Bad (2008)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm1199225856/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T16:27:37.270Z",
-      "checkedAt": "2026-11-21T16:27:37.270Z"
+      "updatedAt": "2026-11-21T18:22:09.025Z",
+      "checkedAt": "2026-11-21T18:22:09.025Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 71,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [
         {
@@ -1252,7 +1250,7 @@
         }
       ],
       "updatedAt": "2026-11-21T14:37:36.935Z",
-      "checkedAt": "2026-11-21T16:27:50.851Z"
+      "checkedAt": "2026-11-21T18:22:12.489Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2347,9 +2345,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-21T16:27:53.379Z",
-      "checkedAt": "2026-11-21T16:27:53.379Z"
+      "updatedAt": "2026-11-21T18:22:15.204Z",
+      "checkedAt": "2026-11-21T18:22:15.204Z"
     }
   },
-  "checkedAt": "2026-11-21T16:27:53.385Z"
+  "checkedAt": "2026-11-21T18:22:15.207Z"
 }
