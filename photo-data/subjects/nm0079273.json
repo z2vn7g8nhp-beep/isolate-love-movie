@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BYTczZWJjZmEtNjM4ZC00NDIzLWJiM2MtYjZmY2EwY2ZkMjJhXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTczZWJjZmEtNjM4ZC00NDIzLWJiM2MtYjZmY2EwY2ZkMjJhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm2554567937/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BYTk3ZDFlNzUtY2VmNi00NmUwLTliYjQtZjRmY2JhZTVkNjAyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTk3ZDFlNzUtY2VmNi00NmUwLTliYjQtZjRmY2JhZTVkNjAyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm12913664",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNjI3MjgxMzcxM15BMl5BanBnXkFtZTcwMzQ2OTM4Mg@@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjI3MjgxMzcxM15BMl5BanBnXkFtZTcwMzQ2OTM4Mg@@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1195,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm835748865/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTg3MTUwODgxNV5BMl5BanBnXkFtZTgwNDE0MjU1MjE@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTg3MTUwODgxNV5BMl5BanBnXkFtZTgwNDE0MjU1MjE@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm2455043840/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNzE5MDAxMmQtZDU0OC00YmE4LTg5YmMtYjM1Yzc2MDE1MDg4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzE5MDAxMmQtZDU0OC00YmE4LTg5YmMtYjM1Yzc2MDE1MDg4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm4134630400/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T13:42:42.373Z",
-      "checkedAt": "2026-11-22T13:42:42.373Z"
+      "updatedAt": "2026-11-22T15:28:06.775Z",
+      "checkedAt": "2026-11-22T15:28:06.775Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0IjoxNTZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0IjoxNjh9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm0079273/58a5713edbf7f773cc65455b.webp"
         }
       ],
-      "updatedAt": "2026-11-22T13:42:43.875Z",
-      "checkedAt": "2026-11-22T13:42:43.875Z",
+      "updatedAt": "2026-11-22T15:28:07.270Z",
+      "checkedAt": "2026-11-22T15:28:07.270Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2265,9 +2263,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T13:42:46.661Z",
-      "checkedAt": "2026-11-22T13:42:46.661Z"
+      "updatedAt": "2026-11-22T15:28:10.223Z",
+      "checkedAt": "2026-11-22T15:28:10.223Z"
     }
   },
-  "checkedAt": "2026-11-22T13:42:46.662Z"
+  "checkedAt": "2026-11-22T15:28:10.226Z"
 }
