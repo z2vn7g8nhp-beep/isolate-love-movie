@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTg2MTcwNDgwNl5BMl5BanBnXkFtZTgwOTM3MDEzMTE@._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-21T23:23:37.876Z",
-      "checkedAt": "2026-11-21T23:23:37.876Z"
+      "updatedAt": "2026-11-22T01:53:45.190Z",
+      "checkedAt": "2026-11-22T01:53:45.190Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTA4Iiwib2Zmc2V0IjoyMjh9",
+      "nextCursor": null,
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2919532501.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2919532501.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532501/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2919532500.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532500.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532500/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2919532498.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532498.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532498/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2919532497.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532497.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532497/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2919532496.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2919532496.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532496/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2919532495.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2919532495.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532495/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2919532494.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2919532494.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532494/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2919532493.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532493.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532493/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2919532467.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532467.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532467/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2919532466.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2919532466.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532466/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2919532464.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2919532464.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532464/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2919532463.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532463.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2919532463/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2919532462.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2919532462.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27260275/photo/643133837/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p643133791.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p643133791.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133791/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p643133781.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p643133781.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133781/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133763.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133763.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133763/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133698.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133698.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133698/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p643133621.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p643133621.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133621/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133550.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133550.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133550/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133512.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133512.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133512/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p643133491.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p643133491.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133491/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p643133445.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p643133445.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133445/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133342.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133342.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133342/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p643133315.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p643133315.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133315/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133248.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133248.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133248/"
         }
       ],
-      "updatedAt": "2026-11-21T23:23:38.665Z",
-      "checkedAt": "2026-11-21T23:23:38.665Z"
+      "updatedAt": "2026-11-22T01:53:45.793Z",
+      "checkedAt": "2026-11-22T01:53:45.793Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2322,16 +2320,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/fe/52/a8/fe52a8044879ebe4a77045e89c6ab4a2.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/fe/52/a8/fe52a8044879ebe4a77045e89c6ab4a2.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/3518505953327334/",
-          "retrievedVia": "public-pin-widget"
-        },
         {
           "url": "https://i.pinimg.com/564x/2a/11/6e/2a116e63bba18513cf6d96c5ce2347b5.jpg",
           "thumbnail": "https://i.pinimg.com/236x/2a/11/6e/2a116e63bba18513cf6d96c5ce2347b5.jpg",
@@ -3371,11 +3359,101 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/a1/b8/56/a1b856dfc0d894c8cc79d1e100287a39.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a1/b8/56/a1b856dfc0d894c8cc79d1e100287a39.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/97/1a/55/971a55949f0caa016976f04987f66350.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/97/1a/55/971a55949f0caa016976f04987f66350.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f2/e1/77/f2e17708ca6e739dd59a6b23e7b6a965.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f2/e1/77/f2e17708ca6e739dd59a6b23e7b6a965.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/fd/e3/e6/fde3e62ea07b2a9d0f9fb6bfe6fef88e.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/fd/e3/e6/fde3e62ea07b2a9d0f9fb6bfe6fef88e.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4e/3e/ac/4e3eacb44ccd52d5eb5d7db39e229edf.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4e/3e/ac/4e3eacb44ccd52d5eb5d7db39e229edf.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/c3/84/34/c38434d35b23c607b7580c551c8fef86.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/c3/84/34/c38434d35b23c607b7580c551c8fef86.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2b/2f/ef/2b2fefef3237c33070cde7d51f592c79.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2b/2f/ef/2b2fefef3237c33070cde7d51f592c79.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ea/05/26/ea052660026c9c4648c26c97a883644f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ea/05/26/ea052660026c9c4648c26c97a883644f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/02/f3/18/02f318ca3d57718b35d866615ea65a84.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/02/f3/18/02f318ca3d57718b35d866615ea65a84.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/2a/b5/d3/2ab5d39367f6d2725bd8218611b58431.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/2a/b5/d3/2ab5d39367f6d2725bd8218611b58431.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
         }
       ],
-      "updatedAt": "2026-11-21T23:23:41.570Z",
-      "checkedAt": "2026-11-21T23:23:41.570Z"
+      "updatedAt": "2026-11-22T01:53:49.382Z",
+      "checkedAt": "2026-11-22T01:53:49.382Z"
     }
   },
-  "checkedAt": "2026-11-21T23:23:41.574Z"
+  "checkedAt": "2026-11-22T01:53:49.386Z"
 }

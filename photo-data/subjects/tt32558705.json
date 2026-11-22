@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjU2ZDE3N2EtMDYwMi00OTdjLTgwZmEtYzRkYmRhNGIyMTM4XkEyXkFqcGc@._V1_.jpg",
@@ -1217,15 +1219,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T00:19:45.682Z",
-      "checkedAt": "2026-11-22T00:19:45.682Z"
+      "updatedAt": "2026-11-22T01:56:09.851Z",
+      "checkedAt": "2026-11-22T01:56:09.851Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MjI4fQ",
+      "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "ok",
-      "message": "从原站读取",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
       "method": "direct",
       "images": [
         {
@@ -1710,7 +1712,7 @@
         }
       ],
       "updatedAt": "2026-11-22T00:19:46.087Z",
-      "checkedAt": "2026-11-22T00:19:46.087Z",
+      "checkedAt": "2026-11-22T01:56:45.505Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2845,9 +2847,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T00:19:48.677Z",
-      "checkedAt": "2026-11-22T00:19:48.677Z"
+      "updatedAt": "2026-11-22T01:56:48.182Z",
+      "checkedAt": "2026-11-22T01:56:48.182Z"
     }
   },
-  "checkedAt": "2026-11-22T00:19:48.682Z"
+  "checkedAt": "2026-11-22T01:56:48.185Z"
 }
