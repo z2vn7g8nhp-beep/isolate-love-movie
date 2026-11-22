@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNjE1YTVjYzUtN2QwYy00ODdhLWI0NTUtODU4YWIyYWUwNWIzXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T07:57:17.853Z",
-      "checkedAt": "2026-11-22T07:57:17.853Z"
+      "updatedAt": "2026-11-22T09:32:32.087Z",
+      "checkedAt": "2026-11-22T09:32:32.087Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjAxMTIwMiIsIm9mZnNldCI6MTIwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjAxMTIwMiIsIm9mZnNldCI6MTMyfQ",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,28 +1711,18 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt21357150/907f9d403b74d461e62fe92e.webp"
         }
       ],
-      "updatedAt": "2026-11-22T07:57:18.240Z",
-      "checkedAt": "2026-11-22T07:57:18.240Z",
+      "updatedAt": "2026-11-22T09:32:32.468Z",
+      "checkedAt": "2026-11-22T09:32:32.468Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/08/e9/7b/08e97b011ed2790ec767e66b19d3a40b.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/08/e9/7b/08e97b011ed2790ec767e66b19d3a40b.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/1079738079423947783/",
-          "retrievedVia": "public-pin-widget"
-        },
         {
           "url": "https://i.pinimg.com/564x/e6/ce/48/e6ce48ef6216f4561ebb755a6178c508.jpg",
           "thumbnail": "https://i.pinimg.com/236x/e6/ce/48/e6ce48ef6216f4561ebb755a6178c508.jpg",
@@ -2818,11 +2810,21 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Avengers%20Doomsday%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/4f/e7/64/4fe764e8f93e4fa9aeef28971bf6c864.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4f/e7/64/4fe764e8f93e4fa9aeef28971bf6c864.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/181340322492251385/",
+          "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-22T07:57:21.155Z",
-      "checkedAt": "2026-11-22T07:57:21.155Z"
+      "updatedAt": "2026-11-22T09:32:39.263Z",
+      "checkedAt": "2026-11-22T09:32:39.263Z"
     }
   },
-  "checkedAt": "2026-11-22T07:57:21.160Z"
+  "checkedAt": "2026-11-22T09:32:39.265Z"
 }

@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTk2MDgyNzQxMV5BMl5BanBnXkFtZTYwMzkzNTc3._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTk2MDgyNzQxMV5BMl5BanBnXkFtZTYwMzkzNTc3._V1_QL80_UX360_.jpg",
-          "title": "The Matrix (1999)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0133093/mediaviewer/rm2537593088",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNTBhZGE4NzUtNDRhMi00MTlmLWIwY2UtODUwMzA4MWM3Nzc1XkEyXkFqcGdeQWFsZWxvZw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTBhZGE4NzUtNDRhMi00MTlmLWIwY2UtODUwMzA4MWM3Nzc1XkEyXkFqcGdeQWFsZWxvZw@@._V1_QL80_UX360_.jpg",
-          "title": "Matrix (1999) - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0133093/?language=es-es",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNjhiZGYxMTgtODZmZC00MDJjLTlhYjMtNWFhY2ViNTFhOWIwXkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjhiZGYxMTgtODZmZC00MDJjLTlhYjMtNWFhY2ViNTFhOWIwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,127 +1195,39 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0133093/mediaviewer/rm2865567489",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZDRkMjBkMjAtMzkzYS00OTJhLWJjYWYtOWVhNDE3NWNiZWY1XkEyXkFqcGc@._V1_FMjpg_UX1280_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDRkMjBkMjAtMzkzYS00OTJhLWJjYWYtOWVhNDE3NWNiZWY1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Matrix (1999)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0133093/mediaviewer/rm2441379841/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYjI5YTI3NzMtM2I0MC00YzUyLTg2ZTktZjdlZWJlODJiNWQyXkEyXkFqcGc@._V1_FMjpg_UX1439_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjI5YTI3NzMtM2I0MC00YzUyLTg2ZTktZjdlZWJlODJiNWQyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Matrix (1999)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0133093/mediaviewer/rm1326147072/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T06:43:39.637Z",
-      "checkedAt": "2026-11-22T06:43:39.637Z"
+      "updatedAt": "2026-11-22T09:31:18.556Z",
+      "checkedAt": "2026-11-22T09:31:18.556Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxODQzIiwib2Zmc2V0IjoxMDIwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxODQzIiwib2Zmc2V0IjoxMDMyfQ",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050745799.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050745799.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050745799/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050745569.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050745569.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050745569/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050745457.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050745457.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050745457/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1050745366.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1050745366.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050745366/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050745103.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050745103.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050745103/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050744979.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050744979.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050744979/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050743137.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050743137.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050743137/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1050742526.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1050742526.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050742526/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050742180.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050742180.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050742180/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050741929.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050741929.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050741929/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050740628.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050740628.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050740628/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1050740467.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050740467.jpg",
-          "title": "The Matrix · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1050740467/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/s/public/p1050740368.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1050740368.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2359885901/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2359885896.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2359885896.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885896/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2359885889.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2359885889.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885889/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2359885884.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2359885884.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885884/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2359885879.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2359885879.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885879/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2359885878.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2359885878.jpg",
+          "title": "《黑客帝国设定集》部分选取",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885878/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2359885838.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2359885838.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885838/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2359885836.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2359885836.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885836/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2359885817.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2359885817.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885817/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2359885815.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2359885815.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885815/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2359885812.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2359885812.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885812/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2359885806.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2359885806.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885806/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2359885804.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2359885804.jpg",
+          "title": "The Matrix · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2359885804/"
         }
       ],
-      "updatedAt": "2026-11-22T06:43:40.062Z",
-      "checkedAt": "2026-11-22T06:43:40.062Z"
+      "updatedAt": "2026-11-22T09:31:18.983Z",
+      "checkedAt": "2026-11-22T09:31:18.983Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3342,11 +3340,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Matrix%201999%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e8/81/de/e881de411f102e77185dc1449c1e8e36.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e8/81/de/e881de411f102e77185dc1449c1e8e36.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Matrix%201999%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T06:43:42.992Z",
-      "checkedAt": "2026-11-22T06:43:42.992Z"
+      "updatedAt": "2026-11-22T09:31:21.509Z",
+      "checkedAt": "2026-11-22T09:31:21.509Z"
     }
   },
-  "checkedAt": "2026-11-22T06:43:42.995Z"
+  "checkedAt": "2026-11-22T09:31:21.514Z"
 }
