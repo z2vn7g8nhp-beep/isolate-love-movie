@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNWQ0M2I4MGMtYWY5Ni00OTM5LWI4NjYtZTAzMjQxMGM3YTMzXkEyXkFqcGc@._V1_FMjpg_UY5056_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T00:20:35.517Z",
-      "checkedAt": "2026-11-22T00:20:35.517Z"
+      "updatedAt": "2026-11-22T03:35:28.211Z",
+      "checkedAt": "2026-11-22T03:35:28.211Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIyNzAxMDc2OCIsIm9mZnNldCI6OTk2fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIyNzAxMDc2OCIsIm9mZnNldCI6MTAwOH0",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585780473.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585780473.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585780473/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2585780471.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2585780471.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585780471/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585780463.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585780463.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585780463/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585417769.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585417769.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417769/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585417760.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585417760.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417760/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2585417755.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2585417755.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417755/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585417582.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585417582.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417582/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585417578.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585417578.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417578/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585417573.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585417573.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417573/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2585417571.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2585417571.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417571/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2585417561.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2585417561.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417561/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2585417557.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585417557.jpg",
-          "title": "Parasite · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2585417557/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2585417556.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2585417556.jpg",
@@ -2309,18 +2199,126 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2585307239/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2585307231.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2585307231.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307231/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2585307229.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585307229.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307229/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2585307221.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2585307221.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307221/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2585307220.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585307220.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307220/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2585307217.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585307217.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307217/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2585307213.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2585307213.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307213/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2585307204.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2585307204.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2585307204/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2584450917.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2584450917.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2584450917/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2584450888.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2584450888.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2584450888/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2584450785.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2584450785.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2584450785/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2582985017.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2582985017.jpg",
+          "title": "Parasite · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2582985017/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2581132122.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2581132122.jpg",
+          "title": "我要吃这个面！！！",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2581132122/"
         }
       ],
-      "updatedAt": "2026-11-22T00:20:35.960Z",
-      "checkedAt": "2026-11-22T00:20:35.960Z"
+      "updatedAt": "2026-11-22T03:35:29.636Z",
+      "checkedAt": "2026-11-22T03:35:29.636Z"
     },
     "pinterest": {
       "nextCursor": null,
       "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/564x/af/14/cc/af14ccfc181d072770cab27c03f589b4.jpg",
@@ -2983,9 +2981,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Parasite%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T00:20:43.128Z",
-      "checkedAt": "2026-11-22T00:20:43.128Z"
+      "updatedAt": "2026-11-22T03:35:32.323Z",
+      "checkedAt": "2026-11-22T03:35:32.323Z"
     }
   },
-  "checkedAt": "2026-11-22T00:20:43.129Z"
+  "checkedAt": "2026-11-22T03:35:32.325Z"
 }
