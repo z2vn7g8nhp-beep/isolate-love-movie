@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMzBhMDE2ZDgtNmRlYi00N2M0LWE5NTEtM2U4OTM5ZDY3YjIzXkEyXkFqcGc@._V1_.jpg",
@@ -1207,8 +1209,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T10:30:47.242Z",
-      "checkedAt": "2026-11-22T10:30:47.242Z"
+      "updatedAt": "2026-11-22T11:30:22.718Z",
+      "checkedAt": "2026-11-22T11:30:22.718Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1219,7 +1221,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-22T10:30:50.621Z",
+      "checkedAt": "2026-11-22T11:30:27.057Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1227,8 +1229,8 @@
       "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/6b/f0/b8/6bf0b892215d96e081b6e793d11bf3ec.jpg",
@@ -2020,9 +2022,9 @@
           "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-22T10:30:57.751Z",
-      "checkedAt": "2026-11-22T10:30:57.751Z"
+      "updatedAt": "2026-11-22T11:30:30.290Z",
+      "checkedAt": "2026-11-22T11:30:30.290Z"
     }
   },
-  "checkedAt": "2026-11-22T10:30:57.752Z"
+  "checkedAt": "2026-11-22T11:30:30.292Z"
 }
