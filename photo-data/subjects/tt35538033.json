@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_.jpg",
@@ -1169,15 +1167,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T21:27:09.985Z",
-      "checkedAt": "2026-11-22T21:27:09.985Z"
+      "updatedAt": "2026-11-22T23:27:15.863Z",
+      "checkedAt": "2026-11-22T23:27:15.863Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6Mzg0fQ",
+      "nextCursor": null,
       "indexOffset": 36,
       "name": "豆瓣",
-      "status": "ok",
-      "message": "从原站读取",
+      "status": "empty",
+      "message": "该站本页没有更多可读图片",
       "method": "direct",
       "images": [
         {
@@ -1662,7 +1660,7 @@
         }
       ],
       "updatedAt": "2026-11-22T21:27:10.414Z",
-      "checkedAt": "2026-11-22T21:27:10.414Z",
+      "checkedAt": "2026-11-22T23:27:20.342Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2243,9 +2241,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T21:27:13.145Z",
-      "checkedAt": "2026-11-22T21:27:13.145Z"
+      "updatedAt": "2026-11-22T23:27:23.287Z",
+      "checkedAt": "2026-11-22T23:27:23.287Z"
     }
   },
-  "checkedAt": "2026-11-22T21:27:13.147Z"
+  "checkedAt": "2026-11-22T23:27:23.289Z"
 }
