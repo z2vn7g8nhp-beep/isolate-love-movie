@@ -10,44 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZTNlMmM0NDYtZGY2Ni00ZGZkLTlmOTEtYTM4YWUyNzViNzZhXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTNlMmM0NDYtZGY2Ni00ZGZkLTlmOTEtYTM4YWUyNzViNzZhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games (2012)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm2566951425/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTcwOTU1NDk3NV5BMl5BanBnXkFtZTcwNTkxMjE1Nw@@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTcwOTU1NDk3NV5BMl5BanBnXkFtZTcwNTkxMjE1Nw@@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games (2012)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/media/rm1512551936/tt1392170",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BYTJmZDllOGYtZWYzMy00YTc2LWI5Y2UtODNkNTBmMDQ2MmYwXkEyXkFqcGc@._V1_FMjpg_UX1024_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTJmZDllOGYtZWYzMy00YTc2LWI5Y2UtODNkNTBmMDQ2MmYwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games (2012)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm1481785088",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNzNlYzNlOGMtOGMxMi00MjI4LTk1N2QtNGMxMjkzNTJiNjMzXkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzNlYzNlOGMtOGMxMi00MjI4LTk1N2QtNGMxMjkzNTJiNjMzXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1185,43 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt1392170/?language=pt-br",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYzY0MzgyOWUtNDM0ZC00ODkyLTgwMjktYzRiOTZkOTg4NGU2XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzY0MzgyOWUtNDM0ZC00ODkyLTgwMjktYzRiOTZkOTg4NGU2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games (2012)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm38733312",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTg3MDA1NjY5Ml5BMl5BanBnXkFtZTcwNzMzMzUwNw@@._V1_QL75_UX500_CR0,47,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTg3MDA1NjY5Ml5BMl5BanBnXkFtZTcwNzMzMzUwNw@@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games (2012) - Videos - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1392170/videogallery/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYWYxNzY1ZTQtZGU4MS00MGI0LWI2MzgtZWNlODc1ODczM2I1XkEyXkFqcGc@._V1_QL75_UY281_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWYxNzY1ZTQtZGU4MS00MGI0LWI2MzgtZWNlODc1ODczM2I1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Does The Hunger Games: Sunrise On The Reaping Have A Post-Credits Scene ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/es-es/news/ni66115683/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T20:30:41.952Z",
-      "checkedAt": "2026-11-22T20:30:41.952Z"
+      "updatedAt": "2026-11-22T22:28:19.216Z",
+      "checkedAt": "2026-11-22T22:28:19.216Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNTkyODUzIiwib2Zmc2V0Ijo2MTJ9",
+      "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt1392170/464332d26f1a73ee00def79d.webp"
         }
       ],
-      "updatedAt": "2026-11-22T20:30:42.362Z",
-      "checkedAt": "2026-11-22T20:30:42.362Z",
+      "updatedAt": "2026-11-22T22:28:19.628Z",
+      "checkedAt": "2026-11-22T22:28:19.628Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2201,9 +2199,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%202012%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T20:30:44.999Z",
-      "checkedAt": "2026-11-22T20:30:44.999Z"
+      "updatedAt": "2026-11-22T22:28:22.390Z",
+      "checkedAt": "2026-11-22T22:28:22.390Z"
     }
   },
-  "checkedAt": "2026-11-22T20:30:45.000Z"
+  "checkedAt": "2026-11-22T22:28:22.392Z"
 }
