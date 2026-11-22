@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -947,13 +945,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/news/ni66078173/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTQ4OTEwNTcwN15BMl5BanBnXkFtZTgwNDU4MDgxMTE@._V1_QL75_UX140_CR0,0,140,140_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTQ4OTEwNTcwN15BMl5BanBnXkFtZTgwNDU4MDgxMTE@._V1_QL80_UX360_.jpg",
+          "title": "Clayface (2026) - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/es/title/tt34890576/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMDIwZmFjOWQtMWRlZS00YjU2LWFlMjEtZjUwYmQ1Y2FmY2E5XkEyXkFqcGc@._V1_QL75_UX140_CR0,12,140,140_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDIwZmFjOWQtMWRlZS00YjU2LWFlMjEtZjUwYmQ1Y2FmY2E5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Clayface (2026) - Full cast & crew - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt34890576/fullcredits/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T07:58:17.069Z",
-      "checkedAt": "2026-11-22T07:58:17.069Z"
+      "updatedAt": "2026-11-22T10:30:08.696Z",
+      "checkedAt": "2026-11-22T10:30:08.696Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6ODR9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6OTZ9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1440,8 +1458,8 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-22T07:58:17.459Z",
-      "checkedAt": "2026-11-22T07:58:17.459Z",
+      "updatedAt": "2026-11-22T10:30:09.019Z",
+      "checkedAt": "2026-11-22T10:30:09.019Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2200,9 +2218,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T07:58:20.952Z",
-      "checkedAt": "2026-11-22T07:58:20.952Z"
+      "updatedAt": "2026-11-22T10:30:12.273Z",
+      "checkedAt": "2026-11-22T10:30:12.273Z"
     }
   },
-  "checkedAt": "2026-11-22T07:58:20.955Z"
+  "checkedAt": "2026-11-22T10:30:12.276Z"
 }
