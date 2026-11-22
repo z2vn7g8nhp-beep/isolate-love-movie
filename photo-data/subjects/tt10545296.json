@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZDRmYmViMDMtMjA3My00MTQ3LTk2NjgtYmViNmQyNzc0Zjk5XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDRmYmViMDMtMjA3My00MTQ3LTk2NjgtYmViNmQyNzc0Zjk5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: The Ballad of Songbirds & Snakes (2023)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt10545296/mediaviewer/rm2562869505/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZmNmMjQ1NmYtZjM0MS00NmFkLTgwNmEtNTdlNDMyY2FjMjRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmNmMjQ1NmYtZjM0MS00NmFkLTgwNmEtNTdlNDMyY2FjMjRlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: The Ballad of Songbirds & Snakes (2023)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt10545296/mediaviewer/rm2297975809/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTg2MGExMDctZWVkZC00NjQ3LThiMGYtY2VkNTljNTVlMjQ0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTg2MGExMDctZWVkZC00NjQ3LThiMGYtY2VkNTljNTVlMjQ0XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1195,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt10545296/mediaviewer/rm1338132737/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMDJlZDU3N2YtYTU0Ny00YmRiLWJkN2ItNWE4NjgyOWU2NzBlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDJlZDU3N2YtYTU0Ny00YmRiLWJkN2ItNWE4NjgyOWU2NzBlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: The Ballad of Songbirds & Snakes (2023)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt10545296/mediaviewer/rm2042710273/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjllMjU1YzUtNzNhNS00ZjliLWI4MDctY2M3ZWRkN2Q5ZWFhXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjllMjU1YzUtNzNhNS00ZjliLWI4MDctY2M3ZWRkN2Q5ZWFhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: The Ballad of Songbirds & Snakes (2023)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt10545296/mediaviewer/rm2985776897/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T04:44:12.647Z",
-      "checkedAt": "2026-11-22T04:44:12.647Z"
+      "updatedAt": "2026-11-22T06:42:37.560Z",
+      "checkedAt": "2026-11-22T06:42:37.560Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzM2fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzQ4fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-22T04:44:12.963Z",
-      "checkedAt": "2026-11-22T04:44:12.963Z",
+      "updatedAt": "2026-11-22T06:42:37.986Z",
+      "checkedAt": "2026-11-22T06:42:37.986Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1723,16 +1721,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/736x/d0/cc/73/d0cc73c5842d0d6ad338938a206e2324.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/d0/cc/73/d0cc73c5842d0d6ad338938a206e2324.jpg",
-          "title": "the ballad of songbirds and snakes wallpaper // lockscreen ⊹ ⋆ ﾟ. | Hunger games, Hungergames ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/291748882129537652/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/originals/2d/8c/23/2d8c235ad579322a091f13ff5b4ada18.jpg",
           "thumbnail": "https://i.pinimg.com/236x/2d/8c/23/2d8c235ad579322a091f13ff5b4ada18.jpg",
@@ -2853,11 +2841,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/da/b4/bb/dab4bba55e9c1f62eeba2956b1d42baf.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/da/b4/bb/dab4bba55e9c1f62eeba2956b1d42baf.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T04:44:15.861Z",
-      "checkedAt": "2026-11-22T04:44:15.861Z"
+      "updatedAt": "2026-11-22T06:42:40.838Z",
+      "checkedAt": "2026-11-22T06:42:40.838Z"
     }
   },
-  "checkedAt": "2026-11-22T04:44:15.863Z"
+  "checkedAt": "2026-11-22T06:42:40.842Z"
 }

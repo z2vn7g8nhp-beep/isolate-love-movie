@@ -13,19 +13,11 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjE4NDM3MzkzMl5BMl5BanBnXkFtZTcwNjEzODcyNg@@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjE4NDM3MzkzMl5BMl5BanBnXkFtZTcwNjEzODcyNg@@._V1_QL80_UX360_.jpg",
-          "title": "Breaking Bad (2008)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm3956063232/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTYwMDc3NzA1M15BMl5BanBnXkFtZTgwOTgxMTU5NTM@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTYwMDc3NzA1M15BMl5BanBnXkFtZTgwOTgxMTU5NTM@._V1_QL80_UX360_.jpg",
@@ -1215,14 +1207,24 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0903747/mediaviewer/rm3896498688/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Breaking Bad",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0903747/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-22T05:41:33.643Z",
-      "checkedAt": "2026-11-22T05:41:33.643Z"
+      "updatedAt": "2026-11-22T06:43:47.528Z",
+      "checkedAt": "2026-11-22T06:43:47.528Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
@@ -1249,8 +1251,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T05:41:46.439Z",
-      "checkedAt": "2026-11-22T05:41:46.439Z"
+      "updatedAt": "2026-11-22T06:44:00.891Z",
+      "checkedAt": "2026-11-22T06:44:00.891Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1260,15 +1262,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/74/6f/9b/746f9b131bbde7681c58a716d3717324.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/74/6f/9b/746f9b131bbde7681c58a716d3717324.jpg",
-          "title": "hahahahah Jesse is the best part of Breaking Bad",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585925751575/"
-        },
         {
           "url": "https://i.pinimg.com/564x/a3/b9/a4/a3b9a42d05a35c27fd211167e66f77f1.jpg",
           "thumbnail": "https://i.pinimg.com/236x/a3/b9/a4/a3b9a42d05a35c27fd211167e66f77f1.jpg",
@@ -2344,11 +2337,20 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/562950022156775228/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/76/95/76/769576e514e0118f4d858d01203c7e72.png",
+          "thumbnail": "https://i.pinimg.com/236x/76/95/76/769576e514e0118f4d858d01203c7e72.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T05:41:49.523Z",
-      "checkedAt": "2026-11-22T05:41:49.523Z"
+      "updatedAt": "2026-11-22T06:44:03.931Z",
+      "checkedAt": "2026-11-22T06:44:03.931Z"
     }
   },
-  "checkedAt": "2026-11-22T05:41:49.527Z"
+  "checkedAt": "2026-11-22T06:44:03.933Z"
 }

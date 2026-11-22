@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNTM5NDM4ODg3MV5BMl5BanBnXkFtZTcwNTA3MTk3Mw@@._V1_FMjpg_UX1000_.jpg",
@@ -1097,13 +1095,53 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/name/nm0151419/mediaviewer/rm2979200514/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BOWU1NmNjNGYtMDNjYi00NjZkLWFmOGUtZWU1MzAzMzFhZWMwXkEyXkFqcGdeQXVyNDg2MjUxNjM@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWU1NmNjNGYtMDNjYi00NjZkLWFmOGUtZWU1MzAzMzFhZWMwXkEyXkFqcGdeQXVyNDg2MjUxNjM@._V1_QL80_UX360_.jpg",
+          "title": "Kyle Chandler",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/video/vi1892136985",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTM0NzIxMjQ5OF5BMl5BanBnXkFtZTYwMDE4NTgz._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTM0NzIxMjQ5OF5BMl5BanBnXkFtZTYwMDE4NTgz._V1_QL80_UX360_.jpg",
+          "title": "Kyle Chandler",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/media/rm4060387840/nm0151419",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BM2ZjZDNlNDgtMjJlMy00NGRjLThlMGEtM2U4N2E4MDUwNjNmXkEyXkFqcGc@._V1_QL75_UY133_CR7,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2ZjZDNlNDgtMjJlMy00NGRjLThlMGEtM2U4N2E4MDUwNjNmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Kyle Chandler best movies",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/list/ls046430657/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjEwZDAxNDctMjU0OC00ZTgwLTlkNGUtNjE2ODk5OGQwMjRiXkEyXkFqcGc@._V1_QL75_UY133_CR1,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjEwZDAxNDctMjU0OC00ZTgwLTlkNGUtNjE2ODk5OGQwMjRiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Kyle Chandler - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/pt/name/nm0151419/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T04:43:46.588Z",
-      "checkedAt": "2026-11-22T04:43:46.588Z"
+      "updatedAt": "2026-11-22T06:42:17.533Z",
+      "checkedAt": "2026-11-22T06:42:17.533Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDQ5NjA3Iiwib2Zmc2V0IjoxMn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDQ5NjA3Iiwib2Zmc2V0IjoyNH0",
       "indexOffset": 71,
       "name": "豆瓣",
       "status": "ok",
@@ -2191,8 +2229,8 @@
           "pageUrl": "https://www.douban.com/personage/27255370/photo/2935277775/"
         }
       ],
-      "updatedAt": "2026-11-22T04:43:47.151Z",
-      "checkedAt": "2026-11-22T04:43:47.151Z"
+      "updatedAt": "2026-11-22T06:42:18.010Z",
+      "checkedAt": "2026-11-22T06:42:18.010Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3136,9 +3174,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Kyle%20Chandler%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T04:43:50.877Z",
-      "checkedAt": "2026-11-22T04:43:50.877Z"
+      "updatedAt": "2026-11-22T06:42:20.753Z",
+      "checkedAt": "2026-11-22T06:42:20.753Z"
     }
   },
-  "checkedAt": "2026-11-22T04:43:50.878Z"
+  "checkedAt": "2026-11-22T06:42:20.755Z"
 }
