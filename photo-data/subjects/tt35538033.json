@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_.jpg",
@@ -1149,11 +1147,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T05:43:16.145Z",
-      "checkedAt": "2026-11-22T05:43:16.145Z"
+      "updatedAt": "2026-11-22T07:57:57.193Z",
+      "checkedAt": "2026-11-22T07:57:57.193Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6Mjc2fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6Mjg4fQ",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1641,17 +1639,17 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp"
         }
       ],
-      "updatedAt": "2026-11-22T05:43:16.550Z",
-      "checkedAt": "2026-11-22T05:43:16.550Z",
+      "updatedAt": "2026-11-22T07:57:57.640Z",
+      "checkedAt": "2026-11-22T07:57:57.640Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "Pinterest",
-      "status": "blocked",
-      "message": "来源要求验证访问",
-      "method": "direct",
+      "status": "ok",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/64/cc/ef/64ccefc0e96a090254bd7fc6a2804448.jpg",
@@ -2194,11 +2192,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/4b/a8/3a/4ba83aca2f948fbdd0aa34e84480eebc.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4b/a8/3a/4ba83aca2f948fbdd0aa34e84480eebc.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T03:37:38.340Z",
-      "checkedAt": "2026-11-22T05:43:24.271Z"
+      "updatedAt": "2026-11-22T07:58:00.453Z",
+      "checkedAt": "2026-11-22T07:58:00.453Z"
     }
   },
-  "checkedAt": "2026-11-22T05:43:24.272Z"
+  "checkedAt": "2026-11-22T07:58:00.456Z"
 }
