@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_FMjpg_UX1000_.jpg",
@@ -557,127 +555,59 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/list/ls099558459",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZjZmN2EwMGItZjM4Mi00ZDhlLWI2MDktOGQ2MzQwMTVlNDAxXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZjZmN2EwMGItZjM4Mi00ZDhlLWI2MDktOGQ2MzQwMTVlNDAxXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Gabriel Luna Is Now Open To Returning as Ghost Rider, Even With Ryan Gosling in the Way - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66122926/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BM2Q4ZjFlMjgtOTc4Yi00YjRiLWJlOTItN2M4ODBhN2I3YmU3XkEyXkFqcGc@._V1_QL75_UX500_CR0,37,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2Q4ZjFlMjgtOTc4Yi00YjRiLWJlOTItN2M4ODBhN2I3YmU3XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Aaron Pierre on 'Lanterns,' the DC Shake-Up, and Landing a Role in Ryan Gosling's 'Star Wars ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66119765/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNzU3Yzc3ODQtNzJlNy00ZWUxLTliNzAtNzRlZDEzYWUzYjFkXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzU3Yzc3ODQtNzJlNy00ZWUxLTliNzAtNzRlZDEzYWUzYjFkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Nicolas Cage's Original Ghost Rider Replacement Addresses MCU Return Ahead Of Ryan Gosling ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66122192/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZmJkMzVkOWUtZjZmMC00NzZjLWJhOGItMjg5YzA4MzBjMTI2XkEyXkFqcGc@._V1_QL75_UX500_CR0,27,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmJkMzVkOWUtZjZmMC00NzZjLWJhOGItMjg5YzA4MzBjMTI2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Ghost Rider: Rosamund Pike & Betty Gilpin Rumored To Be In The Mix To Join Ryan Gosling In MCU ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66119962/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T10:31:15.289Z",
-      "checkedAt": "2026-11-22T10:31:15.289Z"
+      "updatedAt": "2026-11-22T12:28:12.812Z",
+      "checkedAt": "2026-11-22T12:28:12.812Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDEyNTMxIiwib2Zmc2V0Ijo2MH0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDEyNTMxIiwib2Zmc2V0Ijo3Mn0",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1545029118.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545029118.jpg",
-          "title": "2011, \"Crazy, Stupid, Love\" Promotional",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545029118/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1545029078.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545029078.jpg",
-          "title": "2011, \"Crazy, Stupid, Love\" Promotional",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545029078/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1545028995.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1545028995.jpg",
-          "title": "2011, \"Crazy, Stupid, Love\" Promotional",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545028995/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1545028879.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545028879.jpg",
-          "title": "2011, \"Crazy, Stupid, Love\" Promotional",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545028879/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1545025574.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1545025574.jpg",
-          "title": "2011, Cannes Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545025574/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1545025456.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1545025456.jpg",
-          "title": "2011, Cannes Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545025456/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1545025407.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545025407.jpg",
-          "title": "2011, Cannes Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545025407/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1545025346.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1545025346.jpg",
-          "title": "2011, Cannes Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545025346/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1545023665.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1545023665.jpg",
-          "title": "2011, Cannes Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545023665/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1545013629.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545013629.jpg",
-          "title": "2010, Sundance Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545013629/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1545013030.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545013030.jpg",
-          "title": "2010, Sundance Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545013030/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/s/public/p1545012751.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1545012751.jpg",
-          "title": "2010, Sundance Film Festival",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/1545012751/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/s/public/p1545012712.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1545012712.jpg",
@@ -1649,10 +1579,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27218223/photo/2009469897/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1588492875.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1588492875.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1588492875/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1132057277.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1132057277.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1132057277/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1380661989.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1380661989.jpg",
+          "title": "看来会是一个好爸爸",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1380661989/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p1321259411.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1321259411.jpg",
+          "title": "这个女人叫 Eva Mendes...比他大五岁！！！！！ 但是高司令说Rachel是他最爱的女人，我很欣慰",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1321259411/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1309751085.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1309751085.jpg",
+          "title": "2011, \"Crazy, Stupid, Love\" Promotional",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1309751085/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1163689335.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1163689335.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1163689335/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1134775153.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1134775153.jpg",
+          "title": "哈哈哈哈哈哈。。。。。。。。",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/1134775153/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p858798049.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p858798049.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/858798049/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p811685383.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p811685383.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/811685383/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2433032817.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2433032817.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2433032817/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2414750906.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2414750906.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2414750906/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2414750772.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2414750772.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2414750772/"
         }
       ],
-      "updatedAt": "2026-11-22T10:31:16.164Z",
-      "checkedAt": "2026-11-22T10:31:16.164Z"
+      "updatedAt": "2026-11-22T12:28:13.410Z",
+      "checkedAt": "2026-11-22T12:28:13.410Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2428,9 +2466,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Ryan%20Gosling%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T10:31:18.983Z",
-      "checkedAt": "2026-11-22T10:31:18.983Z"
+      "updatedAt": "2026-11-22T12:28:16.481Z",
+      "checkedAt": "2026-11-22T12:28:16.481Z"
     }
   },
-  "checkedAt": "2026-11-22T10:31:18.984Z"
+  "checkedAt": "2026-11-22T12:28:16.485Z"
 }
