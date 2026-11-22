@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTMwMjMxNzM4OV5BMl5BanBnXkFtZTcwNDM5NzkxMw@@._V1_.jpg",
@@ -619,125 +617,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T01:54:36.153Z",
-      "checkedAt": "2026-11-22T01:54:36.153Z"
+      "updatedAt": "2026-11-22T04:42:36.601Z",
+      "checkedAt": "2026-11-22T04:42:36.601Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDMxMjE5Iiwib2Zmc2V0IjoxMn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDMxMjE5Iiwib2Zmc2V0IjoyNH0",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2918786212.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2918786212.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2918786212/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2918786211.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2918786211.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2918786211/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2918786209.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2918786209.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2918786209/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2917475904.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2917475904.jpg",
-          "title": "《婚姻生活》",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2917475904/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2915983761.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2915983761.jpg",
-          "title": "《真相漩涡》",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2915983761/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2912699532.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2912699532.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699532/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2912699528.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2912699528.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699528/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2912699527.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2912699527.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699527/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2912699524.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2912699524.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699524/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2912699519.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2912699519.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699519/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2912699503.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2912699503.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699503/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2912699501.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2912699501.jpg",
-          "title": "Pierce Brosnan · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27236960/photo/2912699501/"
-        },
         {
           "url": "https://img2.doubanio.com/view/photo/l/public/p2912699461.jpg",
           "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2912699461.jpg",
@@ -1709,10 +1599,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27236960/photo/2158283060/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1332919074.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1332919074.jpg",
+          "title": "when he was young",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/1332919074/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1223616425.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1223616425.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/1223616425/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2153031350.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2153031350.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2153031350/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2177096263.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2177096263.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2177096263/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2613790859.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2613790859.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2613790859/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2550483657.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2550483657.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2550483657/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2546848828.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2546848828.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2546848828/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2153023834.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2153023834.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2153023834/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2153021554.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2153021554.jpg",
+          "title": "长路随行，爱你无尽！",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2153021554/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2111768214.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2111768214.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2111768214/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2510917007.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2510917007.jpg",
+          "title": "三儿子Paris Brosnan走Dolce & Gabbana",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2510917007/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2158825344.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2158825344.jpg",
+          "title": "Pierce Brosnan · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27236960/photo/2158825344/"
         }
       ],
-      "updatedAt": "2026-11-22T01:54:36.683Z",
-      "checkedAt": "2026-11-22T01:54:36.683Z"
+      "updatedAt": "2026-11-22T04:42:37.196Z",
+      "checkedAt": "2026-11-22T04:42:37.196Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2408,9 +2406,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Pierce%20Brosnan%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T01:54:39.411Z",
-      "checkedAt": "2026-11-22T01:54:39.411Z"
+      "updatedAt": "2026-11-22T04:42:39.720Z",
+      "checkedAt": "2026-11-22T04:42:39.720Z"
     }
   },
-  "checkedAt": "2026-11-22T01:54:39.417Z"
+  "checkedAt": "2026-11-22T04:42:39.721Z"
 }

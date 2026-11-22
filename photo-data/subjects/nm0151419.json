@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNTM5NDM4ODg3MV5BMl5BanBnXkFtZTcwNTA3MTk3Mw@@._V1_FMjpg_UX1000_.jpg",
@@ -1097,15 +1099,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T01:55:41.938Z",
-      "checkedAt": "2026-11-22T01:55:41.938Z"
+      "updatedAt": "2026-11-22T04:43:46.588Z",
+      "checkedAt": "2026-11-22T04:43:46.588Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDQ5NjA3Iiwib2Zmc2V0IjoxMn0",
       "indexOffset": 71,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "ok",
+      "message": "从原站读取",
       "method": "direct",
       "images": [
         {
@@ -2189,8 +2191,8 @@
           "pageUrl": "https://www.douban.com/personage/27255370/photo/2935277775/"
         }
       ],
-      "updatedAt": "2026-11-22T00:19:39.815Z",
-      "checkedAt": "2026-11-22T01:56:01.309Z"
+      "updatedAt": "2026-11-22T04:43:47.151Z",
+      "checkedAt": "2026-11-22T04:43:47.151Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3134,9 +3136,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Kyle%20Chandler%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T01:56:04.065Z",
-      "checkedAt": "2026-11-22T01:56:04.065Z"
+      "updatedAt": "2026-11-22T04:43:50.877Z",
+      "checkedAt": "2026-11-22T04:43:50.877Z"
     }
   },
-  "checkedAt": "2026-11-22T01:56:04.068Z"
+  "checkedAt": "2026-11-22T04:43:50.878Z"
 }

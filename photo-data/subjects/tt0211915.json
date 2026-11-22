@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOTNmYzY0MWQtZGZmNy00Y2Y4LWFmMDQtMTZjYTdiYzEwZGQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -987,125 +989,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T03:35:15.948Z",
-      "checkedAt": "2026-11-22T03:35:15.948Z"
+      "updatedAt": "2026-11-22T04:44:41.713Z",
+      "checkedAt": "2026-11-22T04:44:41.713Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkyMjE1Iiwib2Zmc2V0IjoxMn0",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img2.doubanio.com/view/photo/s/public/p1647771431.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1647771431.jpg",
-          "title": "Amélie",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1647771431/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1631167000.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1631167000.jpg",
-          "title": "没人觉得la patrone长得像梁龙么？！= =！！",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1631167000/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1620395855.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1620395855.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1620395855/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1620395749.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1620395749.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1620395749/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1620395656.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1620395656.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1620395656/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1620395387.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1620395387.jpg",
-          "title": "Amélie · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1620395387/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1549774227.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1549774227.jpg",
-          "title": "别致的演员表",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1549774227/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1549774135.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1549774135.jpg",
-          "title": "猫~",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1549774135/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1549774002.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1549774002.jpg",
-          "title": "有料~",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1549774002/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1549773957.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1549773957.jpg",
-          "title": "结尾了也舍不得关，法文真漂亮",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1549773957/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/s/public/p1531006446.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1531006446.jpg",
-          "title": "回归自由",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1531006446/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1531005917.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1531005917.jpg",
-          "title": "连诺",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1531005917/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/s/public/p1531005455.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1531005455.jpg",
@@ -2077,10 +1971,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2590356364/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p477619026.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p477619026.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/477619026/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996612763.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996612763.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996612763/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p456301405.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p456301405.jpg",
+          "title": "Amélie Poulain（Audrey Tautou饰）与Nino Quincampoix（Mathieu Kassovitz饰）",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/456301405/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996603183.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996603183.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996603183/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996612342.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996612342.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996612342/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p835619962.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p835619962.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/835619962/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p579091716.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p579091716.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/579091716/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p835615475.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p835615475.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/835615475/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p456301336.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p456301336.jpg",
+          "title": "Amélie Poulain（Audrey Tautou饰）",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/456301336/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p835615702.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p835615702.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/835615702/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p996603567.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p996603567.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996603567/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p996615665.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p996615665.jpg",
+          "title": "Amélie · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/996615665/"
         }
       ],
-      "updatedAt": "2026-11-22T03:35:16.378Z",
-      "checkedAt": "2026-11-22T03:35:16.378Z"
+      "updatedAt": "2026-11-22T04:44:42.086Z",
+      "checkedAt": "2026-11-22T04:44:42.086Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3220,9 +3222,9 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T03:35:19.169Z",
-      "checkedAt": "2026-11-22T03:35:19.169Z"
+      "updatedAt": "2026-11-22T04:44:44.908Z",
+      "checkedAt": "2026-11-22T04:44:44.908Z"
     }
   },
-  "checkedAt": "2026-11-22T03:35:19.172Z"
+  "checkedAt": "2026-11-22T04:44:44.909Z"
 }
