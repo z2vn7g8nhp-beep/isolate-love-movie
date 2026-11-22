@@ -13,19 +13,11 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BM2Y2YTQyZmYtMjZhYi00M2VkLTkzZTAtNjRhZTIyOTJjZmFmXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2Y2YTQyZmYtMjZhYi00M2VkLTkzZTAtNjRhZTIyOTJjZmFmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm2261741825/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMDJlNjVjMTktZDk3Mi00NGU1LThhNGYtOGZlODIwNTYwNGRjXkEyXkFqcGc@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDJlNjVjMTktZDk3Mi00NGU1LThhNGYtOGZlODIwNTYwNGRjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1215,10 +1207,20 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/news/ni64657406/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTQxMDg1Nzc0OV5BMl5BanBnXkFtZTcwODc4NTkyNw@@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTQxMDg1Nzc0OV5BMl5BanBnXkFtZTcwODc4NTkyNw@@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "人物肖像",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-22T20:28:53.420Z",
-      "checkedAt": "2026-11-22T20:28:53.420Z"
+      "updatedAt": "2026-11-22T21:28:05.014Z",
+      "checkedAt": "2026-11-22T21:28:05.014Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1229,7 +1231,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-22T20:28:55.250Z",
+      "checkedAt": "2026-11-22T21:28:06.377Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2048,9 +2050,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T20:28:58.075Z",
-      "checkedAt": "2026-11-22T20:28:58.075Z"
+      "updatedAt": "2026-11-22T21:28:09.149Z",
+      "checkedAt": "2026-11-22T21:28:09.149Z"
     }
   },
-  "checkedAt": "2026-11-22T20:28:58.077Z"
+  "checkedAt": "2026-11-22T21:28:09.152Z"
 }
