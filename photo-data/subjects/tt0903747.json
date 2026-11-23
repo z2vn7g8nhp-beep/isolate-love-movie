@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjA2Nzc4NjQzMl5BMl5BanBnXkFtZTgwODUxMjUzMDE@._V1_.jpg",
@@ -1217,16 +1219,16 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-23T09:02:37.233Z",
-      "checkedAt": "2026-11-23T09:02:37.233Z"
+      "updatedAt": "2026-11-23T10:48:04.526Z",
+      "checkedAt": "2026-11-23T10:48:04.526Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 106,
       "name": "豆瓣",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
+      "method": "direct",
       "images": [
         {
           "url": "https://img2.doubanio.com/view/photo/sqxs/public/p2534660211.jpg",
@@ -1250,7 +1252,7 @@
         }
       ],
       "updatedAt": "2026-11-23T09:02:47.191Z",
-      "checkedAt": "2026-11-23T09:02:47.191Z"
+      "checkedAt": "2026-11-23T10:48:18.036Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1260,15 +1262,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/fb/1e/41/fb1e41a6677909f99938d845ffc108f1.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/fb/1e/41/fb1e41a6677909f99938d845ffc108f1.jpg",
-          "title": "I am the one who laughs.",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585925124990/"
-        },
         {
           "url": "https://i.pinimg.com/564x/fa/eb/46/faeb462326ab639eb1128df4c154afd0.jpg",
           "thumbnail": "https://i.pinimg.com/236x/fa/eb/46/faeb462326ab639eb1128df4c154afd0.jpg",
@@ -2344,11 +2337,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/cd/14/e6/cd14e6b20afc8d8e44726e05ce6bd23c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/cd/14/e6/cd14e6b20afc8d8e44726e05ce6bd23c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-23T09:02:50.184Z",
-      "checkedAt": "2026-11-23T09:02:50.184Z"
+      "updatedAt": "2026-11-23T10:48:20.629Z",
+      "checkedAt": "2026-11-23T10:48:20.629Z"
     }
   },
-  "checkedAt": "2026-11-23T09:02:50.187Z"
+  "checkedAt": "2026-11-23T10:48:20.632Z"
 }
