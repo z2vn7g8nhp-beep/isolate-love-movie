@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -409,8 +407,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-23T09:03:57.854Z",
-      "checkedAt": "2026-11-23T09:03:57.854Z"
+      "updatedAt": "2026-11-23T12:45:51.772Z",
+      "checkedAt": "2026-11-23T12:45:51.772Z"
     },
     "douban": {
       "nextCursor": null,
@@ -421,7 +419,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-23T09:04:02.934Z",
+      "checkedAt": "2026-11-23T12:46:00.726Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1070,11 +1068,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/52/5d/5a/525d5aa1026336a9b161110477031117.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/52/5d/5a/525d5aa1026336a9b161110477031117.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-23T09:04:06.025Z",
-      "checkedAt": "2026-11-23T09:04:06.025Z"
+      "updatedAt": "2026-11-23T12:46:03.742Z",
+      "checkedAt": "2026-11-23T12:46:03.742Z"
     }
   },
-  "checkedAt": "2026-11-23T09:04:06.027Z"
+  "checkedAt": "2026-11-23T12:46:03.745Z"
 }
