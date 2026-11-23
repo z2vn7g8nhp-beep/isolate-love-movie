@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -1057,11 +1059,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-23T22:34:58.060Z",
-      "checkedAt": "2026-11-23T22:34:58.060Z"
+      "updatedAt": "2026-11-23T23:36:15.272Z",
+      "checkedAt": "2026-11-23T23:36:15.272Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6MTJ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6MjR9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1548,17 +1550,17 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-23T22:34:58.376Z",
-      "checkedAt": "2026-11-23T22:34:58.376Z",
+      "updatedAt": "2026-11-23T23:36:15.620Z",
+      "checkedAt": "2026-11-23T23:36:15.620Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/b0/3c/f2/b03cf223f32d3f55469f1498b94ca51a.png",
@@ -2351,11 +2353,51 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/28/7f/5c/287f5c9e750e7ee1496854616da8a161.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/28/7f/5c/287f5c9e750e7ee1496854616da8a161.jpg",
+          "title": "Clayface (Matthew Hagen) (Human/Mutate) (Gotham City, U.S.A.) Professional Criminal; former Treasure Hunter. Enhanced Strength. (Hagen) Temporary Shape-Shifting. Voice-Shifting. Body constituted by living mud, which he c",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/439030663645934849/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d7/a0/c2/d7a0c2e70c8d14487f372fb25d2bf7f1.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d7/a0/c2/d7a0c2e70c8d14487f372fb25d2bf7f1.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/395613148517909197/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/4f/9f/40/4f9f4098bd5eeb57c42a57e193b60a5c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/4f/9f/40/4f9f4098bd5eeb57c42a57e193b60a5c.jpg",
+          "title": "Clayface",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/102316222758479156/",
+          "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/07/2c/d3/072cd31deb2b5bbeb2d128a8bd0fa793.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/07/2c/d3/072cd31deb2b5bbeb2d128a8bd0fa793.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/19069998415495159/",
+          "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-23T22:35:01.933Z",
-      "checkedAt": "2026-11-23T22:35:01.933Z"
+      "updatedAt": "2026-11-23T23:36:23.903Z",
+      "checkedAt": "2026-11-23T23:36:23.903Z"
     }
   },
-  "checkedAt": "2026-11-23T22:35:01.934Z"
+  "checkedAt": "2026-11-23T23:36:23.904Z"
 }
