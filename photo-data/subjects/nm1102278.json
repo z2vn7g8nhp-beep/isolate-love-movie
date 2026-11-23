@@ -10,64 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMDJlNjVjMTktZDk3Mi00NGU1LThhNGYtOGZlODIwNTYwNGRjXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDJlNjVjMTktZDk3Mi00NGU1LThhNGYtOGZlODIwNTYwNGRjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm2519559425/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BOTQ1NzIwOGUtMTJjMC00MTYzLWJlY2QtODAxYjJiM2JjY2UxXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOTQ1NzIwOGUtMTJjMC00MTYzLWJlY2QtODAxYjJiM2JjY2UxXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm3327858177",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNjQ3MjljMTUtMTczZC00ODkwLWEzNzAtNTc2YjIzOTg4NTgyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjQ3MjljMTUtMTczZC00ODkwLWEzNzAtNTc2YjIzOTg4NTgyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm3447037953/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNzMyMzQ4YmMtOTJmMi00OGM5LWJhNzItM2M1MjQ5NDc4YzAxXkEyXkFqcGc@._V1_FMjpg_UY720_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzMyMzQ4YmMtOTJmMi00OGM5LWJhNzItM2M1MjQ5NDc4YzAxXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm1712850945",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjQwMjczMzY2NV5BMl5BanBnXkFtZTgwNzczNTA1OTE@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjQwMjczMzY2NV5BMl5BanBnXkFtZTgwNzczNTA1OTE@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm700779008/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTg2MDQxNDMzNV5BMl5BanBnXkFtZTgwNzMwMzY3OTE@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTg2MDQxNDMzNV5BMl5BanBnXkFtZTgwNzMwMzY3OTE@._V1_QL80_UX360_.jpg",
@@ -1217,10 +1165,60 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/name/nm1102278/",
           "retrievedVia": "public-metadata"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNDcyODAwNTMtMzJhNC00NmFiLTk0ZmMtNDU5YjZhYTdlNjBjXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDcyODAwNTMtMzJhNC00NmFiLTk0ZmMtNDU5YjZhYTdlNjBjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm804941825",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZTdjYmQ4NmMtMDg3Ny00MjdjLTgyZjQtMzlmZWY4YmRhYmI4XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTdjYmQ4NmMtMDg3Ny00MjdjLTgyZjQtMzlmZWY4YmRhYmI4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm404228097",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTU1Nzc4NjMwNl5BMl5BanBnXkFtZTgwNzY3MTg0NjM@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU1Nzc4NjMwNl5BMl5BanBnXkFtZTgwNzY3MTg0NjM@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm3528489984",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BM2Y2YTQyZmYtMjZhYi00M2VkLTkzZTAtNjRhZTIyOTJjZmFmXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2Y2YTQyZmYtMjZhYi00M2VkLTkzZTAtNjRhZTIyOTJjZmFmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm2261741825/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYmI2NGVkNzItMDBhZi00OWIyLWFkNTYtYzMxNmM5YTE1YjkwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmI2NGVkNzItMDBhZi00OWIyLWFkNTYtYzMxNmM5YTE1YjkwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm3154482946/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T23:28:22.659Z",
-      "checkedAt": "2026-11-22T23:28:22.659Z"
+      "updatedAt": "2026-11-23T02:00:20.295Z",
+      "checkedAt": "2026-11-23T02:00:20.295Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1231,7 +1229,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-22T23:28:27.525Z",
+      "checkedAt": "2026-11-23T02:00:26.754Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2048,11 +2046,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/00/68/ca/0068cafb8aee965f22b3b632799c2de8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/00/68/ca/0068cafb8aee965f22b3b632799c2de8.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
         }
       ],
-      "updatedAt": "2026-11-22T23:28:30.315Z",
-      "checkedAt": "2026-11-22T23:28:30.315Z"
+      "updatedAt": "2026-11-23T02:00:29.383Z",
+      "checkedAt": "2026-11-23T02:00:29.383Z"
     }
   },
-  "checkedAt": "2026-11-22T23:28:30.318Z"
+  "checkedAt": "2026-11-23T02:00:29.387Z"
 }
