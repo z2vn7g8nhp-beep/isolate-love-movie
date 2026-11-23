@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMzg3NDY1MTkwM15BMl5BanBnXkFtZTcwMDQ5Nzc4OQ@@._V1_FMjpg_UX1280_.jpg",
@@ -1219,12 +1217,12 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T22:28:39.552Z",
-      "checkedAt": "2026-11-22T22:28:39.552Z"
+      "updatedAt": "2026-11-23T00:27:15.240Z",
+      "checkedAt": "2026-11-23T00:27:15.240Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
@@ -1251,8 +1249,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-22T22:28:52.807Z",
-      "checkedAt": "2026-11-22T22:28:52.807Z"
+      "updatedAt": "2026-11-23T00:27:27.037Z",
+      "checkedAt": "2026-11-23T00:27:27.037Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1262,15 +1260,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/89/8c/1e/898c1eefff545f900036a2ae6a45a4bc.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/89/8c/1e/898c1eefff545f900036a2ae6a45a4bc.jpg",
-          "title": "Breaking Bad episode posters - Zsutti",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585925317454/"
-        },
         {
           "url": "https://i.pinimg.com/564x/c0/d6/83/c0d68320a7e15c268fd26d292cf41655.jpg",
           "thumbnail": "https://i.pinimg.com/236x/c0/d6/83/c0d68320a7e15c268fd26d292cf41655.jpg",
@@ -2346,11 +2335,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/0f/70/41/0f7041d2dd301bdc7d824d8bba80bbe6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/0f/70/41/0f7041d2dd301bdc7d824d8bba80bbe6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-22T22:28:55.691Z",
-      "checkedAt": "2026-11-22T22:28:55.691Z"
+      "updatedAt": "2026-11-23T00:27:29.874Z",
+      "checkedAt": "2026-11-23T00:27:29.874Z"
     }
   },
-  "checkedAt": "2026-11-22T22:28:55.695Z"
+  "checkedAt": "2026-11-23T00:27:29.879Z"
 }
