@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -997,13 +995,53 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/es-es/title/tt34890576/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYjg0MWFiN2YtNWMxYy00YTE4LTkxN2QtY2QyNWFkYTg1NWI5XkEyXkFqcGc@._V1_QL75_UY107_CR65,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjg0MWFiN2YtNWMxYy00YTE4LTkxN2QtY2QyNWFkYTg1NWI5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Clayface North America Box Office: Inches Away From Surpassing ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66123018/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjcyNzgwNDUtZTRiMi00MTVmLTk4YTQtOWNlZWU1ZGJjMWRkXkEyXkFqcGc@._V1_QL75_UY107_CR59,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjcyNzgwNDUtZTRiMi00MTVmLTk4YTQtOWNlZWU1ZGJjMWRkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "\"Clayface\" - $124 Million - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66123010/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMzQ3M2ZlMzQtZmE3YS00NjllLWJlODMtN2MwZjdjNzM1OTBiXkEyXkFqcGc@._V1_QL75_UY107_CR59,0,72,107_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzQ3M2ZlMzQtZmE3YS00NjllLWJlODMtN2MwZjdjNzM1OTBiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "'Clayface' Director James Watkins on the Tragic Ending, Joker Easter ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66081318/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMWYwNjQ4ZWMtYjY2Yy00YTYwLTg2OTYtZGI2ZDlhMjhlMTA2XkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMWYwNjQ4ZWMtYjY2Yy00YTYwLTg2OTYtZGI2ZDlhMjhlMTA2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "It's Officially The End Of An Era For DC's Clayface At The Box Office ...",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/news/ni66123514/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-23T03:42:32.574Z",
-      "checkedAt": "2026-11-23T03:42:32.574Z"
+      "updatedAt": "2026-11-23T06:51:00.428Z",
+      "checkedAt": "2026-11-23T06:51:00.428Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6NzJ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6ODR9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1490,8 +1528,8 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-23T03:42:32.955Z",
-      "checkedAt": "2026-11-23T03:42:32.955Z",
+      "updatedAt": "2026-11-23T06:51:00.836Z",
+      "checkedAt": "2026-11-23T06:51:00.836Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2268,9 +2306,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-23T03:42:36.437Z",
-      "checkedAt": "2026-11-23T03:42:36.437Z"
+      "updatedAt": "2026-11-23T06:51:04.236Z",
+      "checkedAt": "2026-11-23T06:51:04.236Z"
     }
   },
-  "checkedAt": "2026-11-23T03:42:36.444Z"
+  "checkedAt": "2026-11-23T06:51:04.238Z"
 }
