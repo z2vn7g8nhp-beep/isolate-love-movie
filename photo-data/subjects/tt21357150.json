@@ -10,54 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMDE5M2ZlMTktZTliNC00YWUxLWFjOTUtODg1OTc4OTEwNDU2XkEyXkFqcGc@._V1_FMjpg_UX480_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDE5M2ZlMTktZTliNC00YWUxLWFjOTUtODg1OTc4OTEwNDU2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Avengers: Doomsday (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt21357150/mediaviewer/rm4059917057/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMGNiN2RlZTMtMTkyZC00YjkwLTgyY2QtMDg1ZDNhODQwNWM4XkEyXkFqcGc@._V1_UY1200_CR90,0,630,1200_AL_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGNiN2RlZTMtMTkyZC00YjkwLTgyY2QtMDg1ZDNhODQwNWM4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Avengers: Doomsday (2026) - Full Cast & Crew - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/pt/title/tt21357150/fullcredits/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNDE5Y2JhM2MtZDQ1NC00NDhlLWE0NTMtMzllYWUzODUxMmU2XkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDE5Y2JhM2MtZDQ1NC00NDhlLWE0NTMtMzllYWUzODUxMmU2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Avengers: Doomsday (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt21357150/mediaviewer/rm3690818305/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BM2U5Y2EwOTctMDk4YS00ZGRhLTliMjMtMzAxNTM5ZDA0ODllXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2U5Y2EwOTctMDk4YS00ZGRhLTliMjMtMzAxNTM5ZDA0ODllXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Avengers: Doomsday (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/es/title/tt21357150/mediaviewer/rm3674041089/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BOGNjOWNlYjYtZDQ2NS00Njk1LTg1MTctOWMyZTlhOWZiZmM2XkEyXkFqcGc@._V1_FMjpg_UX2160_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BOGNjOWNlYjYtZDQ2NS00Njk1LTg1MTctOWMyZTlhOWZiZmM2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1175,53 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt21357150/",
           "retrievedVia": "public-metadata"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Avengers: Doomsday (2026) - Videos - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt21357150/videogallery/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZDgwMDkyNzUtNjU5Yy00YjBmLTg0NmYtOWQ0OWI4MDgxMWZhXkEyXkFqcGc@._V1_FMjpg_UX600_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDgwMDkyNzUtNjU5Yy00YjBmLTg0NmYtOWQ0OWI4MDgxMWZhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Avengers: Doomsday (2026)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt21357150/mediaviewer/rm583822081/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYmIzN2NhMjktMjMyZS00ZjM4LTgzZTQtN2U1NTk2NmNkNWYxXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmIzN2NhMjktMjMyZS00ZjM4LTgzZTQtN2U1NTk2NmNkNWYxXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Avengers: Doomsday (2026)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt21357150/mediaviewer/rm2206180610/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYzcxOWZiYmEtZWU1Yy00M2ZlLWExMTItN2ViMDY3NTMzMDJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzcxOWZiYmEtZWU1Yy00M2ZlLWExMTItN2ViMDY3NTMzMDJjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Avengers: Doomsday (2026)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt21357150/mediaviewer/rm912517890/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-23T17:40:03.249Z",
-      "checkedAt": "2026-11-23T17:40:03.249Z"
+      "updatedAt": "2026-11-23T19:46:06.272Z",
+      "checkedAt": "2026-11-23T19:46:06.272Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjAxMTIwMiIsIm9mZnNldCI6MzEyfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjAxMTIwMiIsIm9mZnNldCI6MzI0fQ",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt21357150/907f9d403b74d461e62fe92e.webp"
         }
       ],
-      "updatedAt": "2026-11-23T17:40:03.629Z",
-      "checkedAt": "2026-11-23T17:40:03.629Z",
+      "updatedAt": "2026-11-23T19:46:06.604Z",
+      "checkedAt": "2026-11-23T19:46:06.604Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2810,9 +2808,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Avengers%20Doomsday%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-23T17:40:05.924Z",
-      "checkedAt": "2026-11-23T17:40:05.924Z"
+      "updatedAt": "2026-11-23T19:46:09.580Z",
+      "checkedAt": "2026-11-23T19:46:09.580Z"
     }
   },
-  "checkedAt": "2026-11-23T17:40:05.927Z"
+  "checkedAt": "2026-11-23T19:46:09.584Z"
 }
