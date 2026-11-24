@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTQ0NzAwYjAtNWUxYS00NTQ5LWE5MjMtMjQwYWE4ZmRlMjBjXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
@@ -1219,15 +1217,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T04:48:17.971Z",
-      "checkedAt": "2026-11-24T04:48:17.971Z"
+      "updatedAt": "2026-11-24T08:08:14.936Z",
+      "checkedAt": "2026-11-24T08:08:14.936Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxMn0",
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "ok",
+      "message": "从原站读取",
       "method": "direct",
       "images": [
         {
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt0944947/33843911e63231510119d769.webp"
         }
       ],
-      "updatedAt": "2026-11-24T02:01:08.896Z",
-      "checkedAt": "2026-11-24T04:48:35.322Z",
+      "updatedAt": "2026-11-24T08:08:16.531Z",
+      "checkedAt": "2026-11-24T08:08:16.531Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2534,9 +2532,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Game%20of%20Thrones%202011%20stills"
         }
       ],
-      "updatedAt": "2026-11-24T04:48:37.794Z",
-      "checkedAt": "2026-11-24T04:48:37.794Z"
+      "updatedAt": "2026-11-24T08:08:19.515Z",
+      "checkedAt": "2026-11-24T08:08:19.515Z"
     }
   },
-  "checkedAt": "2026-11-24T04:48:37.796Z"
+  "checkedAt": "2026-11-24T08:08:19.517Z"
 }
