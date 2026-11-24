@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNjlmOWY0MWQtZTI1Yi00ODE3LWExNjEtM2Q3Y2U4YWNiZmU5XkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,140_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T08:08:22.833Z",
-      "checkedAt": "2026-11-24T08:08:22.833Z"
+      "updatedAt": "2026-11-24T09:51:30.490Z",
+      "checkedAt": "2026-11-24T09:51:30.490Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MjR9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6MzZ9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,28 +1711,18 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-24T08:08:23.153Z",
-      "checkedAt": "2026-11-24T08:08:23.153Z",
+      "updatedAt": "2026-11-24T09:51:31.405Z",
+      "checkedAt": "2026-11-24T09:51:31.405Z",
       "previewLimit": 48
     },
     "pinterest": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
-        {
-          "url": "https://i.pinimg.com/736x/e1/f6/10/e1f61022500c911fbf84d6e8e42174ef.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/e1/f6/10/e1f61022500c911fbf84d6e8e42174ef.jpg",
-          "title": "🎞️ Hunger Games: The Ballad of Songbirds and Snakes (2023) | Hunger games movies, Hunger games ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/74239093850766137/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/736x/e3/39/fe/e339feb2aee10fb0941299816d7f8361.jpg",
           "thumbnail": "https://i.pinimg.com/236x/e3/39/fe/e339feb2aee10fb0941299816d7f8361.jpg",
@@ -2846,11 +2838,21 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/564x/d5/f8/4d/d5f84d52672f07fb1e5f2645686aa58c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d5/f8/4d/d5f84d52672f07fb1e5f2645686aa58c.jpg",
+          "title": "Dive into The Ballad of Songbirds and Snakes Deluxe Edition by Suzanne Collins. Discover Coriolanus Snow&#8217;s thrilling journey in the Hunger Games. Order now.",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/pin/275352964713097467/",
+          "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-24T08:08:26.604Z",
-      "checkedAt": "2026-11-24T08:08:26.604Z"
+      "updatedAt": "2026-11-24T09:51:38.272Z",
+      "checkedAt": "2026-11-24T09:51:38.272Z"
     }
   },
-  "checkedAt": "2026-11-24T08:08:26.607Z"
+  "checkedAt": "2026-11-24T09:51:38.274Z"
 }
