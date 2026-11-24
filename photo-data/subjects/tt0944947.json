@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTQ0NzAwYjAtNWUxYS00NTQ5LWE5MjMtMjQwYWE4ZmRlMjBjXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
@@ -1217,15 +1219,15 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T02:01:07.464Z",
-      "checkedAt": "2026-11-24T02:01:07.464Z"
+      "updatedAt": "2026-11-24T04:48:17.971Z",
+      "checkedAt": "2026-11-24T04:48:17.971Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxNTZ9",
+      "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "ok",
-      "message": "从原站读取",
+      "status": "unavailable",
+      "message": "来源响应超时，请稍后重试",
       "method": "direct",
       "images": [
         {
@@ -1710,7 +1712,7 @@
         }
       ],
       "updatedAt": "2026-11-24T02:01:08.896Z",
-      "checkedAt": "2026-11-24T02:01:08.896Z",
+      "checkedAt": "2026-11-24T04:48:35.322Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2521,11 +2523,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Game%20of%20Thrones%202011%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/75/46/43/7546432f5afbce4c075acafb8d79d974.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/75/46/43/7546432f5afbce4c075acafb8d79d974.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Game%20of%20Thrones%202011%20stills"
         }
       ],
-      "updatedAt": "2026-11-24T02:01:11.737Z",
-      "checkedAt": "2026-11-24T02:01:11.737Z"
+      "updatedAt": "2026-11-24T04:48:37.794Z",
+      "checkedAt": "2026-11-24T04:48:37.794Z"
     }
   },
-  "checkedAt": "2026-11-24T02:01:11.740Z"
+  "checkedAt": "2026-11-24T04:48:37.796Z"
 }
