@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMDg2NjliYjEtMDg4ZC00YjIyLWE5NzgtNzAxZGM5MDI1MTAxXkEyXkFqcGc@._V1_.jpg",
@@ -1217,12 +1219,12 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T14:41:00.623Z",
-      "checkedAt": "2026-11-24T14:41:00.623Z"
+      "updatedAt": "2026-11-24T15:49:13.129Z",
+      "checkedAt": "2026-11-24T15:49:13.129Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
@@ -1249,8 +1251,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T14:41:14.646Z",
-      "checkedAt": "2026-11-24T14:41:14.646Z"
+      "updatedAt": "2026-11-24T15:49:26.516Z",
+      "checkedAt": "2026-11-24T15:49:26.516Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1260,15 +1262,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/53/bf/35/53bf35934e15185ce9052481d30249cf.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/53/bf/35/53bf35934e15185ce9052481d30249cf.jpg",
-          "title": "28 Times \"Breaking Bad\" Was Really Fucking Funny",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585924837751/"
-        },
         {
           "url": "https://i.pinimg.com/564x/5c/e3/c4/5ce3c438427398b197add851a623a7ad.jpg",
           "thumbnail": "https://i.pinimg.com/236x/5c/e3/c4/5ce3c438427398b197add851a623a7ad.jpg",
@@ -2344,11 +2337,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/96/d8/77/96d87732fb011171e6233fb0415d64a6.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/96/d8/77/96d87732fb011171e6233fb0415d64a6.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-24T14:41:17.629Z",
-      "checkedAt": "2026-11-24T14:41:17.629Z"
+      "updatedAt": "2026-11-24T15:49:29.780Z",
+      "checkedAt": "2026-11-24T15:49:29.780Z"
     }
   },
-  "checkedAt": "2026-11-24T14:41:17.634Z"
+  "checkedAt": "2026-11-24T15:49:29.783Z"
 }
