@@ -10,54 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTkzNTA1MDI5M15BMl5BanBnXkFtZTcwNTY3NjAwOQ@@._V1_QL75_UY133_CR0,0,90,133_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTkzNTA1MDI5M15BMl5BanBnXkFtZTcwNTY3NjAwOQ@@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjI2Mzc5Mzg2MV5BMl5BanBnXkFtZTgwNTYyNDkyOTE@._V1_QL75_UX90_CR0,0,90,133_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjI2Mzc5Mzg2MV5BMl5BanBnXkFtZTgwNTYyNDkyOTE@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNDg1NjcxNzk5NV5BMl5BanBnXkFtZTgwNzcwMzY3OTE@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDg1NjcxNzk5NV5BMl5BanBnXkFtZTgwNzcwMzY3OTE@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm1406339328",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTY5ODc3NDExOF5BMl5BanBnXkFtZTgwMjI0MzU5OTE@._V1_FMjpg_UX800_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTY5ODc3NDExOF5BMl5BanBnXkFtZTgwMjI0MzU5OTE@._V1_QL80_UX360_.jpg",
-          "title": "Antony Starr",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm1102278/mediaviewer/rm3283488512",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZDY0ZDQzYjQtZDVhZS00MmIwLTg3NTQtZTUzMjdiYzQ3ZGJiXkEyXkFqcGc@._V1_QL75_UY281_CR31,0,500,281_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDY0ZDQzYjQtZDVhZS00MmIwLTg3NTQtZTUzMjdiYzQ3ZGJiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,10 +1175,50 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/name/nm1102278/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNGQ2YzRkYmYtN2M0Ni00YzdmLThkZTYtMzc5OTAwZTY0N2ZiXkEyXkFqcGc@._V1_QL75_UX90_CR0,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGQ2YzRkYmYtN2M0Ni00YzdmLThkZTYtMzc5OTAwZTY0N2ZiXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNGExZDcyNzAtN2M2YS00YmRjLWEwMWEtZTdmNWYxOWQ0NThkXkEyXkFqcGc@._V1_QL75_UY133_CR0,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGExZDcyNzAtN2M2YS00YmRjLWEwMWEtZTdmNWYxOWQ0NThkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm1102278/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTY0YjhiNGMtZjQzZS00NTJhLWEwZTEtMjMxM2ZhM2VlMTZhXkEyXkFqcGc@._V1_QL75_UY133_CR1,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTY0YjhiNGMtZjQzZS00NTJhLWEwZTEtMjMxM2ZhM2VlMTZhXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/de/name/nm1102278/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZmU1NWNlZjQtNGExNS00NWQ1LWE1ZGQtYTk0YTEwOWFkMjNkXkEyXkFqcGc@._V1_QL75_UY133_CR2,0,90,133_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmU1NWNlZjQtNGExNS00NWQ1LWE1ZGQtYTk0YTEwOWFkMjNkXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Antony Starr - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/pt/name/nm1102278/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T17:34:41.864Z",
-      "checkedAt": "2026-11-24T17:34:41.864Z"
+      "updatedAt": "2026-11-24T19:46:24.611Z",
+      "checkedAt": "2026-11-24T19:46:24.611Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1231,7 +1229,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-24T17:34:43.254Z",
+      "checkedAt": "2026-11-24T19:46:26.330Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2068,9 +2066,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
         }
       ],
-      "updatedAt": "2026-11-24T17:34:46.233Z",
-      "checkedAt": "2026-11-24T17:34:46.233Z"
+      "updatedAt": "2026-11-24T19:46:29.002Z",
+      "checkedAt": "2026-11-24T19:46:29.002Z"
     }
   },
-  "checkedAt": "2026-11-24T17:34:46.235Z"
+  "checkedAt": "2026-11-24T19:46:29.003Z"
 }
