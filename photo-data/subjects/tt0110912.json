@@ -10,24 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZGI3Nzg2ZmMtNzU4ZS00MGNkLTg1M2ItNTRhNWJkZjllMzU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGI3Nzg2ZmMtNzU4ZS00MGNkLTg1M2ItNTRhNWJkZjllMzU3XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Pulp Fiction (1994)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0110912/mediaviewer/rm1328221697",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmYzNGJlMmMtMGZjYy00MWQ1LTg2MTYtYjgyMmZiYTZiMzU5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmYzNGJlMmMtMGZjYy00MWQ1LTg2MTYtYjgyMmZiYTZiMzU5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,127 +1205,29 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0110912/mediaviewer/rm1819687169/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BOWJiNDFhYjMtMjJmMC00ZTE5LTg1MDUtYzRjMGM3NTE4NDEwXkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWJiNDFhYjMtMjJmMC00ZTE5LTg1MDUtYzRjMGM3NTE4NDEwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Pulp Fiction (1994)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0110912/mediaviewer/rm1513883905",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T15:48:32.944Z",
-      "checkedAt": "2026-11-24T15:48:32.944Z"
+      "updatedAt": "2026-11-24T18:36:20.025Z",
+      "checkedAt": "2026-11-24T18:36:20.025Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxODMyIiwib2Zmc2V0Ijo2MH0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMjkxODMyIiwib2Zmc2V0Ijo3Mn0",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2872551452.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2872551452.jpg",
-          "title": "Pulp Fiction · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2872551452/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2872551451.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2872551451.jpg",
-          "title": "Pulp Fiction · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2872551451/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2872551450.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2872551450.jpg",
-          "title": "Pulp Fiction · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2872551450/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2872551416.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2872551416.jpg",
-          "title": "Pulp Fiction · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2872551416/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2872551393.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2872551393.jpg",
-          "title": "Pulp Fiction · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2872551393/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1590254867.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1590254867.jpg",
-          "title": "我翻译了一下",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1590254867/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2211746950.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2211746950.jpg",
-          "title": "《Modesty Blaise》（喂鸡百科：http://en.wikipedia.org/wiki/Modesty_Blaise）文生手上这本是1965年美国首版，硬皮精装毛边。比较特别的是这本是book club edition，封面沿用了当年Jim Holdaway在报刊上连载的漫画。",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2211746950/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1722339152.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1722339152.jpg",
-          "title": "昆汀蜀黍太坏了",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1722339152/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2526211173.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2526211173.jpg",
-          "title": "海贼王人物原型",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2526211173/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2006977793.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2006977793.jpg",
-          "title": "【习奥版】作死神cos",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2006977793/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/s/public/p1250774131.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1250774131.jpg",
-          "title": "网上看到的剧情分析图 很好很强大",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1250774131/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/s/public/p1655367618.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1655367618.jpg",
-          "title": "没人觉得他俩长得像吗？",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/1655367618/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/s/public/p948051179.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p948051179.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/1568034282/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1568032173.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1568032173.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1568032173/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p1568029501.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p1568029501.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1568029501/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1069813102.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1069813102.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1069813102/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p545187274.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p545187274.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/545187274/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p545186844.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p545186844.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/545186844/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1568038685.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1568038685.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1568038685/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1568036877.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1568036877.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1568036877/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1568031935.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1568031935.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/1568031935/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p545190129.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p545190129.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/545190129/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p545187864.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p545187864.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/545187864/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p545185948.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p545185948.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/545185948/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2872551838.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2872551838.jpg",
+          "title": "Pulp Fiction · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2872551838/"
         }
       ],
-      "updatedAt": "2026-11-24T15:48:34.673Z",
-      "checkedAt": "2026-11-24T15:48:34.673Z"
+      "updatedAt": "2026-11-24T18:36:20.417Z",
+      "checkedAt": "2026-11-24T18:36:20.417Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2758,9 +2756,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Pulp%20Fiction%201994%20stills"
         }
       ],
-      "updatedAt": "2026-11-24T15:48:37.681Z",
-      "checkedAt": "2026-11-24T15:48:37.681Z"
+      "updatedAt": "2026-11-24T18:36:23.347Z",
+      "checkedAt": "2026-11-24T18:36:23.347Z"
     }
   },
-  "checkedAt": "2026-11-24T15:48:37.683Z"
+  "checkedAt": "2026-11-24T18:36:23.348Z"
 }
