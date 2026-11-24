@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNTcxMmIzYjMtZjMwNi00MWRlLWJjMTQtY2Q3ODc4YTc0ZTZjXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTcxMmIzYjMtZjMwNi00MWRlLWJjMTQtY2Q3ODc4YTc0ZTZjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games (2012)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm302092801/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNGZkYWM4MjgtNDgzOS00MGYxLTg1MmQtOTQ3NzhkYjA4ODVmXkEyXkFqcGc@._V1_FMjpg_UX600_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGZkYWM4MjgtNDgzOS00MGYxLTg1MmQtOTQ3NzhkYjA4ODVmXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games (2012)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm3762071808/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_QL75_UX90_CR0,0,90,133_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_QL80_UX360_.jpg",
@@ -1217,13 +1195,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/it/news/ni62736692/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTkxOWYzMzUtNDdjOC00Y2IxLWJhNmEtOTE0NmJhNDU4OThlXkEyXkFqcGc@._V1_FMjpg_UX320_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTkxOWYzMzUtNDdjOC00Y2IxLWJhNmEtOTE0NmJhNDU4OThlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games (2012)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm4161224705/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYTJmZDllOGYtZWYzMy00YTc2LWI5Y2UtODNkNTBmMDQ2MmYwXkEyXkFqcGc@._V1_FMjpg_UX480_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTJmZDllOGYtZWYzMy00YTc2LWI5Y2UtODNkNTBmMDQ2MmYwXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games (2012)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1392170/mediaviewer/rm1481785088",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T00:34:41.968Z",
-      "checkedAt": "2026-11-24T00:34:41.968Z"
+      "updatedAt": "2026-11-24T03:40:05.971Z",
+      "checkedAt": "2026-11-24T03:40:05.971Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNTkyODUzIiwib2Zmc2V0IjoxMzJ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNTkyODUzIiwib2Zmc2V0IjoxNDR9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt1392170/464332d26f1a73ee00def79d.webp"
         }
       ],
-      "updatedAt": "2026-11-24T00:34:42.331Z",
-      "checkedAt": "2026-11-24T00:34:42.331Z",
+      "updatedAt": "2026-11-24T03:40:06.377Z",
+      "checkedAt": "2026-11-24T03:40:06.377Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2228,9 +2226,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%202012%20stills"
         }
       ],
-      "updatedAt": "2026-11-24T00:34:44.541Z",
-      "checkedAt": "2026-11-24T00:34:44.541Z"
+      "updatedAt": "2026-11-24T03:40:08.815Z",
+      "checkedAt": "2026-11-24T03:40:08.815Z"
     }
   },
-  "checkedAt": "2026-11-24T00:34:44.542Z"
+  "checkedAt": "2026-11-24T03:40:08.816Z"
 }
