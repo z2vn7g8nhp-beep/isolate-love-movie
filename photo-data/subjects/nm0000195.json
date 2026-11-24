@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTkyNTc2NjIzNF5BMl5BanBnXkFtZTYwMjQ0NDIz._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-23T23:35:38.824Z",
-      "checkedAt": "2026-11-23T23:35:38.824Z"
+      "updatedAt": "2026-11-24T01:58:59.432Z",
+      "checkedAt": "2026-11-24T01:58:59.432Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTA4Iiwib2Zmc2V0IjoyNH0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTA4Iiwib2Zmc2V0IjozNn0",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2918282548.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2918282548.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2918282548/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2871309580.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2871309580.jpg",
-          "title": "丧尸乐园2,我讨厌周一",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309580/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2871309578.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2871309578.jpg",
-          "title": "丧尸乐园2,下午好啊小姐",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309578/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2871309574.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2871309574.jpg",
-          "title": "丧尸乐园2,我才不怕鬼",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309574/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2871309573.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2871309573.jpg",
-          "title": "丧尸乐园2",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309573/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2871309572.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2871309572.jpg",
-          "title": "丧尸乐园2,哕",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309572/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2871309571.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2871309571.jpg",
-          "title": "丧尸乐园2,旁边主持人吐了",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309571/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2871309566.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2871309566.jpg",
-          "title": "丧尸乐园2.看土拨鼠之日认识他的,我都不知道他已经老了,还以为是十年前的电影,殊不知已经是28年前的事了",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871309566/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2871042994.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2871042994.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2871042994/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2870940861.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2870940861.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2870940861/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2623228962.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2623228962.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2623228962/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2558019371.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2558019371.jpg",
-          "title": "Bill Murray attends the photocall for \"The Dead Don't Die\" during the 72nd annual Cannes Film Festival on May 15, 2019 in Cannes, France. (May 14, 2019 - Source: Getty Images Europe)",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2558019371/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2558019259.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2558019259.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27260275/photo/2019033034/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1553240385.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1553240385.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/1553240385/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133809.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133809.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133809/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p643133196.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p643133196.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133196/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2169353598.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2169353598.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2169353598/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2166922031.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2166922031.jpg",
+          "title": "Bill Murray 在 Reddit 做 AMA（Ask Me Anything），为了证明是他本人，上传了一张很酷的照片。http://www.reddit.com/r/IAmA/comments/1vhjag/bill_murray_here_ok_ill_talk_ill_talk/",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2166922031/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/s/public/p643133741.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/s/public/p643133741.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133741/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133338.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133338.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133338/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2542756043.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542756043.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542756043/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2542756019.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542756019.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542756019/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2542756013.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542756013.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542756013/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2493320392.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2493320392.jpg",
+          "title": "美国范伟",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2493320392/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2327376669.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2327376669.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2327376669/"
         }
       ],
-      "updatedAt": "2026-11-23T23:35:39.363Z",
-      "checkedAt": "2026-11-23T23:35:39.363Z"
+      "updatedAt": "2026-11-24T01:58:59.930Z",
+      "checkedAt": "2026-11-24T01:58:59.930Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3452,9 +3450,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
         }
       ],
-      "updatedAt": "2026-11-23T23:35:41.596Z",
-      "checkedAt": "2026-11-23T23:35:41.596Z"
+      "updatedAt": "2026-11-24T01:59:03.020Z",
+      "checkedAt": "2026-11-24T01:59:03.020Z"
     }
   },
-  "checkedAt": "2026-11-23T23:35:41.599Z"
+  "checkedAt": "2026-11-24T01:59:03.027Z"
 }
