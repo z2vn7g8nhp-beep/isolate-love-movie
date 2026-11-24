@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTkyNTc2NjIzNF5BMl5BanBnXkFtZTYwMjQ0NDIz._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T03:41:36.400Z",
-      "checkedAt": "2026-11-24T03:41:36.400Z"
+      "updatedAt": "2026-11-24T06:40:31.636Z",
+      "checkedAt": "2026-11-24T06:40:31.636Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTA4Iiwib2Zmc2V0Ijo0OH0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDU0NTA4Iiwib2Zmc2V0Ijo2MH0",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2542756010.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542756010.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542756010/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2542583249.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542583249.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583249/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2542583248.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542583248.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583248/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2542583247.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542583247.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583247/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2542583246.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2542583246.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583246/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2539078035.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2539078035.jpg",
-          "title": "Bill Murray attends the American Film Institute's 46th Life Achievement Award Gala Tribute to George Clooney at Dolby Theatre on June 7, 2018 in Hollywood, California. 389980 (June 6, 2018 - Source: Frazer Harrison/Getty",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2539078035/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2539078034.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2539078034.jpg",
-          "title": "Bill Murray attends the American Film Institute's 46th Life Achievement Award Gala Tribute to George Clooney at Dolby Theatre on June 7, 2018 in Hollywood, California. 389980 (June 6, 2018 - Source: Frazer Harrison/Getty",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2539078034/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2539078032.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2539078032.jpg",
-          "title": "Bill Murray attends the American Film Institute's 46th Life Achievement Award Gala Tribute to George Clooney at Dolby Theatre on June 7, 2018 in Hollywood, California. 389980 (June 6, 2018 - Source: Frazer Harrison/Getty",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2539078032/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2511759655.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2511759655.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2511759655/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2327374470.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2327374470.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2327374470/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2244695659.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2244695659.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2244695659/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2200053521.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2200053521.jpg",
-          "title": "Bill Murray · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27260275/photo/2200053521/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2199108296.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2199108296.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27260275/photo/643133864/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p643133574.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p643133574.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133574/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643133263.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643133263.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/643133263/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2623228961.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2623228961.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2623228961/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2558019289.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2558019289.jpg",
+          "title": "Bill Murray attends the press conference for \"The Dead Don't Die\" during the 72nd annual Cannes Film Festival on May 15, 2019 in Cannes, France. (May 14, 2019 - Source: Getty Images Europe)",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2558019289/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2542756012.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542756012.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542756012/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2542583252.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542583252.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583252/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2542583250.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2542583250.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583250/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2542583245.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2542583245.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2542583245/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2444868519.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2444868519.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2444868519/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2355009383.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2355009383.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2355009383/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2327374814.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2327374814.jpg",
+          "title": "Bill Murray · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2327374814/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2223973705.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2223973705.jpg",
+          "title": "比尔·默瑞 Bill Murray",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27260275/photo/2223973705/"
         }
       ],
-      "updatedAt": "2026-11-24T03:41:36.898Z",
-      "checkedAt": "2026-11-24T03:41:36.898Z"
+      "updatedAt": "2026-11-24T06:40:32.620Z",
+      "checkedAt": "2026-11-24T06:40:32.620Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3451,9 +3449,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Bill%20Murray%20portrait"
         }
       ],
-      "updatedAt": "2026-11-24T03:41:39.406Z",
-      "checkedAt": "2026-11-24T03:41:39.406Z"
+      "updatedAt": "2026-11-24T06:40:35.264Z",
+      "checkedAt": "2026-11-24T06:40:35.264Z"
     }
   },
-  "checkedAt": "2026-11-24T03:41:39.409Z"
+  "checkedAt": "2026-11-24T06:40:35.266Z"
 }
