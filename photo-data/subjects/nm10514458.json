@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -409,8 +407,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-24T21:40:00.584Z",
-      "checkedAt": "2026-11-24T21:40:00.584Z"
+      "updatedAt": "2026-11-24T23:34:31.296Z",
+      "checkedAt": "2026-11-24T23:34:31.296Z"
     },
     "douban": {
       "nextCursor": null,
@@ -421,7 +419,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-24T21:40:03.314Z",
+      "checkedAt": "2026-11-24T23:34:38.005Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1088,11 +1086,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/3a/08/7a/3a087a598f1972dfa5f4b028b7b99714.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/3a/08/7a/3a087a598f1972dfa5f4b028b7b99714.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-24T21:40:05.935Z",
-      "checkedAt": "2026-11-24T21:40:05.935Z"
+      "updatedAt": "2026-11-24T23:34:40.939Z",
+      "checkedAt": "2026-11-24T23:34:40.939Z"
     }
   },
-  "checkedAt": "2026-11-24T21:40:05.937Z"
+  "checkedAt": "2026-11-24T23:34:40.942Z"
 }
