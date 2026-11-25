@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjEyMzcxNTM5NV5BMl5BanBnXkFtZTcwMDAxOTM4NQ@@._V1_.jpg",
@@ -1217,16 +1219,16 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T16:46:13.650Z",
-      "checkedAt": "2026-11-25T16:46:13.650Z"
+      "updatedAt": "2026-11-25T18:32:23.054Z",
+      "checkedAt": "2026-11-25T18:32:23.054Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
-      "method": "direct",
+      "status": "ok",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://img2.doubanio.com/view/photo/sqxs/public/p2534660211.jpg",
@@ -1249,8 +1251,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T12:52:17.274Z",
-      "checkedAt": "2026-11-25T16:46:27.563Z"
+      "updatedAt": "2026-11-25T18:32:25.220Z",
+      "checkedAt": "2026-11-25T18:32:25.220Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1260,15 +1262,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/04/58/3b/04583bbdce93ef735c40d27bb267ccf5.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/04/58/3b/04583bbdce93ef735c40d27bb267ccf5.jpg",
-          "title": "If Breaking Bad&#8217;s Cast Of Criminals Were Arrested. . . #infographic",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585923867434/"
-        },
         {
           "url": "https://i.pinimg.com/564x/b1/93/68/b1936803892ad064ec437227a8338ee3.jpg",
           "thumbnail": "https://i.pinimg.com/236x/b1/93/68/b1936803892ad064ec437227a8338ee3.jpg",
@@ -2344,11 +2337,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/81/87/c6/8187c646149a76541225231673b3b284.png",
+          "thumbnail": "https://i.pinimg.com/236x/81/87/c6/8187c646149a76541225231673b3b284.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-25T16:46:30.116Z",
-      "checkedAt": "2026-11-25T16:46:30.116Z"
+      "updatedAt": "2026-11-25T18:32:27.520Z",
+      "checkedAt": "2026-11-25T18:32:27.520Z"
     }
   },
-  "checkedAt": "2026-11-25T16:46:30.119Z"
+  "checkedAt": "2026-11-25T18:32:27.522Z"
 }
