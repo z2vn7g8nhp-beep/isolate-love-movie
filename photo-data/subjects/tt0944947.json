@@ -13,19 +13,11 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTU1ODAyMzg1Nl5BMl5BanBnXkFtZTgwODUxOTIxOTE@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU1ODAyMzg1Nl5BMl5BanBnXkFtZTgwODUxOTIxOTE@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm1087903232",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTk2NjExNTY4OV5BMl5BanBnXkFtZTgwOTkzODMzMzI@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTk2NjExNTY4OV5BMl5BanBnXkFtZTgwOTkzODMzMzI@._V1_QL80_UX360_.jpg",
@@ -1215,13 +1207,23 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0944947/mediaindex/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNGYxOGJkMjItZjVkZC00OGEzLWExNjktOTZmNGZhZmRlMTk2XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGYxOGJkMjItZjVkZC00OGEzLWExNjktOTZmNGZhZmRlMTk2XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-25T04:51:10.587Z",
-      "checkedAt": "2026-11-25T04:51:10.587Z"
+      "updatedAt": "2026-11-25T06:43:09.221Z",
+      "checkedAt": "2026-11-25T06:43:09.221Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxMn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoyNH0",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt0944947/33843911e63231510119d769.webp"
         }
       ],
-      "updatedAt": "2026-11-25T04:51:12.452Z",
-      "checkedAt": "2026-11-25T04:51:12.452Z",
+      "updatedAt": "2026-11-25T06:43:11.204Z",
+      "checkedAt": "2026-11-25T06:43:11.204Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2604,9 +2606,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Game%20of%20Thrones%202011%20stills"
         }
       ],
-      "updatedAt": "2026-11-25T04:51:15.809Z",
-      "checkedAt": "2026-11-25T04:51:15.809Z"
+      "updatedAt": "2026-11-25T06:43:14.140Z",
+      "checkedAt": "2026-11-25T06:43:14.140Z"
     }
   },
-  "checkedAt": "2026-11-25T04:51:15.813Z"
+  "checkedAt": "2026-11-25T06:43:14.142Z"
 }

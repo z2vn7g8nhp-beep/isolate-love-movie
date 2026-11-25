@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BM2Q5MWU0ZmItMjE4YS00NmM3LWFmYjMtZTJiNjZkZDVlMTBjXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2Q5MWU0ZmItMjE4YS00NmM3LWFmYjMtZTJiNjZkZDVlMTBjXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Resident Evil (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt35538033/mediaviewer/rm18713602/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMDA5MTZlZDEtYzhiYi00MWIyLWI1NWMtNTA0OGY4NWI5ZGVlXkEyXkFqcGc@._V1_QL75_UY207_CR13,0,140,207_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDA5MTZlZDEtYzhiYi00MWIyLWI1NWMtNTA0OGY4NWI5ZGVlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Resident Evil (2026) - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt35538033",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYjU3ZGQ3NDEtM2EwNy00M2ZmLWFlOTItMGZkNjI5YWNkNzE1XkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjU3ZGQ3NDEtM2EwNy00M2ZmLWFlOTItMGZkNjI5YWNkNzE1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1195,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/de/title/tt35538033/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZjY2ZTNmYzEtOGQxMy00OTI1LWE4YWMtY2I5ZDFkYjcyZDA3XkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZjY2ZTNmYzEtOGQxMy00OTI1LWE4YWMtY2I5ZDFkYjcyZDA3XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Resident Evil (2026) - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt35538033/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjk4MzIyNWItZmY1Ni00OTEyLThiMDgtYjYxMzNkMDRmZjQ5XkEyXkFqcGc@._V1_QL75_UY140_CR35,0,140,140_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjk4MzIyNWItZmY1Ni00OTEyLThiMDgtYjYxMzNkMDRmZjQ5XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Resident Evil (2026) - IMDb",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt35538033/?pubDate=20250713",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:05.204Z",
-      "checkedAt": "2026-11-25T03:43:05.204Z"
+      "updatedAt": "2026-11-25T06:41:15.402Z",
+      "checkedAt": "2026-11-25T06:41:15.402Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6MjY0fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzA2ODQ0NiIsIm9mZnNldCI6Mjc2fQ",
       "indexOffset": 36,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt35538033/7596c9b5d716d981ef561d19.webp"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:05.587Z",
-      "checkedAt": "2026-11-25T03:43:05.587Z",
+      "updatedAt": "2026-11-25T06:41:15.814Z",
+      "checkedAt": "2026-11-25T06:41:15.814Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2338,9 +2336,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Resident%20Evil%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:08.049Z",
-      "checkedAt": "2026-11-25T03:43:08.049Z"
+      "updatedAt": "2026-11-25T06:41:18.453Z",
+      "checkedAt": "2026-11-25T06:41:18.453Z"
     }
   },
-  "checkedAt": "2026-11-25T03:43:08.050Z"
+  "checkedAt": "2026-11-25T06:41:18.454Z"
 }

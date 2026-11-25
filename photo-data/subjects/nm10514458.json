@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -409,8 +407,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T03:42:52.613Z",
-      "checkedAt": "2026-11-25T03:42:52.613Z"
+      "updatedAt": "2026-11-25T06:41:01.224Z",
+      "checkedAt": "2026-11-25T06:41:01.224Z"
     },
     "douban": {
       "nextCursor": null,
@@ -421,7 +419,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-25T03:42:58.224Z",
+      "checkedAt": "2026-11-25T06:41:09.379Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1124,11 +1122,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f8/a8/65/f8a86587671dcd066de01a7bf1b51a28.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f8/a8/65/f8a86587671dcd066de01a7bf1b51a28.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:00.828Z",
-      "checkedAt": "2026-11-25T03:43:00.828Z"
+      "updatedAt": "2026-11-25T06:41:12.281Z",
+      "checkedAt": "2026-11-25T06:41:12.281Z"
     }
   },
-  "checkedAt": "2026-11-25T03:43:00.829Z"
+  "checkedAt": "2026-11-25T06:41:12.283Z"
 }

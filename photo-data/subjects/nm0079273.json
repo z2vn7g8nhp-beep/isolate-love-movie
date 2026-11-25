@@ -10,74 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMzE5NzA2NzQxNl5BMl5BanBnXkFtZTgwMjU2NDE2ODE@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzE5NzA2NzQxNl5BMl5BanBnXkFtZTgwMjU2NDE2ODE@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm3037404160",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNDVmNGMzMWQtOGRjNi00NDAwLThjMmEtMThiZjI1OWEyYTA0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDVmNGMzMWQtOGRjNi00NDAwLThjMmEtMThiZjI1OWEyYTA0XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany - IMDb",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjIzNDA0NjkzNV5BMl5BanBnXkFtZTgwOTAzNzc1NTM@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjIzNDA0NjkzNV5BMl5BanBnXkFtZTgwOTAzNzc1NTM@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm2751742464",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTU4MjQzODE0OV5BMl5BanBnXkFtZTgwMjEzNzc1NTM@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU4MjQzODE0OV5BMl5BanBnXkFtZTgwMjEzNzc1NTM@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm2701410816/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjA2MDQyNDQ2M15BMl5BanBnXkFtZTcwNjcwMTQxMw@@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjA2MDQyNDQ2M15BMl5BanBnXkFtZTcwNjcwMTQxMw@@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm2229243648",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjM4MDA3MTgwM15BMl5BanBnXkFtZTgwNTE5MzUyMDI@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjM4MDA3MTgwM15BMl5BanBnXkFtZTgwNTE5MzUyMDI@._V1_QL80_UX360_.jpg",
-          "title": "Paul Bettany",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm3930391040",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMzQxNzAzNDMxMV5BMl5BanBnXkFtZTcwNjk0NjgzNA@@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzQxNzAzNDMxMV5BMl5BanBnXkFtZTcwNjk0NjgzNA@@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1155,73 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/media/rm1339602944/nm0079273",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjA1NTMwODY2NF5BMl5BanBnXkFtZTcwNzM4MTY0NA@@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjA1NTMwODY2NF5BMl5BanBnXkFtZTcwNzM4MTY0NA@@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/media/rm3534797312/nm0079273",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNjUzMDIzNjkxMl5BMl5BanBnXkFtZTgwNjgyNzA0MjI@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjUzMDIzNjkxMl5BMl5BanBnXkFtZTgwNjgyNzA0MjI@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm1578445312/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTM1NTgwODI0NF5BMl5BanBnXkFtZTcwNTg0NjgzNA@@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTM1NTgwODI0NF5BMl5BanBnXkFtZTcwNTg0NjgzNA@@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm1831830784",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BNTc2MjU5MzU3Ml5BMl5BanBnXkFtZTgwMDgwNDg3NDM@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTc2MjU5MzU3Ml5BMl5BanBnXkFtZTgwMDgwNDg3NDM@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany Through the Years",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/star-wars/paul-bettany-through-the-years/rg1151703808/mediaviewer/rm607802880",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTU3NDMwNDY2MF5BMl5BanBnXkFtZTgwMzEzNzc1NTM@._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU3NDMwNDY2MF5BMl5BanBnXkFtZTgwMzEzNzc1NTM@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm2684633600/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BZmNjYjJlMTgtOTlmNC00Y2EyLTk2OGQtNjk5OTg1ZTJhNzQ4XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmNjYjJlMTgtOTlmNC00Y2EyLTk2OGQtNjk5OTg1ZTJhNzQ4XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Paul Bettany",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/name/nm0079273/mediaviewer/rm3677139713/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:39.905Z",
-      "checkedAt": "2026-11-25T03:43:39.905Z"
+      "updatedAt": "2026-11-25T06:41:48.692Z",
+      "checkedAt": "2026-11-25T06:41:48.692Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0Ijo0OTJ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDAzNDgyIiwib2Zmc2V0Ijo1MDR9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm0079273/58a5713edbf7f773cc65455b.webp"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:40.448Z",
-      "checkedAt": "2026-11-25T03:43:40.448Z",
+      "updatedAt": "2026-11-25T06:41:49.182Z",
+      "checkedAt": "2026-11-25T06:41:49.182Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2472,9 +2470,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Paul%20Bettany%20portrait"
         }
       ],
-      "updatedAt": "2026-11-25T03:43:42.877Z",
-      "checkedAt": "2026-11-25T03:43:42.877Z"
+      "updatedAt": "2026-11-25T06:41:51.748Z",
+      "checkedAt": "2026-11-25T06:41:51.748Z"
     }
   },
-  "checkedAt": "2026-11-25T03:43:42.878Z"
+  "checkedAt": "2026-11-25T06:41:51.753Z"
 }
