@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -407,8 +409,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T11:41:11.612Z",
-      "checkedAt": "2026-11-25T11:41:11.612Z"
+      "updatedAt": "2026-11-25T12:53:20.404Z",
+      "checkedAt": "2026-11-25T12:53:20.404Z"
     },
     "douban": {
       "nextCursor": null,
@@ -419,7 +421,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-25T11:41:20.040Z",
+      "checkedAt": "2026-11-25T12:53:28.920Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1131,11 +1133,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/14/57/1c/14571c704e790e09d5b500cd5a5b4a9c.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/14/57/1c/14571c704e790e09d5b500cd5a5b4a9c.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-25T11:41:22.478Z",
-      "checkedAt": "2026-11-25T11:41:22.478Z"
+      "updatedAt": "2026-11-25T12:53:31.735Z",
+      "checkedAt": "2026-11-25T12:53:31.735Z"
     }
   },
-  "checkedAt": "2026-11-25T11:41:22.480Z"
+  "checkedAt": "2026-11-25T12:53:31.737Z"
 }
