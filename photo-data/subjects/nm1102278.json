@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjE0MTg3ODYxOV5BMl5BanBnXkFtZTgwNzA4NTQ2OTE@._V1_.jpg",
@@ -1217,8 +1219,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T21:42:39.471Z",
-      "checkedAt": "2026-11-25T21:42:39.471Z"
+      "updatedAt": "2026-11-25T22:43:07.334Z",
+      "checkedAt": "2026-11-25T22:43:07.334Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1229,7 +1231,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-25T21:42:40.812Z",
+      "checkedAt": "2026-11-25T22:43:10.501Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1240,26 +1242,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/41/83/ce/4183ce3881abfb038e761aec1520cbca.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/41/83/ce/4183ce3881abfb038e761aec1520cbca.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/56365432829992123/",
-          "retrievedVia": "public-pin-widget"
-        },
-        {
-          "url": "https://i.pinimg.com/564x/62/50/18/625018b354a46c72390bd028a95d60a2.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/62/50/18/625018b354a46c72390bd028a95d60a2.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/56365432829992121/",
-          "retrievedVia": "public-pin-widget"
-        },
         {
           "url": "https://i.pinimg.com/564x/e5/f2/42/e5f24204316e7aee55b342c1bb21a664.jpg",
           "thumbnail": "https://i.pinimg.com/236x/e5/f2/42/e5f24204316e7aee55b342c1bb21a664.jpg",
@@ -2412,11 +2394,29 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/42/78/4d/42784d111d79b8ad95ed5eaefa666495.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/42/78/4d/42784d111d79b8ad95ed5eaefa666495.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ab/3a/a2/ab3aa2dbf11cb404e4f09ac4a708a491.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ab/3a/a2/ab3aa2dbf11cb404e4f09ac4a708a491.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
         }
       ],
-      "updatedAt": "2026-11-25T21:42:43.610Z",
-      "checkedAt": "2026-11-25T21:42:43.610Z"
+      "updatedAt": "2026-11-25T22:43:13.015Z",
+      "checkedAt": "2026-11-25T22:43:13.015Z"
     }
   },
-  "checkedAt": "2026-11-25T21:42:43.617Z"
+  "checkedAt": "2026-11-25T22:43:13.017Z"
 }

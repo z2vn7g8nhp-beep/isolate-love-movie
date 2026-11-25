@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjEyMzcxNTM5NV5BMl5BanBnXkFtZTcwMDAxOTM4NQ@@._V1_.jpg",
@@ -1219,16 +1217,16 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T20:38:55.644Z",
-      "checkedAt": "2026-11-25T20:38:55.644Z"
+      "updatedAt": "2026-11-25T22:40:36.832Z",
+      "checkedAt": "2026-11-25T22:40:36.832Z"
     },
     "douban": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "豆瓣",
-      "status": "unmatched",
-      "message": "尚未核对到对应豆瓣档案",
-      "method": "direct",
+      "status": "ok",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://img2.doubanio.com/view/photo/sqxs/public/p2534660211.jpg",
@@ -1251,8 +1249,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T18:32:25.220Z",
-      "checkedAt": "2026-11-25T20:38:58.985Z"
+      "updatedAt": "2026-11-25T22:40:47.364Z",
+      "checkedAt": "2026-11-25T22:40:47.364Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2348,9 +2346,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-25T20:39:01.714Z",
-      "checkedAt": "2026-11-25T20:39:01.714Z"
+      "updatedAt": "2026-11-25T22:40:50.314Z",
+      "checkedAt": "2026-11-25T22:40:50.314Z"
     }
   },
-  "checkedAt": "2026-11-25T20:39:01.716Z"
+  "checkedAt": "2026-11-25T22:40:50.316Z"
 }
