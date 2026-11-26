@@ -13,19 +13,11 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMDQ4ODllZDItYjViZS00NWViLWI4YTgtMjI1Y2U4ZjM2NTMyXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDQ4ODllZDItYjViZS00NWViLWI4YTgtMjI1Y2U4ZjM2NTMyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "Interstellar (2014)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0816692/mediaviewer/rm3450420224/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMDlhMDEzNmQtYjE5OC00ZDdjLThkOWUtODEzNzkwNDA0NDI0XkEyXkFqcGc@._V1_FMjpg_UX2160_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDlhMDEzNmQtYjE5OC00ZDdjLThkOWUtODEzNzkwNDA0NDI0XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1215,127 +1207,29 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0816692/mediaviewer/rm470285056",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "Interstellar",
+          "kind": "作品海报",
+          "source": "IMDb 公开主图",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0816692/",
+          "retrievedVia": "public-metadata"
         }
       ],
-      "updatedAt": "2026-11-26T09:48:53.227Z",
-      "checkedAt": "2026-11-26T09:48:53.227Z"
+      "updatedAt": "2026-11-26T11:40:41.228Z",
+      "checkedAt": "2026-11-26T11:40:41.228Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxODg5MjQzIiwib2Zmc2V0IjoxNTg0fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxODg5MjQzIiwib2Zmc2V0IjoxNTk2fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2210069046.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210069046.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210069046/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2210068684.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210068684.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210068684/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210065972.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210065972.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210065972/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210062762.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210062762.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062762/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2210062751.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2210062751.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062751/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210062740.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210062740.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062740/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210062622.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210062622.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062622/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210062590.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210062590.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062590/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210062588.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210062588.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062588/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210062583.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210062583.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210062583/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210057569.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210057569.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210057569/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210054623.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210054623.jpg",
-          "title": "Interstellar · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210054623/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2209910780.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2209910780.jpg",
@@ -2307,10 +2201,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2210697143/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2210354056.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210354056.jpg",
+          "title": "《好莱坞报道者》主创专访",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210354056/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210354053.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210354053.jpg",
+          "title": "《好莱坞报道者》主创专访",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210354053/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2210354046.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210354046.jpg",
+          "title": "《好莱坞报道者》主创专访",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210354046/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210354008.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210354008.jpg",
+          "title": "《好莱坞报道者》杂志写真",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210354008/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210353432.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210353432.jpg",
+          "title": "《娱乐周刊》杂志写真",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210353432/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2210244081.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2210244081.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210244081/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2210244076.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210244076.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210244076/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210244072.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210244072.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210244072/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2210244064.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210244064.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210244064/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2210070336.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210070336.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210070336/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210069948.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210069948.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210069948/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210065843.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210065843.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210065843/"
         }
       ],
-      "updatedAt": "2026-11-26T09:48:53.673Z",
-      "checkedAt": "2026-11-26T09:48:53.673Z"
+      "updatedAt": "2026-11-26T11:40:41.660Z",
+      "checkedAt": "2026-11-26T11:40:41.660Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3463,9 +3465,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Interstellar%202014%20stills"
         }
       ],
-      "updatedAt": "2026-11-26T09:48:56.343Z",
-      "checkedAt": "2026-11-26T09:48:56.343Z"
+      "updatedAt": "2026-11-26T11:40:44.485Z",
+      "checkedAt": "2026-11-26T11:40:44.485Z"
     }
   },
-  "checkedAt": "2026-11-26T09:48:56.352Z"
+  "checkedAt": "2026-11-26T11:40:44.488Z"
 }

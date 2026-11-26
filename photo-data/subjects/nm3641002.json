@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYmVmNGFkMmItZmYwOC00ZGQ4LWE2YTAtYWYyNzg2ZjIzZGZkXkEyXkFqcGdeQXVyMjIyNzU2OTE@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -1087,11 +1089,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-26T08:14:48.236Z",
-      "checkedAt": "2026-11-26T08:14:48.236Z"
+      "updatedAt": "2026-11-26T11:39:37.171Z",
+      "checkedAt": "2026-11-26T11:39:37.171Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyMTZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMzM5NjMwIiwib2Zmc2V0IjoyMjh9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1579,8 +1581,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/nm3641002/c740efbe67828fe563e75d4d.webp"
         }
       ],
-      "updatedAt": "2026-11-26T08:14:48.737Z",
-      "checkedAt": "2026-11-26T08:14:48.737Z",
+      "updatedAt": "2026-11-26T11:39:38.086Z",
+      "checkedAt": "2026-11-26T11:39:38.086Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1591,15 +1593,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/originals/43/7d/81/437d8166e78c23d530f38983a684a6ac.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/43/7d/81/437d8166e78c23d530f38983a684a6ac.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
-        },
         {
           "url": "https://i.pinimg.com/originals/d1/8e/46/d18e463f63bf7766be46776b94dbe77c.jpg",
           "thumbnail": "https://i.pinimg.com/236x/d1/8e/46/d18e463f63bf7766be46776b94dbe77c.jpg",
@@ -2685,11 +2678,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5f/12/67/5f12675b5508a1fb6592f5fc365f8a4d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5f/12/67/5f12675b5508a1fb6592f5fc365f8a4d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Austin%20Abrams%20portrait"
         }
       ],
-      "updatedAt": "2026-11-26T08:14:51.455Z",
-      "checkedAt": "2026-11-26T08:14:51.455Z"
+      "updatedAt": "2026-11-26T11:39:40.905Z",
+      "checkedAt": "2026-11-26T11:39:40.905Z"
     }
   },
-  "checkedAt": "2026-11-26T08:14:51.457Z"
+  "checkedAt": "2026-11-26T11:39:40.906Z"
 }
