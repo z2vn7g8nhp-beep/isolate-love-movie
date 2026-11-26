@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNTMwYjM4MGYtNzI4My00MzQ3LThiNGMtZTc3YWE4MGEyMjQwXkEyXkFqcGc@._V1_.jpg",
@@ -1219,62 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-26T19:48:22.611Z",
-      "checkedAt": "2026-11-26T19:48:22.611Z"
+      "updatedAt": "2026-11-26T21:36:40.125Z",
+      "checkedAt": "2026-11-26T21:36:40.125Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6MTYyMH0",
+      "nextCursor": null,
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2661497527.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2661497527.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2661497527/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2661497020.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2661497020.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2661497020/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2661497005.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2661497005.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2661497005/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2661496984.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2661496984.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2661496984/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2661496976.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2661496976.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2661496976/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2661496975.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2661496975.jpg",
@@ -2309,10 +2262,55 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2630074782/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936221649.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2936221649.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936221649/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2681170108.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2681170108.jpg",
+          "title": "当K穿越到黑客帝国的世界",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2681170108/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2623909006.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2623909006.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2623909006/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2623908844.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2623908844.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2623908844/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2616164802.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2616164802.jpg",
+          "title": "原来我在电影院看了个假的机器人女友",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2616164802/"
         }
       ],
-      "updatedAt": "2026-11-26T19:48:23.071Z",
-      "checkedAt": "2026-11-26T19:48:23.071Z"
+      "updatedAt": "2026-11-26T21:36:40.499Z",
+      "checkedAt": "2026-11-26T21:36:40.499Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3419,9 +3417,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Blade%20Runner%202049%202017%20stills"
         }
       ],
-      "updatedAt": "2026-11-26T19:48:25.766Z",
-      "checkedAt": "2026-11-26T19:48:25.766Z"
+      "updatedAt": "2026-11-26T21:36:42.860Z",
+      "checkedAt": "2026-11-26T21:36:42.860Z"
     }
   },
-  "checkedAt": "2026-11-26T19:48:25.770Z"
+  "checkedAt": "2026-11-26T21:36:42.863Z"
 }
