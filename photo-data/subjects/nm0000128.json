@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTE5NjU1MjMzM15BMl5BanBnXkFtZTYwNzQ1MjU1._V1_.jpg",
@@ -1217,125 +1219,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-25T23:36:42.021Z",
-      "checkedAt": "2026-11-25T23:36:42.021Z"
+      "updatedAt": "2026-11-26T02:03:32.547Z",
+      "checkedAt": "2026-11-26T02:03:32.547Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDE2Njc0Iiwib2Zmc2V0IjoxMn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDE2Njc0Iiwib2Zmc2V0IjoyNH0",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2913614506.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2913614506.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614506/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2913614505.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2913614505.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614505/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2913614500.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614500.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614500/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2913614495.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2913614495.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614495/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2913614493.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614493.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614493/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2913614492.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614492.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614492/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2913614473.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614473.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614473/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2913614470.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614470.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614470/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2913614467.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614467.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614467/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2913614466.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2913614466.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614466/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2913614465.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2913614465.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614465/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2913614464.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2913614464.jpg",
-          "title": "Russell Crowe · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27222397/photo/2913614464/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2913614462.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2913614462.jpg",
@@ -2307,10 +2201,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27222397/photo/1892120341/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/s/public/p1775461126.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/s/public/p1775461126.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1775461126/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p825375137.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p825375137.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/825375137/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1413576009.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1413576009.jpg",
+          "title": "青涩的样子..",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1413576009/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2383517042.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2383517042.jpg",
+          "title": "南半球最爱的两位男演员",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/2383517042/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2169209805.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2169209805.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/2169209805/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2166555348.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2166555348.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/2166555348/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1361909018.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1361909018.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1361909018/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p643157153.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p643157153.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/643157153/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p1987329979.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1987329979.jpg",
+          "title": "罗素克劳2010年解说影片《宾虚》及答记者问，好温柔！",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1987329979/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p825375752.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p825375752.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/825375752/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p1902070749.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p1902070749.jpg",
+          "title": "年轻时有点像猫王",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1902070749/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/s/public/p1429123560.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/s/public/p1429123560.jpg",
+          "title": "Russell Crowe · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27222397/photo/1429123560/"
         }
       ],
-      "updatedAt": "2026-11-25T23:36:42.470Z",
-      "checkedAt": "2026-11-25T23:36:42.470Z"
+      "updatedAt": "2026-11-26T02:03:33.033Z",
+      "checkedAt": "2026-11-26T02:03:33.033Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3475,9 +3477,9 @@
           "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-25T23:36:45.478Z",
-      "checkedAt": "2026-11-25T23:36:45.478Z"
+      "updatedAt": "2026-11-26T02:03:35.338Z",
+      "checkedAt": "2026-11-26T02:03:35.338Z"
     }
   },
-  "checkedAt": "2026-11-25T23:36:45.480Z"
+  "checkedAt": "2026-11-26T02:03:35.340Z"
 }
