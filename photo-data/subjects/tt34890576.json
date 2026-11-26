@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYTAyMjgxZjctMjRjNC00Zjg1LWJiNzctMDkxYzk0NWVmODMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -1079,11 +1077,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-26T00:36:23.905Z",
-      "checkedAt": "2026-11-26T00:36:23.905Z"
+      "updatedAt": "2026-11-26T03:41:06.527Z",
+      "checkedAt": "2026-11-26T03:41:06.527Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNzE1NDU5MSIsIm9mZnNldCI6MTMyfQ",
+      "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1570,8 +1568,8 @@
           "pageUrl": "https://movie.douban.com/photos/photo/2931818582/"
         }
       ],
-      "updatedAt": "2026-11-26T00:36:24.199Z",
-      "checkedAt": "2026-11-26T00:36:24.199Z",
+      "updatedAt": "2026-11-26T03:41:06.849Z",
+      "checkedAt": "2026-11-26T03:41:06.849Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2503,11 +2501,92 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/67/12/61/671261539ce327f84f9c7dea8f7a556d.heic",
+          "thumbnail": "https://i.pinimg.com/236x/67/12/61/671261539ce327f84f9c7dea8f7a556d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ad/e1/99/ade199da201ad14a7f82b192392c0f42.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ad/e1/99/ade199da201ad14a7f82b192392c0f42.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/55/00/2b/55002b1df5d851352fd6f0dc46a7d1b2.png",
+          "thumbnail": "https://i.pinimg.com/236x/55/00/2b/55002b1df5d851352fd6f0dc46a7d1b2.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ae/92/d5/ae92d5cdbb899ea8992620b8c52315ed.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ae/92/d5/ae92d5cdbb899ea8992620b8c52315ed.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/a1/fa/71/a1fa7153d9acb5b7af1b9b5420d9e13b.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/a1/fa/71/a1fa7153d9acb5b7af1b9b5420d9e13b.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ae/ff/98/aeff98b4da2ad32dd9f15b7a04f8d3f8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ae/ff/98/aeff98b4da2ad32dd9f15b7a04f8d3f8.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/04/96/14/049614aa3600c2da4fab01cf48df4a4d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/04/96/14/049614aa3600c2da4fab01cf48df4a4d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f8/2b/6d/f82b6ded491a8ccda0d77d36c52ecc67.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f8/2b/6d/f82b6ded491a8ccda0d77d36c52ecc67.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/03/3f/ed/033fede16ab7d5f56899935a0b9f1a6a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/03/3f/ed/033fede16ab7d5f56899935a0b9f1a6a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Clayface%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-26T00:36:27.924Z",
-      "checkedAt": "2026-11-26T00:36:27.924Z"
+      "updatedAt": "2026-11-26T03:41:10.340Z",
+      "checkedAt": "2026-11-26T03:41:10.340Z"
     }
   },
-  "checkedAt": "2026-11-26T00:36:27.925Z"
+  "checkedAt": "2026-11-26T03:41:10.344Z"
 }
