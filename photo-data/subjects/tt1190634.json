@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNGQ1NjMzYTktYjJmMi00NDMzLTk4MGYtNzhkZDMyOTg4NDI4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -1217,19 +1219,19 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-26T12:49:29.011Z",
-      "checkedAt": "2026-11-26T12:49:29.011Z"
+      "updatedAt": "2026-11-26T16:46:24.470Z",
+      "checkedAt": "2026-11-26T16:46:24.470Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-26T12:49:42.759Z",
+      "checkedAt": "2026-11-26T16:46:36.350Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1709,9 +1711,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Boys%202019%20stills"
         }
       ],
-      "updatedAt": "2026-11-26T12:49:45.402Z",
-      "checkedAt": "2026-11-26T12:49:45.402Z"
+      "updatedAt": "2026-11-26T16:46:39.485Z",
+      "checkedAt": "2026-11-26T16:46:39.485Z"
     }
   },
-  "checkedAt": "2026-11-26T12:49:45.404Z"
+  "checkedAt": "2026-11-26T16:46:39.487Z"
 }
