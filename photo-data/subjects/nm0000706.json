@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMWFiM2U5MjItMDJkNi00YzVjLWIzZWMtZTkyZDNmOTNmMWQ1XkEyXkFqcGc@._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T00:41:03.160Z",
-      "checkedAt": "2026-11-27T00:41:03.160Z"
+      "updatedAt": "2026-11-27T03:41:38.123Z",
+      "checkedAt": "2026-11-27T03:41:38.123Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDIyNjY0Iiwib2Zmc2V0IjoxNjA4fQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDIyNjY0Iiwib2Zmc2V0IjoxNjIwfQ",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111777.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111777.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111777/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2242111774.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2242111774.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111774/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111772.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111772.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111772/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2242111741.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2242111741.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111741/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111739.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111739.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111739/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2242111735.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2242111735.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111735/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111733.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111733.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111733/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111732.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111732.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111732/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111728.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111728.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111728/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111723.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111723.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111723/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2242111719.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111719.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111719/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2242111714.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2242111714.jpg",
-          "title": "Michelle Yeoh · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27228391/photo/2242111714/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2242111712.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2242111712.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27228391/photo/2238563644/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238386740.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238386740.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238386740/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238386483.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238386483.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238386483/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238386400.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238386400.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238386400/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238386397.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238386397.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238386397/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2238383246.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2238383246.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238383246/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2238383136.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2238383136.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238383136/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238382182.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238382182.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238382182/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2238381565.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2238381565.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238381565/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238379398.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238379398.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238379398/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238379393.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238379393.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238379393/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2238379101.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2238379101.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238379101/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2238378757.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2238378757.jpg",
+          "title": "Michelle Yeoh · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27228391/photo/2238378757/"
         }
       ],
-      "updatedAt": "2026-11-27T00:41:03.703Z",
-      "checkedAt": "2026-11-27T00:41:03.703Z"
+      "updatedAt": "2026-11-27T03:41:38.777Z",
+      "checkedAt": "2026-11-27T03:41:38.777Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3480,9 +3478,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Michelle%20Yeoh%20portrait"
         }
       ],
-      "updatedAt": "2026-11-27T00:41:06.464Z",
-      "checkedAt": "2026-11-27T00:41:06.464Z"
+      "updatedAt": "2026-11-27T03:41:41.789Z",
+      "checkedAt": "2026-11-27T03:41:41.789Z"
     }
   },
-  "checkedAt": "2026-11-27T00:41:06.467Z"
+  "checkedAt": "2026-11-27T03:41:41.792Z"
 }
