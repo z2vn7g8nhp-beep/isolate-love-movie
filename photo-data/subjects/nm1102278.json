@@ -13,8 +13,10 @@
       "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZDAwZWMwYTEtZmUwMS00MmQyLWE3MGEtMTViZTNkZGJmZDcyXkEyXkFqcGc@._V1_.jpg",
@@ -1217,8 +1219,8 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T09:47:49.383Z",
-      "checkedAt": "2026-11-27T09:47:49.383Z"
+      "updatedAt": "2026-11-27T11:38:42.120Z",
+      "checkedAt": "2026-11-27T11:38:42.120Z"
     },
     "douban": {
       "nextCursor": null,
@@ -1229,7 +1231,7 @@
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-27T09:47:52.523Z",
+      "checkedAt": "2026-11-27T11:38:46.180Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1240,16 +1242,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/da/38/5c/da385c319b432071813e46132a1a4d1f.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/da/38/5c/da385c319b432071813e46132a1a4d1f.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/56365432829950567/",
-          "retrievedVia": "public-pin-widget"
-        },
         {
           "url": "https://i.pinimg.com/564x/c2/de/80/c2de801f7ab27494fe39b9d6311a39b5.jpg",
           "thumbnail": "https://i.pinimg.com/236x/c2/de/80/c2de801f7ab27494fe39b9d6311a39b5.jpg",
@@ -2403,11 +2395,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/f7/1c/18/f71c181c45bb152e36e92b9938343549.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/f7/1c/18/f71c181c45bb152e36e92b9938343549.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Antony%20Starr%20portrait"
         }
       ],
-      "updatedAt": "2026-11-27T09:47:55.776Z",
-      "checkedAt": "2026-11-27T09:47:55.776Z"
+      "updatedAt": "2026-11-27T11:38:48.756Z",
+      "checkedAt": "2026-11-27T11:38:48.756Z"
     }
   },
-  "checkedAt": "2026-11-27T09:47:55.783Z"
+  "checkedAt": "2026-11-27T11:38:48.757Z"
 }
