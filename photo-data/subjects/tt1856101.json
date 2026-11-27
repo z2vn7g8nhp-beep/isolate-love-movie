@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 1,
+      "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNTMwYjM4MGYtNzI4My00MzQ3LThiNGMtZTc3YWE4MGEyMjQwXkEyXkFqcGc@._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T06:44:29.305Z",
-      "checkedAt": "2026-11-27T06:44:29.305Z"
+      "updatedAt": "2026-11-27T09:48:05.096Z",
+      "checkedAt": "2026-11-27T09:48:05.096Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6NDh9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDUxMjY2MSIsIm9mZnNldCI6NjB9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2492863502.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2492863502.jpg",
-          "title": "帝国八月刊内页",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2492863502/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2453194731.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2453194731.jpg",
-          "title": "瑞恩·高斯林出演《银翼杀手2049》",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2453194731/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2367310235.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2367310235.jpg",
-          "title": "概念图",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2367310235/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2633007388.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2633007388.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2633007388/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2486537924.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2486537924.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2486537924/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2505130224.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2505130224.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2505130224/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2501594342.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2501594342.jpg",
-          "title": "2017-9-24Blade Runner 2049 LA Press Junket",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2501594342/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2501594341.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2501594341.jpg",
-          "title": "2017-9-24Blade Runner 2049 LA Press Junket",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2501594341/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2492863509.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2492863509.jpg",
-          "title": "帝国八月刊",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2492863509/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2453194735.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2453194735.jpg",
-          "title": "瑞恩·高斯林出演《银翼杀手2049》出席cinemacon",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2453194735/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2407166254.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2407166254.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2407166254/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2538413393.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2538413393.jpg",
-          "title": "Blade Runner 2049 · 豆瓣相册",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2538413393/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2538413383.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2538413383.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2502852304/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2500981656.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2500981656.jpg",
+          "title": "Lt. Joshi",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2500981656/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2498252764.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2498252764.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2498252764/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2502990931.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2502990931.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2502990931/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2502857359.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2502857359.jpg",
+          "title": "侯克斯饰演的女反派在执行任务",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2502857359/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2498252661.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2498252661.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2498252661/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2498252602.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2498252602.jpg",
+          "title": "动作帅气的银翼杀手k",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2498252602/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2503321188.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2503321188.jpg",
+          "title": "Officer K",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2503321188/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2459447396.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2459447396.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2459447396/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2561829240.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2561829240.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2561829240/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2503545704.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2503545704.jpg",
+          "title": "Joi",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2503545704/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2503333579.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2503333579.jpg",
+          "title": "Lt. Joshi, Luv",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2503333579/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2502990935.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2502990935.jpg",
+          "title": "Blade Runner 2049 · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2502990935/"
         }
       ],
-      "updatedAt": "2026-11-27T06:44:29.730Z",
-      "checkedAt": "2026-11-27T06:44:29.730Z"
+      "updatedAt": "2026-11-27T09:48:05.463Z",
+      "checkedAt": "2026-11-27T09:48:05.463Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -3429,9 +3427,9 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T06:44:32.547Z",
-      "checkedAt": "2026-11-27T06:44:32.547Z"
+      "updatedAt": "2026-11-27T09:48:08.535Z",
+      "checkedAt": "2026-11-27T09:48:08.535Z"
     }
   },
-  "checkedAt": "2026-11-27T06:44:32.551Z"
+  "checkedAt": "2026-11-27T09:48:08.540Z"
 }

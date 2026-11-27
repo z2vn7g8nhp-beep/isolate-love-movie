@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BNDFkNWZiNzctZGYwMC00M2VjLWJmY2EtMmQ3ZTgzNDUyYzkwXkEyXkFqcGc@._V1_.jpg",
@@ -1219,125 +1217,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T06:45:25.128Z",
-      "checkedAt": "2026-11-27T06:45:25.128Z"
+      "updatedAt": "2026-11-27T09:49:03.515Z",
+      "checkedAt": "2026-11-27T09:49:03.515Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxODg5MjQzIiwib2Zmc2V0IjoxNjkyfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxODg5MjQzIiwib2Zmc2V0IjoxNzA0fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210700128.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210700128.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210700128/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210700123.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210700123.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210700123/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2210700114.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210700114.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210700114/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2210698964.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210698964.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210698964/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2210698265.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210698265.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210698265/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210697213.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210697213.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697213/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210697200.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210697200.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697200/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210697187.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210697187.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697187/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210697179.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210697179.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697179/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210697173.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210697173.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697173/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2210697151.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2210697151.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697151/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2210697143.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210697143.jpg",
-          "title": "上海首映",
-          "kind": "作品图片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://movie.douban.com/photos/photo/2210697143/"
-        },
         {
           "url": "https://img9.doubanio.com/view/photo/l/public/p2210354056.jpg",
           "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210354056.jpg",
@@ -2309,10 +2199,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://movie.douban.com/photos/photo/2212287698/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2211062898.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2211062898.jpg",
+          "title": "TARS和CASE你们最后会再次相遇的",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2211062898/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2212218878.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2212218878.jpg",
+          "title": "新浪微博 po主@露西娅_iMovie 她朋友看不懂她给画的，这也太有才了！！！！",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2212218878/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2210693096.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2210693096.jpg",
+          "title": "网友自制时间轴【简版】By： Frametale's Dogan Can Gundogdu",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210693096/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2210984892.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2210984892.jpg",
+          "title": "剧中诗。",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2210984892/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2212779491.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2212779491.jpg",
+          "title": "人工智能机器人的四种基本行为模式：静止、拐杖行走、双腿行走、四腿（轮式）奔跑",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2212779491/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2211733730.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2211733730.jpg",
+          "title": "Do not go gentle into that good night......",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2211733730/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2211118836.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2211118836.jpg",
+          "title": "Interstellar · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2211118836/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2211733770.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2211733770.jpg",
+          "title": "Do not go gentle into that good night......",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2211733770/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2211663995.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2211663995.jpg",
+          "title": "(点大图看)一张图片助你归类“时空穿梭”类电影作品，翻译自@红袖添饭ing 微博分享。【中文版】",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2211663995/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2504815334.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2504815334.jpg",
+          "title": "经典台词",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2504815334/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2282826407.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2282826407.jpg",
+          "title": "从《拯救大兵瑞恩》到《星际穿越》再到《火星救援》。美帝为了救马特·达蒙，真是花费了不少人力、物力，搞不好就破产了。当然为了能在《谍影重重123》杀死他也花了很多钱和人命。搞个毛啊！！",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2282826407/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2211733750.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2211733750.jpg",
+          "title": "Do not go gentle into that good night......",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2211733750/"
         }
       ],
-      "updatedAt": "2026-11-27T06:45:25.575Z",
-      "checkedAt": "2026-11-27T06:45:25.575Z"
+      "updatedAt": "2026-11-27T09:49:03.914Z",
+      "checkedAt": "2026-11-27T09:49:03.914Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2322,16 +2320,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/originals/e0/be/24/e0be244d29ef249888b8f4d35d5bb083.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/e0/be/24/e0be244d29ef249888b8f4d35d5bb083.jpg",
-          "title": "Coop interstellar | Tars and case interstellar, Interstellar edmunds ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/494270127869723361/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/736x/32/81/2b/32812bc57c2ea2e7b73c0bd35d982f87.jpg",
           "thumbnail": "https://i.pinimg.com/236x/32/81/2b/32812bc57c2ea2e7b73c0bd35d982f87.jpg",
@@ -3462,11 +3450,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Interstellar%202014%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d4/d3/ae/d4d3ae0b4a238ff4b7dc793efbdd095f.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d4/d3/ae/d4d3ae0b4a238ff4b7dc793efbdd095f.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Interstellar%202014%20stills"
         }
       ],
-      "updatedAt": "2026-11-27T06:45:28.154Z",
-      "checkedAt": "2026-11-27T06:45:28.154Z"
+      "updatedAt": "2026-11-27T09:49:06.859Z",
+      "checkedAt": "2026-11-27T09:49:06.859Z"
     }
   },
-  "checkedAt": "2026-11-27T06:45:28.158Z"
+  "checkedAt": "2026-11-27T09:49:06.864Z"
 }
