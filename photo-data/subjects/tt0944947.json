@@ -10,74 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTQ3MTIzOTMxMF5BMl5BanBnXkFtZTgwNjkwODk2ODE@._V1_FMjpg_UX1000_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTQ3MTIzOTMxMF5BMl5BanBnXkFtZTgwNjkwODk2ODE@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm304356608",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTgzMzQ1NjA3M15BMl5BanBnXkFtZTgwMjU1MjMxODE@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTgzMzQ1NjA3M15BMl5BanBnXkFtZTgwMjU1MjMxODE@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm3448380160",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjMyNTQ1ODk4N15BMl5BanBnXkFtZTgwODI3NjgyMTE@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjMyNTQ1ODk4N15BMl5BanBnXkFtZTgwODI3NjgyMTE@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm3171865856/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjMwODA3Mjg1OF5BMl5BanBnXkFtZTgwMTU1MjMxODE@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjMwODA3Mjg1OF5BMl5BanBnXkFtZTgwMTU1MjMxODE@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm3448380160",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNTA4MTk3NzE4M15BMl5BanBnXkFtZTcwOTgxNTcyOQ@@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTA4MTk3NzE4M15BMl5BanBnXkFtZTcwOTgxNTcyOQ@@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/media/rm1530765312/tt0944947",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMjIxNDg2MjY1M15BMl5BanBnXkFtZTgwOTc2MjQ0NTE@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjIxNDg2MjY1M15BMl5BanBnXkFtZTgwOTc2MjQ0NTE@._V1_QL80_UX360_.jpg",
-          "title": "Game of Thrones (2011)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm475133440/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjM4NDE5MDQwOF5BMl5BanBnXkFtZTgwMTQ0MzgwMTE@._V1_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjM4NDE5MDQwOF5BMl5BanBnXkFtZTgwMTQ0MzgwMTE@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1155,73 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm1709873153",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTA1NjMyNzMwMTNeQTJeQWpwZ15BbWU4MDkwMzUyOTgx._V1_FMjpg_UX1000_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTA1NjMyNzMwMTNeQTJeQWpwZ15BbWU4MDkwMzUyOTgx._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones (2011)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm516427776/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTUxOTY5ODQ0N15BMl5BanBnXkFtZTgwNDQ5MTkyMzI@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTUxOTY5ODQ0N15BMl5BanBnXkFtZTgwNDQ5MTkyMzI@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones (2011)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm4166263552/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTQ3NzE2MTEzM15BMl5BanBnXkFtZTgwMDU1MjMxODE@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTQ3NzE2MTEzM15BMl5BanBnXkFtZTgwMDU1MjMxODE@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones (2011)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm3465157376",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjQ0NzI1OTQxOF5BMl5BanBnXkFtZTgwNDkwODk2ODE@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjQ0NzI1OTQxOF5BMl5BanBnXkFtZTgwNDkwODk2ODE@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones (2011)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm354688256/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BODE0ODgxMTk5OV5BMl5BanBnXkFtZTgwMzI3NjgyMTE@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BODE0ODgxMTk5OV5BMl5BanBnXkFtZTgwMzI3NjgyMTE@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones (2011)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm2987316480",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMjExODg2ODQyNl5BMl5BanBnXkFtZTgwOTgwNjcwODM@._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjExODg2ODQyNl5BMl5BanBnXkFtZTgwOTgwNjcwODM@._V1_QL80_UX360_.jpg",
+          "title": "Game of Thrones (2011)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt0944947/mediaviewer/rm2950849792",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T09:48:34.866Z",
-      "checkedAt": "2026-11-27T09:48:34.866Z"
+      "updatedAt": "2026-11-27T12:45:10.712Z",
+      "checkedAt": "2026-11-27T12:45:10.712Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0Ijo5Nn0",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzMDE2MTg3Iiwib2Zmc2V0IjoxMDh9",
       "indexOffset": 71,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt0944947/33843911e63231510119d769.webp"
         }
       ],
-      "updatedAt": "2026-11-27T09:48:36.202Z",
-      "checkedAt": "2026-11-27T09:48:36.202Z",
+      "updatedAt": "2026-11-27T12:45:16.282Z",
+      "checkedAt": "2026-11-27T12:45:16.282Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -2624,9 +2622,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Game%20of%20Thrones%202011%20stills"
         }
       ],
-      "updatedAt": "2026-11-27T09:48:39.125Z",
-      "checkedAt": "2026-11-27T09:48:39.125Z"
+      "updatedAt": "2026-11-27T12:45:19.311Z",
+      "checkedAt": "2026-11-27T12:45:19.311Z"
     }
   },
-  "checkedAt": "2026-11-27T09:48:39.129Z"
+  "checkedAt": "2026-11-27T12:45:19.315Z"
 }
