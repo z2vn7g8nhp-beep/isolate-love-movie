@@ -10,34 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BZDk2ZjUzYzctYmE3Mi00ZmE3LWI2N2UtM2E0YTVlYTQ5N2MyXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDk2ZjUzYzctYmE3Mi00ZmE3LWI2N2UtM2E0YTVlYTQ5N2MyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Sunrise on the Reaping (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm3254908162/",
-          "retrievedVia": "public-image-index"
-        },
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BNmQ1OThhNmItMzgyYi00ZDkwLWJkMzktOWIxZjBkMjg0NmJlXkEyXkFqcGc@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmQ1OThhNmItMzgyYi00ZDkwLWJkMzktOWIxZjBkMjg0NmJlXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Sunrise on the Reaping (2026)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm164164866/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZmJhOWNkZWQtMTczZS00MWQ3LWE2N2EtNjU0ZWFjNmM1OTQyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmJhOWNkZWQtMTczZS00MWQ3LWE2N2EtNjU0ZWFjNmM1OTQyXkEyXkFqcGc@._V1_QL80_UX360_.jpg",
@@ -1217,13 +1195,33 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm3857832706/",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BY2MwYmE4ZGEtNDMzMi00ODc4LTlkNDgtZGY2NGY0M2QxNDk1XkEyXkFqcGc@._V1_FMjpg_UY600_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2MwYmE4ZGEtNDMzMi00ODc4LTlkNDgtZGY2NGY0M2QxNDk1XkEyXkFqcGc@._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Sunrise on the Reaping (2026)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt32558705/mediaviewer/rm441906434/",
+          "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/G/01/imdb/images/social/imdb_logo.png",
+          "thumbnail": "https://m.media-amazon.com/images/G/01/imdb/images/social/imdb_logo.png",
+          "title": "The Hunger Games: Sunrise on the Reaping - Showtimes & tickets",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/showtimes/title/tt32558705/2026-11-24/",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-26T23:40:03.944Z",
-      "checkedAt": "2026-11-26T23:40:03.944Z"
+      "updatedAt": "2026-11-27T02:07:24.383Z",
+      "checkedAt": "2026-11-27T02:07:24.383Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MTIwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjkxNTk4OCIsIm9mZnNldCI6MTMyfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1711,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt32558705/088a9a5279b2b1f79a34141f.webp"
         }
       ],
-      "updatedAt": "2026-11-26T23:40:04.264Z",
-      "checkedAt": "2026-11-26T23:40:04.264Z",
+      "updatedAt": "2026-11-27T02:07:24.795Z",
+      "checkedAt": "2026-11-27T02:07:24.795Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1720,63 +1718,9 @@
       "indexOffset": 71,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/originals/57/c2/69/57c269d6a30163b9a1d93453300a914d.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/57/c2/69/57c269d6a30163b9a1d93453300a914d.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/c4/c0/3f/c4c03f6c8f9b010d721ed7959cd7d78f.png",
-          "thumbnail": "https://i.pinimg.com/236x/c4/c0/3f/c4c03f6c8f9b010d721ed7959cd7d78f.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/30/05/34/30053460c0061189040def7e879b0842.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/30/05/34/30053460c0061189040def7e879b0842.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/d2/1e/44/d21e44211e66dd09c2cae894c4130ac9.png",
-          "thumbnail": "https://i.pinimg.com/236x/d2/1e/44/d21e44211e66dd09c2cae894c4130ac9.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/27/ce/90/27ce90a670950810829b91b2d40eb18b.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/27/ce/90/27ce90a670950810829b91b2d40eb18b.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
-        },
-        {
-          "url": "https://i.pinimg.com/originals/17/1d/67/171d67f81faa84624bc5b93aeb8e81cd.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/17/1d/67/171d67f81faa84624bc5b93aeb8e81cd.jpg",
-          "title": "Pinterest 搜索图片",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
-        },
         {
           "url": "https://i.pinimg.com/originals/a7/7a/c0/a77ac0902d7211212f64953d4b8b3dfd.jpg",
           "thumbnail": "https://i.pinimg.com/236x/a7/7a/c0/a77ac0902d7211212f64953d4b8b3dfd.jpg",
@@ -2854,11 +2798,65 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/pin/991777149199578303/",
           "retrievedVia": "public-pin-widget"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/7a/06/0c/7a060cdda5b433e10951aef7a837ef83.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/7a/06/0c/7a060cdda5b433e10951aef7a837ef83.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5d/bc/27/5dbc27e7ba7e2194e3af5ce9df495914.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5d/bc/27/5dbc27e7ba7e2194e3af5ce9df495914.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/5b/aa/f4/5baaf464791a03b4117247a957fde8d3.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/5b/aa/f4/5baaf464791a03b4117247a957fde8d3.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/49/15/d0/4915d07c8fa10a1ce7cdb1832a5d830d.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/49/15/d0/4915d07c8fa10a1ce7cdb1832a5d830d.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/ce/06/da/ce06da5f5e69eb11c23c86ec5891580a.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/ce/06/da/ce06da5f5e69eb11c23c86ec5891580a.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e8/46/5d/e8465dc4e7b7caebd2aa4231b42485e8.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e8/46/5d/e8465dc4e7b7caebd2aa4231b42485e8.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-26T23:40:13.049Z",
-      "checkedAt": "2026-11-26T23:40:13.049Z"
+      "updatedAt": "2026-11-27T02:07:27.458Z",
+      "checkedAt": "2026-11-27T02:07:27.458Z"
     }
   },
-  "checkedAt": "2026-11-26T23:40:13.051Z"
+  "checkedAt": "2026-11-27T02:07:27.461Z"
 }
