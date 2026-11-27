@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BODA2MGJjNDMtMTMzYi00NTMwLWE3MmMtZGVkNzExNzMyMzgxXkEyXkFqcGc@._V1_.jpg",
@@ -409,19 +407,19 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T15:43:24.076Z",
-      "checkedAt": "2026-11-27T15:43:24.076Z"
+      "updatedAt": "2026-11-27T18:33:02.531Z",
+      "checkedAt": "2026-11-27T18:33:02.531Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unavailable",
-      "message": "来源响应超时，请稍后重试",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
       "method": "direct",
       "images": [],
       "updatedAt": null,
-      "checkedAt": "2026-11-27T15:43:37.708Z",
+      "checkedAt": "2026-11-27T18:33:06.201Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1162,9 +1160,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Spike%20Fearn%20portrait"
         }
       ],
-      "updatedAt": "2026-11-27T15:43:40.324Z",
-      "checkedAt": "2026-11-27T15:43:40.324Z"
+      "updatedAt": "2026-11-27T18:33:08.820Z",
+      "checkedAt": "2026-11-27T18:33:08.820Z"
     }
   },
-  "checkedAt": "2026-11-27T15:43:40.326Z"
+  "checkedAt": "2026-11-27T18:33:08.822Z"
 }
