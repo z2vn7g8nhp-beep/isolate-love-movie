@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 36,
+      "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_FMjpg_UX1000_.jpg",
@@ -709,125 +707,17 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T18:34:37.689Z",
-      "checkedAt": "2026-11-27T18:34:37.689Z"
+      "updatedAt": "2026-11-27T20:40:55.912Z",
+      "checkedAt": "2026-11-27T20:40:55.912Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDEyNTMxIiwib2Zmc2V0Ijo2MzZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIxMDEyNTMxIiwib2Zmc2V0Ijo2NDh9",
       "indexOffset": 106,
       "name": "豆瓣",
       "status": "ok",
       "message": "从原站读取",
       "method": "direct",
       "images": [
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2892736846.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2892736846.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736846/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2892736845.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2892736845.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736845/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2892736838.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2892736838.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736838/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2892736837.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2892736837.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736837/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2892736827.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2892736827.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736827/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2892736826.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2892736826.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736826/"
-        },
-        {
-          "url": "https://img9.doubanio.com/view/photo/l/public/p2892736825.jpg",
-          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2892736825.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736825/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2892736820.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2892736820.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736820/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2892736818.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2892736818.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2892736818/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2890952282.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2890952282.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2890952282/"
-        },
-        {
-          "url": "https://img2.doubanio.com/view/photo/l/public/p2890952281.jpg",
-          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2890952281.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2890952281/"
-        },
-        {
-          "url": "https://img3.doubanio.com/view/photo/l/public/p2890952279.jpg",
-          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2890952279.jpg",
-          "title": "Ryan Gosling · 豆瓣相册",
-          "kind": "人物照片",
-          "source": "豆瓣 相册",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.douban.com/personage/27218223/photo/2890952279/"
-        },
         {
           "url": "https://img3.doubanio.com/view/photo/l/public/p2890952278.jpg",
           "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2890952278.jpg",
@@ -1799,10 +1689,118 @@
           "source": "豆瓣 相册",
           "license": "版权归原权利人",
           "pageUrl": "https://www.douban.com/personage/27218223/photo/2595325335/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2595325334.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2595325334.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2595325334/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2595325333.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2595325333.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2595325333/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2595325332.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2595325332.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2595325332/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2595291885.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2595291885.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2595291885/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2594985410.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2594985410.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985410/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2594985355.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2594985355.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985355/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2594985354.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2594985354.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985354/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2594985353.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2594985353.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985353/"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2594985271.jpg",
+          "thumbnail": "https://img2.doubanio.com/view/photo/m/public/p2594985271.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985271/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2594985269.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2594985269.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985269/"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2594985267.jpg",
+          "thumbnail": "https://img3.doubanio.com/view/photo/m/public/p2594985267.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985267/"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2594985264.jpg",
+          "thumbnail": "https://img9.doubanio.com/view/photo/m/public/p2594985264.jpg",
+          "title": "Ryan Gosling · 豆瓣相册",
+          "kind": "人物照片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.douban.com/personage/27218223/photo/2594985264/"
         }
       ],
-      "updatedAt": "2026-11-27T18:34:38.192Z",
-      "checkedAt": "2026-11-27T18:34:38.192Z"
+      "updatedAt": "2026-11-27T20:40:56.341Z",
+      "checkedAt": "2026-11-27T20:40:56.341Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -2650,9 +2648,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Ryan%20Gosling%20portrait"
         }
       ],
-      "updatedAt": "2026-11-27T18:34:40.832Z",
-      "checkedAt": "2026-11-27T18:34:40.832Z"
+      "updatedAt": "2026-11-27T20:40:58.593Z",
+      "checkedAt": "2026-11-27T20:40:58.593Z"
     }
   },
-  "checkedAt": "2026-11-27T18:34:40.836Z"
+  "checkedAt": "2026-11-27T20:40:58.597Z"
 }
