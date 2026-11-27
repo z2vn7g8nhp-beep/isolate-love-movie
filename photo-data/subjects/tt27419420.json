@@ -10,13 +10,11 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 71,
+      "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "相册暂不可读，已读取 IMDb 公开主图",
-      "method": "public-metadata",
-      "limited": true,
-      "upstreamStatus": "blocked",
+      "message": "三站公开图片经搜索索引发现",
+      "method": "public-image-index",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BZGUwODMxNzYtMmI2OS00NjhmLWI4YTQtMWJjNjY1N2ZhNzgxXkEyXkFqcGc@._V1_.jpg",
@@ -549,19 +547,140 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-27T21:40:08.515Z",
-      "checkedAt": "2026-11-27T21:40:08.515Z"
+      "updatedAt": "2026-11-27T23:37:36.371Z",
+      "checkedAt": "2026-11-27T23:37:36.371Z"
     },
     "douban": {
-      "nextCursor": null,
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNjM0NDEwMCIsIm9mZnNldCI6MTJ9",
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "unmatched",
-      "message": "尚未核对到对应豆瓣档案",
+      "status": "ok",
+      "message": "从原站读取",
       "method": "direct",
-      "images": [],
-      "updatedAt": null,
-      "checkedAt": "2026-11-27T21:40:11.298Z",
+      "images": [
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936897248.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/84dca5cf980550e1dd90fb29.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936897248/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/84dca5cf980550e1dd90fb29.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936897198.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/f4f919d24d9cd342ca35ea5c.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936897198/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/f4f919d24d9cd342ca35ea5c.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936539647.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/5223dbf823482ef8c7810d71.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936539647/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/5223dbf823482ef8c7810d71.webp"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2936539644.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/1c4c5ceb19460841528dd14b.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936539644/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/1c4c5ceb19460841528dd14b.webp"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2936213924.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/949998ac0431ce2a567b485e.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936213924/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/949998ac0431ce2a567b485e.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2935252000.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/83ebebde75d9a9b94541d2e8.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2935252000/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/83ebebde75d9a9b94541d2e8.webp"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2937052391.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/a538c649d057c59eb7146abb.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2937052391/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/a538c649d057c59eb7146abb.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936894393.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/0b54d9e789228967532de643.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936894393/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/0b54d9e789228967532de643.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936689677.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/60e81bfe009952b74f4f8f21.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936689677/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/60e81bfe009952b74f4f8f21.webp"
+        },
+        {
+          "url": "https://img9.doubanio.com/view/photo/l/public/p2936539645.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/0a7f39934896bb3f45ea2d40.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936539645/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/0a7f39934896bb3f45ea2d40.webp"
+        },
+        {
+          "url": "https://img3.doubanio.com/view/photo/l/public/p2936539642.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/706118b60236992bde1db625.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936539642/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/706118b60236992bde1db625.webp"
+        },
+        {
+          "url": "https://img2.doubanio.com/view/photo/l/public/p2936539641.jpg",
+          "thumbnail": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/b1ecff74f5ba3daf6bd80660.webp",
+          "title": "Street Fighter · 豆瓣相册",
+          "kind": "作品图片",
+          "source": "豆瓣 相册",
+          "license": "版权归原权利人",
+          "pageUrl": "https://movie.douban.com/photos/photo/2936539641/",
+          "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt27419420/b1ecff74f5ba3daf6bd80660.webp"
+        }
+      ],
+      "updatedAt": "2026-11-27T23:37:37.224Z",
+      "checkedAt": "2026-11-27T23:37:37.224Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -832,11 +951,29 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Street%20Fighter%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/d8/cf/92/d8cf92f1a39030bb01d3e68df882de71.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/d8/cf/92/d8cf92f1a39030bb01d3e68df882de71.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Street%20Fighter%202026%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/88/b7/70/88b77079aa3d39d899a0c38ae8b6b9df.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/88/b7/70/88b77079aa3d39d899a0c38ae8b6b9df.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Street%20Fighter%202026%20stills"
         }
       ],
-      "updatedAt": "2026-11-27T21:40:14.076Z",
-      "checkedAt": "2026-11-27T21:40:14.076Z"
+      "updatedAt": "2026-11-27T23:37:55.587Z",
+      "checkedAt": "2026-11-27T23:37:55.587Z"
     }
   },
-  "checkedAt": "2026-11-27T21:40:14.077Z"
+  "checkedAt": "2026-11-27T23:37:55.588Z"
 }
