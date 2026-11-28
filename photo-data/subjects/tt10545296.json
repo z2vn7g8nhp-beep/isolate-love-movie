@@ -13,8 +13,10 @@
       "indexOffset": 36,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BYjYzZGZkNjgtNDhjNi00OGYxLThlYTktYWM0MGYyNDc4NzIzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-28T03:37:49.590Z",
-      "checkedAt": "2026-11-28T03:37:49.590Z"
+      "updatedAt": "2026-11-28T04:44:52.611Z",
+      "checkedAt": "2026-11-28T04:44:52.611Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6NDkyfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6NTA0fQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-28T03:37:53.257Z",
-      "checkedAt": "2026-11-28T03:37:53.257Z",
+      "updatedAt": "2026-11-28T04:44:53.035Z",
+      "checkedAt": "2026-11-28T04:44:53.035Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1721,16 +1723,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/736x/5c/85/44/5c8544faf463f5f1c9ff22c846bfb7fc.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/5c/85/44/5c8544faf463f5f1c9ff22c846bfb7fc.jpg",
-          "title": "\"The Ballad of Songbirds and Snakes\" Includes a Nod to an Iconic Katniss Everdeen Look | Hunger ...",
-          "kind": "搜索图片",
-          "source": "Pinterest · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/376895062582587163/",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://i.pinimg.com/originals/09/e0/30/09e030bcfc976db2c4c0028b3a4d455e.jpg",
           "thumbnail": "https://i.pinimg.com/236x/09/e0/30/09e030bcfc976db2c4c0028b3a4d455e.jpg",
@@ -2842,11 +2834,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/e7/2f/13/e72f1314de279b659aa916ca7e9e5e64.jpg",
+          "thumbnail": "https://i.pinimg.com/236x/e7/2f/13/e72f1314de279b659aa916ca7e9e5e64.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
         }
       ],
-      "updatedAt": "2026-11-28T03:37:56.042Z",
-      "checkedAt": "2026-11-28T03:37:56.042Z"
+      "updatedAt": "2026-11-28T04:44:55.312Z",
+      "checkedAt": "2026-11-28T04:44:55.312Z"
     }
   },
-  "checkedAt": "2026-11-28T03:37:56.045Z"
+  "checkedAt": "2026-11-28T04:44:55.314Z"
 }
