@@ -10,22 +10,12 @@
   "sources": {
     "imdb": {
       "nextCursor": null,
-      "indexOffset": 106,
+      "indexOffset": 1,
       "name": "IMDb",
       "status": "ok",
       "message": "三站公开图片经搜索索引发现",
       "method": "public-image-index",
       "images": [
-        {
-          "url": "https://m.media-amazon.com/images/M/MV5BMTg5NjIwNTY5Nl5BMl5BanBnXkFtZTgwNDM1OTM1MDE@._V1_.jpg",
-          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTg5NjIwNTY5Nl5BMl5BanBnXkFtZTgwNDM1OTM1MDE@._V1_QL80_UX360_.jpg",
-          "title": "The Hunger Games: Catching Fire (2013)",
-          "kind": "搜索图片",
-          "source": "IMDb · 搜索索引",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm2266815744",
-          "retrievedVia": "public-image-index"
-        },
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMTA4MTgyMDA0OTVeQTJeQWpwZ15BbWU4MDY0NDU2MTAx._V1_FMjpg_UX2048_.jpg",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTA4MTgyMDA0OTVeQTJeQWpwZ15BbWU4MDY0NDU2MTAx._V1_QL80_UX360_.jpg",
@@ -1215,13 +1205,23 @@
           "license": "版权归原权利人",
           "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm3704216320",
           "retrievedVia": "public-image-index"
+        },
+        {
+          "url": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_.jpg",
+          "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_QL80_UX360_.jpg",
+          "title": "The Hunger Games: Catching Fire (2013)",
+          "kind": "搜索图片",
+          "source": "IMDb · 搜索索引",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.imdb.com/title/tt1951264/mediaviewer/rm755621632",
+          "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-28T13:53:26.915Z",
-      "checkedAt": "2026-11-28T13:53:26.915Z"
+      "updatedAt": "2026-11-28T16:31:55.648Z",
+      "checkedAt": "2026-11-28T16:31:55.648Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiI2ODc0NDU2Iiwib2Zmc2V0IjoyNzZ9",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiI2ODc0NDU2Iiwib2Zmc2V0IjoyODh9",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1709,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt1951264/4ca32e17c9fa4e3f88108b4f.webp"
         }
       ],
-      "updatedAt": "2026-11-28T13:53:27.295Z",
-      "checkedAt": "2026-11-28T13:53:27.295Z",
+      "updatedAt": "2026-11-28T16:31:57.010Z",
+      "checkedAt": "2026-11-28T16:31:57.010Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1718,8 +1718,8 @@
       "indexOffset": 36,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从 Pinterest 官方公开组件读取",
-      "method": "public-pin-widget",
+      "message": "从原站读取",
+      "method": "browser",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/ae/9a/84/ae9a84b0c3300da4b2f06b2135e1c30d.jpg",
@@ -2561,9 +2561,9 @@
           "retrievedVia": "public-pin-widget"
         }
       ],
-      "updatedAt": "2026-11-28T13:53:34.487Z",
-      "checkedAt": "2026-11-28T13:53:34.487Z"
+      "updatedAt": "2026-11-28T16:31:59.975Z",
+      "checkedAt": "2026-11-28T16:31:59.975Z"
     }
   },
-  "checkedAt": "2026-11-28T13:53:34.489Z"
+  "checkedAt": "2026-11-28T16:31:59.979Z"
 }
