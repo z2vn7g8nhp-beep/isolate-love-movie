@@ -13,8 +13,10 @@
       "indexOffset": 106,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMjllMjU1YzUtNzNhNS00ZjliLWI4MDctY2M3ZWRkN2Q5ZWFhXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -1217,11 +1219,11 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-28T11:32:32.026Z",
-      "checkedAt": "2026-11-28T11:32:32.026Z"
+      "updatedAt": "2026-11-28T12:38:06.513Z",
+      "checkedAt": "2026-11-28T12:38:06.513Z"
     },
     "douban": {
-      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6NTQwfQ",
+      "nextCursor": "eyJzb3VyY2UiOiJkb3ViYW4iLCJkb3ViYW4iOiIzNDQzODI5OCIsIm9mZnNldCI6NTUyfQ",
       "indexOffset": 1,
       "name": "豆瓣",
       "status": "ok",
@@ -1709,8 +1711,8 @@
           "cachedUrl": "https://z2vn7g8nhp-beep.github.io/isolate-love-movie/photo-data/images/tt10545296/f4b21773819ba0ba714e9f27.webp"
         }
       ],
-      "updatedAt": "2026-11-28T11:32:35.222Z",
-      "checkedAt": "2026-11-28T11:32:35.222Z",
+      "updatedAt": "2026-11-28T12:38:06.990Z",
+      "checkedAt": "2026-11-28T12:38:06.990Z",
       "previewLimit": 48
     },
     "pinterest": {
@@ -1718,8 +1720,8 @@
       "indexOffset": 1,
       "name": "Pinterest",
       "status": "ok",
-      "message": "从原站读取",
-      "method": "browser",
+      "message": "从 Pinterest 官方公开组件读取",
+      "method": "public-pin-widget",
       "images": [
         {
           "url": "https://i.pinimg.com/originals/09/e0/30/09e030bcfc976db2c4c0028b3a4d455e.jpg",
@@ -2843,9 +2845,9 @@
           "pageUrl": "https://www.pinterest.com/search/pins/?q=The%20Hunger%20Games%20The%20Ballad%20of%20Songbirds%20and%20Snakes%202023%20stills"
         }
       ],
-      "updatedAt": "2026-11-28T11:32:37.531Z",
-      "checkedAt": "2026-11-28T11:32:37.531Z"
+      "updatedAt": "2026-11-28T12:38:15.776Z",
+      "checkedAt": "2026-11-28T12:38:15.776Z"
     }
   },
-  "checkedAt": "2026-11-28T11:32:37.538Z"
+  "checkedAt": "2026-11-28T12:38:15.777Z"
 }
