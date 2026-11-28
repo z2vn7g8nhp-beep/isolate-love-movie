@@ -13,8 +13,10 @@
       "indexOffset": 71,
       "name": "IMDb",
       "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "message": "相册暂不可读，已读取 IMDb 公开主图",
+      "method": "public-metadata",
+      "limited": true,
+      "upstreamStatus": "blocked",
       "images": [
         {
           "url": "https://m.media-amazon.com/images/M/MV5BMmU0NjJkNzUtZjgwNS00ODEyLTlkNTctMTNiNDU0ODA3OTliXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UX500_CR0,47,500,281_.jpg",
@@ -1217,16 +1219,16 @@
           "retrievedVia": "public-image-index"
         }
       ],
-      "updatedAt": "2026-11-28T16:29:40.071Z",
-      "checkedAt": "2026-11-28T16:29:40.071Z"
+      "updatedAt": "2026-11-28T17:30:40.636Z",
+      "checkedAt": "2026-11-28T17:30:40.636Z"
     },
     "douban": {
       "nextCursor": null,
       "indexOffset": 1,
       "name": "豆瓣",
-      "status": "ok",
-      "message": "三站公开图片经搜索索引发现",
-      "method": "public-image-index",
+      "status": "unmatched",
+      "message": "尚未核对到对应豆瓣档案",
+      "method": "direct",
       "images": [
         {
           "url": "https://img2.doubanio.com/view/photo/sqxs/public/p2534660211.jpg",
@@ -1250,7 +1252,7 @@
         }
       ],
       "updatedAt": "2026-11-28T16:29:53.401Z",
-      "checkedAt": "2026-11-28T16:29:53.401Z"
+      "checkedAt": "2026-11-28T17:30:45.157Z"
     },
     "pinterest": {
       "nextCursor": null,
@@ -1260,15 +1262,6 @@
       "message": "从原站读取",
       "method": "browser",
       "images": [
-        {
-          "url": "https://i.pinimg.com/564x/52/d7/8a/52d78a88e72b4e344ef2472aaaae35c9.jpg",
-          "thumbnail": "https://i.pinimg.com/236x/52/d7/8a/52d78a88e72b4e344ef2472aaaae35c9.jpg",
-          "title": "Illustrations by CranioDsgn",
-          "kind": "搜索图片",
-          "source": "Pinterest 搜索",
-          "license": "版权归原权利人",
-          "pageUrl": "https://www.pinterest.com/pin/169940585923689198/"
-        },
         {
           "url": "https://i.pinimg.com/564x/a8/03/80/a80380a3d2e5dcb7c7b4ac0cb0d61647.jpg",
           "thumbnail": "https://i.pinimg.com/236x/a8/03/80/a80380a3d2e5dcb7c7b4ac0cb0d61647.jpg",
@@ -2344,11 +2337,20 @@
           "source": "Pinterest 搜索",
           "license": "版权归原权利人",
           "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
+        },
+        {
+          "url": "https://i.pinimg.com/originals/7a/bb/52/7abb52c26c157e205f257e45b7a9eb95.png",
+          "thumbnail": "https://i.pinimg.com/236x/7a/bb/52/7abb52c26c157e205f257e45b7a9eb95.jpg",
+          "title": "Pinterest 搜索图片",
+          "kind": "搜索图片",
+          "source": "Pinterest 搜索",
+          "license": "版权归原权利人",
+          "pageUrl": "https://www.pinterest.com/search/pins/?q=Breaking%20Bad%202008%20stills"
         }
       ],
-      "updatedAt": "2026-11-28T16:29:56.315Z",
-      "checkedAt": "2026-11-28T16:29:56.315Z"
+      "updatedAt": "2026-11-28T17:30:47.927Z",
+      "checkedAt": "2026-11-28T17:30:47.927Z"
     }
   },
-  "checkedAt": "2026-11-28T16:29:56.321Z"
+  "checkedAt": "2026-11-28T17:30:47.930Z"
 }
